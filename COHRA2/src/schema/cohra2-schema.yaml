@@ -1,0 +1,166 @@
+id: https://w3id.org/OHD/DFA-study/cohra2
+name: cohra2
+prefixes:
+  linkml: https://w3id.org/linkml/
+  cohra2: https://w3id.org/OHD/DFA-study/cohra2/
+  OHD:  http://purl.obolibrary.org/obo/OHD_
+  dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
+
+imports:
+  - linkml:types
+default_range: string
+default_prefix: traitvalue
+
+classes:
+  COHRA2Dataset:
+    description: >-
+      The COHRA2 dataset
+    tree_root: true
+    attributes:
+      record:
+        multivalued: true
+        inlined_as_list: true
+        range: COHRA2Record
+
+  COHRA2Record:
+    description: >-
+      A record in the COHRA2 dataset
+    slots:
+      - subject_id
+      - visit
+      - site_code
+      - month
+      - day
+      - year
+      - batch_scan_opr
+      - form_id
+      - time_stamp
+      - verify_wks
+      - staff_initials
+      - DF01
+      - DF02
+      - DF03
+      - DF04
+      - DF05
+      - DF06
+      - DF07
+      - DF08
+      - DF09
+      - DF10
+      - DF11
+      - DF12
+      - DF13
+      - DF14
+      - DF15
+      - DF16
+      - DF17
+      - DF18
+      - DF19
+      - DF20
+      - DF21
+      - DF22
+      - DF23
+      - DF24
+      - DF25
+      - DF26
+      - DF27
+      - DF28
+      - DF29
+
+slots:
+  subject_id: 
+    description: >-
+      The ID of the subject
+    range: string
+  visit:
+    description: >-
+      TO DO
+    range: string
+  site_code:
+    description: >-
+      TO DO
+    range: string
+  month:
+    description: >-
+      The month in which the assessement was given.
+    range: string
+  day:
+    description: >-
+      The day in which the assessment was given.
+    range: string
+  year:
+    description: >-
+      The year in which the assessment was given.
+    range: string
+  batch_scan_opr:
+    range: string
+  form_id:
+    range: string
+  time_stamp:
+    range: string
+  verify_wks:
+    range: string
+  staff_initials:
+    range: string
+  DF01:
+    range: string
+  DF02:
+    range: string
+  DF03:
+    range: string
+  DF04:
+    range: string
+  DF05:
+    range: string
+  DF06:
+    range: string
+  DF07:
+    range: string
+  DF08:
+    range: string
+  DF09:
+    range: string
+  DF10:
+    range: string
+  DF11:
+    range: string
+  DF12:
+    range: string
+  DF13:
+    range: string
+  DF14:
+    range: string
+  DF15:
+    range: string
+  DF16:
+    range: string
+  DF17:
+    range: string
+  DF18:
+    range: string
+  DF19:
+    range: string
+  DF20:
+    range: string
+  DF21:
+    range: string
+  DF22:
+    range: string
+  DF23:
+    range: string
+  DF24:
+    range: string
+  DF25:
+    range: string
+  DF26:
+    range: string
+  DF27:
+    range: string
+  DF28:
+    range: string
+  DF29:
+    range: string
+
+
+
