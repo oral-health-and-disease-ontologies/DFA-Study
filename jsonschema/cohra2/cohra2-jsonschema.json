@@ -1,0 +1,294 @@
+{
+    "$defs": {
+        "COHRA2Dataset": {
+            "additionalProperties": false,
+            "description": "The COHRA2 dataset",
+            "properties": {
+                "record": {
+                    "items": {
+                        "$ref": "#/$defs/COHRA2Record"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "COHRA2Dataset",
+            "type": "object"
+        },
+        "COHRA2Record": {
+            "additionalProperties": false,
+            "description": "A record in the COHRA2 dataset",
+            "properties": {
+                "DF01": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF02": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF03": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF04": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF05": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF06": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF07": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF08": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF09": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF10": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF11": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF12": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF13": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF14": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF15": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF16": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF17": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF18": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF19": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF20": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF21": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF22": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF23": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF24": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF25": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF26": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF27": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF28": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DF29": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "batch_scan_opr": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "day": {
+                    "description": "The day in which the assessment was given.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "form_id": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "month": {
+                    "description": "The month in which the assessement was given.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "site_code": {
+                    "description": "TO DO",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "staff_initials": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "subject_id": {
+                    "description": "The ID of the subject",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "time_stamp": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "verify_wks": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "visit": {
+                    "description": "TO DO",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "year": {
+                    "description": "The year in which the assessment was given.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "title": "COHRA2Record",
+            "type": "object"
+        }
+    },
+    "$id": "https://w3id.org/OHD/DFA-study/cohra2",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": true,
+    "description": "The COHRA2 dataset",
+    "metamodel_version": "1.7.0",
+    "properties": {
+        "record": {
+            "items": {
+                "$ref": "#/$defs/COHRA2Record"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        }
+    },
+    "title": "cohra2",
+    "type": "object",
+    "version": null
+}
