@@ -1,0 +1,30 @@
+# standard directories for virtual environments
+.env
+.venv
+env
+venv
+
+# OSX Desktop Services Store file
+.DS_Store
+
+# PyCharm project config
+.idea/
+
+# jupyter backups
+.ipynb_checkpoints/
+
+# emacs backup files
+*~
+
+# ignore files needed for pypi distribution
+__pycache__/
+build/
+dist/
+*.egg-info/
+*.egg
+
+# ignore temp directories and files
+tmp/
+temp/
+*.tmp
+*.temp
