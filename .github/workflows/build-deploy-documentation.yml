@@ -1,0 +1,55 @@
+name: Build and Deploy Documentation
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'mkdocs.yml'
+      - /COHRA2/src/schema/cohra2-schema.yaml
+      - 'src/docs/*.md'
+      - 'src/docs/*.html'
+      - 'docs/images/*'
+  workflow_dispatch:
+  
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v3
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      
+      # install dependencies
+      - name: Install dependencies.
+        run: |
+          pip install --upgrade pip
+          pip install mkdocs-get-deps
+          pip install mkdocs-mermaid2-plugin
+          pip install mkdocs-techdocs-redirects
+          pip install mkdocs-material
+          pip install mkdocs-section-index
+          pip install linkml
+          pip install git_root
+
+      - name: Build and deploy documentation.
+        run: |
+          mkdir -p docs
+          mkdir -p docs/images
+          touch docs/.nojekyll
+          make gendoc
+          mkdocs gh-deploy --force
