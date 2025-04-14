@@ -1,6 +1,6 @@
 site_name: DFA Study Schema
 site_url: https://oral-health-and-disease-ontologies.github.io/DFA-Study/
-repo_url: https://github.com/oral-health-and-disease-ontologies/DFA-Study
+repo_url: https://github.com/oral-health-and-disease-ontologies/DFA-Study/
 
 plugins:
   - search
