@@ -1,0 +1,20 @@
+site_name: DFA Study Schema
+site_url: https://oral-health-and-disease-ontologies.github.io/DFA-Study/
+repo_url: https://github.com/oral-health-and-disease-ontologies/DFA-Study
+
+plugins:
+  - search
+  - mermaid2:
+      version: 10.9.0
+  - redirects: # reference: https://github.com/mkdocs/mkdocs-redirects
+      redirect_maps:
+        'home.md': 'index.md'  # redirects "/home" to "/"
+markdown_extensions:
+  - admonition
+  - tables
+  - pymdownx.magiclink
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+nav:
+  - DFA Study Schema: index.md

@@ -45,7 +45,7 @@ jobs:
           pip install mkdocs-section-index
           pip install linkml
           pip install git_root
-
+      
       - name: Build and deploy documentation.
         run: |
           mkdir -p docs
