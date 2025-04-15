@@ -16,7 +16,7 @@ prefixes:
 
 imports:
   - linkml:types
-  - ../core/core-schema
+  - core
 default_range: string
 default_prefix: cohra2
 
@@ -28,7 +28,6 @@ classes:
       The COHRA2 dataset
     slot_usage:
       records:
-        slot_uri: core:records
         range: COHRA2Record
 
   COHRA2Record:
