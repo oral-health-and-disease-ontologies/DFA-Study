@@ -1,5 +1,8 @@
 id: https://w3id.org/OHD/DFA-study/cohra2
 name: cohra2
+title: COHRA2 Study Schema
+license: https://mit-license.org/
+
 prefixes:
   linkml: https://w3id.org/linkml/
   cohra2: https://w3id.org/OHD/DFA-study/cohra2/
