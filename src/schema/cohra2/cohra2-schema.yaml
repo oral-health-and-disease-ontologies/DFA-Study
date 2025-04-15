@@ -10,7 +10,7 @@ prefixes:
 imports:
   - linkml:types
 default_range: string
-default_prefix: traitvalue
+default_prefix: cohra2
 
 classes:
   COHRA2Dataset:
@@ -112,6 +112,9 @@ slots:
   DF01:
     description: >-
       Has fear of dental work ever caused you to put off making an appointment?
+    annotations:
+      - pun_type: owl:Class
+      - pun_subclass_of: OHD:0000421
     range: string
   DF02:
     description: >-
