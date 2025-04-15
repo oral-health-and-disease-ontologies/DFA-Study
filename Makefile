@@ -7,7 +7,7 @@ COHRA2_DOCS_DIR = $(DOCSDIR)/cohra2
 
 # --- linkml products --- #
 cohra2-jsonschema: $(COHRA2_SCHEMA)
-	gen-json-schema $< > jsonschema/cohra2/cohra2-jsonschema.json
+	gen-json-schema $< > jsonschema/cohra2.json
 
 cohra2-owl: $(COHRA2_SCHEMA)
 	gen-owl $< > temp/cohra2.tmp.ttl 

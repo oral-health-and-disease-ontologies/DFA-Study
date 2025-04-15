@@ -4,7 +4,8 @@
             "additionalProperties": false,
             "description": "The COHRA2 dataset",
             "properties": {
-                "record": {
+                "records": {
+                    "description": "Slot for connecting the dataset to its records",
                     "items": {
                         "$ref": "#/$defs/COHRA2Record"
                     },
@@ -22,193 +23,224 @@
             "description": "A record in the COHRA2 dataset",
             "properties": {
                 "DF01": {
+                    "description": "Has fear of dental work ever caused you to put off making an appointment?",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF02": {
+                    "description": "Has fear of dental work ever caused you to cancel or not appear for an appointment?",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF03": {
+                    "description": "When having dental work done, my muscles become tense.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF04": {
+                    "description": "When having dental work done, my breathing rate increases.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF05": {
+                    "description": "When having dental work done, I perspire.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF06": {
+                    "description": "When having dental work done, I feel nauseated and sick to my stomach.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF07": {
+                    "description": "When having dental work done, my heart beats faster.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF08": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Making an appointment for dentistry.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF09": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Approching the dentist's office.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF10": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Sitting in the waiting room.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF11": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Being seated in the dental chair.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF12": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: The smell of the dentist's office.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF13": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the dentist walk in.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF14": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the anesthetic needle.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF15": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the needle injected.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF16": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the drill.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF17": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Hearing the drill.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF18": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the vibrations of the drill.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF19": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Having your teeth cleaned.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF20": {
+                    "description": "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: All things considered, how fearful are you of having dental work done?",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF21": {
+                    "description": "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Breaking your arm.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF22": {
+                    "description": "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having a foot doctor remove a wart from your foot with a sharp instrument.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF23": {
+                    "description": "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting a paper cut on your finger.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF24": {
+                    "description": "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your mouth.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF25": {
+                    "description": "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting strong soap in both your eyes while bathing or showering.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF26": {
+                    "description": "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having someone slam a heavy car door on your hand.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF27": {
+                    "description": "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Gulping a hot drink before it has cooled.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF28": {
+                    "description": "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your hip/buttocks.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "DF29": {
+                    "description": "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Falling down a flight of concrete stairs.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "batch_scan_opr": {
+                    "description": "The teleform scan operator.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "day": {
-                    "description": "The day in which the assessment was given.",
+                    "description": "The day of the month in which the assessment was given.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "form_id": {
+                    "description": "The teleform form version.",
                     "type": [
                         "string",
                         "null"
@@ -222,7 +254,7 @@
                     ]
                 },
                 "site_code": {
-                    "description": "TO DO",
+                    "description": "The code for the site where the assessment was given.",
                     "type": [
                         "string",
                         "null"
@@ -235,26 +267,27 @@
                     ]
                 },
                 "subject_id": {
-                    "description": "The ID of the subject",
+                    "description": "The ID of the subject.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "time_stamp": {
+                    "description": "The teleform time scanned.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "verify_wks": {
+                    "description": "The teleform verifier.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "visit": {
-                    "description": "TO DO",
                     "type": [
                         "string",
                         "null"
@@ -270,17 +303,42 @@
             },
             "title": "COHRA2Record",
             "type": "object"
+        },
+        "Dataset": {
+            "additionalProperties": false,
+            "description": "The dataset for the study",
+            "properties": {
+                "records": {
+                    "description": "Slot for connecting the dataset to its records",
+                    "items": {
+                        "$ref": "#/$defs/Record"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "Dataset",
+            "type": "object"
+        },
+        "Record": {
+            "additionalProperties": false,
+            "description": "A record in the dataset",
+            "title": "Record",
+            "type": "object"
         }
     },
     "$id": "https://w3id.org/OHD/DFA-study/cohra2",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "additionalProperties": true,
-    "description": "The COHRA2 dataset",
+    "description": "The dataset for the study",
     "metamodel_version": "1.7.0",
     "properties": {
-        "record": {
+        "records": {
+            "description": "Slot for connecting the dataset to its records",
             "items": {
-                "$ref": "#/$defs/COHRA2Record"
+                "$ref": "#/$defs/Record"
             },
             "type": [
                 "array",
