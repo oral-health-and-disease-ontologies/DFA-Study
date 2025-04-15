@@ -3,6 +3,9 @@ name: cohra2
 title: COHRA2 Study Schema
 license: https://mit-license.org/
 
+description: >-
+  LinkML schema for defining data elements used in the COHRA2 study.
+
 prefixes:
   linkml: https://w3id.org/linkml/
   cohra2: https://w3id.org/OHD/DFA-study/cohra2/
