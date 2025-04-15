@@ -1,18 +1,18 @@
 DOCSDIR = docs
 SRC = src
 
-COHRA2_SCHEMA_DIR = $(SRC)/schema/cohra2
-COHRA2_SCHEMA = $(COHRA2_SCHEMA_DIR)/cohra2-schema.yaml
+COHRA2_SCHEMA_DIR = $(SRC)/schema
+COHRA2_SCHEMA = $(COHRA2_SCHEMA_DIR)/cohra2.yaml
 COHRA2_DOCS_DIR = $(DOCSDIR)/cohra2
 
 # --- linkml products --- #
 cohra2-jsonschema: $(COHRA2_SCHEMA)
-	gen-json-schema $< > jsonschema/cohra2/cohra2-jsonschema.json
+	gen-json-schema $< > jsonschema/cohra2.json
 
 cohra2-owl: $(COHRA2_SCHEMA)
 	gen-owl $< > temp/cohra2.tmp.ttl 
 	src/scripts/pun-annotations-to-ttl.py $< > temp/pun.tmp.ttl 
-	robot merge -i temp/cohra2.tmp.ttl -i temp/pun.tmp.ttl -o owl/cohra2/cohra2-schema.ttl 
+	robot merge -i temp/cohra2.tmp.ttl -i temp/pun.tmp.ttl -o owl/cohra2.ttl 
 
 ## remove products
 clean-products:

@@ -5,7 +5,8 @@ on:
       - main
     paths:
       - 'mkdocs.yml'
-      - src/schema/cohra2/cohra2-schema.yaml
+      - src/schema/core.yaml
+      - src/schema/cohra2.yaml
       - 'src/docs/*.md'
       - 'src/docs/*.html'
       - 'docs/images/*'

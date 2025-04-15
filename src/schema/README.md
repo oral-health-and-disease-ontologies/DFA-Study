@@ -1,1 +1,1 @@
-Directory for schema files for DFA studies
+Directory for DFA study schemas.

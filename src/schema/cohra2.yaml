@@ -1,7 +1,14 @@
 id: https://w3id.org/OHD/DFA-study/cohra2
 name: cohra2
+title: COHRA2 Study Schema
+license: https://mit-license.org/
+
+description: >-
+  LinkML schema for defining data elements used in the COHRA2 study.
+
 prefixes:
   linkml: https://w3id.org/linkml/
+  core: https://w3id.org/OHD/DFA-study/core/
   cohra2: https://w3id.org/OHD/DFA-study/cohra2/
   OHD:  http://purl.obolibrary.org/obo/OHD_
   dcterms: http://purl.org/dc/terms/
@@ -9,21 +16,22 @@ prefixes:
 
 imports:
   - linkml:types
+  - core
 default_range: string
 default_prefix: cohra2
 
 classes:
   COHRA2Dataset:
+    tree_root: true
+    is_a: Dataset
     description: >-
       The COHRA2 dataset
-    tree_root: true
-    attributes:
-      record:
-        multivalued: true
-        inlined_as_list: true
+    slot_usage:
+      records:
         range: COHRA2Record
 
   COHRA2Record:
+    is_a: Record
     description: >-
       A record in the COHRA2 dataset
     slots:
