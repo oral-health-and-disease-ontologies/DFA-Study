@@ -15,21 +15,22 @@ prefixes:
 
 imports:
   - linkml:types
+  - ../core/core-schema
 default_range: string
 default_prefix: cohra2
 
 classes:
   COHRA2Dataset:
+    is_a: Dataset
     description: >-
       The COHRA2 dataset
     tree_root: true
-    attributes:
+    slot_usage:
       record:
-        multivalued: true
-        inlined_as_list: true
         range: COHRA2Record
 
   COHRA2Record:
+    is_a: Record
     description: >-
       A record in the COHRA2 dataset
     slots:

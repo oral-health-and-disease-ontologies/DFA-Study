@@ -1,0 +1,38 @@
+id: https://w3id.org/OHD/DFA-study/core
+name: core
+title: COHRA2 Study Schema
+license: https://mit-license.org/
+description: >-
+  Core schema defining elements that are common across DFA-study schemas.  
+  This schema is intended to be imported into other schemas.
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  core: https://w3id.org/OHD/DFA-study/core/
+  dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
+
+imports:
+  - linkml:types
+default_range: string
+default_prefix: core
+
+classes:
+  Dataset:
+    description: >-
+      The dataset for the study
+    tree_root: true
+    slots:
+      - record
+  
+  Record:
+    description: >-
+      A record in the dataset
+
+slots:
+  record:
+    description: >-
+      Slot for connecting the dataset to its records
+    multivalued: true
+    inlined_as_list: true
+    range: Record
