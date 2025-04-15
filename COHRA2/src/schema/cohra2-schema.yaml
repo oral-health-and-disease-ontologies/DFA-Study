@@ -71,15 +71,13 @@ classes:
 slots:
   subject_id: 
     description: >-
-      The ID of the subject
+      The ID of the subject.
     range: string
   visit:
-    description: >-
-      TO DO
     range: string
   site_code:
     description: >-
-      TO DO
+      The code for the site where the assessment was given.
     range: string
   month:
     description: >-
@@ -87,79 +85,145 @@ slots:
     range: string
   day:
     description: >-
-      The day in which the assessment was given.
+      The day of the month in which the assessment was given.
     range: string
   year:
     description: >-
       The year in which the assessment was given.
     range: string
   batch_scan_opr:
+    description: >-
+      The teleform scan operator.
     range: string
   form_id:
+    description: >-
+      The teleform form version.
     range: string
   time_stamp:
+    description: >-
+      The teleform time scanned.
     range: string
   verify_wks:
+    description: >-
+      The teleform verifier.
     range: string
   staff_initials:
     range: string
   DF01:
+    description: >-
+      Has fear of dental work ever caused you to put off making an appointment?
     range: string
   DF02:
+    description: >-
+      Has fear of dental work ever caused you to cancel or not appear for an appointment?
     range: string
   DF03:
+    description: >-
+      When having dental work done, my muscles become tense.
     range: string
   DF04:
+    description: >-
+      When having dental work done, my breathing rate increases.
     range: string
   DF05:
+    description: >-
+      When having dental work done, I perspire.
     range: string
   DF06:
+    description: >-
+      When having dental work done, I feel nauseated and sick to my stomach.
     range: string
   DF07:
+    description: >-
+      When having dental work done, my heart beats faster.
     range: string
   DF08:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Making an appointment for dentistry.
     range: string
   DF09:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Approching the dentist's office.
     range: string
   DF10:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Sitting in the waiting room.
     range: string
   DF11:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Being seated in the dental chair.
     range: string
   DF12:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: The smell of the dentist's office.
     range: string
   DF13:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the dentist walk in.
     range: string
   DF14:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the anesthetic needle.
     range: string
   DF15:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the needle injected.
     range: string
   DF16:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the drill.
     range: string
   DF17:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Hearing the drill.
     range: string
   DF18:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the vibrations of the drill.
     range: string
   DF19:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Having your teeth cleaned.
     range: string
   DF20:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: All things considered, how fearful are you of having dental work done?
     range: string
   DF21:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Breaking your arm.
     range: string
   DF22:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having a foot doctor remove a wart from your foot with a sharp instrument.
     range: string
   DF23:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting a paper cut on your finger.
     range: string
   DF24:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your mouth.
     range: string
   DF25:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting strong soap in both your eyes while bathing or showering.
     range: string
   DF26:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having someone slam a heavy car door on your hand.
     range: string
   DF27:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Gulping a hot drink before it has cooled.
     range: string
   DF28:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your hip/buttocks.
     range: string
   DF29:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Falling down a flight of concrete stairs.
     range: string
 
 
