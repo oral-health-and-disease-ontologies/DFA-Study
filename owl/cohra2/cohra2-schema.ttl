@@ -1,0 +1,889 @@
+@prefix : <https://w3id.org/OHD/DFA-study/cohra2.owl.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cohra2: <https://w3id.org/OHD/DFA-study/cohra2/> .
+@base <https://w3id.org/OHD/DFA-study/cohra2.owl.ttl> .
+
+<https://w3id.org/OHD/DFA-study/cohra2.owl.ttl> rdf:type owl:Ontology ;
+                                                 rdfs:label "cohra2" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/pun_subclass_of
+cohra2:pun_subclass_of rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/pun_type
+cohra2:pun_type rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/OHD/DFA-study/cohra2/record
+cohra2:record rdf:type owl:ObjectProperty ;
+              rdfs:label "record" ;
+              skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF01
+cohra2:DF01 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF02
+cohra2:DF02 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF02" ;
+            skos:definition "Has fear of dental work ever caused you to cancel or not appear for an appointment?" ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF03
+cohra2:DF03 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF03" ;
+            skos:definition "When having dental work done, my muscles become tense." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF04
+cohra2:DF04 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF04" ;
+            skos:definition "When having dental work done, my breathing rate increases." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF05
+cohra2:DF05 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF05" ;
+            skos:definition "When having dental work done, I perspire." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF06
+cohra2:DF06 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF06" ;
+            skos:definition "When having dental work done, I feel nauseated and sick to my stomach." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF07
+cohra2:DF07 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF07" ;
+            skos:definition "When having dental work done, my heart beats faster." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF08
+cohra2:DF08 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF08" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Making an appointment for dentistry." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF09
+cohra2:DF09 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF09" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Approching the dentist's office." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF10
+cohra2:DF10 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF10" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Sitting in the waiting room." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF11
+cohra2:DF11 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF11" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Being seated in the dental chair." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF12
+cohra2:DF12 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF12" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: The smell of the dentist's office." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF13
+cohra2:DF13 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF13" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the dentist walk in." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF14
+cohra2:DF14 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF14" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the anesthetic needle." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF15
+cohra2:DF15 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF15" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the needle injected." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF16
+cohra2:DF16 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF16" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the drill." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF17
+cohra2:DF17 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF17" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Hearing the drill." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF18
+cohra2:DF18 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF18" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the vibrations of the drill." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF19
+cohra2:DF19 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF19" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Having your teeth cleaned." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF20
+cohra2:DF20 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF20" ;
+            skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: All things considered, how fearful are you of having dental work done?" ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF21
+cohra2:DF21 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF21" ;
+            skos:definition "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Breaking your arm." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF22
+cohra2:DF22 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF22" ;
+            skos:definition "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having a foot doctor remove a wart from your foot with a sharp instrument." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF23
+cohra2:DF23 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF23" ;
+            skos:definition "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting a paper cut on your finger." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF24
+cohra2:DF24 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF24" ;
+            skos:definition "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your mouth." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF25
+cohra2:DF25 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF25" ;
+            skos:definition "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting strong soap in both your eyes while bathing or showering." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF26
+cohra2:DF26 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF26" ;
+            skos:definition "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having someone slam a heavy car door on your hand." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF27
+cohra2:DF27 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF27" ;
+            skos:definition "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Gulping a hot drink before it has cooled." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF28
+cohra2:DF28 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF28" ;
+            skos:definition "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your hip/buttocks." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF29
+cohra2:DF29 rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "DF29" ;
+            skos:definition "Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Falling down a flight of concrete stairs." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/batch_scan_opr
+cohra2:batch_scan_opr rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "batch_scan_opr" ;
+                      skos:definition "The teleform scan operator." ;
+                      skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/day
+cohra2:day rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:label "day" ;
+           skos:definition "The day of the month in which the assessment was given." ;
+           skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/form_id
+cohra2:form_id rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:label "form_id" ;
+               skos:definition "The teleform form version." ;
+               skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/month
+cohra2:month rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:label "month" ;
+             skos:definition "The month in which the assessement was given." ;
+             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/site_code
+cohra2:site_code rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "site_code" ;
+                 skos:definition "The code for the site where the assessment was given." ;
+                 skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/staff_initials
+cohra2:staff_initials rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "staff_initials" ;
+                      skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/subject_id
+cohra2:subject_id rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "subject_id" ;
+                  skos:definition "The ID of the subject." ;
+                  skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/time_stamp
+cohra2:time_stamp rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "time_stamp" ;
+                  skos:definition "The teleform time scanned." ;
+                  skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/verify_wks
+cohra2:verify_wks rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "verify_wks" ;
+                  skos:definition "The teleform verifier." ;
+                  skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/visit
+cohra2:visit rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:label "visit" ;
+             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/year
+cohra2:year rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "year" ;
+            skos:definition "The year in which the assessment was given." ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/OHD_0000421
+<http://purl.obolibrary.org/obo/OHD_0000421> rdf:type owl:Class .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/COHRA2Dataset
+cohra2:COHRA2Dataset rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty cohra2:record ;
+                                       owl:allValuesFrom cohra2:COHRA2Record
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cohra2:record ;
+                                       owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                     ] ;
+                     rdfs:label "COHRA2Dataset" ;
+                     skos:definition "The COHRA2 dataset" ;
+                     skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/COHRA2Record
+cohra2:COHRA2Record rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF01 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF02 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF03 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF04 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF05 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF06 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF07 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF08 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF09 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF10 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF11 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF12 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF13 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF14 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF15 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF16 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF17 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF18 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF19 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF20 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF21 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF22 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF23 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF24 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF25 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF26 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF27 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF28 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF29 ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:batch_scan_opr ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:day ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:form_id ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:month ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:site_code ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:staff_initials ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:subject_id ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:time_stamp ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:verify_wks ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:visit ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:year ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF01 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF02 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF03 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF04 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF05 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF06 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF07 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF08 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF09 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF10 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF11 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF12 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF13 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF14 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF15 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF16 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF17 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF18 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF19 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF20 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF21 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF22 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF23 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF24 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF25 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF26 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF27 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF28 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF29 ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:batch_scan_opr ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:day ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:form_id ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:month ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:site_code ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:staff_initials ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:subject_id ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:time_stamp ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:verify_wks ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:visit ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:year ;
+                                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF01 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF02 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF03 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF04 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF05 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF06 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF07 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF08 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF09 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF10 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF11 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF12 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF13 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF14 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF15 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF16 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF17 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF18 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF19 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF20 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF21 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF22 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF23 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF24 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF25 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF26 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF27 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF28 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:DF29 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:batch_scan_opr ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:day ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:form_id ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:month ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:site_code ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:staff_initials ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:subject_id ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:time_stamp ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:verify_wks ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:visit ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cohra2:year ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ;
+                    rdfs:label "COHRA2Record" ;
+                    skos:definition "A record in the COHRA2 dataset" ;
+                    skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+
+
+###  https://w3id.org/OHD/DFA-study/cohra2/DF01
+cohra2:DF01 rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.obolibrary.org/obo/OHD_0000421> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+cohra2:DF01 rdfs:label "DF01" ;
+            skos:definition "Has fear of dental work ever caused you to put off making an appointment?" ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
+            cohra2:pun_subclass_of "OHD:0000421" ;
+            cohra2:pun_type "owl:Class" .
+
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi
