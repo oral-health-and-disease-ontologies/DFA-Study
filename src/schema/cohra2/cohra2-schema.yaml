@@ -8,6 +8,7 @@ description: >-
 
 prefixes:
   linkml: https://w3id.org/linkml/
+  core: https://w3id.org/OHD/DFA-study/core/
   cohra2: https://w3id.org/OHD/DFA-study/cohra2/
   OHD:  http://purl.obolibrary.org/obo/OHD_
   dcterms: http://purl.org/dc/terms/
@@ -21,12 +22,13 @@ default_prefix: cohra2
 
 classes:
   COHRA2Dataset:
+    tree_root: true
     is_a: Dataset
     description: >-
       The COHRA2 dataset
-    tree_root: true
     slot_usage:
-      record:
+      records:
+        slot_uri: core:records
         range: COHRA2Record
 
   COHRA2Record:

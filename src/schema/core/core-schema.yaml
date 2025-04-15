@@ -23,14 +23,14 @@ classes:
       The dataset for the study
     tree_root: true
     slots:
-      - record
+      - records
   
   Record:
     description: >-
       A record in the dataset
 
 slots:
-  record:
+  records:
     description: >-
       Slot for connecting the dataset to its records
     multivalued: true
