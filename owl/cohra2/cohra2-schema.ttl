@@ -3,17 +3,30 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <https://w3id.org/OHD/DFA-study/core/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix cohra2: <https://w3id.org/OHD/DFA-study/cohra2/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @base <https://w3id.org/OHD/DFA-study/cohra2.owl.ttl> .
 
 <https://w3id.org/OHD/DFA-study/cohra2.owl.ttl> rdf:type owl:Ontology ;
-                                                 rdfs:label "cohra2" .
+                                                 dcterms:license "https://mit-license.org/" ;
+                                                 dcterms:title "COHRA2 Study Schema" ;
+                                                 rdfs:label "cohra2" ;
+                                                 skos:definition "LinkML schema for defining data elements used in the COHRA2 study." .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
 
 ###  http://www.w3.org/2004/02/skos/core#definition
 skos:definition rdf:type owl:AnnotationProperty .
@@ -35,10 +48,12 @@ cohra2:pun_type rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/OHD/DFA-study/cohra2/record
-cohra2:record rdf:type owl:ObjectProperty ;
-              rdfs:label "record" ;
-              skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> .
+###  https://w3id.org/OHD/DFA-study/core/records
+core:records rdf:type owl:ObjectProperty ;
+             rdfs:range core:Record ;
+             rdfs:label "records" ;
+             skos:definition "Slot for connecting the dataset to its records" ;
+             skos:inScheme <https://w3id.org/OHD/DFA-study/core> .
 
 
 #################################################################
@@ -370,12 +385,13 @@ cohra2:year rdf:type owl:DatatypeProperty ;
 
 ###  https://w3id.org/OHD/DFA-study/cohra2/COHRA2Dataset
 cohra2:COHRA2Dataset rdf:type owl:Class ;
-                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                       owl:onProperty cohra2:record ;
+                     rdfs:subClassOf core:Dataset ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty core:records ;
                                        owl:allValuesFrom cohra2:COHRA2Record
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty cohra2:record ;
+                                       owl:onProperty core:records ;
                                        owl:minCardinality "0"^^xsd:nonNegativeInteger
                                      ] ;
                      rdfs:label "COHRA2Dataset" ;
@@ -385,7 +401,8 @@ cohra2:COHRA2Dataset rdf:type owl:Class ;
 
 ###  https://w3id.org/OHD/DFA-study/cohra2/COHRA2Record
 cohra2:COHRA2Record rdf:type owl:Class ;
-                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    rdfs:subClassOf core:Record ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty cohra2:DF01 ;
                                       owl:allValuesFrom xsd:string
                                     ] ,
@@ -873,6 +890,28 @@ cohra2:COHRA2Record rdf:type owl:Class ;
 ###  https://w3id.org/OHD/DFA-study/cohra2/DF01
 cohra2:DF01 rdf:type owl:Class ;
             rdfs:subClassOf <http://purl.obolibrary.org/obo/OHD_0000421> .
+
+
+###  https://w3id.org/OHD/DFA-study/core/Dataset
+core:Dataset rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty core:records ;
+                               owl:allValuesFrom core:Record
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty core:records ;
+                               owl:minCardinality "0"^^xsd:nonNegativeInteger
+                             ] ;
+             rdfs:label "Dataset" ;
+             skos:definition "The dataset for the study" ;
+             skos:inScheme <https://w3id.org/OHD/DFA-study/core> .
+
+
+###  https://w3id.org/OHD/DFA-study/core/Record
+core:Record rdf:type owl:Class ;
+            rdfs:label "Record" ;
+            skos:definition "A record in the dataset" ;
+            skos:inScheme <https://w3id.org/OHD/DFA-study/core> .
 
 
 #################################################################
