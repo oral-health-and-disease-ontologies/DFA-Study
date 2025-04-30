@@ -115,7 +115,7 @@ def parse_slot_annotations(view:SchemaView) -> Text:
         if len(ttl_str) > 0:
             ttl_str += "\n" # add blank line for readabilty
 
-    return ttl_str
+    return ttl_str.rstrip()
 
 
 def main(view:SchemaView, include_prefixes:bool):
