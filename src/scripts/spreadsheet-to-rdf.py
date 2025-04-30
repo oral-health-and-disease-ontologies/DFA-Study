@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""Convert the columns specified in the LinkML schema to RDF."""
 
 from linkml_runtime.utils.schemaview import SchemaView
 from linkml.utils.datautils import _get_context

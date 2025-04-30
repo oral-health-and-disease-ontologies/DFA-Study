@@ -54,8 +54,16 @@ def parse_prefixes(view:SchemaView) -> Text:
     return ttl_str
 
 
-# def parse_element_uri(view:SchemaView, element:Definition) -> Text:
 def parse_element_uri(view:SchemaView, element:Definition) -> Text:
+    """extract the URI from the schema element and inserts <> around the URI if necessary
+
+    Args:
+        view (SchemaView): schema view object
+        element (Definition): schema element with the URI
+
+    Returns:
+        Text: element's URI
+    """
     uri = view.get_uri(element)
     
     # check for 'http' uri
@@ -66,6 +74,15 @@ def parse_element_uri(view:SchemaView, element:Definition) -> Text:
 
 
 def parse_annotation(annotation:Annotation, uri:Text) -> Text:
+    """Finds the punning in the annotations and creates corresponding RDF statements for punning.
+
+    Args:
+        annotation (Annotation): the Annotation object for an element
+        uri (Text): the URI of the element
+
+    Returns:
+        Text: turtle statements of the punning information specified by the annotations
+    """
     ttl_str = ""
 
     # parse annotatons
@@ -81,7 +98,16 @@ def parse_annotation(annotation:Annotation, uri:Text) -> Text:
     return ttl_str
 
 
-def parse_annotations(view:SchemaView, element:Definition):
+def parse_annotations(view:SchemaView, element:Definition) -> Text:
+    """iterates over annotations defined for an element and created turtle statements as needed
+
+    Args:
+        view (SchemaView): schema view object
+        element (Definition): the element being examined for annotations
+
+    Returns:
+        Text: turtle statements based on annotation informaton
+    """
     # print('-----', type(element), type(element) == SlotDefinition)
     ttl_str = ""
     # return ttl_str
