@@ -114,141 +114,121 @@ slots:
     description: >-
       Has fear of dental work ever caused you to put off making an appointment?
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000421 # DFS 01
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000421 # DFS 01
     range: integer
   DF02:
     description: >-
       Has fear of dental work ever caused you to cancel or not appear for an appointment?
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000422 # DFS 02
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000422 # DFS 02
     range: integer
   DF03:
     description: >-
       When having dental work done, my muscles become tense.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000423 # DFS 03
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000423 # DFS 03
     range: integer
   DF04:
     description: >-
       When having dental work done, my breathing rate increases.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000424 # DFS 04
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000424 # DFS 04
     range: integer
   DF05:
     description: >-
       When having dental work done, I perspire.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000426 # DFS 05
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000426 # DFS 05
     range: integer
   DF06:
     description: >-
       When having dental work done, I feel nauseated and sick to my stomach.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000427 # DFS 06
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000427 # DFS 06
     range: integer
   DF07:
     description: >-
       When having dental work done, my heart beats faster.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000428 # DFS 07
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000428 # DFS 07
     range: integer
   DF08:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Making an appointment for dentistry.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000429 # DFS 08
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000429 # DFS 08
     range: integer
   DF09:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Approching the dentist's office.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000430 # DFS 09
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000430 # DFS 09
     range: integer
   DF10:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Sitting in the waiting room.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000431 # DFS 10
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000431 # DFS 10
     range: integer
   DF11:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Being seated in the dental chair.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000432 # DFS 11
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000432 # DFS 11
     range: integer
   DF12:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: The smell of the dentist's office.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000433 # DFS 12
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000433 # DFS 12
     range: integer
   DF13:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the dentist walk in.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000434 # DFS 13
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000434 # DFS 13
     range: integer
   DF14:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the anesthetic needle.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000435 # DFS 14
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000435 # DFS 14
     range: integer
   DF15:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the needle injected.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000436 # DFS 15
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000436 # DFS 15
     range: integer
   DF16:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the drill.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000437 # DFS 16
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000437 # DFS 16
     range: integer
   DF17:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Hearing the drill.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000438 # DFS 17
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000438 # DFS 17
     range: integer
   DF18:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the vibrations of the drill.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000439 # DFS 18
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000439 # DFS 18
     range: integer
   DF19:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Having your teeth cleaned.
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000440 # DFS 19
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000440 # DFS 19
     range: integer
   DF20:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: All things considered, how fearful are you of having dental work done?
     annotations:
-      pun_type: owl:Class
-      pun_subclass_of: OHD:0000441 # DFS 20
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000441 # DFS 20
     range: integer
   DF21:
     description: >-

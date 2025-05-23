@@ -36,12 +36,8 @@ skos:definition rdf:type owl:AnnotationProperty .
 skos:inScheme rdf:type owl:AnnotationProperty .
 
 
-###  https://w3id.org/OHD/DFA-study/cohra2/pun_subclass_of
-cohra2:pun_subclass_of rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/OHD/DFA-study/cohra2/pun_type
-cohra2:pun_type rdf:type owl:AnnotationProperty .
+###  https://w3id.org/OHD/DFA-study/cohra2/pun_as
+cohra2:pun_as rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -997,141 +993,121 @@ core:Record rdf:type owl:Class ;
 cohra2:DF01 rdfs:label "DF01" ;
             skos:definition "Has fear of dental work ever caused you to put off making an appointment?" ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000421" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000421" .
 
 
 cohra2:DF02 rdfs:label "DF02" ;
             skos:definition "Has fear of dental work ever caused you to cancel or not appear for an appointment?" ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000422" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000422" .
 
 
 cohra2:DF03 rdfs:label "DF03" ;
             skos:definition "When having dental work done, my muscles become tense." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000423" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000423" .
 
 
 cohra2:DF04 rdfs:label "DF04" ;
             skos:definition "When having dental work done, my breathing rate increases." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000424" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000424" .
 
 
 cohra2:DF05 rdfs:label "DF05" ;
             skos:definition "When having dental work done, I perspire." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000426" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000426" .
 
 
 cohra2:DF06 rdfs:label "DF06" ;
             skos:definition "When having dental work done, I feel nauseated and sick to my stomach." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000427" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000427" .
 
 
 cohra2:DF07 rdfs:label "DF07" ;
             skos:definition "When having dental work done, my heart beats faster." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000428" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000428" .
 
 
 cohra2:DF08 rdfs:label "DF08" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Making an appointment for dentistry." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000429" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000429" .
 
 
 cohra2:DF09 rdfs:label "DF09" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Approching the dentist's office." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000430" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000430" .
 
 
 cohra2:DF10 rdfs:label "DF10" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Sitting in the waiting room." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000431" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000431" .
 
 
 cohra2:DF11 rdfs:label "DF11" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Being seated in the dental chair." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000432" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000432" .
 
 
 cohra2:DF12 rdfs:label "DF12" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: The smell of the dentist's office." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000433" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000433" .
 
 
 cohra2:DF13 rdfs:label "DF13" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the dentist walk in." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000434" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000434" .
 
 
 cohra2:DF14 rdfs:label "DF14" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the anesthetic needle." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000435" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000435" .
 
 
 cohra2:DF15 rdfs:label "DF15" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the needle injected." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000436" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000436" .
 
 
 cohra2:DF16 rdfs:label "DF16" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the drill." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000437" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000437" .
 
 
 cohra2:DF17 rdfs:label "DF17" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Hearing the drill." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000438" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000438" .
 
 
 cohra2:DF18 rdfs:label "DF18" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the vibrations of the drill." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000439" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000439" .
 
 
 cohra2:DF19 rdfs:label "DF19" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Having your teeth cleaned." ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000440" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000440" .
 
 
 cohra2:DF20 rdfs:label "DF20" ;
             skos:definition "Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: All things considered, how fearful are you of having dental work done?" ;
             skos:inScheme <https://w3id.org/OHD/DFA-study/cohra2> ;
-            cohra2:pun_subclass_of "OHD:0000441" ;
-            cohra2:pun_type "owl:Class" .
+            cohra2:pun_as "rdf:type owl:Class; rdfs:subClassOf OHD:0000441" .
 
 
 ###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi
