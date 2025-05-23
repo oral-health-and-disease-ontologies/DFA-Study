@@ -88,12 +88,14 @@ def parse_annotation(annotation:Annotation, uri:Text) -> Text:
     # parse annotatons
     tag = annotation.tag.lower().strip()
     value = annotation.value.strip()
-    if tag in ["pun_type", "pun_as"]:
-        ttl_str += f"{uri} rdf:type {value} ."
+    if tag in ["pun_as"]:
+        ttl_str += f"{uri} {value} . "
+    if tag in ["pun_type"]:
+        ttl_str += f"{uri} rdf:type {value} . "
     if tag in ["pun_subclass_of", "pun_subclassof"]:
-        ttl_str += f"{uri} rdfs:subClassOf {value} ."
+        ttl_str += f"{uri} rdfs:subClassOf {value} . "
     if tag in ["pun_subproperty_of", "pun_subpropertyof"]:
-        ttl_str += f"{uri} rdfs:subPropertyOf {value} ."
+        ttl_str += f"{uri} rdfs:subPropertyOf {value} . "
 
     return ttl_str
 
