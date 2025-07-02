@@ -1,0 +1,739 @@
+id: https://w3id.org/OHD/DFA-study/ada_ohwb
+name: ada_ohwb
+title: ADA Oral Health and Well Being Study Schema
+license: https://mit-license.org/
+
+description: >-
+  LinkML schema for defining data elements used in the ADA Oral Health and Well Being study.
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  core: https://w3id.org/OHD/DFA-study/core/
+  ada_ohwb: https://w3id.org/OHD/DFA-study/ada_ohwb/
+  OHD:  http://purl.obolibrary.org/obo/OHD_
+  dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
+
+imports:
+  - linkml:types
+  - core
+default_range: string
+default_prefix: ada_ohwb
+
+classes:
+  ADA_OHWBDataset:
+    is_a: Dataset
+    description: >-
+      The ADA OHWB dataset
+    slot_usage:
+      records:
+        range: ADA_OHWBRecord
+
+  ADA_OHWBRecord:
+    is_a: Record
+    description: >-
+      A record in the ADA OHWB dataset
+    slots:
+      - RESPID
+      - Q710
+      - Q715_4
+      - Q715_5
+      - Q715_6
+      - Q715_9
+      - Q725_4
+      - Q725_5
+      - Q730
+      - Q735
+      - Q740_1
+      - Q740_2
+      - Q740_3
+      - Q740_4
+      - Q740_5
+      - Q740_6
+      - Q740_96
+      - Q740_98
+      - Q740_99
+      - Q745_1
+      - Q745_2
+      - Q745_3
+      - Q745_4
+      - Q745_5
+      - Q745_6
+      - Q745_96
+      - Q745_98
+      - Q745_99
+      - Q750
+      - Q760 
+      - Q765 
+      - Q770
+      - Q775_1
+      - Q775_2
+      - Q775_3
+      - Q775_4
+      - Q775_5
+      - Q775_6
+      - Q775_7
+      - Q775_8
+      - Q775_9
+      - Q775_96
+      - Q775_97
+      - Q368
+      - Q372
+      - MQ602
+      - MQ603
+      - MQ605
+      - MQ607
+      - Q600
+      - Q268
+      - Q280
+      - Q318
+      - Q350
+      - Q410
+      - Q462
+      - Q364
+      - Q437
+      - Q485 
+      
+
+slots:
+  RESPID: 
+    description: >-
+      The respondant's study ID.
+    range: integer
+  Q710:
+    description: >-
+      Have you ever felt that the appearance of your mouth and teeth affected your ability to interview for a job?
+    range: YesNoDK
+  Q715_4:
+    description: >-
+      Felt anxiety: How often have you experienced each of the following problems related to your mouth and teeth during the past 12 months?
+    range: Frequency
+  Q715_5:
+    description: >-
+      Felt embarrassment: How often have you experienced each of the following problems related to your mouth and teeth during the past 12 months?
+    range: Frequency
+  Q715_6:
+    description: >-
+      Avoided smiling: How often have you experienced each of the following problems related to your mouth and teeth during the past 12 months?
+    range: Frequency
+  Q715_9:
+    description: >-
+      Reduced participation in social activities: How often have you experienced each of the following problems related to your mouth and teeth during the past 12 months?
+    range: Frequency
+  Q725_4:
+    description: >-
+      I need to see the dentist twice a year: How strongly do you agree or disagree with the following statements about how you perceive the health of your mouth?
+    range: Agreement
+  Q725_5:
+    description: >-
+      It is easier to get ahead in life if I have straight bright teeth: How strongly do you agree or disagree with the following statements about how you perceive the health of your mouth?
+    range: Agreement
+  Q730:
+    description: >-
+      Do you currently have health insurance for 2015?
+    range: YesNoDK
+  Q735:
+    description: >-
+      Do you currently have dental insurance for 2015?
+    range: YesNoDK
+  Q740_1:
+    description: >-
+      Employer (mine or my spouse/partner's): How did you obtain your own individual health insurance for 2015?
+    range: NoYes
+  Q740_2:
+    description: >-
+      Through the new health insurance marketplace: How did you obtain your own individual health insurance for 2015?
+    range: NoYes
+  Q740_3:
+    description: >-
+      Directly from the insurance company, not through the marketplace: How did you obtain your own individual health insurance for 2015?
+    range: NoYes
+  Q740_4:
+    description: >-
+      Medicaid (including state versions such as Montana Medicaid or New York State of Health Medicaid): How did you obtain your own individual health insurance for 2015?
+    range: NoYes
+  Q740_5:
+    description: >-
+      Medicare: How did you obtain your own individual health insurance for 2015?
+    range: NoYes
+  Q740_6:
+    description: >-
+      Through a government program other than Medicaid/Medicare: How did you obtain your own individual health insurance for 2015?
+    range: NoYes
+  Q740_96:
+    description: >-
+      Other: How did you obtain your own individual health insurance for 2015?
+    range: NoYes
+  Q740_98:
+    description: >-
+      Don't know: How did you obtain your own individual health insurance for 2015?
+    range: NoYes
+  Q740_99:
+    description: >-
+      N/A- I do not have health insurance for 2015: How did you obtain your own individual health insurance for 2015?
+    range: NoYes
+  Q745_1:
+    description: >-
+      Employer (mine or my spouse/partner's): How did you obtain your own individual dental insurance for 2015?
+    range: NoYes
+  Q745_2:
+    description: >-
+      Through the new health insurance marketplace: How did you obtain your own individual dental insurance for 2015?
+    range: NoYes
+  Q745_3:
+    description: >-
+      Directly from the insurance company, not through the marketplace: How did you obtain your own individual dental insurance for 2015?
+    range: NoYes
+  Q745_4:
+    description: >-
+      Medicaid (including state versions such as Montana Medicaid or New York State of Health Medicaid): How did you obtain your own individual dental insurance for 2015?
+    range: NoYes
+  Q745_5:
+    description: >-
+      Medicare: How did you obtain your own individual dental insurance for 2015?
+    range: NoYes
+  Q745_6:
+    description: >-
+      Through a government program other than Medicaid/Medicare (e.g., VA, TRICARE, SSI): How did you obtain your own individual dental insurance for 2015?
+    range: NoYes
+  Q745_96:
+    description: >-
+      Other: How did you obtain your own individual dental insurance for 2015?
+    range: NoYes
+  Q745_98:
+    description: >-
+      Don't know: How did you obtain your own individual dental insurance for 2015?
+    range: NoYes
+  Q745_99:
+    description: >-
+      N/A- I do not have health insurance for 2015: How did you obtain your own individual dental insurance for 2015?
+    range: NoYes
+  Q750:
+    description: >-
+      How easy or difficult is it for you to find a dentist that accepts your dental insurance?
+    range: Difficulty
+  Q760:
+    description: >-
+      Do you have a single dentist or dental office that is your usual source of dental care?
+    range: YesNo
+  Q765:
+    description: >-
+      How long since you last had a dental visit?
+    range: TimeSinceDentalVisit
+  Q770:
+    description: >-
+      Do you plan to visit the dentist in the next 12 months?
+    range: YesNoDK
+  Q775_1:
+    description: >-
+      My mouth is healthy so I do not need to visit the dentist: Why did you not visit the dentist more frequently?
+    range: NoYes
+  Q775_2:
+    description: >-
+      I do not know where to go to receive dental services: Why did you not visit the dentist more frequently?
+    range: NoYes
+  Q775_3:
+    description: >-
+      I cannot afford to go to the dentist: Why did you not visit the dentist more frequently?
+    range: NoYes
+  Q775_4:
+    description: >-
+      It is too hard to find a dentist that accepts my dental plan or Medicaid: Why did you not visit the dentist more frequently?
+    range: NoYes
+  Q775_5:
+    description: >-
+      I cannot find the time to get to a dentist (e.g., cannot get the time off from work, dentist does not have convenient office hours): Why did you not visit the dentist more frequently?
+    range: NoYes
+  Q775_6:
+    description: >-
+      Many services are not covered by my dental plan or Medicaid, so I end up having to pay with my own money: Why did you not visit the dentist more frequently?
+    range: NoYes
+  Q775_7:
+    description: >-
+      I cannot travel to a dentist easily (e.g., do not have transportation, located too far away): Why did you not visit the dentist more frequently?
+    range: NoYes
+  Q775_8:
+    description: >-
+      I do not have any of my original teeth (i.e. I have no teeth, or I have dentures): Why did you not visit the dentist more frequently?
+    range: NoYes
+  Q775_9:
+    description: >-
+      I am afraid of going to the dentist: Why did you not visit the dentist more frequently?
+    range: NoYes
+  Q775_96:
+    description: >-
+      Other: Why did you not visit the dentist more frequently?
+    range: NoYes
+  Q775_97:
+    description: >-
+      No reason: Why did you not visit the dentist more frequently?
+    range: NoYes
+  Q368:
+    description: >-
+      Including yourself, how many people age 18 or older live in your household?
+    range: integer
+  Q372:
+    description: >-
+      How many people under the age of 18 live in your household?
+    range: integer
+  MQ602:
+    description: >-
+      Total number of people live in your household.
+    range: integer
+  MQ603:
+    description: >-
+      Income Level
+    range: IncomeLevel
+  MQ605:
+    description: >-
+      Compute Income Level1
+    range: float
+  MQ607:
+    description: >-
+      Compute Income Level2
+    range: ComputeIncomeLevel
+  Q600:
+    description: >-
+      Are you currently receiving any Medicaid benefits?
+    range: YesNoDK
+  Q268:
+    description: >-
+      Are you male/female?
+    range: MaleFemale
+  Q280:
+    description: >-
+      Respondent Age (at time of data collection)
+    range: integer
+  Q410:
+    description: >-
+      Which one of the following best describes your employment status?
+    range: EmploymentStatus
+  Q462:
+    description: >-
+      Which of the following income categories best describes your total 2014 household income before/after taxes?
+    range: IncomeCategory
+  Q318:
+    description: >-
+      In what state or territory do you currently reside?
+    range: State
+  Q350:
+    description: >-
+      How many hours per week do you typically spend on the Internet or World Wide Web?
+    range: integer
+  Q364: 
+    description: >-
+      What is your marital status?
+    range: MaritalStatus
+  Q437:
+    description: >-
+      What is the highest level of education you have completed or the highest degree you have received?
+    range: Education
+  Q485:
+    description: >-
+      Race/Ethnicity.
+    range: RaceEthnicity
+
+enums:
+  IncomeLevel:
+    description: >-
+      Enumeration for level of income
+    permissible_values:
+      1:
+        description: "7500"
+      2:
+        description: "20000"
+      3:
+        description: "30000"
+      4:
+        description: "42500"
+      5:
+        description: "62500"
+      6:
+        description: "87500"
+      7:
+        description: "112500"
+      8:
+        description: "137500"
+      9:
+        description: "175000"
+      10:
+        description: "225000"
+      11:
+        description: "250000"
+
+  ComputeIncomeLevel:
+    description: >-
+      Enumeration for computed income level
+    permissible_values:
+      1:
+        description: "Low income (>138%)"
+      2:
+        description: "Medium income (139%-400%)"
+      3:
+        description: "High (401%+)"
+
+  MaleFemale:
+    description: >-
+      Enumeration for male/female status
+    permissible_values:
+      1:
+        description: "Male"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205465
+      2:
+        description: "Female"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205464
+  
+  EmploymentStatus:
+    description: >-
+      Enumeration for employment status
+    permissible_values:
+      1:
+        description: "Employed full time"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C148254
+      2:
+        description: "Employed part-time"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C148255
+      3:
+        description: "Self-employed"
+      4:
+        description: "Not employed, but looking for work"
+      5:
+        description: "Not employed and not looking for work"
+      6:
+        description: "Retired"
+      7:
+        description: "Not employed, unable to work due to a disability or illness"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C198129
+      8:
+        description: "Student"
+      9:
+        description: "Stay-at-home spouse or partner"
+
+  Education:
+    description: >-
+      Enumeration for highest level of education completed
+    permissible_values:
+      1:
+        description: "Less than high school"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C173723
+      2:
+        description: "Completed some high school"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C198650
+      3:
+        description: "Completed high school"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67136
+      70:
+        description: "Associate Degree"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67140
+      71:
+        description: "Job-specific training program(s) after high school"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67141
+      72:
+        description: "Some college, but no degree"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67137
+      73:
+        description: "Some college, but no 4 year degree"
+      74:
+        description: "College (such as B.A., B.S.)"
+      75:
+        description: "Some graduate school, but no degree"
+      76:
+        description: "Graduate degree (such as MBA, MS, M.D., Ph.D.)"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C168226
+
+  IncomeCategory:
+    description: >-
+      Enumeration for 2014 household income category
+    permissible_values:
+      1:
+        description: "Less than $15,000"
+      2:
+        description: "$15,000 to $24,999"
+      3:
+        description: "$25,000 to $34,999"
+      4:
+        description: "$35,000 to $49,999"
+      5:
+        description: "$50,000 to $74,999"
+      6:
+        description: "$75,000 to $99,999"
+      7:
+        description: "$100,000 to $124,999"
+      8:
+        description: "$125,000 to $149,999"
+      9:
+        description: "$150,000 to $199,999"
+      10:
+        description: "$200,000 to $249,999"
+      11:
+        description: "$250,000 or more"
+
+  RaceEthnicity:
+    description: >-
+      Enumeration for respondant race/ethnicity
+    permissible_values:
+      1:
+        description: "White"
+      2:
+        description: "Black"
+      3:
+        description: "Asian or Pacific Islander"
+      4:
+        description: "Native American or Alaskan Native"
+      5:
+        description: "Mixed Race"
+      6:
+        description: "Some other race"
+      7:
+        description: "Hispanic"
+      8:
+        description: "African American"
+      94:
+        description: "Decline to Answer"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  YesNoDK:
+    description: >-
+      Enumeration for yes/no responses starting with 'yes' option, including a 'don't know' option
+    permissible_values:
+      1:
+        description: "Yes"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      2:
+        description: "No"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      3:
+        description: "Don't know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+
+  Frequency:
+    description: >-
+      Enumeration for frequency of occurrence
+    permissible_values:
+      1:
+        description: "Never"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C70543
+      2:
+        description: "Rarely"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C73116
+      3:
+        description: "Occasionally"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C151974
+      4:
+        description: "Very Often"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91245
+      8:
+        description: "Don't know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+
+  Agreement:
+    description: >-
+      Enumeration for level of agreement
+    permissible_values:
+      1:
+        description: "Strongly disagree"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104476
+      2:
+        description: "Somewhat disagree"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C153546
+      3:
+        description: "Somewhat agree"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C153547
+      4:
+        description: "Strongly agree"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104475
+      8:
+        description: "Don't know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+
+  NoYes:
+    description: >-
+      Enumeration for yes/no responses starting with 'no' option
+    permissible_values:
+      1:
+        description: "No"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      2:
+        description: "Yes"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+
+  Difficulty:
+    description: >-
+      Enumeration for difficulty level
+    permissible_values:
+      1:
+        description: "Very difficult"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C129484
+      2:
+        description: "Somewhat difficult"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C121165
+      3:
+        description: "Somewhat easy"
+      4:
+        description: "Very easy"
+
+  TimeSinceDentalVisit:
+    description: >-
+      Enumeration for time since last dental visit
+    permissible_values:
+      1:
+        description: "Less than 12 months"
+      2:
+        description: "1 to 2 years"
+      3:
+        description: "3 to 5 years"
+      4:
+        description: "More than 5 years"
+      7:
+        description: "N/A -I've never been to a dentist."
+
+  YesNo:
+    description: >-
+      Enumeration for yes/no responses starting with 'yes' option
+    permissible_values:
+      1:
+        description: "Yes"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      2:
+        description: "No"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+
+  MaritalStatus:
+    description: >-
+      Enumeration for marital status
+    permissible_values:
+      1:
+        description: "Never married"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51774
+      2:
+        description: "Married or civil union"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C150743
+      3:
+        description: "Divorced"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51776
+      4:
+        description: "Separated"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C156541
+      5:
+        description: "Widow/Widower"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51775
+      6:
+        description: "Living with a partner"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C150733
+      7:
+        description: "Unknown"
+      9:
+        description: "Decline to answer"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  State:
+    description: >-
+      Enumeration for US states/territory respondant lives in
+    permissible_values:
+      101:
+        description: "Alabama"
+      102:
+        description: "Alaska"
+      103:
+        description: "Arizona"
+      104:
+        description: "Arkansas"
+      105:
+        description: "California"
+      106:
+        description: "Colorado"
+      107:
+        description: "Connecticut"
+      108:
+        description: "Delaware"
+      109:
+        description: "District of Columbia"
+      110:
+        description: "Florida"
+      111:
+        description: "Georgia"  
+      112:
+        description: "Hawaii"
+      113:
+        description: "Idaho"
+      114:
+        description: "Illinois"
+      115:
+        description: "Indiana"
+      116:
+        description: "Iowa"
+      117:
+        description: "Kansas"
+      118:
+        description: "Kentucky"
+      119:
+        description: "Louisiana"
+      120:
+        description: "Maine"  
+      121:
+        description: "Maryland"     
+      122:
+        description: "Massachusetts"  
+      123:   
+        description: "Michigan"
+      124:
+        description: "Minnesota"
+      125:
+        description: "Mississippi"
+      126:
+        description: "Missouri"
+      127:
+        description: "Montana"
+      128:
+        description: "Nebraska"
+      129:
+        description: "Nevada"
+      130:
+        description: "New Hampshire"
+      131:
+        description: "New Jersey"
+      132:
+        description: "New Mexico"
+      133:
+        description: "New York"
+      134:
+        description: "North Carolina"
+      135:
+        description: "North Dakota"
+      136:
+        description: "Ohio"
+      137:
+        description: "Oklahoma"
+      138:  
+        description: "Oregon"
+      139:
+        description: "Pennsylvania"
+      140:  
+        description: "Rhode Island"
+      141:
+        description: "South Carolina"
+      142:
+        description: "South Dakota"
+      143:  
+        description: "Tennessee"
+      144:
+        description: "Texas"
+      145:
+        description: "Utah"
+      146:
+        description: "Vermont"
+      147:
+        description: "Virginia"
+      148:
+        description: "Washington"
+      149:
+        description: "West Virginia"
+      150:
+        description: "Wisconsin"
+      151:
+        description: "Wyoming"
+
+
+
+
+
