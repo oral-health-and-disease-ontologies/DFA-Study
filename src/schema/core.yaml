@@ -1,6 +1,6 @@
 id: https://w3id.org/OHD/DFA-study/core
 name: core
-title: COHRA2 Study Schema
+title: DFA Study Schema
 license: https://mit-license.org/
 description: >-
   Core schema defining elements that are common across DFA-study schemas.  
