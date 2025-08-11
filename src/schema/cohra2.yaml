@@ -81,7 +81,7 @@ slots:
   Timepoint:
     description: >-
       The timepoint in the study when the visit occurred.
-    range: integer
+    range: Timepoint
   TimepointDesc:
     description: >-
       Description of the timepoint.
@@ -89,7 +89,7 @@ slots:
   Site:
     description: >-
       The code for the study site where the assessment was given.
-    range: string
+    range: Site
   Pedigree_Name:
     description: >-
       The Family pedigree number assigned by genetic relationship.
@@ -101,171 +101,322 @@ slots:
   Sex:
     description: >-
       The particpant's sex
-    range: integer
+    range: SexCOHRA2
   demRace:
     description: >-
       What is your race/ethnicity?
-    range: integer
+    range: demRaceCOHRA2
   Ethnicity:
     description: >-
       Hispanic or Latino
-    range: integer
+    range: NoYesCOHRA2
   DF01:
     description: >-
       Has fear of dental work ever caused you to put off making an appointment?
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000421 # DFS 01
-    range: integer
+    range: LikertFearNH
   DF02:
     description: >-
       Has fear of dental work ever caused you to cancel or not appear for an appointment?
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000422 # DFS 02
-    range: integer
+    range: LikertFearNH
   DF03:
     description: >-
       When having dental work done, my muscles become tense.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000423 # DFS 03
-    range: integer
+    range: LikertFearNH
   DF04:
     description: >-
       When having dental work done, my breathing rate increases.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000424 # DFS 04
-    range: integer
+    range: LikertFearNH
   DF05:
     description: >-
       When having dental work done, I perspire.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000426 # DFS 05
-    range: integer
+    range: LikertFearNH
   DF06:
     description: >-
       When having dental work done, I feel nauseated and sick to my stomach.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000427 # DFS 06
-    range: integer
+    range: LikertFearNH
   DF07:
     description: >-
       When having dental work done, my heart beats faster.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000428 # DFS 07
-    range: integer
+    range: LikertFearNH
   DF08:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Making an appointment for dentistry.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000429 # DFS 08
-    range: integer
+    range: LikertFearNH
   DF09:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Approching the dentist's office.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000430 # DFS 09
-    range: integer
+    range: LikertFearNH
   DF10:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Sitting in the waiting room.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000431 # DFS 10
-    range: integer
+    range: LikertFearNH
   DF11:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Being seated in the dental chair.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000432 # DFS 11
-    range: integer
+    range: LikertFearNH
   DF12:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: The smell of the dentist's office.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000433 # DFS 12
-    range: integer
+    range: LikertFearNH
   DF13:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the dentist walk in.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000434 # DFS 13
-    range: integer
+    range: LikertFearNH
   DF14:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the anesthetic needle.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000435 # DFS 14
-    range: integer
+    range: LikertFearNH
   DF15:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the needle injected.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000436 # DFS 15
-    range: integer
+    range: LikertFearNH
   DF16:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the drill.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000437 # DFS 16
-    range: integer
+    range: LikertFearNH
   DF17:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Hearing the drill.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000438 # DFS 17
-    range: integer
+    range: LikertFearNH
   DF18:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the vibrations of the drill.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000439 # DFS 18
-    range: integer
+    range: LikertFearNH
   DF19:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Having your teeth cleaned.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000440 # DFS 19
-    range: integer
+    range: LikertFearNH
   DF20:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: All things considered, how fearful are you of having dental work done?
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000441 # DFS 20
-    range: integer
+    range: LikertFearNH
   DF21:
     description: >-
       Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Breaking your arm.
-    range: integer
+    range: LikertFear
   DF22:
     description: >-
       Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having a foot doctor remove a wart from your foot with a sharp instrument.
-    range: integer
+    range: LikertFear
   DF23:
     description: >-
       Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting a paper cut on your finger.
-    range: integer
+    range: LikertFear
   DF24:
     description: >-
       Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your mouth.
-    range: integer
+    range: LikertFear
   DF25:
     description: >-
       Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting strong soap in both your eyes while bathing or showering.
-    range: integer
+    range: LikertFear
   DF26:
     description: >-
       Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having someone slam a heavy car door on your hand.
-    range: integer
+    range: LikertFear
   DF27:
     description: >-
       Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Gulping a hot drink before it has cooled.
-    range: integer
+    range: LikertFear
   DF28:
     description: >-
       Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your hip/buttocks.
-    range: integer
+    range: LikertFear
   DF29:
     description: >-
       Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Falling down a flight of concrete stairs.
-    range: integer
+    range: LikertFear
 
+enums:
+  LikertFearNH:
+    description: >-
+      Enumeration for respondant level of fear toward some situation, including an option for didn't happen because never happened to me.
+    permissible_values:
+      1: 
+        description: "Not afraid at all"
+      2:
+        description: "A little afraid"
+      3:
+        description: "Somewhat afraid"
+      4:
+        description: "Pretty much afraid"
+      5:
+        description: "Very afraid"
+      9:
+        description: "I don't know, because this never happened to me."
+      -8888:
+        description: "Don't Know"
+      -9999:
+        description: "Missing"
+
+  LikertFear:
+    description: >-
+      Enumeration for respondant level of fear toward some situation.
+    permissible_values:
+      1: 
+        description: "Not afraid at all"
+      2:
+        description: "A little afraid"
+      3:
+        description: "Somewhat afraid"
+      4:
+        description: "Pretty much afraid"
+      5:
+        description: "Very afraid"
+      -8888:
+        description: "Don't Know"
+      -9999:
+        description: "Missing"
+
+  Timepoint:
+    description: >-
+      Enumeration for the point in time at which the participant answered the questionnaire relative to birth of child.
+    permissible_values:
+      0:
+        description: "Prenatal Phone Questionnaire"
+      1:
+        description: "Birth (Pitt)"
+      2:
+        description: "First Postnatam Phone Questionnaire (2 Months Old)"
+      3:
+        description: "1st Tooth (Pitt)"
+      4:
+        description: "Second Postnatal Phone Questionnaire (6 Months Old)"
+      5: 
+        description: "Third Postnatal Phone Questionnaire (12 Months Old)"
+      6:
+        description: "Fourth Postnatal Phone Questionnaire (18 Months Old)"
+      7:
+        description: "Fifth Postnatal Phone Questionnaire (24 Months Old)"
+      8:
+        description: "Sixth Postnatal Phone Questionnaire (30 Months Old)"
+      9:
+        description: "Seventh Postnatal Phone Questionnaire (36 Months Old)"
+      10:
+        description: "Eighth Postnatal Phone Questionnaire (3.5 Years Old)"
+      11:
+        description: "Ninth Postnatal Phone Questionnaire (4 Years Old)"
+      12:
+        description: "Tenth Postnatal Phone Questionnaire (4.5 Years Old)"
+      13:
+        description: "Eleventh Postnatal Phone Questionnaire (5 Years Old)"
+      14:
+        description: "Twelfth Postnatal Phone Questionnaire (5.5 Years Old)"
+      15:
+        description: "Thirteenth Postnatal Phone Questionnaire (6 Years Old)"
+      16:
+        description: "Fourteenth Postnatal Phone Questionnaire (6.5 Years Old)"
+      17:
+        description: "Fifteenth Postnatal Phone Questionnaire (7 Years Old)"
+      18:
+        description: "Sixteenth Postnatal Phone Questionnaire (7.5 Years Old)"
+      19:
+        description: "Seventeenth Postnatal Phone Questionnaire (8 Years Old)"
+      20:
+        description: "Eighteenth Postnatal Phone Questionnaire (8.5 Years Old)"
+      21:
+        description: "Nineteenth Postnatal Phone Questionnaire (9 Years Old)"
+      22:
+        description: "Twentieth Postnatal Phone Questionnaire (9.5 Years Old)"
+      23:
+        description: "Twenty-first Postnatal Phone Questionnaire (10 Years Old)"
+
+  Site:
+    description: >-
+      Enumeration for the study site where the assessment was given.
+    permissible_values:
+      "C2-WV":
+        description: "COHRA2 - West Virginia"
+      "C2-PA":
+        description: "COHRA2 - Pittsburgh"
+    
+  SexCOHRA2:
+    description: >-
+      Enumeration for the sex of the participant.
+    permissible_values:
+      1:
+        description: "Male"
+      2:
+        description: "Female"
+      -9999:
+        description: "Missing"
+      -8888:
+        description: "Don't Know"
+      
+  demRaceCOHRA2:
+    description: >-
+      Enumeration of participant race/ethnicity in COHRA2.
+    permissible_values:
+      1:
+        description: "White"
+      2:
+        description: "African American"
+      3:
+        description: "Hawaiian/Pacific Islander"
+      4:
+        description: "Hispanic"
+      5:
+        description: "Native American/Alaskan Native"
+      6:
+        description: "Asian"
+      7:
+        description: "More than one race"
+      999:
+        description: "Other"
+      -9999:
+        description: "Missing"
+  
+  NoYesCOHRA2:
+    description: >-
+      Enumeration for yes/no responses in COHRA2.
+    permissible_values:
+      1:
+        description: "No"
+      2:
+        description: "Yes"
+      -9999:
+        description: "Missing"
+      -5555:
+        description: "Not part of protocol for this participant/age group"
 
 

@@ -103,7 +103,7 @@ slots:
   Q710:
     description: >-
       Have you ever felt that the appearance of your mouth and teeth affected your ability to interview for a job?
-    range: YesNoDK
+    range: YesNoDK_OHWB
   Q715_4:
     description: >-
       Felt anxiety: How often have you experienced each of the following problems related to your mouth and teeth during the past 12 months?
@@ -131,83 +131,83 @@ slots:
   Q730:
     description: >-
       Do you currently have health insurance for 2015?
-    range: YesNoDK
+    range: YesNoDK_OHWB
   Q735:
     description: >-
       Do you currently have dental insurance for 2015?
-    range: YesNoDK
+    range: YesNoDK_OHWB
   Q740_1:
     description: >-
       Employer (mine or my spouse/partner's): How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_2:
     description: >-
       Through the new health insurance marketplace: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_3:
     description: >-
       Directly from the insurance company, not through the marketplace: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_4:
     description: >-
       Medicaid (including state versions such as Montana Medicaid or New York State of Health Medicaid): How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_5:
     description: >-
       Medicare: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_6:
     description: >-
       Through a government program other than Medicaid/Medicare: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_96:
     description: >-
       Other: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_98:
     description: >-
       Don't know: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_99:
     description: >-
       N/A- I do not have health insurance for 2015: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_1:
     description: >-
       Employer (mine or my spouse/partner's): How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_2:
     description: >-
       Through the new health insurance marketplace: How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_3:
     description: >-
       Directly from the insurance company, not through the marketplace: How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_4:
     description: >-
       Medicaid (including state versions such as Montana Medicaid or New York State of Health Medicaid): How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_5:
     description: >-
       Medicare: How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_6:
     description: >-
       Through a government program other than Medicaid/Medicare (e.g., VA, TRICARE, SSI): How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_96:
     description: >-
       Other: How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_98:
     description: >-
       Don't know: How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_99:
     description: >-
       N/A- I do not have health insurance for 2015: How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q750:
     description: >-
       How easy or difficult is it for you to find a dentist that accepts your dental insurance?
@@ -215,7 +215,7 @@ slots:
   Q760:
     description: >-
       Do you have a single dentist or dental office that is your usual source of dental care?
-    range: YesNo
+    range: YesNoOHWB
   Q765:
     description: >-
       How long since you last had a dental visit?
@@ -223,51 +223,51 @@ slots:
   Q770:
     description: >-
       Do you plan to visit the dentist in the next 12 months?
-    range: YesNoDK
+    range: YesNoDK_OHWB
   Q775_1:
     description: >-
       My mouth is healthy so I do not need to visit the dentist: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_2:
     description: >-
       I do not know where to go to receive dental services: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_3:
     description: >-
       I cannot afford to go to the dentist: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_4:
     description: >-
       It is too hard to find a dentist that accepts my dental plan or Medicaid: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_5:
     description: >-
       I cannot find the time to get to a dentist (e.g., cannot get the time off from work, dentist does not have convenient office hours): Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_6:
     description: >-
       Many services are not covered by my dental plan or Medicaid, so I end up having to pay with my own money: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_7:
     description: >-
       I cannot travel to a dentist easily (e.g., do not have transportation, located too far away): Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_8:
     description: >-
       I do not have any of my original teeth (i.e. I have no teeth, or I have dentures): Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_9:
     description: >-
       I am afraid of going to the dentist: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_96:
     description: >-
       Other: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_97:
     description: >-
       No reason: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q368:
     description: >-
       Including yourself, how many people age 18 or older live in your household?
@@ -295,11 +295,11 @@ slots:
   Q600:
     description: >-
       Are you currently receiving any Medicaid benefits?
-    range: YesNoDK
+    range: YesNoDK_OHWB
   Q268:
     description: >-
       Are you male/female?
-    range: MaleFemale
+    range: MaleFemaleOHWB
   Q280:
     description: >-
       Respondent Age (at time of data collection)
@@ -331,7 +331,7 @@ slots:
   Q485:
     description: >-
       Race/Ethnicity.
-    range: RaceEthnicity
+    range: RaceEthnicityOHWB
 
 enums:
   IncomeLevel:
@@ -372,9 +372,9 @@ enums:
       3:
         description: "High (401%+)"
 
-  MaleFemale:
+  MaleFemaleOHWB:
     description: >-
-      Enumeration for male/female status
+      Enumeration for male/female status in ADA_OHWB
     permissible_values:
       1:
         description: "Male"
@@ -468,9 +468,9 @@ enums:
       11:
         description: "$250,000 or more"
 
-  RaceEthnicity:
+  RaceEthnicityOHWB:
     description: >-
-      Enumeration for respondant race/ethnicity
+      Enumeration for respondant race/ethnicity in ADA_OHWB
     permissible_values:
       1:
         description: "White"
@@ -492,9 +492,9 @@ enums:
         description: "Decline to Answer"
         meaning: http://purl.obolibrary.org/obo/NCIT_C51024
 
-  YesNoDK:
+  YesNoDK_OHWB:
     description: >-
-      Enumeration for yes/no responses starting with 'yes' option, including a 'don't know' option
+      Enumeration for yes/no responses starting with 'yes' option, including a 'don't know' option, in ADA_OHWB
     permissible_values:
       1:
         description: "Yes"
@@ -546,7 +546,7 @@ enums:
         description: "Don't know"
         meaning: http://purl.obolibrary.org/obo/NCIT_C67142
 
-  NoYes:
+  NoYesOHWB:
     description: >-
       Enumeration for yes/no responses starting with 'no' option
     permissible_values:
@@ -587,7 +587,7 @@ enums:
       7:
         description: "N/A -I've never been to a dentist."
 
-  YesNo:
+  YesNoOHWB:
     description: >-
       Enumeration for yes/no responses starting with 'yes' option
     permissible_values:
