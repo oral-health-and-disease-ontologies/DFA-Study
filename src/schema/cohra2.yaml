@@ -286,8 +286,10 @@ enums:
         description: "I don't know, because this never happened to me."
       -8888:
         description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
       -9999:
         description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
 
   LikertFear:
     description: >-
@@ -305,8 +307,10 @@ enums:
         description: "Very afraid"
       -8888:
         description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
       -9999:
         description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
 
   Timepoint:
     description: >-
@@ -376,12 +380,16 @@ enums:
     permissible_values:
       1:
         description: "Male"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205465
       2:
         description: "Female"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205464
       -9999:
         description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
       -8888:
         description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
       
   demRaceCOHRA2:
     description: >-
@@ -389,22 +397,31 @@ enums:
     permissible_values:
       1:
         description: "White"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41261
       2:
         description: "African American"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C16352
       3:
         description: "Hawaiian/Pacific Islander"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41219
       4:
         description: "Hispanic"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17459
       5:
         description: "Native American/Alaskan Native"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41259
       6:
         description: "Asian"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41260
       7:
         description: "More than one race"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67109
       999:
         description: "Other"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104495
       -9999:
         description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
   
   NoYesCOHRA2:
     description: >-
@@ -412,10 +429,13 @@ enums:
     permissible_values:
       1:
         description: "No"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
       2:
         description: "Yes"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
       -9999:
         description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
       -5555:
         description: "Not part of protocol for this participant/age group"
 

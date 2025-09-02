@@ -395,6 +395,7 @@ enums:
         meaning: http://purl.obolibrary.org/obo/NCIT_C148255
       3:
         description: "Self-employed"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C116000
       4:
         description: "Not employed, but looking for work"
       5:
@@ -406,8 +407,10 @@ enums:
         meaning: http://purl.obolibrary.org/obo/NCIT_C198129
       8:
         description: "Student"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C75561
       9:
         description: "Stay-at-home spouse or partner"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C75560
 
   Education:
     description: >-
@@ -435,6 +438,7 @@ enums:
         description: "Some college, but no 4 year degree"
       74:
         description: "College (such as B.A., B.S.)"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C159746
       75:
         description: "Some graduate school, but no degree"
       76:
@@ -474,20 +478,27 @@ enums:
     permissible_values:
       1:
         description: "White"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41261
       2:
         description: "Black"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C42331
       3:
         description: "Asian or Pacific Islander"
       4:
         description: "Native American or Alaskan Native"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41259
       5:
         description: "Mixed Race"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67109
       6:
         description: "Some other race"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104495
       7:
         description: "Hispanic"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17459
       8:
         description: "African American"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C16352
       94:
         description: "Decline to Answer"
         meaning: http://purl.obolibrary.org/obo/NCIT_C51024
@@ -622,6 +633,7 @@ enums:
         meaning: http://purl.obolibrary.org/obo/NCIT_C150733
       7:
         description: "Unknown"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17998
       9:
         description: "Decline to answer"
         meaning: http://purl.obolibrary.org/obo/NCIT_C51024
@@ -632,106 +644,157 @@ enums:
     permissible_values:
       101:
         description: "Alabama"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43479
       102:
         description: "Alaska"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43506
       103:
         description: "Arizona"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43505
       104:
         description: "Arkansas"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43495
       105:
         description: "California"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43509
       106:
         description: "Colorado"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43501
       107:
         description: "Connecticut"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43466
       108:
         description: "Delaware"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43470
       109:
         description: "District of Columbia"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C108007
       110:
         description: "Florida"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43478
       111:
         description: "Georgia"  
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43477
       112:
         description: "Hawaii"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43510
       113:
         description: "Idaho"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43499
       114:
         description: "Illinois"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43491
       115:
         description: "Indiana"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43483
       116:
         description: "Iowa"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43487
       117:
         description: "Kansas"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43493
       118:
         description: "Kentucky"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43484
       119:
         description: "Louisiana"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43496
       120:
         description: "Maine"  
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43457
       121:
-        description: "Maryland"     
+        description: "Maryland"   
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43471  
       122:
         description: "Massachusetts"  
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43463
       123:   
         description: "Michigan"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43481
       124:
         description: "Minnesota"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43486
       125:
         description: "Mississippi"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43480
       126:
         description: "Missouri"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43492
       127:
         description: "Montana"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43490
       128:
         description: "Nebraska"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43494
       129:
         description: "Nevada"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43503
       130:
         description: "New Hampshire"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43460
       131:
         description: "New Jersey"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43467
       132:
         description: "New Mexico"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43504
       133:
         description: "New York"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43468
       134:
         description: "North Carolina"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43474
       135:
         description: "North Dakota"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43488
       136:
         description: "Ohio"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43482
       137:
         description: "Oklahoma"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43497
       138:  
         description: "Oregon"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43508
       139:
         description: "Pennsylvania"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43469
       140:  
         description: "Rhode Island"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43464
       141:
         description: "South Carolina"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43475
       142:
         description: "South Dakota"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43489
       143:  
         description: "Tennessee"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43476
       144:
         description: "Texas"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43498
       145:
         description: "Utah"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43502
       146:
         description: "Vermont"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43462
       147:
         description: "Virginia"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43472
       148:
         description: "Washington"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43507
       149:
         description: "West Virginia"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43473
       150:
         description: "Wisconsin"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43485
       151:
         description: "Wyoming"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43500
 
 
 
