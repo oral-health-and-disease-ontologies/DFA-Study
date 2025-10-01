@@ -1,0 +1,1124 @@
+id: https://w3id.org/OHD/DFA-study/cq_sohea
+name: cq_sohea
+title: CareQuest State of Oral Health Equity in America (SOHEA) Study Schema
+license: https://mit-license.org/
+
+description: >-
+  LinkML schema for defining data elements used in the carequest sohea study.
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  core: https://w3id.org/OHD/DFA-study/core/
+  cq_sohea: https://w3id.org/OHD/DFA-study/cq_sohea/
+  OHD:  http://purl.obolibrary.org/obo/OHD_
+  dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
+
+imports:
+  - linkml:types
+  - core
+default_range: string
+default_prefix: cq_sohea
+
+classes:
+  CQ_SOHEADataset:
+    is_a: Dataset
+    description: >-
+      The CareQuest SOHEA dataset
+    slot_usage:
+      records:
+        range: CQ_SOHEARecord
+
+  CQ_SOHEARecord:
+    is_a: Record
+    description: >-
+      A record in the CareQuest SOHEA dataset
+    slots:
+      - Q9
+      - Q9A_4
+      - Q10_1
+      - Q10_2
+      - Q10_7
+      - Q14
+      - Q24B
+      - Q24D_7
+      - Q24D_10
+      - S3_Q1
+      - S3_Q2
+      - S3_Q3DA
+      - S3_Q3DB
+      - S3_Q3DC
+      - S3_Q3DD
+      - S3_Q4A
+      - S3_Q4B
+      - S3_Q4C
+      - S3_Q4D
+      - S3_Q4E
+      - S3_Q11
+      - S3_Q12A
+      - S3_Q17
+      - LGBT
+      - S3_Q25
+      - S3_Q26
+      - S3_Q36
+      - S4_Q7A
+      - S4_Q7B
+      - S4_Q7C
+      - S4_Q7D
+      - S4_Q7E
+      - S4_Q7F
+      - S4_Q7G
+      - S4_Q7H
+      - S4_Q7I
+      - S4_Q7J
+      - S5_Q4
+      - S5_Q4A
+      - S6_Q16A1A
+      - S6_Q16A1B
+      - S6_Q16A1C
+      - S6_Q16A1D
+      - S6_Q16A1E
+      - S6_Q16A1F
+      - S6_Q16A1G
+      - S6_Q17_1
+      - S6_Q17_2
+      - S6_Q17_3
+      - S6_Q17_4
+      - S6_Q17_5
+      - S6_Q17_6
+      - S6_Q17_7
+      - S6_Q17_8
+      - S6_Q17_9
+      - S6_Q17_10
+      - S6_Q17_11
+      - S6_Q17_12
+      - S6_Q17_DK
+      - S6_Q17_SKP
+      - S6_Q17_REF
+      - S6_Q19
+      - S6_Q19A
+      - HL_Q3NEWA
+      - GENDER
+      - AGE7
+      - RACETHNICITY
+      - EDUC5
+      - MARITAL 
+      - EMPLOY 
+      - INCOME
+      - STATE
+
+slots:
+  Q9: 
+    description: >-
+      Do you plan on seeing an oral health provider in the next year for routine or preventive care?
+    range: YesNoUnsureSR
+  Q9A_4:
+    description: >-
+      [Avoid stress of an urgent dental visit] Why do you plan on seeing an oral health provider in the next year for routine or preventive care?
+    range: NoYes0
+  Q10_1:
+    description: >-
+      [Fear of COVID-19 exposure] Which of the following reasons explain why you do not plan on seeing an oral health care provider in the next year for routine or preventive care?
+    range: NoYes0
+  Q10_2:
+    description: >-
+      [Fear of the dentist or procedures] Which of the following reasons explain why you do not plan on seeing an oral health care provider in the next year for routine or preventive care?
+    range: NoYes0
+  Q10_7:
+    description: >-
+      [I don't think the dental team will respect me] Which of the following reasons explain why you do not plan on seeing an oral health care provider in the next year for routine or preventive care?
+    range: NoYes0
+  Q14:
+    description: >-
+      How often in the last year have you been self-conscious or embarrassed because of your teeth, mouth, or dentures?
+    range: FrequencyDKSR
+  Q24B:
+    description: >-
+      Regarding the [Q24A], did you visit a dentist, oral health provider, or emergency department about the symptom?
+    range: VisitSymptom
+  Q24D_7:
+    description: >-
+      [Afraid of the dentist] Why did you not visit a dentist, oral health provider, or emergency department about the symptom?
+    range: NoYes0
+  Q24D_10:
+    description: >-
+      [I was afraid of COVID-19 exposure in dental office] Why did you not visit a dentist, oral health provider, or emergency department about the symptom?
+    range: NoYes0
+  S3_Q1:
+    description: >-
+      When was your last visit to a dentist?
+    range: TimeSinceDentalVisitDKSR
+  S3_Q2:
+    description: >-
+      What is the primary reason that you haven't visited the dentist in the last two years?
+    range: HoursDaysDKSR
+  S3_Q3DA:
+    description: >-
+      [At my last oral health visit, my oral health provider believed me when I reported my oral health needs, knowledge, and behaviors] How much do you agree with the following statements about your last oral health visit?
+    range: LikertDKSR
+  S3_Q3DB:
+    description: >-
+      [At my last oral health visit, my oral health provider respected me] How much do you agree with the following statements about your last oral health visit?
+    range: LikertDKSR
+  S3_Q3DC:
+    description: >-
+      [At my last oral health visit, I trusted the oral health provider I saw] How much do you agree with the following statements about your last oral health visit?
+    range: LikertDKSR
+  S3_Q3DD:
+    description: >-
+      [At my last oral health visit, my oral health provider tried to make me feel comfortable and at ease] How much do you agree with the following statements about your last oral health visit?
+    range: LikertDKSR
+  S3_Q4A:
+    description: >-
+      [If you went to the dentist for treatment tomorrow] How would you feel in the following scenarios?
+    range: AnxietyDKSR
+  S3_Q4B:
+    description: >-
+      [If you were sitting in the waiting room (waiting for treatment)] How would you feel in the following scenarios?
+    range: AnxietyDKSR
+  S3_Q4C:
+    description: >-
+      [If you were about to have a tooth drilled] How would you feel in the following scenarios?
+    range: AnxietyDKSR
+  S3_Q4D:
+    description: >-
+      [If you were about to have your teeth scaled and polished] How would you feel in the following scenarios?
+    range: AnxietyDKSR
+  S3_Q4E:
+    description: >-
+      [If you were about to have a local anesthetic injection in your gum above an upper back tooth] How would you feel in the following scenarios?
+    range: AnxietyDKSR
+  S3_Q11:
+    description: >-
+      Have you received sedation at a dental visit in the last two years?
+    range: YesNoDKSR
+  S3_Q12A:
+    description: >-
+      Which best describes why you received sedation at your most recent procedure?
+    range: SedationReason
+  S3_Q17:
+    description: >-
+      Are the treatment decisions your oral health provider makes based more often on the best care for you or more often on what is most profitable for the provider?
+    range: TreatmentDecisionBasis
+  LGBT:
+    description: >-
+      This next question is about sexual orientation. Which of the following best represents how you think of yourself?
+    range: Sexuality
+  S3_Q25:
+    description: >-
+      When making decisions about dental care, how important is it to you that a dentist is supportive of LGBTQIA+ people?
+    range: ImportanceLikert
+  S3_Q26:
+    description: >-
+      When making decisions about dental care, how important is it to you that a dentist identifies as part of the LGBTQIA+ community?
+    range: ImportanceLikert
+  S3_Q36:
+    description: >-
+      How much do you spend on average in out-of-pocket costs for visits to your dentist, including premiums and co-pays?
+    range: AnnualCosts
+  S4_Q7A:
+    description: >-
+      [Overall health screening] Are you comfortable with your oral health provider measuring or screening for the following?
+    range: YesNoDKSR
+  S4_Q7B:
+    description: >-
+      [Height, Weight (BMI)] Are you comfortable with your oral health provider measuring or screening for the following?
+    range: YesNoDKSR
+  S4_Q7C:
+    description: >-
+      [Blood Pressure] Are you comfortable with your oral health provider measuring or screening for the following?
+    range: YesNoDKSR
+  S4_Q7D:
+    description: >-
+      [Screening for Diabetes] Are you comfortable with your oral health provider measuring or screening for the following?
+    range: YesNoDKSR
+  S4_Q7E:
+    description: >-
+      [Screening for Oral Cancer] Are you comfortable with your oral health provider measuring or screening for the following?
+    range: YesNoDKSR
+  S4_Q7F:
+    description: >-
+      [Screening for COVID-19] Are you comfortable with your oral health provider measuring or screening for the following?
+    range: YesNoDKSR
+  S4_Q7G:
+    description: >-
+      [Screening for HIV] Are you comfortable with your oral health provider measuring or screening for the following?
+    range: YesNoDKSR
+  S4_Q7H:
+    description: >-
+      [Vaccination history] Are you comfortable with your oral health provider measuring or screening for the following?
+    range: YesNoDKSR
+  S4_Q7I:
+    description: >-
+      [Tobacco cessation] Are you comfortable with your oral health provider measuring or screening for the following?
+    range: YesNoDKSR
+  S4_Q7J:
+    description: >-
+      [Addiction Risk Assessment for drugs or alcohol] Are you comfortable with your oral health provider measuring or screening for the following?
+    range: YesNoDKSR
+  S5_Q4:
+    description: >-
+      Do you currently have dental insurance?
+    range: YesNoDKSR
+  S5_Q4A:
+    description: >-
+      When was the last time you had dental insurance?
+    range: PastTime
+  S6_Q16A1A:
+    description: >-
+      [You received poorer oral health care than others] How often have any of the following things happened to you in the last year?
+    range: InverseFrequencyDKSR
+  S6_Q16A1B:
+    description: >-
+      [You felt that a dentist or oral health team member acted as if he or she thinks you are not smart] How often have any of the following things happened to you in the last year?
+    range: InverseFrequencyDKSR
+  S6_Q16A1C:
+    description: >-
+      [You felt that a dentist or oral health team member acted as if he or she is afraid of you] How often have any of the following things happened to you in the last year?
+    range: InverseFrequencyDKSR
+  S6_Q16A1D:
+    description: >-
+      [You felt that a dentist or oral health team member acted as if he or she is better than you] How often have any of the following things happened to you in the last year?
+    range: InverseFrequencyDKSR
+  S6_Q16A1E:
+    description: >-
+      [You felt like your dentist or oral health team was not listening to what you were saying] How often have any of the following things happened to you in the last year?
+    range: InverseFrequencyDKSR
+  S6_Q16A1F:
+    description: >-
+      [A dentist or oral health team member called you names or insulted you] How often have any of the following things happened to you in the last year?
+    range: InverseFrequencyDKSR
+  S6_Q16A1G:
+    description: >-
+      [You felt that a dentist or oral health team member threatened or harassed you] How often have any of the following things happened to you in the last year?
+    range: InverseFrequencyDKSR
+  S6_Q17_1:
+    description: >-
+      [Race/Ethnicity] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_2:
+    description: >-
+      [Age] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_3:
+    description: >-
+      [Gender] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_4:
+    description: >-
+      [Religion] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_5:
+    description: >-
+      [Physical appearance] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_6:
+    description: >-
+      [Sexual orientation] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_7:
+    description: >-
+      [Language] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_8:
+    description: >-
+      [A visible disability] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_9:
+    description: >-
+      [An invisible disability] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_10:
+    description: >-
+      [Other] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_11:
+    description: >-
+      [None of the above] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_12:
+    description: >-
+      [I'd rather not say] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_DK:
+    description: >-
+      [DON'T KNOW] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_SKP:
+    description: >-
+      [SKIPPED ON WEB] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q17_REF:
+    description: >-
+      [REFUSED] Have you experienced discrimination as a result of any of the following in your lifetime?
+    range: NoYes0
+  S6_Q19:
+    description: >-
+      Have you ever experienced discrimination in dental or oral health care?
+    range: YesNoIRNSDKSR
+  S6_Q19A:
+    description: >-
+      Have you been denied dental or oral health care due to discrimination?
+    range: YesNoIRNSDKSR
+  HL_Q3NEWA:
+    description: >-
+      Have you ever been diagnosed with an anxiety disorder?
+    range: YesNoDKSR
+  GENDER:
+    description: >-
+      Respondent gender
+    range: UnknownGender
+  AGE7:
+    description: >-
+      Age - 7 Categories
+    range: AgeRanges
+  RACETHNICITY:
+    description: >-
+      Combined Race/Ethnicity  
+    range: RaceEthnicity
+  EDUC5:
+    description: >-
+      5-level education
+    range: Education5
+  MARITAL:
+    description: >-
+      Marital Status
+    range: Marital5
+  EMPLOY:
+    description: >-
+      Current Employment Status
+    range: EmploymentStatus7
+  INCOME:
+    description: >-
+      Household income
+    range: HouseholdIncome18
+  STATE:
+    description: >-
+      State
+    range: DKRState
+
+enums:
+  YesNoUnsureSR:
+    description: >-
+      Enumeration for yes/no/unsure responses which also includes answering that the respondant skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: Yes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      2:
+        description: No
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      77:
+        description: Unsure
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  NoYes0:
+    description: >-
+      Enumeration for no/yes responses where the first option is 0.
+    permissible_values:
+      0: 
+        description: No
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      1:
+        description: Yes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+
+  FrequencyDKSR:
+    description: >-
+      Enumeration for frequency responses which also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: Very often
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91245
+      2:
+        description: Fairly often
+        meaning: http://purl.obolibrary.org/obo/NCIT_C95144
+      3:
+        description: Occassionally
+        meaning: http://purl.obolibrary.org/obo/NCIT_C151974
+      4:
+        description: Hardly ever
+        meaning: http://purl.obolibrary.org/obo/NCIT_C114685
+      5:
+        description: Never
+        meaning: http://purl.obolibrary.org/obo/NCIT_C176245
+      77:
+        description: Don't know
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  VisitSymptom:
+    description: >-
+      Enumeration for answering whether an individual visited a dentist, oral health provider, or emergency department about a symptom.
+    permissible_values:
+      1: 
+        description: Yes, I went to the dentist or oral health provider
+      2:
+        description: Yes, I went to the emergency department
+      3:
+        description: No, I went to neither
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      9:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  TimeSinceDentalVisitDKSR:
+    description: >-
+      Enumeration for time since last dental visit which also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: Less than 6 months ago
+      2:
+        description: Between 6 months ago and one year ago
+        meaning: http://purl.obolibrary.org/obo/NCIT_C82447
+      3:
+        description: More than a year and less than two years ago
+      4:
+        description: More than 2 and less than 5 years ago
+      5:
+        description: 5 or more years ago
+      6:
+        description: Never
+        meaning: http://purl.obolibrary.org/obo/NCIT_C176245
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+    
+  HoursDaysDKSR:
+    description: >-
+      Enumeration for periods of hours or days which also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: 1-2 hours
+      2:
+        description: 3-4 hours
+      3:
+        description: 5-8 hours
+      4:
+        description: 1 day
+      5:
+        description: 2 days
+      6:
+        description: 3 or more days
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+  
+  LikertDKSR:
+    description: >-
+      Enumeration for Likert scale responses which also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: Strongly agree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104475
+      2:
+        description: Somewhat agree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C153547
+      3:
+        description: Neither agree nor disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C103804
+      4:
+        description: Somewhat disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C153546
+      5:
+        description: Strongly disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104476
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  AnxietyDKSR:
+    description: >-
+      Enumeration for answering whether an individual would feel anxious in some scenario.
+    permissible_values:
+      1: 
+        description: Not anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C111675
+      2:
+        description: Slightly anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C120244
+      3:
+        description: Fairly anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C111676
+      4:
+        description: Very anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C120252
+      5:
+        description: Extremely anxious
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+  
+  YesNoDKSR:
+    description: >-
+      Enumeration for yes/no responses which also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: Yes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      2:
+        description: No
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  SedationReason:
+    description: >-
+      Enumeration for reasons why an individual received sedation at their most recent dental procedure.
+    permissible_values:
+      1: 
+        description: My dentist recommended it
+      2:
+        description: I requested it because I was worried the procedure would be painful or uncomfortable
+      3:
+        description: I requested it because I had anxiety about the procedure
+      4:
+        description: Other
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17649
+      77:
+        description: Unsure
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+  
+  TreatmentDecisionBasis:
+    description: >-
+      Enumeration for patients' impression of whether an their oral health provider makes treatment decisions based more often on the best care or what is most profitable.
+    permissible_values:
+      1: 
+        description: Based on the best care for you
+      2:
+        description: Based on what is most profitable for the provider
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  Sexuality:
+    description: >-
+      Enumeration for sexual orientation.
+    permissible_values:
+      1: 
+        description: Gay/Lesbian or Gay
+        meaning: http://purl.obolibrary.org/obo/GSSO_001591
+      2:
+        description: Straight, that is, not gay/not lesbian or gay
+        meaning: http://purl.obolibrary.org/obo/GSSO_001592
+      3:
+        description: Bisexual
+        meaning: http://purl.obolibrary.org/obo/GSSO_001590
+      4:
+        description: Something else
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104495
+      77:
+        description: I don't know the answer
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+  
+  ImportanceLikert:
+    description: >-
+      Enumeration for level of importance in a Likert scale format.
+    permissible_values:
+      1: 
+        description: Very important
+        meaning: http://purl.obolibrary.org/obo/NCIT_C115921
+      2:
+        description: Important
+        meaning: http://purl.obolibrary.org/obo/NCIT_C115916
+      3:
+        description: Neutral
+        meaning: http://purl.obolibrary.org/obo/NCIT_C154573
+      4:
+        description: Low importance
+        meaning: http://purl.obolibrary.org/obo/NCIT_C115925
+      5:
+        description: Not at all important
+        meaning: http://purl.obolibrary.org/obo/NCIT_C115926
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+  
+  AnnualCosts:
+    description: >-
+      Enumeration for ranges of annual costs.
+    permissible_values:
+      1: 
+        description: Less than $500 a year
+      2:
+        description: $500-$999 a year
+      3:
+        description: $1,000 to $1,999 a year
+      4:
+        description: $2,000 to $2,999 a year
+      5:
+        description: over $3,000 a year
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  PastTime:
+    description: >-
+      Enumeration for periods of time in the past.
+    permissible_values:
+      1: 
+        description: Within the last year
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205531
+      2:
+        description: 1-2 years
+      3:
+        description: 3-5 years
+      4:
+        description: 6 or more years ago
+      5:
+        description: Never
+        meaning: http://purl.obolibrary.org/obo/NCIT_C176245
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  InverseFrequencyDKSR:
+    description: >-
+      Enumeration for frequency responses which starts from 'Never' and also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: Never
+        meaning: http://purl.obolibrary.org/obo/NCIT_C176245
+      2:
+        description: Rarely
+        meaning: http://purl.obolibrary.org/obo/NCIT_C73116
+      3:
+        description: Sometimes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C90025
+      4:
+        description: Most of the time
+        meaning: http://purl.obolibrary.org/obo/NCIT_C110991
+      5:
+        description: Always
+        meaning: http://purl.obolibrary.org/obo/NCIT_C70670
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  YesNoIRNSDKSR:
+    description: >-
+      Enumeration for yes/no responses where the option of 'I'd rather not say' is included instead of 'unsure' and also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      0: 
+        description: No
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      1:
+        description: Yes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      3:
+        description: I'd rather not say
+        meaning: http://purl.obolibrary.org/obo/NCIT_C132222
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  UnknownGender:
+    description: >-
+      Enumeration for gender where the first option is 'Unknown'.
+    permissible_values:
+      0: 
+        description: Unknown
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17998
+      1:
+        description: Male
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205465
+      2:
+        description: Female
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205464
+
+  AgeRanges:
+    description: >-
+      Enumeration for age ranges.
+    permissible_values:
+      1: 
+        description: 18-24
+      2:
+        description: 25-34
+      3:
+        description: 35-44
+      4:
+        description: 45-54
+      5:
+        description: 55-64
+      6:
+        description: 65-74
+      7:
+        description: 75+
+      99:
+        description: Under 18
+
+  RaceEthnicity:
+    description: >-
+      Enumeration for combined race and ethnicity.
+    permissible_values:
+      1: 
+        description: White, non-Hispanic
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41261
+      2:
+        description: Black, non-Hispanic
+        meaning: http://purl.obolibrary.org/obo/NCIT_C42331
+      3:
+        description: Other, non-Hispanic 
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104495
+      4:
+        description: Hispanic
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17459
+      5:
+        description: 2+, non-Hispanic
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67109
+      6:
+        description: Asian, non-Hispanic
+        meaning: http://purl.obolibrary.org/obo/NCIT_C16352
+
+  Education5:
+    description: >-
+      Enumeration for 5-level education.
+    permissible_values:
+      1: 
+        description: Less than HS
+        meaning: http://purl.obolibrary.org/obo/NCIT_C173723
+      2:
+        description: HS graduate or equivalent
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67136
+      3:
+        description: Some college/ associates degree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67140
+      4:
+        description: Bachelor's degree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C70555
+      5:
+        description: Post grad study/professional degree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C168226
+
+  Marital5:
+    description: >-
+      Enumeration for marital status with 5 categories.
+    permissible_values:
+      1: 
+        description: Married
+        meaning: http://purl.obolibrary.org/obo/NCIT_C150743
+      2:
+        description: Widowed
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51775
+      3:
+        description: Divorced
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51776
+      4:
+        description: Separated
+        meaning: http://purl.obolibrary.org/obo/NCIT_C156541
+      99:
+        description: Never married
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51774
+
+  EmploymentStatus7:
+    description: >-
+      Enumeration for employment status in 7 categories.
+    permissible_values:
+      1: 
+        description: Working - as a paid employee
+        meaning: http://purl.unep.org/sdg/SDGIO_00010029
+      2:
+        description: Working - self-employed
+        meaning: http://purl.obolibrary.org/obo/NCIT_C116000
+      3:
+        description: Not working - on temporary layoff from a job
+        meaning: http://purl.obolibrary.org/obo/NCIT_C165486
+      4:
+        description: Not working - looking for work
+      5:
+        description: Not working - retired
+      6:
+        description: Not working - disabled
+      7:
+        description: Not working - other
+
+  HouseholdIncome18:
+    description: >-
+      Enumeration for household income in 18 categories.
+    permissible_values:
+      1: 
+        description: Less than $5,000
+      2:
+        description: $5,000 to less than $9,999
+      3:
+        description: $10,000 to less than $14,999
+      4:
+        description: $15,000 to less than $19,999
+      5:
+        description: $20,000 to less than $24,999
+      6:
+        description: $25,000 to less than $29,999   
+      7:
+        description: $30,000 to less than $34,999
+      8:
+        description: $35,000 to less than $39,999
+      9:
+        description: $40,000 to less than $44,999
+      10:
+        description: $45,000 to less than $49,999
+      11:
+        description: $50,000 to less than $59,999
+      12:
+        description: $60,000 to less than $74,999
+      13:
+        description: $75,000 to less than $99,999
+      14:
+        description: $100,000 to less than $124,999
+      15:
+        description: $125,000 to less than $149,999
+      16:
+        description: $150,000 to less than $174,999
+      17:
+        description: $175,000 to less than $199,999
+      18:
+        description: $200,000 or more
+
+  DKRState:
+    description: >-
+      Enumeration for US states including a code for 'DON'T KNOW' and 'REFUSED'.
+    permissible_values:
+      77: 
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+      AK: 
+        description: Alaska
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43506
+      AL: 
+        description: Alabama
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43479
+      AR:
+        description: Arkansas
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43495
+      AZ:
+        description: Arizona
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43505
+      CA:
+        description: California
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43509
+      CO:
+        description: Colorado
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43501
+      CT:
+        description: Connecticut
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43466
+      DC:
+        description: District of Columbia
+        meaning: http://purl.obolibrary.org/obo/NCIT_C108007
+      DE:
+        description: Delaware
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43470
+      FL:
+        description: Florida
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43478
+      GA:
+        description: Georgia
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43477
+      HI:
+        description: Hawaii
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43510
+      IA:
+        description: Iowa
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43487
+      ID:
+        description: Idaho
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43499
+      IL:
+        description: Illinois
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43491
+      IN:
+        description: Indiana
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43483
+      KS:
+        description: Kansas
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43493
+      KY:
+        description: Kentucky
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43484
+      LA:
+        description: Louisiana
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43496
+      MA:
+        description: Massachusetts
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43463
+      MD:
+        description: Maryland
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43471 
+      ME:
+        description: Maine
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43457
+      MI:
+        description: Michigan
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43481
+      MN:
+        description: Minnesota
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43486
+      MO:
+        description: Missouri
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43492
+      MS:
+        description: Mississippi
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43480
+      MT:
+        description: Montana
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43490
+      NC:
+        description: North Carolina
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43474
+      ND:
+        description: North Dakota
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43488
+      NE:
+        description: Nebraska
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43494
+      NH:
+        description: New Hampshire
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43460
+      NJ:
+        description: New Jersey
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43467
+      NM:
+        description: New Mexico
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43504
+      NV:
+        description: Nevada
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43503
+      NY:
+        description: New York
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43468
+      OE:
+        description: Oregon
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43508
+      OH:
+        description: Ohio
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43482
+      OK:
+        description: Oklahoma
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43497
+      OR:
+        description: Ohio
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43508
+      PA:
+        description: Pennsylvania
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43469
+      RI:
+        description: Rhode Island
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43464
+      SC:
+        description: South Carolina
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43475
+      SD:
+        description: South Dakota
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43489
+      TN:
+        description: Tennessee
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43476
+      TX:
+        description: Texas
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43498
+      UT:
+        description: Utah
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43502
+      VA:
+        description: Virginia
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43472
+      VI:
+        description: Virgin Islands
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17255
+      VT:
+        description: Vermont
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43462
+      WA:
+        description: Washington
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43507
+      WI:
+        description: Wisconsin
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43485
+      WV:
+        description: West Virginia
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43473
+      WY:
+        description: Wyoming
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43500
+
+
+  
+  
+  
+  
