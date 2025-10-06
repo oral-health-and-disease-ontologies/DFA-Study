@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://oral-health-and-disease-ontologies.github.io/DFA-Study/cohra2/COHRA2Record/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Class: COHRA2Record - DFA Study Schema</title>
+<link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../../css/brands.min.css" rel="stylesheet"/>
+<link href="../../css/solid.min.css" rel="stylesheet"/>
+<link href="../../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="../..">DFA Study Schema</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="../..">DFA Study Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../">COHRA2 Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../ada_ohwb/">ADA Oral Health and Well Being Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../cq_sohea/">CareQuest SOHEA Schema</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://github.com/oral-health-and-disease-ontologies/DFA-Study/?query=root/DFA-Study/docs/cohra2/COHRA2Record.md"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#class-cohra2record">Class: COHRA2Record</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#inheritance">Inheritance</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#slots">Slots</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#usages">Usages</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#identifier-and-mapping-information">Identifier and Mapping Information</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#mappings">Mappings</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#linkml-source">LinkML Source</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="class-cohra2record">Class: COHRA2Record</h1>
+<p><em>A record in the COHRA2 dataset</em></p>
+<p>URI: <a href="https://w3id.org/OHD/DFA-study/cohra2/COHRA2Record">cohra2:COHRA2Record</a></p>
+<div class="mermaid"> classDiagram
+    class COHRA2Record
+    click COHRA2Record href "../COHRA2Record/"
+      Record &lt;|-- COHRA2Record
+        click Record href "../Record/"
+
+      COHRA2Record : Age
+
+      COHRA2Record : demRace
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" DemRaceCOHRA2 : demRace
+        click DemRaceCOHRA2 href "../DemRaceCOHRA2/"
+
+
+
+      COHRA2Record : DF01
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF01
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF02
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF02
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF03
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF03
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF04
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF04
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF05
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF05
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF06
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF06
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF07
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF07
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF08
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF08
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF09
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF09
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF10
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF10
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF11
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF11
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF12
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF12
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF13
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF13
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF14
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF14
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF15
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF15
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF16
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF16
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF17
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF17
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF18
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF18
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF19
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF19
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF20
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFearNH : DF20
+        click LikertFearNH href "../LikertFearNH/"
+
+
+
+      COHRA2Record : DF21
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFear : DF21
+        click LikertFear href "../LikertFear/"
+
+
+
+      COHRA2Record : DF22
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFear : DF22
+        click LikertFear href "../LikertFear/"
+
+
+
+      COHRA2Record : DF23
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFear : DF23
+        click LikertFear href "../LikertFear/"
+
+
+
+      COHRA2Record : DF24
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFear : DF24
+        click LikertFear href "../LikertFear/"
+
+
+
+      COHRA2Record : DF25
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFear : DF25
+        click LikertFear href "../LikertFear/"
+
+
+
+      COHRA2Record : DF26
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFear : DF26
+        click LikertFear href "../LikertFear/"
+
+
+
+      COHRA2Record : DF27
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFear : DF27
+        click LikertFear href "../LikertFear/"
+
+
+
+      COHRA2Record : DF28
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFear : DF28
+        click LikertFear href "../LikertFear/"
+
+
+
+      COHRA2Record : DF29
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" LikertFear : DF29
+        click LikertFear href "../LikertFear/"
+
+
+
+      COHRA2Record : Ethnicity
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" NoYesCOHRA2 : Ethnicity
+        click NoYesCOHRA2 href "../NoYesCOHRA2/"
+
+
+
+      COHRA2Record : Participant_ID
+
+      COHRA2Record : Pedigree_Name
+
+      COHRA2Record : Sex
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" SexCOHRA2 : Sex
+        click SexCOHRA2 href "../SexCOHRA2/"
+
+
+
+      COHRA2Record : Site
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" Site : Site
+        click Site href "../Site/"
+
+
+
+      COHRA2Record : Timepoint
+
+
+
+
+
+        COHRA2Record --&gt; "0..1" Timepoint : Timepoint
+        click Timepoint href "../Timepoint/"
+
+
+
+      COHRA2Record : TimepointDesc
+
+
+</div>
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><a href="../Record/">Record</a><ul>
+<li><strong>COHRA2Record</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+<th>Inheritance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Participant_ID/">Participant_ID</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The participant's study ID</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Timepoint/">Timepoint</a></td>
+<td>0..1 <br/> <a href="../Timepoint/">Timepoint</a></td>
+<td>The timepoint in the study when the visit occurred</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../TimepointDesc/">TimepointDesc</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Description of the timepoint</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Site/">Site</a></td>
+<td>0..1 <br/> <a href="../Site/">Site</a></td>
+<td>The code for the study site where the assessment was given</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Pedigree_Name/">Pedigree_Name</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The Family pedigree number assigned by genetic relationship</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Age/">Age</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>The particpant's age at the time of the visit</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Sex/">Sex</a></td>
+<td>0..1 <br/> <a href="../SexCOHRA2/">SexCOHRA2</a></td>
+<td>The particpant's sex</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../demRace/">demRace</a></td>
+<td>0..1 <br/> <a href="../DemRaceCOHRA2/">DemRaceCOHRA2</a></td>
+<td>What is your race/ethnicity?</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Ethnicity/">Ethnicity</a></td>
+<td>0..1 <br/> <a href="../NoYesCOHRA2/">NoYesCOHRA2</a></td>
+<td>Hispanic or Latino</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF01/">DF01</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Has fear of dental work ever caused you to put off making an appointment?</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF02/">DF02</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Has fear of dental work ever caused you to cancel or not appear for an appoin...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF03/">DF03</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>When having dental work done, my muscles become tense</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF04/">DF04</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>When having dental work done, my breathing rate increases</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF05/">DF05</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>When having dental work done, I perspire</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF06/">DF06</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>When having dental work done, I feel nauseated and sick to my stomach</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF07/">DF07</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>When having dental work done, my heart beats faster</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF08/">DF08</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF09/">DF09</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF10/">DF10</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF11/">DF11</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF12/">DF12</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF13/">DF13</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF14/">DF14</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF15/">DF15</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF16/">DF16</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF17/">DF17</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF18/">DF18</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF19/">DF19</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF20/">DF20</a></td>
+<td>0..1 <br/> <a href="../LikertFearNH/">LikertFearNH</a></td>
+<td>Please rate how much fear, anxiety, or unpleasantness each of these dental si...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF21/">DF21</a></td>
+<td>0..1 <br/> <a href="../LikertFear/">LikertFear</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in rela...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF22/">DF22</a></td>
+<td>0..1 <br/> <a href="../LikertFear/">LikertFear</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in rela...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF23/">DF23</a></td>
+<td>0..1 <br/> <a href="../LikertFear/">LikertFear</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in rela...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF24/">DF24</a></td>
+<td>0..1 <br/> <a href="../LikertFear/">LikertFear</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in rela...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF25/">DF25</a></td>
+<td>0..1 <br/> <a href="../LikertFear/">LikertFear</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in rela...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF26/">DF26</a></td>
+<td>0..1 <br/> <a href="../LikertFear/">LikertFear</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in rela...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF27/">DF27</a></td>
+<td>0..1 <br/> <a href="../LikertFear/">LikertFear</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in rela...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF28/">DF28</a></td>
+<td>0..1 <br/> <a href="../LikertFear/">LikertFear</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in rela...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../DF29/">DF29</a></td>
+<td>0..1 <br/> <a href="../LikertFear/">LikertFear</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in rela...</td>
+<td>direct</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usages">Usages</h2>
+<table>
+<thead>
+<tr>
+<th>used by</th>
+<th>used in</th>
+<th>type</th>
+<th>used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../COHRA2Dataset/">COHRA2Dataset</a></td>
+<td><a href="../records/">records</a></td>
+<td>range</td>
+<td><a href="./">COHRA2Record</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: <a href="https://w3id.org/OHD/DFA-study/cohra2">https://w3id.org/OHD/DFA-study/cohra2</a></li>
+</ul>
+<h2 id="mappings">Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>cohra2:COHRA2Record</td>
+</tr>
+<tr>
+<td>native</td>
+<td>cohra2:COHRA2Record</td>
+</tr>
+</tbody>
+</table>
+<h2 id="linkml-source">LinkML Source</h2>
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+<h3 id="direct">Direct</h3>
+<details>
+<pre><code class="language-yaml">name: COHRA2Record
+description: A record in the COHRA2 dataset
+from_schema: https://w3id.org/OHD/DFA-study/cohra2
+is_a: Record
+slots:
+- Participant_ID
+- Timepoint
+- TimepointDesc
+- Site
+- Pedigree_Name
+- Age
+- Sex
+- demRace
+- Ethnicity
+- DF01
+- DF02
+- DF03
+- DF04
+- DF05
+- DF06
+- DF07
+- DF08
+- DF09
+- DF10
+- DF11
+- DF12
+- DF13
+- DF14
+- DF15
+- DF16
+- DF17
+- DF18
+- DF19
+- DF20
+- DF21
+- DF22
+- DF23
+- DF24
+- DF25
+- DF26
+- DF27
+- DF28
+- DF29
+
+</code></pre>
+</details>
+<h3 id="induced">Induced</h3>
+<details>
+<pre><code class="language-yaml">name: COHRA2Record
+description: A record in the COHRA2 dataset
+from_schema: https://w3id.org/OHD/DFA-study/cohra2
+is_a: Record
+attributes:
+  Participant_ID:
+    name: Participant_ID
+    description: The participant's study ID.
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: Participant_ID
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: integer
+  Timepoint:
+    name: Timepoint
+    description: The timepoint in the study when the visit occurred.
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: Timepoint
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: Timepoint
+  TimepointDesc:
+    name: TimepointDesc
+    description: Description of the timepoint.
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: TimepointDesc
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: string
+  Site:
+    name: Site
+    description: The code for the study site where the assessment was given.
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: Site
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: Site
+  Pedigree_Name:
+    name: Pedigree_Name
+    description: The Family pedigree number assigned by genetic relationship.
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: Pedigree_Name
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: integer
+  Age:
+    name: Age
+    description: The particpant's age at the time of the visit.
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: Age
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: float
+  Sex:
+    name: Sex
+    description: The particpant's sex
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: Sex
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: SexCOHRA2
+  demRace:
+    name: demRace
+    description: What is your race/ethnicity?
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: demRace
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: demRaceCOHRA2
+  Ethnicity:
+    name: Ethnicity
+    description: Hispanic or Latino
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: Ethnicity
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: NoYesCOHRA2
+  DF01:
+    name: DF01
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000421
+    description: Has fear of dental work ever caused you to put off making an appointment?
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF01
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF02:
+    name: DF02
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000422
+    description: Has fear of dental work ever caused you to cancel or not appear for
+      an appointment?
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF02
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF03:
+    name: DF03
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000423
+    description: When having dental work done, my muscles become tense.
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF03
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF04:
+    name: DF04
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000424
+    description: When having dental work done, my breathing rate increases.
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF04
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF05:
+    name: DF05
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000426
+    description: When having dental work done, I perspire.
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF05
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF06:
+    name: DF06
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000427
+    description: When having dental work done, I feel nauseated and sick to my stomach.
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF06
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF07:
+    name: DF07
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000428
+    description: When having dental work done, my heart beats faster.
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF07
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF08:
+    name: DF08
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000429
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Making an appointment for dentistry.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF08
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF09:
+    name: DF09
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000430
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Approching the dentist''s office.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF09
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF10:
+    name: DF10
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000431
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Sitting in the waiting room.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF10
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF11:
+    name: DF11
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000432
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Being seated in the dental chair.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF11
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF12:
+    name: DF12
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000433
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: The smell of the dentist''s office.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF12
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF13:
+    name: DF13
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000434
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Seeing the dentist walk in.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF13
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF14:
+    name: DF14
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000435
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Seeing the anesthetic needle.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF14
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF15:
+    name: DF15
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000436
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Feeling the needle injected.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF15
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF16:
+    name: DF16
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000437
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Seeing the drill.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF16
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF17:
+    name: DF17
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000438
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Hearing the drill.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF17
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF18:
+    name: DF18
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000439
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Feeling the vibrations of the drill.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF18
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF19:
+    name: DF19
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000440
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Having your teeth cleaned.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF19
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF20:
+    name: DF20
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000441
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: All things considered, how fearful are you of
+      having dental work done?'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF20
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFearNH
+  DF21:
+    name: DF21
+    description: 'Choose the appropriate number for each item to rate your FEAR OF
+      PAIN in relation to each event: Breaking your arm.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF21
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFear
+  DF22:
+    name: DF22
+    description: 'Choose the appropriate number for each item to rate your FEAR OF
+      PAIN in relation to each event: Having a foot doctor remove a wart from your
+      foot with a sharp instrument.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF22
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFear
+  DF23:
+    name: DF23
+    description: 'Choose the appropriate number for each item to rate your FEAR OF
+      PAIN in relation to each event: Getting a paper cut on your finger.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF23
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFear
+  DF24:
+    name: DF24
+    description: 'Choose the appropriate number for each item to rate your FEAR OF
+      PAIN in relation to each event: Receiving an injection in your mouth.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF24
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFear
+  DF25:
+    name: DF25
+    description: 'Choose the appropriate number for each item to rate your FEAR OF
+      PAIN in relation to each event: Getting strong soap in both your eyes while
+      bathing or showering.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF25
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFear
+  DF26:
+    name: DF26
+    description: 'Choose the appropriate number for each item to rate your FEAR OF
+      PAIN in relation to each event: Having someone slam a heavy car door on your
+      hand.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF26
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFear
+  DF27:
+    name: DF27
+    description: 'Choose the appropriate number for each item to rate your FEAR OF
+      PAIN in relation to each event: Gulping a hot drink before it has cooled.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF27
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFear
+  DF28:
+    name: DF28
+    description: 'Choose the appropriate number for each item to rate your FEAR OF
+      PAIN in relation to each event: Receiving an injection in your hip/buttocks.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF28
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFear
+  DF29:
+    name: DF29
+    description: 'Choose the appropriate number for each item to rate your FEAR OF
+      PAIN in relation to each event: Falling down a flight of concrete stairs.'
+    from_schema: https://w3id.org/OHD/DFA-study/cohra2
+    rank: 1000
+    alias: DF29
+    owner: COHRA2Record
+    domain_of:
+    - COHRA2Record
+    range: LikertFear
+
+</code></pre>
+</details></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../../js/base.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../javascripts/tablesort.js"></script>
+<script src="../../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

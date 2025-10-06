@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://oral-health-and-disease-ontologies.github.io/DFA-Study/cq_sohea/CQSOHEARecord/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Class: CQSOHEARecord - DFA Study Schema</title>
+<link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../../css/brands.min.css" rel="stylesheet"/>
+<link href="../../css/solid.min.css" rel="stylesheet"/>
+<link href="../../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="../..">DFA Study Schema</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="../..">DFA Study Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../cohra2/">COHRA2 Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../ada_ohwb/">ADA Oral Health and Well Being Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../">CareQuest SOHEA Schema</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://github.com/oral-health-and-disease-ontologies/DFA-Study/?query=root/DFA-Study/docs/cq_sohea/CQSOHEARecord.md"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#class-cqsohearecord">Class: CQSOHEARecord</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#inheritance">Inheritance</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#slots">Slots</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#usages">Usages</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#identifier-and-mapping-information">Identifier and Mapping Information</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#mappings">Mappings</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#linkml-source">LinkML Source</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="class-cqsohearecord">Class: CQSOHEARecord</h1>
+<p><em>A record in the CareQuest SOHEA dataset</em></p>
+<p>URI: <a href="https://w3id.org/OHD/DFA-study/cq_sohea/CQSOHEARecord">cq_sohea:CQSOHEARecord</a></p>
+<div class="mermaid"> classDiagram
+    class CQSOHEARecord
+    click CQSOHEARecord href "../CQSOHEARecord/"
+      Record &lt;|-- CQSOHEARecord
+        click Record href "../Record/"
+
+      CQSOHEARecord : AGE7
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" AgeRanges : AGE7
+        click AgeRanges href "../AgeRanges/"
+
+
+
+      CQSOHEARecord : EDUC5
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" Education5 : EDUC5
+        click Education5 href "../Education5/"
+
+
+
+      CQSOHEARecord : EMPLOY
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" EmploymentStatus7 : EMPLOY
+        click EmploymentStatus7 href "../EmploymentStatus7/"
+
+
+
+      CQSOHEARecord : GENDER
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" UnknownGender : GENDER
+        click UnknownGender href "../UnknownGender/"
+
+
+
+      CQSOHEARecord : HL_Q3NEWA
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : HL_Q3NEWA
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : INCOME
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" HouseholdIncome18 : INCOME
+        click HouseholdIncome18 href "../HouseholdIncome18/"
+
+
+
+      CQSOHEARecord : LGBT
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" Sexuality : LGBT
+        click Sexuality href "../Sexuality/"
+
+
+
+      CQSOHEARecord : MARITAL
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" Marital5 : MARITAL
+        click Marital5 href "../Marital5/"
+
+
+
+      CQSOHEARecord : Q10_1
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : Q10_1
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : Q10_2
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : Q10_2
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : Q10_7
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : Q10_7
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : Q14
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" FrequencyDKSR : Q14
+        click FrequencyDKSR href "../FrequencyDKSR/"
+
+
+
+      CQSOHEARecord : Q24B
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" VisitSymptom : Q24B
+        click VisitSymptom href "../VisitSymptom/"
+
+
+
+      CQSOHEARecord : Q24D_10
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : Q24D_10
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : Q24D_7
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : Q24D_7
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : Q9
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoUnsureSR : Q9
+        click YesNoUnsureSR href "../YesNoUnsureSR/"
+
+
+
+      CQSOHEARecord : Q9A_4
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : Q9A_4
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : RACETHNICITY
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" RaceEthnicity : RACETHNICITY
+        click RaceEthnicity href "../RaceEthnicity/"
+
+
+
+      CQSOHEARecord : S3_Q1
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" TimeSinceDentalVisitDKSR : S3_Q1
+        click TimeSinceDentalVisitDKSR href "../TimeSinceDentalVisitDKSR/"
+
+
+
+      CQSOHEARecord : S3_Q11
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : S3_Q11
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : S3_Q12A
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" SedationReason : S3_Q12A
+        click SedationReason href "../SedationReason/"
+
+
+
+      CQSOHEARecord : S3_Q17
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" TreatmentDecisionBasis : S3_Q17
+        click TreatmentDecisionBasis href "../TreatmentDecisionBasis/"
+
+
+
+      CQSOHEARecord : S3_Q2
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" HoursDaysDKSR : S3_Q2
+        click HoursDaysDKSR href "../HoursDaysDKSR/"
+
+
+
+      CQSOHEARecord : S3_Q25
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" ImportanceLikert : S3_Q25
+        click ImportanceLikert href "../ImportanceLikert/"
+
+
+
+      CQSOHEARecord : S3_Q26
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" ImportanceLikert : S3_Q26
+        click ImportanceLikert href "../ImportanceLikert/"
+
+
+
+      CQSOHEARecord : S3_Q36
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" AnnualCosts : S3_Q36
+        click AnnualCosts href "../AnnualCosts/"
+
+
+
+      CQSOHEARecord : S3_Q3DA
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" LikertDKSR : S3_Q3DA
+        click LikertDKSR href "../LikertDKSR/"
+
+
+
+      CQSOHEARecord : S3_Q3DB
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" LikertDKSR : S3_Q3DB
+        click LikertDKSR href "../LikertDKSR/"
+
+
+
+      CQSOHEARecord : S3_Q3DC
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" LikertDKSR : S3_Q3DC
+        click LikertDKSR href "../LikertDKSR/"
+
+
+
+      CQSOHEARecord : S3_Q3DD
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" LikertDKSR : S3_Q3DD
+        click LikertDKSR href "../LikertDKSR/"
+
+
+
+      CQSOHEARecord : S3_Q4A
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" AnxietyDKSR : S3_Q4A
+        click AnxietyDKSR href "../AnxietyDKSR/"
+
+
+
+      CQSOHEARecord : S3_Q4B
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" AnxietyDKSR : S3_Q4B
+        click AnxietyDKSR href "../AnxietyDKSR/"
+
+
+
+      CQSOHEARecord : S3_Q4C
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" AnxietyDKSR : S3_Q4C
+        click AnxietyDKSR href "../AnxietyDKSR/"
+
+
+
+      CQSOHEARecord : S3_Q4D
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" AnxietyDKSR : S3_Q4D
+        click AnxietyDKSR href "../AnxietyDKSR/"
+
+
+
+      CQSOHEARecord : S3_Q4E
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" AnxietyDKSR : S3_Q4E
+        click AnxietyDKSR href "../AnxietyDKSR/"
+
+
+
+      CQSOHEARecord : S4_Q7A
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : S4_Q7A
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : S4_Q7B
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : S4_Q7B
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : S4_Q7C
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : S4_Q7C
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : S4_Q7D
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : S4_Q7D
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : S4_Q7E
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : S4_Q7E
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : S4_Q7F
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : S4_Q7F
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : S4_Q7G
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : S4_Q7G
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : S4_Q7H
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : S4_Q7H
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : S4_Q7I
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : S4_Q7I
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : S4_Q7J
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : S4_Q7J
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : S5_Q4
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoDKSR : S5_Q4
+        click YesNoDKSR href "../YesNoDKSR/"
+
+
+
+      CQSOHEARecord : S5_Q4A
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" PastTime : S5_Q4A
+        click PastTime href "../PastTime/"
+
+
+
+      CQSOHEARecord : S6_Q16A1A
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" InverseFrequencyDKSR : S6_Q16A1A
+        click InverseFrequencyDKSR href "../InverseFrequencyDKSR/"
+
+
+
+      CQSOHEARecord : S6_Q16A1B
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" InverseFrequencyDKSR : S6_Q16A1B
+        click InverseFrequencyDKSR href "../InverseFrequencyDKSR/"
+
+
+
+      CQSOHEARecord : S6_Q16A1C
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" InverseFrequencyDKSR : S6_Q16A1C
+        click InverseFrequencyDKSR href "../InverseFrequencyDKSR/"
+
+
+
+      CQSOHEARecord : S6_Q16A1D
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" InverseFrequencyDKSR : S6_Q16A1D
+        click InverseFrequencyDKSR href "../InverseFrequencyDKSR/"
+
+
+
+      CQSOHEARecord : S6_Q16A1E
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" InverseFrequencyDKSR : S6_Q16A1E
+        click InverseFrequencyDKSR href "../InverseFrequencyDKSR/"
+
+
+
+      CQSOHEARecord : S6_Q16A1F
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" InverseFrequencyDKSR : S6_Q16A1F
+        click InverseFrequencyDKSR href "../InverseFrequencyDKSR/"
+
+
+
+      CQSOHEARecord : S6_Q16A1G
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" InverseFrequencyDKSR : S6_Q16A1G
+        click InverseFrequencyDKSR href "../InverseFrequencyDKSR/"
+
+
+
+      CQSOHEARecord : S6_Q17_1
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_1
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_10
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_10
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_11
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_11
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_12
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_12
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_2
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_2
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_3
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_3
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_4
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_4
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_5
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_5
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_6
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_6
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_7
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_7
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_8
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_8
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_9
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_9
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_DK
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_DK
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_REF
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_REF
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q17_SKP
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" NoYes0 : S6_Q17_SKP
+        click NoYes0 href "../NoYes0/"
+
+
+
+      CQSOHEARecord : S6_Q19
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoIRNSDKSR : S6_Q19
+        click YesNoIRNSDKSR href "../YesNoIRNSDKSR/"
+
+
+
+      CQSOHEARecord : S6_Q19A
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" YesNoIRNSDKSR : S6_Q19A
+        click YesNoIRNSDKSR href "../YesNoIRNSDKSR/"
+
+
+
+      CQSOHEARecord : STATE
+
+
+
+
+
+        CQSOHEARecord --&gt; "0..1" DKRState : STATE
+        click DKRState href "../DKRState/"
+
+
+
+
+</div>
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><a href="../Record/">Record</a><ul>
+<li><strong>CQSOHEARecord</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+<th>Inheritance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Q9/">Q9</a></td>
+<td>0..1 <br/> <a href="../YesNoUnsureSR/">YesNoUnsureSR</a></td>
+<td>Do you plan on seeing an oral health provider in the next year for routine or...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Q9A_4/">Q9A_4</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[Avoid stress of an urgent dental visit] Why do you plan on seeing an oral he...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Q10_1/">Q10_1</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[Fear of COVID-19 exposure] Which of the following reasons explain why you do...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Q10_2/">Q10_2</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[Fear of the dentist or procedures] Which of the following reasons explain wh...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Q10_7/">Q10_7</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[I don't think the dental team will respect me] Which of the following reason...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Q14/">Q14</a></td>
+<td>0..1 <br/> <a href="../FrequencyDKSR/">FrequencyDKSR</a></td>
+<td>How often in the last year have you been self-conscious or embarrassed becaus...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Q24B/">Q24B</a></td>
+<td>0..1 <br/> <a href="../VisitSymptom/">VisitSymptom</a></td>
+<td>Regarding the [Q24A], did you visit a dentist, oral health provider, or emerg...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Q24D_7/">Q24D_7</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[Afraid of the dentist] Why did you not visit a dentist, oral health provider...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../Q24D_10/">Q24D_10</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[I was afraid of COVID-19 exposure in dental office] Why did you not visit a ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q1/">S3_Q1</a></td>
+<td>0..1 <br/> <a href="../TimeSinceDentalVisitDKSR/">TimeSinceDentalVisitDKSR</a></td>
+<td>When was your last visit to a dentist?</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q2/">S3_Q2</a></td>
+<td>0..1 <br/> <a href="../HoursDaysDKSR/">HoursDaysDKSR</a></td>
+<td>What is the primary reason that you haven't visited the dentist in the last t...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q3DA/">S3_Q3DA</a></td>
+<td>0..1 <br/> <a href="../LikertDKSR/">LikertDKSR</a></td>
+<td>[At my last oral health visit, my oral health provider believed me when I rep...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q3DB/">S3_Q3DB</a></td>
+<td>0..1 <br/> <a href="../LikertDKSR/">LikertDKSR</a></td>
+<td>[At my last oral health visit, my oral health provider respected me] How much...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q3DC/">S3_Q3DC</a></td>
+<td>0..1 <br/> <a href="../LikertDKSR/">LikertDKSR</a></td>
+<td>[At my last oral health visit, I trusted the oral health provider I saw] How ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q3DD/">S3_Q3DD</a></td>
+<td>0..1 <br/> <a href="../LikertDKSR/">LikertDKSR</a></td>
+<td>[At my last oral health visit, my oral health provider tried to make me feel ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q4A/">S3_Q4A</a></td>
+<td>0..1 <br/> <a href="../AnxietyDKSR/">AnxietyDKSR</a></td>
+<td>[If you went to the dentist for treatment tomorrow] How would you feel in the...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q4B/">S3_Q4B</a></td>
+<td>0..1 <br/> <a href="../AnxietyDKSR/">AnxietyDKSR</a></td>
+<td>[If you were sitting in the waiting room (waiting for treatment)] How would y...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q4C/">S3_Q4C</a></td>
+<td>0..1 <br/> <a href="../AnxietyDKSR/">AnxietyDKSR</a></td>
+<td>[If you were about to have a tooth drilled] How would you feel in the followi...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q4D/">S3_Q4D</a></td>
+<td>0..1 <br/> <a href="../AnxietyDKSR/">AnxietyDKSR</a></td>
+<td>[If you were about to have your teeth scaled and polished] How would you feel...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q4E/">S3_Q4E</a></td>
+<td>0..1 <br/> <a href="../AnxietyDKSR/">AnxietyDKSR</a></td>
+<td>[If you were about to have a local anesthetic injection in your gum above an ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q11/">S3_Q11</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>Have you received sedation at a dental visit in the last two years?</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q12A/">S3_Q12A</a></td>
+<td>0..1 <br/> <a href="../SedationReason/">SedationReason</a></td>
+<td>Which best describes why you received sedation at your most recent procedure?</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q17/">S3_Q17</a></td>
+<td>0..1 <br/> <a href="../TreatmentDecisionBasis/">TreatmentDecisionBasis</a></td>
+<td>Are the treatment decisions your oral health provider makes based more often ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../LGBT/">LGBT</a></td>
+<td>0..1 <br/> <a href="../Sexuality/">Sexuality</a></td>
+<td>This next question is about sexual orientation</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q25/">S3_Q25</a></td>
+<td>0..1 <br/> <a href="../ImportanceLikert/">ImportanceLikert</a></td>
+<td>When making decisions about dental care, how important is it to you that a de...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q26/">S3_Q26</a></td>
+<td>0..1 <br/> <a href="../ImportanceLikert/">ImportanceLikert</a></td>
+<td>When making decisions about dental care, how important is it to you that a de...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S3_Q36/">S3_Q36</a></td>
+<td>0..1 <br/> <a href="../AnnualCosts/">AnnualCosts</a></td>
+<td>How much do you spend on average in out-of-pocket costs for visits to your de...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S4_Q7A/">S4_Q7A</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>[Overall health screening] Are you comfortable with your oral health provider...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S4_Q7B/">S4_Q7B</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>[Height, Weight (BMI)] Are you comfortable with your oral health provider mea...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S4_Q7C/">S4_Q7C</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>[Blood Pressure] Are you comfortable with your oral health provider measuring...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S4_Q7D/">S4_Q7D</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>[Screening for Diabetes] Are you comfortable with your oral health provider m...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S4_Q7E/">S4_Q7E</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>[Screening for Oral Cancer] Are you comfortable with your oral health provide...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S4_Q7F/">S4_Q7F</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>[Screening for COVID-19] Are you comfortable with your oral health provider m...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S4_Q7G/">S4_Q7G</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>[Screening for HIV] Are you comfortable with your oral health provider measur...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S4_Q7H/">S4_Q7H</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>[Vaccination history] Are you comfortable with your oral health provider meas...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S4_Q7I/">S4_Q7I</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>[Tobacco cessation] Are you comfortable with your oral health provider measur...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S4_Q7J/">S4_Q7J</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>[Addiction Risk Assessment for drugs or alcohol] Are you comfortable with you...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S5_Q4/">S5_Q4</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>Do you currently have dental insurance?</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S5_Q4A/">S5_Q4A</a></td>
+<td>0..1 <br/> <a href="../PastTime/">PastTime</a></td>
+<td>When was the last time you had dental insurance?</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q16A1A/">S6_Q16A1A</a></td>
+<td>0..1 <br/> <a href="../InverseFrequencyDKSR/">InverseFrequencyDKSR</a></td>
+<td>[You received poorer oral health care than others] How often have any of the ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q16A1B/">S6_Q16A1B</a></td>
+<td>0..1 <br/> <a href="../InverseFrequencyDKSR/">InverseFrequencyDKSR</a></td>
+<td>[You felt that a dentist or oral health team member acted as if he or she thi...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q16A1C/">S6_Q16A1C</a></td>
+<td>0..1 <br/> <a href="../InverseFrequencyDKSR/">InverseFrequencyDKSR</a></td>
+<td>[You felt that a dentist or oral health team member acted as if he or she is ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q16A1D/">S6_Q16A1D</a></td>
+<td>0..1 <br/> <a href="../InverseFrequencyDKSR/">InverseFrequencyDKSR</a></td>
+<td>[You felt that a dentist or oral health team member acted as if he or she is ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q16A1E/">S6_Q16A1E</a></td>
+<td>0..1 <br/> <a href="../InverseFrequencyDKSR/">InverseFrequencyDKSR</a></td>
+<td>[You felt like your dentist or oral health team was not listening to what you...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q16A1F/">S6_Q16A1F</a></td>
+<td>0..1 <br/> <a href="../InverseFrequencyDKSR/">InverseFrequencyDKSR</a></td>
+<td>[A dentist or oral health team member called you names or insulted you] How o...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q16A1G/">S6_Q16A1G</a></td>
+<td>0..1 <br/> <a href="../InverseFrequencyDKSR/">InverseFrequencyDKSR</a></td>
+<td>[You felt that a dentist or oral health team member threatened or harassed yo...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_1/">S6_Q17_1</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[Race/Ethnicity] Have you experienced discrimination as a result of any of th...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_2/">S6_Q17_2</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[Age] Have you experienced discrimination as a result of any of the following...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_3/">S6_Q17_3</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[Gender] Have you experienced discrimination as a result of any of the follow...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_4/">S6_Q17_4</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[Religion] Have you experienced discrimination as a result of any of the foll...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_5/">S6_Q17_5</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[Physical appearance] Have you experienced discrimination as a result of any ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_6/">S6_Q17_6</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[Sexual orientation] Have you experienced discrimination as a result of any o...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_7/">S6_Q17_7</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[Language] Have you experienced discrimination as a result of any of the foll...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_8/">S6_Q17_8</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[A visible disability] Have you experienced discrimination as a result of any...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_9/">S6_Q17_9</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[An invisible disability] Have you experienced discrimination as a result of ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_10/">S6_Q17_10</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[Other] Have you experienced discrimination as a result of any of the followi...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_11/">S6_Q17_11</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[None of the above] Have you experienced discrimination as a result of any of...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_12/">S6_Q17_12</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[I'd rather not say] Have you experienced discrimination as a result of any o...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_DK/">S6_Q17_DK</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[DON'T KNOW] Have you experienced discrimination as a result of any of the fo...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_SKP/">S6_Q17_SKP</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[SKIPPED ON WEB] Have you experienced discrimination as a result of any of th...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q17_REF/">S6_Q17_REF</a></td>
+<td>0..1 <br/> <a href="../NoYes0/">NoYes0</a></td>
+<td>[REFUSED] Have you experienced discrimination as a result of any of the follo...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q19/">S6_Q19</a></td>
+<td>0..1 <br/> <a href="../YesNoIRNSDKSR/">YesNoIRNSDKSR</a></td>
+<td>Have you ever experienced discrimination in dental or oral health care?</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../S6_Q19A/">S6_Q19A</a></td>
+<td>0..1 <br/> <a href="../YesNoIRNSDKSR/">YesNoIRNSDKSR</a></td>
+<td>Have you been denied dental or oral health care due to discrimination?</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../HL_Q3NEWA/">HL_Q3NEWA</a></td>
+<td>0..1 <br/> <a href="../YesNoDKSR/">YesNoDKSR</a></td>
+<td>Have you ever been diagnosed with an anxiety disorder?</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../GENDER/">GENDER</a></td>
+<td>0..1 <br/> <a href="../UnknownGender/">UnknownGender</a></td>
+<td>Respondent gender</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../AGE7/">AGE7</a></td>
+<td>0..1 <br/> <a href="../AgeRanges/">AgeRanges</a></td>
+<td>Age - 7 Categories</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../RACETHNICITY/">RACETHNICITY</a></td>
+<td>0..1 <br/> <a href="../RaceEthnicity/">RaceEthnicity</a></td>
+<td>Combined Race/Ethnicity</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../EDUC5/">EDUC5</a></td>
+<td>0..1 <br/> <a href="../Education5/">Education5</a></td>
+<td>5-level education</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../MARITAL/">MARITAL</a></td>
+<td>0..1 <br/> <a href="../Marital5/">Marital5</a></td>
+<td>Marital Status</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../EMPLOY/">EMPLOY</a></td>
+<td>0..1 <br/> <a href="../EmploymentStatus7/">EmploymentStatus7</a></td>
+<td>Current Employment Status</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../INCOME/">INCOME</a></td>
+<td>0..1 <br/> <a href="../HouseholdIncome18/">HouseholdIncome18</a></td>
+<td>Household income</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../STATE/">STATE</a></td>
+<td>0..1 <br/> <a href="../DKRState/">DKRState</a></td>
+<td>State</td>
+<td>direct</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usages">Usages</h2>
+<table>
+<thead>
+<tr>
+<th>used by</th>
+<th>used in</th>
+<th>type</th>
+<th>used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../CQSOHEADataset/">CQSOHEADataset</a></td>
+<td><a href="../records/">records</a></td>
+<td>range</td>
+<td><a href="./">CQSOHEARecord</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: <a href="https://w3id.org/OHD/DFA-study/cq_sohea">https://w3id.org/OHD/DFA-study/cq_sohea</a></li>
+</ul>
+<h2 id="mappings">Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>cq_sohea:CQSOHEARecord</td>
+</tr>
+<tr>
+<td>native</td>
+<td>cq_sohea:CQSOHEARecord</td>
+</tr>
+</tbody>
+</table>
+<h2 id="linkml-source">LinkML Source</h2>
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+<h3 id="direct">Direct</h3>
+<details>
+<pre><code class="language-yaml">name: CQ_SOHEARecord
+description: A record in the CareQuest SOHEA dataset
+from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+is_a: Record
+slots:
+- Q9
+- Q9A_4
+- Q10_1
+- Q10_2
+- Q10_7
+- Q14
+- Q24B
+- Q24D_7
+- Q24D_10
+- S3_Q1
+- S3_Q2
+- S3_Q3DA
+- S3_Q3DB
+- S3_Q3DC
+- S3_Q3DD
+- S3_Q4A
+- S3_Q4B
+- S3_Q4C
+- S3_Q4D
+- S3_Q4E
+- S3_Q11
+- S3_Q12A
+- S3_Q17
+- LGBT
+- S3_Q25
+- S3_Q26
+- S3_Q36
+- S4_Q7A
+- S4_Q7B
+- S4_Q7C
+- S4_Q7D
+- S4_Q7E
+- S4_Q7F
+- S4_Q7G
+- S4_Q7H
+- S4_Q7I
+- S4_Q7J
+- S5_Q4
+- S5_Q4A
+- S6_Q16A1A
+- S6_Q16A1B
+- S6_Q16A1C
+- S6_Q16A1D
+- S6_Q16A1E
+- S6_Q16A1F
+- S6_Q16A1G
+- S6_Q17_1
+- S6_Q17_2
+- S6_Q17_3
+- S6_Q17_4
+- S6_Q17_5
+- S6_Q17_6
+- S6_Q17_7
+- S6_Q17_8
+- S6_Q17_9
+- S6_Q17_10
+- S6_Q17_11
+- S6_Q17_12
+- S6_Q17_DK
+- S6_Q17_SKP
+- S6_Q17_REF
+- S6_Q19
+- S6_Q19A
+- HL_Q3NEWA
+- GENDER
+- AGE7
+- RACETHNICITY
+- EDUC5
+- MARITAL
+- EMPLOY
+- INCOME
+- STATE
+
+</code></pre>
+</details>
+<h3 id="induced">Induced</h3>
+<details>
+<pre><code class="language-yaml">name: CQ_SOHEARecord
+description: A record in the CareQuest SOHEA dataset
+from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+is_a: Record
+attributes:
+  Q9:
+    name: Q9
+    description: Do you plan on seeing an oral health provider in the next year for
+      routine or preventive care?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: Q9
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoUnsureSR
+  Q9A_4:
+    name: Q9A_4
+    description: '[Avoid stress of an urgent dental visit] Why do you plan on seeing
+      an oral health provider in the next year for routine or preventive care?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: Q9A_4
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  Q10_1:
+    name: Q10_1
+    description: '[Fear of COVID-19 exposure] Which of the following reasons explain
+      why you do not plan on seeing an oral health care provider in the next year
+      for routine or preventive care?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: Q10_1
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  Q10_2:
+    name: Q10_2
+    description: '[Fear of the dentist or procedures] Which of the following reasons
+      explain why you do not plan on seeing an oral health care provider in the next
+      year for routine or preventive care?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: Q10_2
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  Q10_7:
+    name: Q10_7
+    description: '[I don''t think the dental team will respect me] Which of the following
+      reasons explain why you do not plan on seeing an oral health care provider in
+      the next year for routine or preventive care?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: Q10_7
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  Q14:
+    name: Q14
+    description: How often in the last year have you been self-conscious or embarrassed
+      because of your teeth, mouth, or dentures?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: Q14
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: FrequencyDKSR
+  Q24B:
+    name: Q24B
+    description: Regarding the [Q24A], did you visit a dentist, oral health provider,
+      or emergency department about the symptom?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: Q24B
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: VisitSymptom
+  Q24D_7:
+    name: Q24D_7
+    description: '[Afraid of the dentist] Why did you not visit a dentist, oral health
+      provider, or emergency department about the symptom?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: Q24D_7
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  Q24D_10:
+    name: Q24D_10
+    description: '[I was afraid of COVID-19 exposure in dental office] Why did you
+      not visit a dentist, oral health provider, or emergency department about the
+      symptom?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: Q24D_10
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S3_Q1:
+    name: S3_Q1
+    description: When was your last visit to a dentist?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q1
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: TimeSinceDentalVisitDKSR
+  S3_Q2:
+    name: S3_Q2
+    description: What is the primary reason that you haven't visited the dentist in
+      the last two years?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q2
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: HoursDaysDKSR
+  S3_Q3DA:
+    name: S3_Q3DA
+    description: '[At my last oral health visit, my oral health provider believed
+      me when I reported my oral health needs, knowledge, and behaviors] How much
+      do you agree with the following statements about your last oral health visit?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q3DA
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: LikertDKSR
+  S3_Q3DB:
+    name: S3_Q3DB
+    description: '[At my last oral health visit, my oral health provider respected
+      me] How much do you agree with the following statements about your last oral
+      health visit?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q3DB
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: LikertDKSR
+  S3_Q3DC:
+    name: S3_Q3DC
+    description: '[At my last oral health visit, I trusted the oral health provider
+      I saw] How much do you agree with the following statements about your last oral
+      health visit?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q3DC
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: LikertDKSR
+  S3_Q3DD:
+    name: S3_Q3DD
+    description: '[At my last oral health visit, my oral health provider tried to
+      make me feel comfortable and at ease] How much do you agree with the following
+      statements about your last oral health visit?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q3DD
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: LikertDKSR
+  S3_Q4A:
+    name: S3_Q4A
+    description: '[If you went to the dentist for treatment tomorrow] How would you
+      feel in the following scenarios?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q4A
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: AnxietyDKSR
+  S3_Q4B:
+    name: S3_Q4B
+    description: '[If you were sitting in the waiting room (waiting for treatment)]
+      How would you feel in the following scenarios?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q4B
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: AnxietyDKSR
+  S3_Q4C:
+    name: S3_Q4C
+    description: '[If you were about to have a tooth drilled] How would you feel in
+      the following scenarios?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q4C
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: AnxietyDKSR
+  S3_Q4D:
+    name: S3_Q4D
+    description: '[If you were about to have your teeth scaled and polished] How would
+      you feel in the following scenarios?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q4D
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: AnxietyDKSR
+  S3_Q4E:
+    name: S3_Q4E
+    description: '[If you were about to have a local anesthetic injection in your
+      gum above an upper back tooth] How would you feel in the following scenarios?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q4E
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: AnxietyDKSR
+  S3_Q11:
+    name: S3_Q11
+    description: Have you received sedation at a dental visit in the last two years?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q11
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  S3_Q12A:
+    name: S3_Q12A
+    description: Which best describes why you received sedation at your most recent
+      procedure?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q12A
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: SedationReason
+  S3_Q17:
+    name: S3_Q17
+    description: Are the treatment decisions your oral health provider makes based
+      more often on the best care for you or more often on what is most profitable
+      for the provider?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q17
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: TreatmentDecisionBasis
+  LGBT:
+    name: LGBT
+    description: This next question is about sexual orientation. Which of the following
+      best represents how you think of yourself?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: LGBT
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: Sexuality
+  S3_Q25:
+    name: S3_Q25
+    description: When making decisions about dental care, how important is it to you
+      that a dentist is supportive of LGBTQIA+ people?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q25
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: ImportanceLikert
+  S3_Q26:
+    name: S3_Q26
+    description: When making decisions about dental care, how important is it to you
+      that a dentist identifies as part of the LGBTQIA+ community?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q26
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: ImportanceLikert
+  S3_Q36:
+    name: S3_Q36
+    description: How much do you spend on average in out-of-pocket costs for visits
+      to your dentist, including premiums and co-pays?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S3_Q36
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: AnnualCosts
+  S4_Q7A:
+    name: S4_Q7A
+    description: '[Overall health screening] Are you comfortable with your oral health
+      provider measuring or screening for the following?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S4_Q7A
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  S4_Q7B:
+    name: S4_Q7B
+    description: '[Height, Weight (BMI)] Are you comfortable with your oral health
+      provider measuring or screening for the following?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S4_Q7B
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  S4_Q7C:
+    name: S4_Q7C
+    description: '[Blood Pressure] Are you comfortable with your oral health provider
+      measuring or screening for the following?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S4_Q7C
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  S4_Q7D:
+    name: S4_Q7D
+    description: '[Screening for Diabetes] Are you comfortable with your oral health
+      provider measuring or screening for the following?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S4_Q7D
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  S4_Q7E:
+    name: S4_Q7E
+    description: '[Screening for Oral Cancer] Are you comfortable with your oral health
+      provider measuring or screening for the following?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S4_Q7E
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  S4_Q7F:
+    name: S4_Q7F
+    description: '[Screening for COVID-19] Are you comfortable with your oral health
+      provider measuring or screening for the following?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S4_Q7F
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  S4_Q7G:
+    name: S4_Q7G
+    description: '[Screening for HIV] Are you comfortable with your oral health provider
+      measuring or screening for the following?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S4_Q7G
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  S4_Q7H:
+    name: S4_Q7H
+    description: '[Vaccination history] Are you comfortable with your oral health
+      provider measuring or screening for the following?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S4_Q7H
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  S4_Q7I:
+    name: S4_Q7I
+    description: '[Tobacco cessation] Are you comfortable with your oral health provider
+      measuring or screening for the following?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S4_Q7I
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  S4_Q7J:
+    name: S4_Q7J
+    description: '[Addiction Risk Assessment for drugs or alcohol] Are you comfortable
+      with your oral health provider measuring or screening for the following?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S4_Q7J
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  S5_Q4:
+    name: S5_Q4
+    description: Do you currently have dental insurance?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S5_Q4
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  S5_Q4A:
+    name: S5_Q4A
+    description: When was the last time you had dental insurance?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S5_Q4A
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: PastTime
+  S6_Q16A1A:
+    name: S6_Q16A1A
+    description: '[You received poorer oral health care than others] How often have
+      any of the following things happened to you in the last year?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q16A1A
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: InverseFrequencyDKSR
+  S6_Q16A1B:
+    name: S6_Q16A1B
+    description: '[You felt that a dentist or oral health team member acted as if
+      he or she thinks you are not smart] How often have any of the following things
+      happened to you in the last year?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q16A1B
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: InverseFrequencyDKSR
+  S6_Q16A1C:
+    name: S6_Q16A1C
+    description: '[You felt that a dentist or oral health team member acted as if
+      he or she is afraid of you] How often have any of the following things happened
+      to you in the last year?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q16A1C
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: InverseFrequencyDKSR
+  S6_Q16A1D:
+    name: S6_Q16A1D
+    description: '[You felt that a dentist or oral health team member acted as if
+      he or she is better than you] How often have any of the following things happened
+      to you in the last year?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q16A1D
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: InverseFrequencyDKSR
+  S6_Q16A1E:
+    name: S6_Q16A1E
+    description: '[You felt like your dentist or oral health team was not listening
+      to what you were saying] How often have any of the following things happened
+      to you in the last year?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q16A1E
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: InverseFrequencyDKSR
+  S6_Q16A1F:
+    name: S6_Q16A1F
+    description: '[A dentist or oral health team member called you names or insulted
+      you] How often have any of the following things happened to you in the last
+      year?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q16A1F
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: InverseFrequencyDKSR
+  S6_Q16A1G:
+    name: S6_Q16A1G
+    description: '[You felt that a dentist or oral health team member threatened or
+      harassed you] How often have any of the following things happened to you in
+      the last year?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q16A1G
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: InverseFrequencyDKSR
+  S6_Q17_1:
+    name: S6_Q17_1
+    description: '[Race/Ethnicity] Have you experienced discrimination as a result
+      of any of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_1
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_2:
+    name: S6_Q17_2
+    description: '[Age] Have you experienced discrimination as a result of any of
+      the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_2
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_3:
+    name: S6_Q17_3
+    description: '[Gender] Have you experienced discrimination as a result of any
+      of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_3
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_4:
+    name: S6_Q17_4
+    description: '[Religion] Have you experienced discrimination as a result of any
+      of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_4
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_5:
+    name: S6_Q17_5
+    description: '[Physical appearance] Have you experienced discrimination as a result
+      of any of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_5
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_6:
+    name: S6_Q17_6
+    description: '[Sexual orientation] Have you experienced discrimination as a result
+      of any of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_6
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_7:
+    name: S6_Q17_7
+    description: '[Language] Have you experienced discrimination as a result of any
+      of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_7
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_8:
+    name: S6_Q17_8
+    description: '[A visible disability] Have you experienced discrimination as a
+      result of any of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_8
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_9:
+    name: S6_Q17_9
+    description: '[An invisible disability] Have you experienced discrimination as
+      a result of any of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_9
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_10:
+    name: S6_Q17_10
+    description: '[Other] Have you experienced discrimination as a result of any of
+      the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_10
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_11:
+    name: S6_Q17_11
+    description: '[None of the above] Have you experienced discrimination as a result
+      of any of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_11
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_12:
+    name: S6_Q17_12
+    description: '[I''d rather not say] Have you experienced discrimination as a result
+      of any of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_12
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_DK:
+    name: S6_Q17_DK
+    description: '[DON''T KNOW] Have you experienced discrimination as a result of
+      any of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_DK
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_SKP:
+    name: S6_Q17_SKP
+    description: '[SKIPPED ON WEB] Have you experienced discrimination as a result
+      of any of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_SKP
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q17_REF:
+    name: S6_Q17_REF
+    description: '[REFUSED] Have you experienced discrimination as a result of any
+      of the following in your lifetime?'
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q17_REF
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: NoYes0
+  S6_Q19:
+    name: S6_Q19
+    description: Have you ever experienced discrimination in dental or oral health
+      care?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q19
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoIRNSDKSR
+  S6_Q19A:
+    name: S6_Q19A
+    description: Have you been denied dental or oral health care due to discrimination?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: S6_Q19A
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoIRNSDKSR
+  HL_Q3NEWA:
+    name: HL_Q3NEWA
+    description: Have you ever been diagnosed with an anxiety disorder?
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: HL_Q3NEWA
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: YesNoDKSR
+  GENDER:
+    name: GENDER
+    description: Respondent gender
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: GENDER
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: UnknownGender
+  AGE7:
+    name: AGE7
+    description: Age - 7 Categories
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: AGE7
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: AgeRanges
+  RACETHNICITY:
+    name: RACETHNICITY
+    description: 'Combined Race/Ethnicity  '
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: RACETHNICITY
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: RaceEthnicity
+  EDUC5:
+    name: EDUC5
+    description: 5-level education
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: EDUC5
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: Education5
+  MARITAL:
+    name: MARITAL
+    description: Marital Status
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: MARITAL
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: Marital5
+  EMPLOY:
+    name: EMPLOY
+    description: Current Employment Status
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: EMPLOY
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: EmploymentStatus7
+  INCOME:
+    name: INCOME
+    description: Household income
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: INCOME
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: HouseholdIncome18
+  STATE:
+    name: STATE
+    description: State
+    from_schema: https://w3id.org/OHD/DFA-study/cq_sohea
+    rank: 1000
+    alias: STATE
+    owner: CQ_SOHEARecord
+    domain_of:
+    - CQ_SOHEARecord
+    range: DKRState
+
+</code></pre>
+</details></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../../js/base.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../javascripts/tablesort.js"></script>
+<script src="../../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

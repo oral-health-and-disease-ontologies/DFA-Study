@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://oral-health-and-disease-ontologies.github.io/DFA-Study/ada_ohwb/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>ADA Oral Health and Well Being Schema - DFA Study Schema</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">DFA Study Schema</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">DFA Study Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../cohra2/" class="nav-link">COHRA2 Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">ADA Oral Health and Well Being Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../cq_sohea/" class="nav-link">CareQuest SOHEA Schema</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../cohra2/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../cq_sohea/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/oral-health-and-disease-ontologies/DFA-Study/?query=root/DFA-Study/docs/ada_ohwb/index.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ada-oral-health-and-well-being-study-schema" class="nav-link">ADA Oral Health and Well Being Study Schema</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#classes" class="nav-link">Classes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#slots" class="nav-link">Slots</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#enumerations" class="nav-link">Enumerations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#types" class="nav-link">Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#subsets" class="nav-link">Subsets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="ada-oral-health-and-well-being-study-schema">ADA Oral Health and Well Being Study Schema</h1>
+<p>LinkML schema for defining data elements used in the ADA Oral Health and Well Being study.</p>
+<p>URI: <a href="https://w3id.org/OHD/DFA-study/ada_ohwb">https://w3id.org/OHD/DFA-study/ada_ohwb</a></p>
+<p>Name: ada_ohwb</p>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Dataset/">Dataset</a></td>
+<td>The dataset for the study</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ADAOHWBDataset/">ADAOHWBDataset</a></td>
+<td>The ADA OHWB dataset</td>
+</tr>
+<tr>
+<td><a href="Record/">Record</a></td>
+<td>A record in the dataset</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ADAOHWBRecord/">ADAOHWBRecord</a></td>
+<td>A record in the ADA OHWB dataset</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="MQ602/">MQ602</a></td>
+<td>Total number of people live in your household</td>
+</tr>
+<tr>
+<td><a href="MQ603/">MQ603</a></td>
+<td>Income Level</td>
+</tr>
+<tr>
+<td><a href="MQ605/">MQ605</a></td>
+<td>Compute Income Level1</td>
+</tr>
+<tr>
+<td><a href="MQ607/">MQ607</a></td>
+<td>Compute Income Level2</td>
+</tr>
+<tr>
+<td><a href="Q268/">Q268</a></td>
+<td>Are you male/female?</td>
+</tr>
+<tr>
+<td><a href="Q280/">Q280</a></td>
+<td>Respondent Age (at time of data collection)</td>
+</tr>
+<tr>
+<td><a href="Q318/">Q318</a></td>
+<td>In what state or territory do you currently reside?</td>
+</tr>
+<tr>
+<td><a href="Q350/">Q350</a></td>
+<td>How many hours per week do you typically spend on the Internet or World Wide ...</td>
+</tr>
+<tr>
+<td><a href="Q364/">Q364</a></td>
+<td>What is your marital status?</td>
+</tr>
+<tr>
+<td><a href="Q368/">Q368</a></td>
+<td>Including yourself, how many people age 18 or older live in your household?</td>
+</tr>
+<tr>
+<td><a href="Q372/">Q372</a></td>
+<td>How many people under the age of 18 live in your household?</td>
+</tr>
+<tr>
+<td><a href="Q410/">Q410</a></td>
+<td>Which one of the following best describes your employment status?</td>
+</tr>
+<tr>
+<td><a href="Q437/">Q437</a></td>
+<td>What is the highest level of education you have completed or the highest degr...</td>
+</tr>
+<tr>
+<td><a href="Q462/">Q462</a></td>
+<td>Which of the following income categories best describes your total 2014 house...</td>
+</tr>
+<tr>
+<td><a href="Q485/">Q485</a></td>
+<td>Race/Ethnicity</td>
+</tr>
+<tr>
+<td><a href="Q600/">Q600</a></td>
+<td>Are you currently receiving any Medicaid benefits?</td>
+</tr>
+<tr>
+<td><a href="Q710/">Q710</a></td>
+<td>Have you ever felt that the appearance of your mouth and teeth affected your ...</td>
+</tr>
+<tr>
+<td><a href="Q715_4/">Q715_4</a></td>
+<td>Felt anxiety: How often have you experienced each of the following problems r...</td>
+</tr>
+<tr>
+<td><a href="Q715_5/">Q715_5</a></td>
+<td>Felt embarrassment: How often have you experienced each of the following prob...</td>
+</tr>
+<tr>
+<td><a href="Q715_6/">Q715_6</a></td>
+<td>Avoided smiling: How often have you experienced each of the following problem...</td>
+</tr>
+<tr>
+<td><a href="Q715_9/">Q715_9</a></td>
+<td>Reduced participation in social activities: How often have you experienced ea...</td>
+</tr>
+<tr>
+<td><a href="Q725_4/">Q725_4</a></td>
+<td>I need to see the dentist twice a year: How strongly do you agree or disagree...</td>
+</tr>
+<tr>
+<td><a href="Q725_5/">Q725_5</a></td>
+<td>It is easier to get ahead in life if I have straight bright teeth: How strong...</td>
+</tr>
+<tr>
+<td><a href="Q730/">Q730</a></td>
+<td>Do you currently have health insurance for 2015?</td>
+</tr>
+<tr>
+<td><a href="Q735/">Q735</a></td>
+<td>Do you currently have dental insurance for 2015?</td>
+</tr>
+<tr>
+<td><a href="Q740_1/">Q740_1</a></td>
+<td>Employer (mine or my spouse/partner's): How did you obtain your own individua...</td>
+</tr>
+<tr>
+<td><a href="Q740_2/">Q740_2</a></td>
+<td>Through the new health insurance marketplace: How did you obtain your own ind...</td>
+</tr>
+<tr>
+<td><a href="Q740_3/">Q740_3</a></td>
+<td>Directly from the insurance company, not through the marketplace: How did you...</td>
+</tr>
+<tr>
+<td><a href="Q740_4/">Q740_4</a></td>
+<td>Medicaid (including state versions such as Montana Medicaid or New York State...</td>
+</tr>
+<tr>
+<td><a href="Q740_5/">Q740_5</a></td>
+<td>Medicare: How did you obtain your own individual health insurance for 2015?</td>
+</tr>
+<tr>
+<td><a href="Q740_6/">Q740_6</a></td>
+<td>Through a government program other than Medicaid/Medicare: How did you obtain...</td>
+</tr>
+<tr>
+<td><a href="Q740_96/">Q740_96</a></td>
+<td>Other: How did you obtain your own individual health insurance for 2015?</td>
+</tr>
+<tr>
+<td><a href="Q740_98/">Q740_98</a></td>
+<td>Don't know: How did you obtain your own individual health insurance for 2015?</td>
+</tr>
+<tr>
+<td><a href="Q740_99/">Q740_99</a></td>
+<td>N/A- I do not have health insurance for 2015: How did you obtain your own ind...</td>
+</tr>
+<tr>
+<td><a href="Q745_1/">Q745_1</a></td>
+<td>Employer (mine or my spouse/partner's): How did you obtain your own individua...</td>
+</tr>
+<tr>
+<td><a href="Q745_2/">Q745_2</a></td>
+<td>Through the new health insurance marketplace: How did you obtain your own ind...</td>
+</tr>
+<tr>
+<td><a href="Q745_3/">Q745_3</a></td>
+<td>Directly from the insurance company, not through the marketplace: How did you...</td>
+</tr>
+<tr>
+<td><a href="Q745_4/">Q745_4</a></td>
+<td>Medicaid (including state versions such as Montana Medicaid or New York State...</td>
+</tr>
+<tr>
+<td><a href="Q745_5/">Q745_5</a></td>
+<td>Medicare: How did you obtain your own individual dental insurance for 2015?</td>
+</tr>
+<tr>
+<td><a href="Q745_6/">Q745_6</a></td>
+<td>Through a government program other than Medicaid/Medicare (e</td>
+</tr>
+<tr>
+<td><a href="Q745_96/">Q745_96</a></td>
+<td>Other: How did you obtain your own individual dental insurance for 2015?</td>
+</tr>
+<tr>
+<td><a href="Q745_98/">Q745_98</a></td>
+<td>Don't know: How did you obtain your own individual dental insurance for 2015?</td>
+</tr>
+<tr>
+<td><a href="Q745_99/">Q745_99</a></td>
+<td>N/A- I do not have health insurance for 2015: How did you obtain your own ind...</td>
+</tr>
+<tr>
+<td><a href="Q750/">Q750</a></td>
+<td>How easy or difficult is it for you to find a dentist that accepts your denta...</td>
+</tr>
+<tr>
+<td><a href="Q760/">Q760</a></td>
+<td>Do you have a single dentist or dental office that is your usual source of de...</td>
+</tr>
+<tr>
+<td><a href="Q765/">Q765</a></td>
+<td>How long since you last had a dental visit?</td>
+</tr>
+<tr>
+<td><a href="Q770/">Q770</a></td>
+<td>Do you plan to visit the dentist in the next 12 months?</td>
+</tr>
+<tr>
+<td><a href="Q775_1/">Q775_1</a></td>
+<td>My mouth is healthy so I do not need to visit the dentist: Why did you not vi...</td>
+</tr>
+<tr>
+<td><a href="Q775_2/">Q775_2</a></td>
+<td>I do not know where to go to receive dental services: Why did you not visit t...</td>
+</tr>
+<tr>
+<td><a href="Q775_3/">Q775_3</a></td>
+<td>I cannot afford to go to the dentist: Why did you not visit the dentist more ...</td>
+</tr>
+<tr>
+<td><a href="Q775_4/">Q775_4</a></td>
+<td>It is too hard to find a dentist that accepts my dental plan or Medicaid: Why...</td>
+</tr>
+<tr>
+<td><a href="Q775_5/">Q775_5</a></td>
+<td>I cannot find the time to get to a dentist (e</td>
+</tr>
+<tr>
+<td><a href="Q775_6/">Q775_6</a></td>
+<td>Many services are not covered by my dental plan or Medicaid, so I end up havi...</td>
+</tr>
+<tr>
+<td><a href="Q775_7/">Q775_7</a></td>
+<td>I cannot travel to a dentist easily (e</td>
+</tr>
+<tr>
+<td><a href="Q775_8/">Q775_8</a></td>
+<td>I do not have any of my original teeth (i</td>
+</tr>
+<tr>
+<td><a href="Q775_9/">Q775_9</a></td>
+<td>I am afraid of going to the dentist: Why did you not visit the dentist more f...</td>
+</tr>
+<tr>
+<td><a href="Q775_96/">Q775_96</a></td>
+<td>Other: Why did you not visit the dentist more frequently?</td>
+</tr>
+<tr>
+<td><a href="Q775_97/">Q775_97</a></td>
+<td>No reason: Why did you not visit the dentist more frequently?</td>
+</tr>
+<tr>
+<td><a href="records/">records</a></td>
+<td>Slot for connecting the dataset to its records</td>
+</tr>
+<tr>
+<td><a href="RESPID/">RESPID</a></td>
+<td>The respondant's study ID</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enumerations">Enumerations</h2>
+<table>
+<thead>
+<tr>
+<th>Enumeration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Agreement/">Agreement</a></td>
+<td>Enumeration for level of agreement</td>
+</tr>
+<tr>
+<td><a href="ComputeIncomeLevel/">ComputeIncomeLevel</a></td>
+<td>Enumeration for computed income level</td>
+</tr>
+<tr>
+<td><a href="Difficulty/">Difficulty</a></td>
+<td>Enumeration for difficulty level</td>
+</tr>
+<tr>
+<td><a href="Education/">Education</a></td>
+<td>Enumeration for highest level of education completed</td>
+</tr>
+<tr>
+<td><a href="EmploymentStatus/">EmploymentStatus</a></td>
+<td>Enumeration for employment status</td>
+</tr>
+<tr>
+<td><a href="Frequency/">Frequency</a></td>
+<td>Enumeration for frequency of occurrence</td>
+</tr>
+<tr>
+<td><a href="IncomeCategory/">IncomeCategory</a></td>
+<td>Enumeration for 2014 household income category</td>
+</tr>
+<tr>
+<td><a href="IncomeLevel/">IncomeLevel</a></td>
+<td>Enumeration for level of income</td>
+</tr>
+<tr>
+<td><a href="MaleFemaleOHWB/">MaleFemaleOHWB</a></td>
+<td>Enumeration for male/female status in ADA_OHWB</td>
+</tr>
+<tr>
+<td><a href="MaritalStatus/">MaritalStatus</a></td>
+<td>Enumeration for marital status</td>
+</tr>
+<tr>
+<td><a href="NoYesOHWB/">NoYesOHWB</a></td>
+<td>Enumeration for yes/no responses starting with 'no' option</td>
+</tr>
+<tr>
+<td><a href="RaceEthnicityOHWB/">RaceEthnicityOHWB</a></td>
+<td>Enumeration for respondant race/ethnicity in ADA_OHWB</td>
+</tr>
+<tr>
+<td><a href="State/">State</a></td>
+<td>Enumeration for US states/territory respondant lives in</td>
+</tr>
+<tr>
+<td><a href="TimeSinceDentalVisit/">TimeSinceDentalVisit</a></td>
+<td>Enumeration for time since last dental visit</td>
+</tr>
+<tr>
+<td><a href="YesNoDKOHWB/">YesNoDKOHWB</a></td>
+<td>Enumeration for yes/no responses starting with 'yes' option, including a 'don...</td>
+</tr>
+<tr>
+<td><a href="YesNoOHWB/">YesNoOHWB</a></td>
+<td>Enumeration for yes/no responses starting with 'yes' option</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Boolean/">Boolean</a></td>
+<td>A binary (true or false) value</td>
+</tr>
+<tr>
+<td><a href="Curie/">Curie</a></td>
+<td>a compact URI</td>
+</tr>
+<tr>
+<td><a href="Date/">Date</a></td>
+<td>a date (year, month and day) in an idealized calendar</td>
+</tr>
+<tr>
+<td><a href="DateOrDatetime/">DateOrDatetime</a></td>
+<td>Either a date or a datetime</td>
+</tr>
+<tr>
+<td><a href="Datetime/">Datetime</a></td>
+<td>The combination of a date and time</td>
+</tr>
+<tr>
+<td><a href="Decimal/">Decimal</a></td>
+<td>A real number with arbitrary precision that conforms to the xsd:decimal speci...</td>
+</tr>
+<tr>
+<td><a href="Double/">Double</a></td>
+<td>A real number that conforms to the xsd:double specification</td>
+</tr>
+<tr>
+<td><a href="Float/">Float</a></td>
+<td>A real number that conforms to the xsd:float specification</td>
+</tr>
+<tr>
+<td><a href="Integer/">Integer</a></td>
+<td>An integer</td>
+</tr>
+<tr>
+<td><a href="Jsonpath/">Jsonpath</a></td>
+<td>A string encoding a JSON Path</td>
+</tr>
+<tr>
+<td><a href="Jsonpointer/">Jsonpointer</a></td>
+<td>A string encoding a JSON Pointer</td>
+</tr>
+<tr>
+<td><a href="Ncname/">Ncname</a></td>
+<td>Prefix part of CURIE</td>
+</tr>
+<tr>
+<td><a href="Nodeidentifier/">Nodeidentifier</a></td>
+<td>A URI, CURIE or BNODE that represents a node in a model</td>
+</tr>
+<tr>
+<td><a href="Objectidentifier/">Objectidentifier</a></td>
+<td>A URI or CURIE that represents an object in the model</td>
+</tr>
+<tr>
+<td><a href="Sparqlpath/">Sparqlpath</a></td>
+<td>A string encoding a SPARQL Property Path</td>
+</tr>
+<tr>
+<td><a href="String/">String</a></td>
+<td>A character string</td>
+</tr>
+<tr>
+<td><a href="Time/">Time</a></td>
+<td>A time object represents a (local) time of day, independent of any particular...</td>
+</tr>
+<tr>
+<td><a href="Uri/">Uri</a></td>
+<td>a complete URI</td>
+</tr>
+<tr>
+<td><a href="Uriorcurie/">Uriorcurie</a></td>
+<td>a URI or a CURIE</td>
+</tr>
+</tbody>
+</table>
+<h2 id="subsets">Subsets</h2>
+<table>
+<thead>
+<tr>
+<th>Subset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../javascripts/tablesort.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
