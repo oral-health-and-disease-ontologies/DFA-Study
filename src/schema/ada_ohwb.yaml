@@ -103,7 +103,7 @@ slots:
   Q710:
     description: >-
       Have you ever felt that the appearance of your mouth and teeth affected your ability to interview for a job?
-    range: YesNoDK
+    range: YesNoDK_OHWB
   Q715_4:
     description: >-
       Felt anxiety: How often have you experienced each of the following problems related to your mouth and teeth during the past 12 months?
@@ -131,83 +131,83 @@ slots:
   Q730:
     description: >-
       Do you currently have health insurance for 2015?
-    range: YesNoDK
+    range: YesNoDK_OHWB
   Q735:
     description: >-
       Do you currently have dental insurance for 2015?
-    range: YesNoDK
+    range: YesNoDK_OHWB
   Q740_1:
     description: >-
       Employer (mine or my spouse/partner's): How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_2:
     description: >-
       Through the new health insurance marketplace: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_3:
     description: >-
       Directly from the insurance company, not through the marketplace: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_4:
     description: >-
       Medicaid (including state versions such as Montana Medicaid or New York State of Health Medicaid): How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_5:
     description: >-
       Medicare: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_6:
     description: >-
       Through a government program other than Medicaid/Medicare: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_96:
     description: >-
       Other: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_98:
     description: >-
       Don't know: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q740_99:
     description: >-
       N/A- I do not have health insurance for 2015: How did you obtain your own individual health insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_1:
     description: >-
       Employer (mine or my spouse/partner's): How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_2:
     description: >-
       Through the new health insurance marketplace: How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_3:
     description: >-
       Directly from the insurance company, not through the marketplace: How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_4:
     description: >-
       Medicaid (including state versions such as Montana Medicaid or New York State of Health Medicaid): How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_5:
     description: >-
       Medicare: How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_6:
     description: >-
       Through a government program other than Medicaid/Medicare (e.g., VA, TRICARE, SSI): How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_96:
     description: >-
       Other: How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_98:
     description: >-
       Don't know: How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q745_99:
     description: >-
       N/A- I do not have health insurance for 2015: How did you obtain your own individual dental insurance for 2015?
-    range: NoYes
+    range: NoYesOHWB
   Q750:
     description: >-
       How easy or difficult is it for you to find a dentist that accepts your dental insurance?
@@ -215,7 +215,7 @@ slots:
   Q760:
     description: >-
       Do you have a single dentist or dental office that is your usual source of dental care?
-    range: YesNo
+    range: YesNoOHWB
   Q765:
     description: >-
       How long since you last had a dental visit?
@@ -223,51 +223,51 @@ slots:
   Q770:
     description: >-
       Do you plan to visit the dentist in the next 12 months?
-    range: YesNoDK
+    range: YesNoDK_OHWB
   Q775_1:
     description: >-
       My mouth is healthy so I do not need to visit the dentist: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_2:
     description: >-
       I do not know where to go to receive dental services: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_3:
     description: >-
       I cannot afford to go to the dentist: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_4:
     description: >-
       It is too hard to find a dentist that accepts my dental plan or Medicaid: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_5:
     description: >-
       I cannot find the time to get to a dentist (e.g., cannot get the time off from work, dentist does not have convenient office hours): Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_6:
     description: >-
       Many services are not covered by my dental plan or Medicaid, so I end up having to pay with my own money: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_7:
     description: >-
       I cannot travel to a dentist easily (e.g., do not have transportation, located too far away): Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_8:
     description: >-
       I do not have any of my original teeth (i.e. I have no teeth, or I have dentures): Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_9:
     description: >-
       I am afraid of going to the dentist: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_96:
     description: >-
       Other: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q775_97:
     description: >-
       No reason: Why did you not visit the dentist more frequently?
-    range: NoYes
+    range: NoYesOHWB
   Q368:
     description: >-
       Including yourself, how many people age 18 or older live in your household?
@@ -295,11 +295,11 @@ slots:
   Q600:
     description: >-
       Are you currently receiving any Medicaid benefits?
-    range: YesNoDK
+    range: YesNoDK_OHWB
   Q268:
     description: >-
       Are you male/female?
-    range: MaleFemale
+    range: MaleFemaleOHWB
   Q280:
     description: >-
       Respondent Age (at time of data collection)
@@ -331,7 +331,7 @@ slots:
   Q485:
     description: >-
       Race/Ethnicity.
-    range: RaceEthnicity
+    range: RaceEthnicityOHWB
 
 enums:
   IncomeLevel:
@@ -372,9 +372,9 @@ enums:
       3:
         description: "High (401%+)"
 
-  MaleFemale:
+  MaleFemaleOHWB:
     description: >-
-      Enumeration for male/female status
+      Enumeration for male/female status in ADA_OHWB
     permissible_values:
       1:
         description: "Male"
@@ -395,6 +395,7 @@ enums:
         meaning: http://purl.obolibrary.org/obo/NCIT_C148255
       3:
         description: "Self-employed"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C116000
       4:
         description: "Not employed, but looking for work"
       5:
@@ -406,8 +407,10 @@ enums:
         meaning: http://purl.obolibrary.org/obo/NCIT_C198129
       8:
         description: "Student"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C75561
       9:
         description: "Stay-at-home spouse or partner"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C75560
 
   Education:
     description: >-
@@ -435,6 +438,7 @@ enums:
         description: "Some college, but no 4 year degree"
       74:
         description: "College (such as B.A., B.S.)"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C159746
       75:
         description: "Some graduate school, but no degree"
       76:
@@ -468,33 +472,40 @@ enums:
       11:
         description: "$250,000 or more"
 
-  RaceEthnicity:
+  RaceEthnicityOHWB:
     description: >-
-      Enumeration for respondant race/ethnicity
+      Enumeration for respondant race/ethnicity in ADA_OHWB
     permissible_values:
       1:
         description: "White"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41261
       2:
         description: "Black"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C42331
       3:
         description: "Asian or Pacific Islander"
       4:
         description: "Native American or Alaskan Native"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41259
       5:
         description: "Mixed Race"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67109
       6:
         description: "Some other race"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104495
       7:
         description: "Hispanic"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17459
       8:
         description: "African American"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C16352
       94:
         description: "Decline to Answer"
         meaning: http://purl.obolibrary.org/obo/NCIT_C51024
 
-  YesNoDK:
+  YesNoDK_OHWB:
     description: >-
-      Enumeration for yes/no responses starting with 'yes' option, including a 'don't know' option
+      Enumeration for yes/no responses starting with 'yes' option, including a 'don't know' option, in ADA_OHWB
     permissible_values:
       1:
         description: "Yes"
@@ -546,7 +557,7 @@ enums:
         description: "Don't know"
         meaning: http://purl.obolibrary.org/obo/NCIT_C67142
 
-  NoYes:
+  NoYesOHWB:
     description: >-
       Enumeration for yes/no responses starting with 'no' option
     permissible_values:
@@ -587,7 +598,7 @@ enums:
       7:
         description: "N/A -I've never been to a dentist."
 
-  YesNo:
+  YesNoOHWB:
     description: >-
       Enumeration for yes/no responses starting with 'yes' option
     permissible_values:
@@ -622,6 +633,7 @@ enums:
         meaning: http://purl.obolibrary.org/obo/NCIT_C150733
       7:
         description: "Unknown"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17998
       9:
         description: "Decline to answer"
         meaning: http://purl.obolibrary.org/obo/NCIT_C51024
@@ -632,106 +644,157 @@ enums:
     permissible_values:
       101:
         description: "Alabama"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43479
       102:
         description: "Alaska"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43506
       103:
         description: "Arizona"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43505
       104:
         description: "Arkansas"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43495
       105:
         description: "California"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43509
       106:
         description: "Colorado"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43501
       107:
         description: "Connecticut"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43466
       108:
         description: "Delaware"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43470
       109:
         description: "District of Columbia"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C108007
       110:
         description: "Florida"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43478
       111:
         description: "Georgia"  
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43477
       112:
         description: "Hawaii"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43510
       113:
         description: "Idaho"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43499
       114:
         description: "Illinois"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43491
       115:
         description: "Indiana"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43483
       116:
         description: "Iowa"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43487
       117:
         description: "Kansas"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43493
       118:
         description: "Kentucky"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43484
       119:
         description: "Louisiana"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43496
       120:
         description: "Maine"  
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43457
       121:
-        description: "Maryland"     
+        description: "Maryland"   
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43471  
       122:
         description: "Massachusetts"  
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43463
       123:   
         description: "Michigan"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43481
       124:
         description: "Minnesota"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43486
       125:
         description: "Mississippi"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43480
       126:
         description: "Missouri"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43492
       127:
         description: "Montana"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43490
       128:
         description: "Nebraska"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43494
       129:
         description: "Nevada"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43503
       130:
         description: "New Hampshire"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43460
       131:
         description: "New Jersey"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43467
       132:
         description: "New Mexico"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43504
       133:
         description: "New York"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43468
       134:
         description: "North Carolina"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43474
       135:
         description: "North Dakota"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43488
       136:
         description: "Ohio"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43482
       137:
         description: "Oklahoma"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43497
       138:  
         description: "Oregon"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43508
       139:
         description: "Pennsylvania"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43469
       140:  
         description: "Rhode Island"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43464
       141:
         description: "South Carolina"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43475
       142:
         description: "South Dakota"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43489
       143:  
         description: "Tennessee"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43476
       144:
         description: "Texas"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43498
       145:
         description: "Utah"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43502
       146:
         description: "Vermont"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43462
       147:
         description: "Virginia"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43472
       148:
         description: "Washington"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43507
       149:
         description: "West Virginia"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43473
       150:
         description: "Wisconsin"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43485
       151:
         description: "Wyoming"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43500
 
 
 
