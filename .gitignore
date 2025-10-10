@@ -29,5 +29,8 @@ temp/
 *.tmp
 *.temp
 
+# DS_Store directory on Macs
+.DS_Store
+
 # DFA study data
 DFA-data
