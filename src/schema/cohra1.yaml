@@ -1,0 +1,440 @@
+id: https://w3id.org/OHD/DFA-study/cohra1
+name: cohra1
+title: COHRA1 Study Schema
+license: https://mit-license.org/
+
+description: >-
+  LinkML schema for defining data elements used in the COHRA1 study.
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  core: https://w3id.org/OHD/DFA-study/core/
+  cohra1: https://w3id.org/OHD/DFA-study/cohra1/
+  OHD:  http://purl.obolibrary.org/obo/OHD_
+  dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
+
+imports:
+  - linkml:types
+  - core
+default_range: string
+default_prefix: cohra1
+
+classes:
+  COHRA1Dataset:
+    is_a: Dataset
+    description: >-
+      The COHRA1 dataset
+    slot_usage:
+      records:
+        range: COHRA1Record
+
+  COHRA1Record:
+    is_a: Record
+    description: >-
+      A record in the COHRA1 dataset
+    slots:
+      - Participant_ID
+      - Timepoint
+      - TimepointDesc
+      - Site
+      - Pedigree_Name
+      - Age
+      - Sex
+      - demRace
+      - Ethnicity
+      - DF01
+      - DF02
+      - DF03
+      - DF04
+      - DF05
+      - DF06
+      - DF07
+      - DF08
+      - DF09
+      - DF10
+      - DF11
+      - DF12
+      - DF13
+      - DF14
+      - DF15
+      - DF16
+      - DF17
+      - DF18
+      - DF19
+      - DF20
+      - DF21
+      - DF22
+      - DF23
+      - DF24
+      - DF25
+      - DF26
+      - DF27
+      - DF28
+      - DF29
+
+slots:
+  Participant_ID: 
+    description: >-
+      The participant's study ID.
+    range: integer
+  Timepoint:
+    description: >-
+      The timepoint in the study when the visit occurred.
+    range: Timepoint
+  TimepointDesc:
+    description: >-
+      Description of the timepoint.
+    range: string
+  Site:
+    description: >-
+      The code for the study site where the assessment was given.
+    range: Site
+  Pedigree_Name:
+    description: >-
+      The Family pedigree number assigned by genetic relationship.
+    range: integer
+  Age:
+    description: >-
+      The particpant's age at the time of the visit.
+    range: float
+  Sex:
+    description: >-
+      The particpant's sex
+    range: SexCOHRA2
+  demRace:
+    description: >-
+      What is your race/ethnicity?
+    range: demRaceCOHRA2
+  Ethnicity:
+    description: >-
+      Hispanic or Latino
+    range: NoYesCOHRA2
+  DF01:
+    description: >-
+      Has fear of dental work ever caused you to put off making an appointment?
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000421 # DFS 01
+    range: LikertFearNH
+  DF02:
+    description: >-
+      Has fear of dental work ever caused you to cancel or not appear for an appointment?
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000422 # DFS 02
+    range: LikertFearNH
+  DF03:
+    description: >-
+      When having dental work done, my muscles become tense.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000423 # DFS 03
+    range: LikertFearNH
+  DF04:
+    description: >-
+      When having dental work done, my breathing rate increases.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000424 # DFS 04
+    range: LikertFearNH
+  DF05:
+    description: >-
+      When having dental work done, I perspire.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000426 # DFS 05
+    range: LikertFearNH
+  DF06:
+    description: >-
+      When having dental work done, I feel nauseated and sick to my stomach.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000427 # DFS 06
+    range: LikertFearNH
+  DF07:
+    description: >-
+      When having dental work done, my heart beats faster.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000428 # DFS 07
+    range: LikertFearNH
+  DF08:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Making an appointment for dentistry.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000429 # DFS 08
+    range: LikertFearNH
+  DF09:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Approching the dentist's office.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000430 # DFS 09
+    range: LikertFearNH
+  DF10:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Sitting in the waiting room.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000431 # DFS 10
+    range: LikertFearNH
+  DF11:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Being seated in the dental chair.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000432 # DFS 11
+    range: LikertFearNH
+  DF12:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: The smell of the dentist's office.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000433 # DFS 12
+    range: LikertFearNH
+  DF13:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the dentist walk in.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000434 # DFS 13
+    range: LikertFearNH
+  DF14:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the anesthetic needle.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000435 # DFS 14
+    range: LikertFearNH
+  DF15:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the needle injected.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000436 # DFS 15
+    range: LikertFearNH
+  DF16:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the drill.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000437 # DFS 16
+    range: LikertFearNH
+  DF17:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Hearing the drill.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000438 # DFS 17
+    range: LikertFearNH
+  DF18:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the vibrations of the drill.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000439 # DFS 18
+    range: LikertFearNH
+  DF19:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Having your teeth cleaned.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000440 # DFS 19
+    range: LikertFearNH
+  DF20:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: All things considered, how fearful are you of having dental work done?
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000441 # DFS 20
+    range: LikertFearNH
+  DF21:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Breaking your arm.
+    range: LikertFear
+  DF22:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having a foot doctor remove a wart from your foot with a sharp instrument.
+    range: LikertFear
+  DF23:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting a paper cut on your finger.
+    range: LikertFear
+  DF24:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your mouth.
+    range: LikertFear
+  DF25:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting strong soap in both your eyes while bathing or showering.
+    range: LikertFear
+  DF26:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having someone slam a heavy car door on your hand.
+    range: LikertFear
+  DF27:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Gulping a hot drink before it has cooled.
+    range: LikertFear
+  DF28:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your hip/buttocks.
+    range: LikertFear
+  DF29:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Falling down a flight of concrete stairs.
+    range: LikertFear
+
+enums:
+  LikertFearNH:
+    description: >-
+      Enumeration for respondant level of fear toward some situation, including an option for didn't happen because never happened to me.
+    permissible_values:
+      1: 
+        description: "Not afraid at all"
+      2:
+        description: "A little afraid"
+      3:
+        description: "Somewhat afraid"
+      4:
+        description: "Pretty much afraid"
+      5:
+        description: "Very afraid"
+      9:
+        description: "I don't know, because this never happened to me."
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+
+  LikertFear:
+    description: >-
+      Enumeration for respondant level of fear toward some situation.
+    permissible_values:
+      1: 
+        description: "Not afraid at all"
+      2:
+        description: "A little afraid"
+      3:
+        description: "Somewhat afraid"
+      4:
+        description: "Pretty much afraid"
+      5:
+        description: "Very afraid"
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+
+  Timepoint:
+    description: >-
+      Enumeration for the point in time at which the participant answered the questionnaire relative to birth of child.
+    permissible_values:
+      0:
+        description: "Prenatal Phone Questionnaire"
+      1:
+        description: "Birth (Pitt)"
+      2:
+        description: "First Postnatam Phone Questionnaire (2 Months Old)"
+      3:
+        description: "1st Tooth (Pitt)"
+      4:
+        description: "Second Postnatal Phone Questionnaire (6 Months Old)"
+      5: 
+        description: "Third Postnatal Phone Questionnaire (12 Months Old)"
+      6:
+        description: "Fourth Postnatal Phone Questionnaire (18 Months Old)"
+      7:
+        description: "Fifth Postnatal Phone Questionnaire (24 Months Old)"
+      8:
+        description: "Sixth Postnatal Phone Questionnaire (30 Months Old)"
+      9:
+        description: "Seventh Postnatal Phone Questionnaire (36 Months Old)"
+      10:
+        description: "Eighth Postnatal Phone Questionnaire (3.5 Years Old)"
+      11:
+        description: "Ninth Postnatal Phone Questionnaire (4 Years Old)"
+      12:
+        description: "Tenth Postnatal Phone Questionnaire (4.5 Years Old)"
+      13:
+        description: "Eleventh Postnatal Phone Questionnaire (5 Years Old)"
+      14:
+        description: "Twelfth Postnatal Phone Questionnaire (5.5 Years Old)"
+      15:
+        description: "Thirteenth Postnatal Phone Questionnaire (6 Years Old)"
+      16:
+        description: "Fourteenth Postnatal Phone Questionnaire (6.5 Years Old)"
+      17:
+        description: "Fifteenth Postnatal Phone Questionnaire (7 Years Old)"
+      18:
+        description: "Sixteenth Postnatal Phone Questionnaire (7.5 Years Old)"
+      19:
+        description: "Seventeenth Postnatal Phone Questionnaire (8 Years Old)"
+      20:
+        description: "Eighteenth Postnatal Phone Questionnaire (8.5 Years Old)"
+      21:
+        description: "Nineteenth Postnatal Phone Questionnaire (9 Years Old)"
+      22:
+        description: "Twentieth Postnatal Phone Questionnaire (9.5 Years Old)"
+      23:
+        description: "Twenty-first Postnatal Phone Questionnaire (10 Years Old)"
+
+  Site:
+    description: >-
+      Enumeration for the study site where the assessment was given.
+    permissible_values:
+      "C2-WV":
+        description: "COHRA2 - West Virginia"
+      "C2-PA":
+        description: "COHRA2 - Pittsburgh"
+    
+  SexCOHRA2:
+    description: >-
+      Enumeration for the sex of the participant.
+    permissible_values:
+      1:
+        description: "Male"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205465
+      2:
+        description: "Female"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205464
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      
+  demRaceCOHRA2:
+    description: >-
+      Enumeration of participant race/ethnicity in COHRA2.
+    permissible_values:
+      1:
+        description: "White"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41261
+      2:
+        description: "African American"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C16352
+      3:
+        description: "Hawaiian/Pacific Islander"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41219
+      4:
+        description: "Hispanic"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17459
+      5:
+        description: "Native American/Alaskan Native"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41259
+      6:
+        description: "Asian"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41260
+      7:
+        description: "More than one race"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67109
+      999:
+        description: "Other"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104495
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+  
+  NoYesCOHRA2:
+    description: >-
+      Enumeration for yes/no responses in COHRA2.
+    permissible_values:
+      1:
+        description: "No"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      2:
+        description: "Yes"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -5555:
+        description: "Not part of protocol for this participant/age group"
