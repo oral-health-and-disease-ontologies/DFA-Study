@@ -35,11 +35,9 @@ classes:
       A record in the COHRA1 dataset
     slots:
       - Participant_ID
-      - Timepoint
-      - TimepointDesc
       - Site
-      - Pedigree_Name
-      - Age
+      - Pedigree name
+      - AGE
       - Sex
       - demRace
       - Ethnicity
@@ -72,44 +70,44 @@ classes:
       - DF27
       - DF28
       - DF29
+      - AvoidanceAnticipatoryFear
+      - FearOfSpecificDentalStimuli
+      - PhysiologicalArousal
+      - TotalDFSScore
+      - FearOfPainScore
+      - FearOfMinorPain
+      - FearOfSeverePain
+      - FearOfMedical
 
 slots:
   Participant_ID: 
     description: >-
       The participant's study ID.
     range: integer
-  Timepoint:
-    description: >-
-      The timepoint in the study when the visit occurred.
-    range: Timepoint
-  TimepointDesc:
-    description: >-
-      Description of the timepoint.
-    range: string
   Site:
     description: >-
       The code for the study site where the assessment was given.
-    range: Site
-  Pedigree_Name:
+    range: SiteCOHRA1
+  Pedigree name:
     description: >-
       The Family pedigree number assigned by genetic relationship.
     range: integer
-  Age:
+  AGE:
     description: >-
       The particpant's age at the time of the visit.
     range: float
   Sex:
     description: >-
       The particpant's sex
-    range: SexCOHRA2
+    range: SexCOHRA
   demRace:
     description: >-
       What is your race/ethnicity?
-    range: demRaceCOHRA2
+    range: demRaceCOHRA
   Ethnicity:
     description: >-
       Hispanic or Latino
-    range: NoYesCOHRA2
+    range: NoYesCOHRA
   DF01:
     description: >-
       Has fear of dental work ever caused you to put off making an appointment?
@@ -266,175 +264,49 @@ slots:
     description: >-
       Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Falling down a flight of concrete stairs.
     range: LikertFear
+  AvoidanceAnticipatoryFear:
+    description: >-
+      Sum of responses related to avoidance/anticipatory fear, including DF01, DF02, DF08, DF09, DF10, DF11, DF12, and DF13.
+    range: Sum8-40
+  FearOfSpecificDentalStimuli:
+    description: >-
+      Sum of responses related to fear of specific dental stimuli, including DF14, DF15, DF16, DF17, DF18, and DF19.
+    range: Sum6-30
+  PhysiologicalArousal:
+    description: >-
+      Sum of responses related to physiological arousal, including DF03, DF04, DF05, DF06, and DF07.
+    range: Sum5-25
+  TotalDFSScore:
+    description: >-
+      Total score of all DFS items, including DF01 through DF20.
+    range: Sum20-100
+  FearOfPainScore:
+    description: >-
+      Total score of all Fear of Pain items, including DF21 through DF29.
+    range: Sum9-45
+  FearOfMinorPain:
+    description: >-
+      Sum of responses related to fear of minor pain, including DF23, DF25, and DF27.
+    range: Sum3-15
+  FearOfSeverePain:
+    description: >-
+      Sum of responses related to fear of severe pain, including DF21, DF26, and DF29.
+    range: Sum3-15
+  FearOfMedical:
+    description: >-
+      Sum of responses related to fear of pain resulting from a medical procedure, including DF22, DF24, and DF28.
+    range: Sum3-15
 
 enums:
-  LikertFearNH:
+  SiteCOHRA1:
     description: >-
-      Enumeration for respondant level of fear toward some situation, including an option for didn't happen because never happened to me.
+      Enumeration for the COHRA1 study site where the assessment was given.
     permissible_values:
-      1: 
-        description: "Not afraid at all"
-      2:
-        description: "A little afraid"
-      3:
-        description: "Somewhat afraid"
-      4:
-        description: "Pretty much afraid"
-      5:
-        description: "Very afraid"
-      9:
-        description: "I don't know, because this never happened to me."
-      -8888:
-        description: "Don't Know"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
-      -9999:
-        description: "Missing"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
-
-  LikertFear:
-    description: >-
-      Enumeration for respondant level of fear toward some situation.
-    permissible_values:
-      1: 
-        description: "Not afraid at all"
-      2:
-        description: "A little afraid"
-      3:
-        description: "Somewhat afraid"
-      4:
-        description: "Pretty much afraid"
-      5:
-        description: "Very afraid"
-      -8888:
-        description: "Don't Know"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
-      -9999:
-        description: "Missing"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
-
-  Timepoint:
-    description: >-
-      Enumeration for the point in time at which the participant answered the questionnaire relative to birth of child.
-    permissible_values:
-      0:
-        description: "Prenatal Phone Questionnaire"
-      1:
-        description: "Birth (Pitt)"
-      2:
-        description: "First Postnatam Phone Questionnaire (2 Months Old)"
-      3:
-        description: "1st Tooth (Pitt)"
-      4:
-        description: "Second Postnatal Phone Questionnaire (6 Months Old)"
-      5: 
-        description: "Third Postnatal Phone Questionnaire (12 Months Old)"
-      6:
-        description: "Fourth Postnatal Phone Questionnaire (18 Months Old)"
-      7:
-        description: "Fifth Postnatal Phone Questionnaire (24 Months Old)"
-      8:
-        description: "Sixth Postnatal Phone Questionnaire (30 Months Old)"
-      9:
-        description: "Seventh Postnatal Phone Questionnaire (36 Months Old)"
-      10:
-        description: "Eighth Postnatal Phone Questionnaire (3.5 Years Old)"
-      11:
-        description: "Ninth Postnatal Phone Questionnaire (4 Years Old)"
-      12:
-        description: "Tenth Postnatal Phone Questionnaire (4.5 Years Old)"
-      13:
-        description: "Eleventh Postnatal Phone Questionnaire (5 Years Old)"
-      14:
-        description: "Twelfth Postnatal Phone Questionnaire (5.5 Years Old)"
-      15:
-        description: "Thirteenth Postnatal Phone Questionnaire (6 Years Old)"
-      16:
-        description: "Fourteenth Postnatal Phone Questionnaire (6.5 Years Old)"
-      17:
-        description: "Fifteenth Postnatal Phone Questionnaire (7 Years Old)"
-      18:
-        description: "Sixteenth Postnatal Phone Questionnaire (7.5 Years Old)"
-      19:
-        description: "Seventeenth Postnatal Phone Questionnaire (8 Years Old)"
-      20:
-        description: "Eighteenth Postnatal Phone Questionnaire (8.5 Years Old)"
-      21:
-        description: "Nineteenth Postnatal Phone Questionnaire (9 Years Old)"
-      22:
-        description: "Twentieth Postnatal Phone Questionnaire (9.5 Years Old)"
-      23:
-        description: "Twenty-first Postnatal Phone Questionnaire (10 Years Old)"
-
-  Site:
-    description: >-
-      Enumeration for the study site where the assessment was given.
-    permissible_values:
-      "C2-WV":
-        description: "COHRA2 - West Virginia"
-      "C2-PA":
-        description: "COHRA2 - Pittsburgh"
-    
-  SexCOHRA2:
-    description: >-
-      Enumeration for the sex of the participant.
-    permissible_values:
-      1:
-        description: "Male"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C205465
-      2:
-        description: "Female"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C205464
-      -9999:
-        description: "Missing"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
-      -8888:
-        description: "Don't Know"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
-      
-  demRaceCOHRA2:
-    description: >-
-      Enumeration of participant race/ethnicity in COHRA2.
-    permissible_values:
-      1:
-        description: "White"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C41261
-      2:
-        description: "African American"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C16352
-      3:
-        description: "Hawaiian/Pacific Islander"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C41219
-      4:
-        description: "Hispanic"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C17459
-      5:
-        description: "Native American/Alaskan Native"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C41259
-      6:
-        description: "Asian"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C41260
-      7:
-        description: "More than one race"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C67109
-      999:
-        description: "Other"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C104495
-      -9999:
-        description: "Missing"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
-  
-  NoYesCOHRA2:
-    description: >-
-      Enumeration for yes/no responses in COHRA2.
-    permissible_values:
-      1:
-        description: "No"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
-      2:
-        description: "Yes"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
-      -9999:
-        description: "Missing"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
-      -5555:
-        description: "Not part of protocol for this participant/age group"
+      "C1-WV":
+        description: "COHRA1 - West Virginia"
+      "C1-BR":
+        description: "COHRA1 - Bradford"
+      "C1-BU":
+        description: "COHRA1 - Burgettstown"
+      "C1-BK":
+        description: "COHRA1 - Braddock"
