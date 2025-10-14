@@ -75,8 +75,8 @@ classes:
       - AvoidanceAnticipatoryFear
       - FearOfSpecificDentalStimuli
       - PhysiologicalArousal
-      - TotalDFSScore
-      - FearOfPainScore
+      - TotalScaleScore
+      - AdditionalCOHRAScore
       - FearOfMinorPain
       - FearOfSeverePain
       - FearOfMedical
@@ -89,7 +89,7 @@ slots:
   Timepoint:
     description: >-
       The timepoint in the study when the visit occurred.
-    range: Timepoint
+    range: TimepointEnum
   TimepointDesc:
     description: >-
       Description of the timepoint.
@@ -286,11 +286,11 @@ slots:
     description: >-
       Sum of responses related to physiological arousal, including DF03, DF04, DF05, DF06, and DF07.
     range: Sum5-25
-  TotalDFSScore:
+  TotalScaleScore:
     description: >-
       Total score of all DFS items, including DF01 through DF20.
     range: Sum20-100
-  FearOfPainScore:
+  AdditionalCOHRAScore:
     description: >-
       Total score of all Fear of Pain items, including DF21 through DF29.
     range: Sum9-45
@@ -308,7 +308,7 @@ slots:
     range: Sum3-15
 
 enums:
-  Timepoint:
+  TimepointEnum:
     description: >-
       Enumeration for the point in time at which the participant answered the questionnaire relative to birth of child.
     permissible_values:

@@ -36,7 +36,7 @@ classes:
     slots:
       - Participant_ID
       - Site
-      - Pedigree name
+      - Pedigree_name
       - AGE
       - Sex
       - demRace
@@ -88,7 +88,7 @@ slots:
     description: >-
       The code for the study site where the assessment was given.
     range: SiteCOHRA1
-  Pedigree name:
+  Pedigree_name:
     description: >-
       The Family pedigree number assigned by genetic relationship.
     range: integer
