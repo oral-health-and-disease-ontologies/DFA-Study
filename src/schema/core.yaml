@@ -36,3 +36,580 @@ slots:
     multivalued: true
     inlined_as_list: true
     range: Record
+
+enums:
+  SexCOHRA:
+    description: >-
+      Enumeration for the sex of the participant.
+    permissible_values:
+      1:
+        description: "Male"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205465
+      2:
+        description: "Female"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205464
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+
+  demRaceCOHRA:
+    description: >-
+      Enumeration of participant race/ethnicity in COHRA.
+    permissible_values:
+      1:
+        description: "White"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41261
+      2:
+        description: "African American"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C16352
+      3:
+        description: "Hawaiian/Pacific Islander"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41219
+      4:
+        description: "Hispanic"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17459
+      5:
+        description: "Native American/Alaskan Native"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41259
+      6:
+        description: "Asian"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41260
+      7:
+        description: "More than one race"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67109
+      999:
+        description: "Other"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104495
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+  
+  NoYesCOHRA:
+    description: >-
+      Enumeration for yes/no responses in COHRA.
+    permissible_values:
+      1:
+        description: "No"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      2:
+        description: "Yes"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -5555:
+        description: "Not part of protocol for this participant/age group"
+
+  LikertFearNH:
+    description: >-
+      Enumeration for respondant level of fear toward some situation, including an option for didn't happen because never happened to me.
+    permissible_values:
+      1: 
+        description: "Not afraid at all"
+      2:
+        description: "A little afraid"
+      3:
+        description: "Somewhat afraid"
+      4:
+        description: "Pretty much afraid"
+      5:
+        description: "Very afraid"
+      9:
+        description: "I don't know, because this never happened to me."
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+  
+  LikertFear:
+    description: >-
+      Enumeration for respondant level of fear toward some situation.
+    permissible_values:
+      1: 
+        description: "Not afraid at all"
+      2:
+        description: "A little afraid"
+      3:
+        description: "Somewhat afraid"
+      4:
+        description: "Pretty much afraid"
+      5:
+        description: "Very afraid"
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+
+  Sum8-40:
+    description: >-
+      Enumeration for summed scores between 8 and 40, including an option for Missing.
+    permissible_values:
+      8:
+        description: "8"
+      9:
+        description: "9"
+      10:
+        description: "10"
+      11:
+        description: "11"
+      12:
+        description: "12"
+      13:
+        description: "13"
+      14:
+        description: "14"
+      15:
+        description: "15"
+      16:
+        description: "16"
+      17:
+        description: "17"
+      18:
+        description: "18"
+      19:
+        description: "19"
+      20:
+        description: "20"
+      21:
+        description: "21"
+      22:
+        description: "22"
+      23:
+        description: "23"
+      24:
+        description: "24"
+      25:
+        description: "25"
+      26:
+        description: "26"
+      27:
+        description: "27"
+      28:
+        description: "28"
+      29:
+        description: "29"
+      30:
+        description: "30"
+      31:
+        description: "31"
+      32:
+        description: "32"
+      33:
+        description: "33"
+      34:
+        description: "34"
+      35:
+        description: "35"
+      36:
+        description: "36"
+      37:
+        description: "37"
+      38:
+        description: "38"
+      39:
+        description: "39"
+      40:
+        description: "40"
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+    
+  Sum6-30:
+    description: >-
+      Enumeration for summed scores between 6 and 30, including an option for Missing.
+    permissible_values:
+      6:
+        description: "6"
+      7:
+        description: "7"
+      8:
+        description: "8"
+      9:
+        description: "9"
+      10:
+        description: "10"
+      11:
+        description: "11"
+      12:
+        description: "12"
+      13:
+        description: "13"
+      14:
+        description: "14"
+      15:
+        description: "15"
+      16:
+        description: "16"
+      17:
+        description: "17"
+      18:
+        description: "18"
+      19:
+        description: "19"
+      20:
+        description: "20"
+      21:
+        description: "21"
+      22:
+        description: "22"
+      23:
+        description: "23"
+      24:
+        description: "24"
+      25:
+        description: "25"
+      26:
+        description: "26"
+      27:
+        description: "27"
+      28:
+        description: "28"
+      29:
+        description: "29"
+      30:
+        description: "30"
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+  
+  Sum5-25:
+    description: >-
+      Enumeration for summed scores between 5 and 25, including an option for Missing.
+    permissible_values:
+      5:
+        description: "5"
+      6:
+        description: "6"
+      7:
+        description: "7"
+      8:
+        description: "8"
+      9:
+        description: "9"
+      10:
+        description: "10"
+      11:
+        description: "11"
+      12:
+        description: "12"
+      13:
+        description: "13"
+      14:
+        description: "14"
+      15:
+        description: "15"
+      16:
+        description: "16"
+      17:
+        description: "17"
+      18:
+        description: "18"
+      19:
+        description: "19"
+      20:
+        description: "20"
+      21:
+        description: "21"
+      22:
+        description: "22"
+      23:
+        description: "23"
+      24:
+        description: "24"
+      25:
+        description: "25"
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+  
+  Sum20-100:
+    description: >-
+      Enumeration for summed scores between 20 and 100, including an option for Missing.
+    permissible_values:
+      20:
+        description: "20"
+      21:
+        description: "21"
+      22:
+        description: "22"
+      23:
+        description: "23"
+      24:
+        description: "24"
+      25:
+        description: "25"
+      26:
+        description: "26"
+      27:
+        description: "27"
+      28:
+        description: "28"
+      29:
+        description: "29"
+      30:
+        description: "30"
+      31:
+        description: "31"
+      32:
+        description: "32"
+      33:
+        description: "33"
+      34:
+        description: "34"
+      35:
+        description: "35"
+      36:
+        description: "36"
+      37:
+        description: "37"
+      38:
+        description: "38"
+      39:
+        description: "39"
+      40:
+        description: "40"
+      41:
+        description: "41"
+      42:
+        description: "42"
+      43:
+        description: "43"
+      44:
+        description: "44"
+      45:
+        description: "45"
+      46:
+        description: "46"
+      47:
+        description: "47"
+      48:
+        description: "48"
+      49:
+        description: "49"
+      50:
+        description: "50"
+      51:
+        description: "51"
+      52:
+        description: "52"
+      53:
+        description: "53"
+      54:
+        description: "54"
+      55:
+        description: "55"
+      56:
+        description: "56"
+      57:
+        description: "57"
+      58:
+        description: "58"
+      59:
+        description: "59"
+      60:
+        description: "60"
+      61:
+        description: "61"
+      62:
+        description: "62"
+      63:
+        description: "63"
+      64:
+        description: "64"
+      65:
+        description: "65"
+      66:
+        description: "66"
+      67:
+        description: "67"
+      68:
+        description: "68"
+      69:
+        description: "69"
+      70:
+        description: "70"
+      71:
+        description: "71"
+      72:
+        description: "72"
+      73:
+        description: "73"
+      74:
+        description: "74"
+      75:
+        description: "75"
+      76:
+        description: "76"
+      77:
+        description: "77"
+      78: 
+        description: "78"
+      79:
+        description: "79"
+      80:
+        description: "80"
+      81:
+        description: "81"
+      82:
+        description: "82"
+      83:
+        description: "83"
+      84:
+        description: "84"
+      85:
+        description: "85"
+      86:
+        description: "86"
+      87:
+        description: "87"
+      88:
+        description: "88"
+      89:
+        description: "89"
+      90:
+        description: "90"
+      91:
+        description: "91"
+      92:
+        description: "92"
+      93:
+        description: "93"
+      94:
+        description: "94"
+      95:
+        description: "95"
+      96:
+        description: "96"
+      97:
+        description: "97"
+      98:
+        description: "98"
+      99:
+        description: "99"
+      100: 
+        description: "100"
+      -9999:
+        description: "Missing"
+
+  Sum9-45:
+    description: >-
+      Enumeration for summed scores between 9 and 45, including an option for Missing.
+    permissible_values:
+      9:
+        description: "9"
+      10:
+        description: "10"
+      11:
+        description: "11"
+      12:
+        description: "12"
+      13:
+        description: "13"
+      14:
+        description: "14"
+      15:
+        description: "15"
+      16:
+        description: "16"
+      17:
+        description: "17"
+      18:
+        description: "18"
+      19:
+        description: "19"
+      20:
+        description: "20"
+      21:
+        description: "21"
+      22:
+        description: "22"
+      23:
+        description: "23"
+      24:
+        description: "24"
+      25:
+        description: "25"
+      26:
+        description: "26"
+      27:
+        description: "27"
+      28:
+        description: "28"
+      29:
+        description: "29"
+      30:
+        description: "30"
+      31:
+        description: "31"
+      32:
+        description: "32"
+      33:
+        description: "33"
+      34:
+        description: "34"
+      35:
+        description: "35"
+      36:
+        description: "36"
+      37:
+        description: "37"
+      38:
+        description: "38"
+      39:
+        description: "39"
+      40:
+        description: "40"
+      41:
+        description: "41"
+      42:
+        description: "42"
+      43:
+        description: "43"
+      44:
+        description: "44"
+      45:
+        description: "45"
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+  
+  Sum3-15:
+    description: >-
+      Enumeration for summed scores between 3 and 15, including an option for Missing.
+    permissible_values:
+      3:
+        description: "3"
+      4:
+        description: "4"
+      5:
+        description: "5"
+      6:
+        description: "6"
+      7:
+        description: "7"
+      8:
+        description: "8"
+      9:
+        description: "9"
+      10:
+        description: "10"
+      11:
+        description: "11"
+      12:
+        description: "12"
+      13:
+        description: "13"
+      14:
+        description: "14"
+      15:
+        description: "15"
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031

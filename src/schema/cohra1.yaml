@@ -1,15 +1,15 @@
-id: https://w3id.org/OHD/DFA-study/cohra2
-name: cohra2
-title: COHRA2 Study Schema
+id: https://w3id.org/OHD/DFA-study/cohra1
+name: cohra1
+title: COHRA1 Study Schema
 license: https://mit-license.org/
 
 description: >-
-  LinkML schema for defining data elements used in the COHRA2 study.
+  LinkML schema for defining data elements used in the COHRA1 study.
 
 prefixes:
   linkml: https://w3id.org/linkml/
   core: https://w3id.org/OHD/DFA-study/core/
-  cohra2: https://w3id.org/OHD/DFA-study/cohra2/
+  cohra1: https://w3id.org/OHD/DFA-study/cohra1/
   OHD:  http://purl.obolibrary.org/obo/OHD_
   dcterms: http://purl.org/dc/terms/
   dwc: http://rs.tdwg.org/dwc/terms/
@@ -18,28 +18,26 @@ imports:
   - linkml:types
   - core
 default_range: string
-default_prefix: cohra2
+default_prefix: cohra1
 
 classes:
-  COHRA2Dataset:
+  COHRA1Dataset:
     is_a: Dataset
     description: >-
-      The COHRA2 dataset
+      The COHRA1 dataset
     slot_usage:
       records:
-        range: COHRA2Record
+        range: COHRA1Record
 
-  COHRA2Record:
+  COHRA1Record:
     is_a: Record
     description: >-
-      A record in the COHRA2 dataset
+      A record in the COHRA1 dataset
     slots:
       - Participant_ID
-      - Timepoint
-      - TimepointDesc
       - Site
-      - Pedigree_Name
-      - Age
+      - Pedigree_name
+      - AGE
       - Sex
       - demRace
       - Ethnicity
@@ -75,8 +73,8 @@ classes:
       - AvoidanceAnticipatoryFear
       - FearOfSpecificDentalStimuli
       - PhysiologicalArousal
-      - TotalScaleScore
-      - AdditionalCOHRAScore
+      - TotalDFSScore
+      - FearOfPainScore
       - FearOfMinorPain
       - FearOfSeverePain
       - FearOfMedical
@@ -86,23 +84,15 @@ slots:
     description: >-
       The participant's study ID.
     range: integer
-  Timepoint:
-    description: >-
-      The timepoint in the study when the visit occurred.
-    range: TimepointEnum
-  TimepointDesc:
-    description: >-
-      Description of the timepoint.
-    range: string
   Site:
     description: >-
       The code for the study site where the assessment was given.
-    range: SiteCOHRA2
-  Pedigree_Name:
+    range: SiteCOHRA1
+  Pedigree_name:
     description: >-
       The Family pedigree number assigned by genetic relationship.
     range: integer
-  Age:
+  AGE:
     description: >-
       The particpant's age at the time of the visit.
     range: float
@@ -286,11 +276,11 @@ slots:
     description: >-
       Sum of responses related to physiological arousal, including DF03, DF04, DF05, DF06, and DF07.
     range: Sum5-25
-  TotalScaleScore:
+  TotalDFSScore:
     description: >-
       Total score of all DFS items, including DF01 through DF20.
     range: Sum20-100
-  AdditionalCOHRAScore:
+  FearOfPainScore:
     description: >-
       Total score of all Fear of Pain items, including DF21 through DF29.
     range: Sum9-45
@@ -308,66 +298,15 @@ slots:
     range: Sum3-15
 
 enums:
-  TimepointEnum:
+  SiteCOHRA1:
     description: >-
-      Enumeration for the point in time at which the participant answered the questionnaire relative to birth of child.
+      Enumeration for the COHRA1 study site where the assessment was given.
     permissible_values:
-      0:
-        description: "Prenatal Phone Questionnaire"
-      1:
-        description: "Birth (Pitt)"
-      2:
-        description: "First Postnatam Phone Questionnaire (2 Months Old)"
-      3:
-        description: "1st Tooth (Pitt)"
-      4:
-        description: "Second Postnatal Phone Questionnaire (6 Months Old)"
-      5: 
-        description: "Third Postnatal Phone Questionnaire (12 Months Old)"
-      6:
-        description: "Fourth Postnatal Phone Questionnaire (18 Months Old)"
-      7:
-        description: "Fifth Postnatal Phone Questionnaire (24 Months Old)"
-      8:
-        description: "Sixth Postnatal Phone Questionnaire (30 Months Old)"
-      9:
-        description: "Seventh Postnatal Phone Questionnaire (36 Months Old)"
-      10:
-        description: "Eighth Postnatal Phone Questionnaire (3.5 Years Old)"
-      11:
-        description: "Ninth Postnatal Phone Questionnaire (4 Years Old)"
-      12:
-        description: "Tenth Postnatal Phone Questionnaire (4.5 Years Old)"
-      13:
-        description: "Eleventh Postnatal Phone Questionnaire (5 Years Old)"
-      14:
-        description: "Twelfth Postnatal Phone Questionnaire (5.5 Years Old)"
-      15:
-        description: "Thirteenth Postnatal Phone Questionnaire (6 Years Old)"
-      16:
-        description: "Fourteenth Postnatal Phone Questionnaire (6.5 Years Old)"
-      17:
-        description: "Fifteenth Postnatal Phone Questionnaire (7 Years Old)"
-      18:
-        description: "Sixteenth Postnatal Phone Questionnaire (7.5 Years Old)"
-      19:
-        description: "Seventeenth Postnatal Phone Questionnaire (8 Years Old)"
-      20:
-        description: "Eighteenth Postnatal Phone Questionnaire (8.5 Years Old)"
-      21:
-        description: "Nineteenth Postnatal Phone Questionnaire (9 Years Old)"
-      22:
-        description: "Twentieth Postnatal Phone Questionnaire (9.5 Years Old)"
-      23:
-        description: "Twenty-first Postnatal Phone Questionnaire (10 Years Old)"
-
-  SiteCOHRA2:
-    description: >-
-      Enumeration for the COHRA2 study site where the assessment was given.
-    permissible_values:
-      "C2-WV":
-        description: "COHRA2 - West Virginia"
-      "C2-PA":
-        description: "COHRA2 - Pittsburgh"
-
-
+      "C1-WV":
+        description: "COHRA1 - West Virginia"
+      "C1-BR":
+        description: "COHRA1 - Bradford"
+      "C1-BU":
+        description: "COHRA1 - Burgettstown"
+      "C1-BK":
+        description: "COHRA1 - Braddock"

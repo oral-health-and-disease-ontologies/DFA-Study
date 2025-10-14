@@ -1,6 +1,10 @@
 DOCSDIR = docs
 SRC = src
 
+COHRA1_SCHEMA_DIR = $(SRC)/schema
+COHRA1_SCHEMA = $(COHRA1_SCHEMA_DIR)/cohra1.yaml
+COHRA1_DOCS_DIR = $(DOCSDIR)/cohra1
+
 COHRA2_SCHEMA_DIR = $(SRC)/schema
 COHRA2_SCHEMA = $(COHRA2_SCHEMA_DIR)/cohra2.yaml
 COHRA2_DOCS_DIR = $(DOCSDIR)/cohra2
@@ -14,6 +18,14 @@ CQ_SOHEA_SCHEMA = $(CQ_SOHEA_SCHEMA_DIR)/cq_sohea.yaml
 CQ_SOHEA_DOCS_DIR = $(DOCSDIR)/cq_sohea
 
 # --- linkml products --- #
+cohra1-jsonschema: $(COHRA1_SCHEMA)
+	gen-json-schema $< > jsonschema/cohra1.json
+
+cohra1-owl: $(COHRA1_SCHEMA)
+	gen-owl $< > temp/cohra1.tmp.ttl 
+	src/scripts/pun-annotations-to-ttl.py $< > temp/pun.tmp.ttl 
+	robot merge -i temp/cohra1.tmp.ttl -i temp/pun.tmp.ttl -o owl/cohra1.ttl 
+
 cohra2-jsonschema: $(COHRA2_SCHEMA)
 	gen-json-schema $< > jsonschema/cohra2.json
 
@@ -49,6 +61,7 @@ clean-products:
 
 gendoc:
 	@# create target folders
+	mkdir -p $(COHRA1_DOCS_DIR)
 	mkdir -p $(COHRA2_DOCS_DIR)
 	mkdir -p $(ADA_OHWB_DOCS_DIR)
 	mkdir -p $(CQ_SOHEA_DOCS_DIR)
@@ -59,6 +72,7 @@ gendoc:
 	@if ls src/docs/images/*.* 1> /dev/null 2>&1; then cp src/docs/images/*.* docs/images/; fi
 
 	@# generate documentation
+	gen-doc -d $(COHRA1_DOCS_DIR) $(COHRA1_SCHEMA)
 	gen-doc -d $(COHRA2_DOCS_DIR) $(COHRA2_SCHEMA)
 	gen-doc -d $(ADA_OHWB_DOCS_DIR) $(ADA_OHWB_SCHEMA)
 	gen-doc -d $(CQ_SOHEA_DOCS_DIR) $(CQ_SOHEA_SCHEMA)

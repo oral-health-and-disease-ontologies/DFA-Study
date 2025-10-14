@@ -18,7 +18,8 @@ extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - javascripts/tablesort.js
 nav:
-  - DFA Study Schema: index.md
-  - COHRA2 Schema: cohra2/index.md
   - ADA Oral Health and Well Being Schema: ada_ohwb/index.md
   - CareQuest SOHEA Schema: cq_sohea/index.md
+  - COHRA1 Schema: cohra1/index.md
+  - COHRA2 Schema: cohra2/index.md
+  - DFA Study Schema: index.md
