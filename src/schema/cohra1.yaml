@@ -17,7 +17,6 @@ prefixes:
 imports:
   - linkml:types
   - core
-default_range: string
 default_prefix: cohra1
 
 classes:
@@ -267,35 +266,51 @@ slots:
   AvoidanceAnticipatoryFear:
     description: >-
       Sum of responses related to avoidance/anticipatory fear, including DF01, DF02, DF08, DF09, DF10, DF11, DF12, and DF13.
-    range: Sum8-40
+    any_of:
+      - range: Score8to40
+      - range: MissingResponse
   FearOfSpecificDentalStimuli:
     description: >-
       Sum of responses related to fear of specific dental stimuli, including DF14, DF15, DF16, DF17, DF18, and DF19.
-    range: Sum6-30
+    any_of:
+      - range: Score6to30
+      - range: MissingResponse
   PhysiologicalArousal:
     description: >-
       Sum of responses related to physiological arousal, including DF03, DF04, DF05, DF06, and DF07.
-    range: Sum5-25
+    any_of:
+      - range: Score5to25
+      - range: MissingResponse
   TotalDFSScore:
     description: >-
       Total score of all DFS items, including DF01 through DF20.
-    range: Sum20-100
+    any_of:
+      - range: Score20to100
+      - range: MissingResponse
   FearOfPainScore:
     description: >-
       Total score of all Fear of Pain items, including DF21 through DF29.
-    range: Sum9-45
+    any_of:
+      - range: Score9to45
+      - range: MissingResponse
   FearOfMinorPain:
     description: >-
       Sum of responses related to fear of minor pain, including DF23, DF25, and DF27.
-    range: Sum3-15
+    any_of:
+      - range: Score3to15
+      - range: MissingResponse
   FearOfSeverePain:
     description: >-
       Sum of responses related to fear of severe pain, including DF21, DF26, and DF29.
-    range: Sum3-15
+    any_of:
+      - range: Score3to15
+      - range: MissingResponse
   FearOfMedical:
     description: >-
       Sum of responses related to fear of pain resulting from a medical procedure, including DF22, DF24, and DF28.
-    range: Sum3-15
+    any_of:
+      - range: Score3to15
+      - range: MissingResponse
 
 enums:
   SiteCOHRA1:

@@ -17,7 +17,6 @@ prefixes:
 imports:
   - linkml:types
   - core
-default_range: string
 default_prefix: ada_ohwb
 
 classes:
