@@ -162,6 +162,29 @@ enums:
         description: "Missing"
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
   
+  FreqNH:
+    description: >-
+      Enumeration for the frequency with which an individual experiences some phenomenon, including an option for didn't happen because never happened to me.
+    permissible_values:
+      1: 
+        description: "Never/Not at all"
+      2:
+        description: "Once or twice/A little"
+      3:
+        description: "A few times/Somewhat"
+      4:
+        description: "Often/Much"
+      5:
+        description: "Nearly every time/Very much"
+      9:
+        description: "I don't know, because this never happened to me."
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+
   LikertFear:
     description: >-
       Enumeration for respondant level of fear toward some situation.

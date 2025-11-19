@@ -112,43 +112,43 @@ slots:
       Has fear of dental work ever caused you to put off making an appointment?
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000421 # DFS 01
-    range: LikertFearNH
+    range: FreqNH
   DF02:
     description: >-
       Has fear of dental work ever caused you to cancel or not appear for an appointment?
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000422 # DFS 02
-    range: LikertFearNH
+    range: FreqNH
   DF03:
     description: >-
       When having dental work done, my muscles become tense.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000423 # DFS 03
-    range: LikertFearNH
+    range: FreqNH
   DF04:
     description: >-
       When having dental work done, my breathing rate increases.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000424 # DFS 04
-    range: LikertFearNH
+    range: FreqNH
   DF05:
     description: >-
       When having dental work done, I perspire.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000426 # DFS 05
-    range: LikertFearNH
+    range: FreqNH
   DF06:
     description: >-
       When having dental work done, I feel nauseated and sick to my stomach.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000427 # DFS 06
-    range: LikertFearNH
+    range: FreqNH
   DF07:
     description: >-
       When having dental work done, my heart beats faster.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000428 # DFS 07
-    range: LikertFearNH
+    range: FreqNH
   DF08:
     description: >-
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Making an appointment for dentistry.
