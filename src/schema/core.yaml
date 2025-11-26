@@ -43,10 +43,22 @@ types:
     minimum_value: 8
     maximum_value: 40
 
+  Score0to40:
+    description: "Integer score between 0 and 40."
+    base: integer
+    minimum_value: 0
+    maximum_value: 40
+
   Score6to30:
     description: "Integer score between 6 and 30."
     base: integer
     minimum_value: 6
+    maximum_value: 30
+  
+  Score0to30:
+    description: "Integer score between 0 and 30."
+    base: integer
+    minimum_value: 0
     maximum_value: 30
 
   Score5to25:
@@ -55,10 +67,22 @@ types:
     minimum_value: 5
     maximum_value: 25
 
+  Score0to25:
+    description: "Integer score between 0 and 25."
+    base: integer
+    minimum_value: 0
+    maximum_value: 25
+
   Score20to100:
     description: "Integer score between 20 and 100."
     base: integer
     minimum_value: 20
+    maximum_value: 100
+
+  Score0to100:
+    description: "Integer score between 0 and 100."
+    base: integer
+    minimum_value: 0
     maximum_value: 100
 
   Score9to45:
@@ -122,15 +146,18 @@ enums:
       -9999:
         description: "Missing"
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
   
   NoYesCOHRA:
     description: >-
       Enumeration for yes/no responses in COHRA.
     permissible_values:
-      1:
+      0:
         description: "No"
         meaning: http://purl.obolibrary.org/obo/NCIT_C49487
-      2:
+      1:
         description: "Yes"
         meaning: http://purl.obolibrary.org/obo/NCIT_C49488
       -9999:
@@ -138,6 +165,9 @@ enums:
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
       -5555:
         description: "Not part of protocol for this participant/age group"
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
 
   LikertFearNH:
     description: >-
@@ -155,32 +185,59 @@ enums:
         description: "Very afraid"
       9:
         description: "I don't know, because this never happened to me."
-      -8888:
-        description: "Don't Know"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      -5555:
+        description: "Not Asked on Form at This Time"
       -9999:
         description: "Missing"
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
   
+  Frequency:
+    description: >-
+      Enumeration for the frequency with which an individual experiences some phenomenon.
+    permissible_values:
+      1: 
+        description: "Never"
+      2:
+        description: "Once or twice"
+      3:
+        description: "A few times"
+      4:
+        description: "Often"
+      5:
+        description: "Nearly every time"
+      -5555:
+        description: "Not Asked on Form at This Time"
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+
   FreqNH:
     description: >-
       Enumeration for the frequency with which an individual experiences some phenomenon, including an option for didn't happen because never happened to me.
     permissible_values:
       1: 
-        description: "Never/Not at all"
+        description: "Never"
       2:
-        description: "Once or twice/A little"
+        description: "Once or twice"
       3:
-        description: "A few times/Somewhat"
+        description: "A few times"
       4:
-        description: "Often/Much"
+        description: "Often"
       5:
-        description: "Nearly every time/Very much"
+        description: "Nearly every time"
       9:
         description: "I don't know, because this never happened to me."
       -8888:
         description: "Don't Know"
         meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      -5555:
+        description: "Not Asked on Form at This Time"
       -9999:
         description: "Missing"
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
@@ -202,6 +259,9 @@ enums:
       -8888:
         description: "Don't Know"
         meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      -5555:
+        description: "Not Asked on Form at This Time"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
       -9999:
         description: "Missing"
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
@@ -213,4 +273,6 @@ enums:
       -9999:
         description: "Missing"
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -5555:
+        description: "Not Asked on Form at This Time"
   

@@ -267,25 +267,25 @@ slots:
     description: >-
       Sum of responses related to avoidance/anticipatory fear, including DF01, DF02, DF08, DF09, DF10, DF11, DF12, and DF13.
     any_of:
-      - range: Score8to40
+      - range: Score0to40
       - range: MissingResponse
   FearOfSpecificDentalStimuli:
     description: >-
       Sum of responses related to fear of specific dental stimuli, including DF14, DF15, DF16, DF17, DF18, and DF19.
     any_of:
-      - range: Score6to30
+      - range: Score0to30
       - range: MissingResponse
   PhysiologicalArousal:
     description: >-
       Sum of responses related to physiological arousal, including DF03, DF04, DF05, DF06, and DF07.
     any_of:
-      - range: Score5to25
+      - range: Score0to25
       - range: MissingResponse
   TotalDFSScore:
     description: >-
       Total score of all DFS items, including DF01 through DF20.
     any_of:
-      - range: Score20to100
+      - range: Score0to100
       - range: MissingResponse
   FearOfPainScore:
     description: >-
