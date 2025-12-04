@@ -1,0 +1,1124 @@
+id: https://w3id.org/OHD/DFA-study/tic_clinical
+name: tic_clinical
+title: TIC Clinical Schema
+license: https://mit-license.org/
+
+description: Schema for TIC Clinical data
+
+imports:
+  - linkml:types
+  - core
+default_range: string
+default_prefix: tic_clinical
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  core: https://w3id.org/OHD/DFA-study/core/
+  tic_clinical: https://w3id.org/OHD/DFA-study/tic_clinical/
+  OHD:  http://purl.obolibrary.org/obo/OHD_
+  dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
+
+enums:
+  language_used_enum:
+    permissible_values:
+      en-US:
+        description: en-US
+      es:
+        description: es
+
+classes:
+  TIC_CLINICALDataset:
+    is_a: Dataset
+    description: >-
+      The TIC Clinical Dataset
+    slot_usage:
+      records:
+        range: TIC_CLINICALRecord
+
+  TIC_CLINICALRecord:
+    is_a: Record
+    description: >-
+      A record in the TIC Clinical dataset
+    slots:
+    - record_id
+    - redcap_survey_identifier
+    - demographics_timestamp
+    - study_site
+    - age_in_years
+    - race___1
+    - race___2
+    - race___3
+    - race___4
+    - race___5
+    - race___6
+    - race___7
+    - race___8
+    - race___88
+    - race_other
+    - hispanic_latino
+    - ethnicity___1
+    - ethnicity___2
+    - ethnicity___3
+    - ethnicity___4
+    - ethnicity___5
+    - ethnicity___6
+    - ethnicity___7
+    - ethnicity___8
+    - ethnicity___88
+    - ethnicity_other
+    - gender_identity
+    - gender_identity_other
+    - usa_born
+    - time_in_usa
+    - usa_months_vs_years
+    - education
+    - education_other
+    - work_for_pay
+    - work_level
+    - family_needs
+    - individual_needs
+    - language_used
+    - language_used_name
+    - demographics_complete
+    - health_history_timestamp
+    - general_health
+    - healthcare_usage
+    - affording_healthcare
+    - smoking
+    - diabetes
+    - hypertension
+    - chronic_pain
+    - health_history_complete
+    - dental_history_timestamp
+    - oral_health_self_eval
+    - dental_home
+    - last_dental_visit
+    - visit_avoid___1
+    - visit_avoid___2
+    - visit_avoid___3
+    - visit_avoid___4
+    - visit_avoid___5
+    - visit_avoid___6
+    - visit_avoid___7
+    - visit_avoid___8
+    - visit_avoid___9
+    - visit_avoid___10
+    - visit_avoid___11
+    - visit_avoid___88
+    - avoid_other
+    - last_dental_reason___1
+    - last_dental_reason___2
+    - last_dental_reason___3
+    - last_dental_reason___4
+    - last_dental_reason___5
+    - last_dental_reason___6
+    - last_dental_reason___7
+    - last_dental_reason___8
+    - last_dental_reason___9
+    - last_dental_reason___10
+    - last_dental_reason___88
+    - last_dental_other
+    - affording_dentistry
+    - checkup_feeling
+    - negative_experiences
+    - negative_reason___1
+    - negative_reason___2
+    - negative_reason___3
+    - negative_reason___4
+    - negative_reason___5
+    - negative_reason___6
+    - negative_reason___7
+    - negative_reason___88
+    - neg_reason_other
+    - dental_specialist
+    - dental_insurance
+    - perio_diagnosis
+    - perio_treatment
+    - perio_mobility
+    - oral_cancer
+    - dry_mouth
+    - dental_history_complete
+    - idaf4c_timestamp
+    - idaf_1_a
+    - idaf_1_b
+    - idaf_1_c
+    - idaf_1_d
+    - idaf_1_e
+    - idaf_1_f
+    - idaf_1_g
+    - idaf_1_h
+    - idaf_2_a
+    - idaf_2_b
+    - idaf_2_c
+    - idaf_2_d
+    - idaf_2_e
+    - idaf_3_a
+    - idaf_3_b
+    - idaf_3_c
+    - idaf_3_d
+    - idaf_3_e
+    - idaf_3_f
+    - idaf_3_g
+    - idaf_3_h
+    - idaf_3_i
+    - idaf_3_j
+    - idaf4c_complete
+    - dfs_timestamp
+    - dfs_1
+    - dfs_2
+    - dfs_3
+    - dfs_4
+    - dfs_5
+    - dfs_6
+    - dfs_7
+    - dfs_8
+    - dfs_9
+    - dfs_10
+    - dfs_11
+    - dfs_12
+    - dfs_13
+    - dfs_14
+    - dfs_15
+    - dfs_16
+    - dfs_17
+    - dfs_18
+    - dfs_19
+    - dfs_20
+    - dfs_complete
+    - difficult_life_experiences_histo
+    - physical_violence_child
+    - physical_violence_adult
+    - physical_timeline_adult
+    - sexual_abuse_child
+    - sexual_assault_adult
+    - sexual_timeline_adult
+    - family_violence_child
+    - family_violence_adult
+    - family_timeline_adult
+    - community_violence_child
+    - community_violence_adult
+    - community_timeline_adult
+    - v159
+    - age
+    - sex
+    - race1
+    - insur
+    - dv2
+    - dfsscore
+    - dfsavoid
+    - dfsphy
+    - dfsstim
+    - dfs2
+    - phychild
+    - phyadult
+    - phy
+    - sexchild
+    - sexadult
+    - sexual
+    - comchild
+    - comadult
+    - com
+    - famchild
+    - famadult
+    - family
+    - home
+    - violence
+    - dfs_1_3cat
+    - dfs_2_3cat
+    - dfs_3_3cat
+    - dfs_4_3cat
+    - dfs_5_3cat
+    - dfs_6_3cat
+    - dfs_7_3cat
+    - dfs_8_3cat
+    - dfs_9_3cat
+    - dfs_10_3cat
+    - dfs_11_3cat
+    - dfs_12_3cat
+    - dfs_13_3cat
+    - dfs_14_3cat
+    - dfs_15_3cat
+    - dfs_16_3cat
+    - dfs_17_3cat
+    - dfs_18_3cat
+    - dfs_19_3cat
+    - dfs_20_3cat
+    - education2
+    - soh
+    - idafc_total
+    - idafc2
+    - idafcmean
+    - site
+    unique_keys:
+      redcap_survey_identifier_key:
+        unique_key_name: redcap_survey_identifier_key
+        unique_key_slots:
+        - redcap_survey_identifier
+      demographics_timestamp_key:
+        unique_key_name: demographics_timestamp_key
+        unique_key_slots:
+        - demographics_timestamp
+      education_other_key:
+        unique_key_name: education_other_key
+        unique_key_slots:
+        - education_other
+      language_used_name_key:
+        unique_key_name: language_used_name_key
+        unique_key_slots:
+        - language_used_name
+      health_history_timestamp_key:
+        unique_key_name: health_history_timestamp_key
+        unique_key_slots:
+        - health_history_timestamp
+      dental_history_timestamp_key:
+        unique_key_name: dental_history_timestamp_key
+        unique_key_slots:
+        - dental_history_timestamp
+      idaf4c_timestamp_key:
+        unique_key_name: idaf4c_timestamp_key
+        unique_key_slots:
+        - idaf4c_timestamp
+      dfs_timestamp_key:
+        unique_key_name: dfs_timestamp_key
+        unique_key_slots:
+        - dfs_timestamp
+      difficult_life_experiences_histo_key:
+        unique_key_name: difficult_life_experiences_histo_key
+        unique_key_slots:
+        - difficult_life_experiences_histo
+
+slots:
+  record_id:
+    examples:
+    - value: '470'
+    identifier: true
+    range: integer
+  redcap_survey_identifier:
+    range: string
+  demographics_timestamp:
+    examples:
+    - value: '2025-09-30 14:55:49'
+    range: datetime
+  study_site:
+    examples:
+    - value: '13'
+    range: integer
+  age_in_years:
+    examples:
+    - value: '78'
+    range: integer
+  race___1:
+    examples:
+    - value: '0'
+    range: integer
+  race___2:
+    examples:
+    - value: '0'
+    range: integer
+  race___3:
+    examples:
+    - value: '0'
+    range: integer
+  race___4:
+    examples:
+    - value: '0'
+    range: integer
+  race___5:
+    examples:
+    - value: '0'
+    range: integer
+  race___6:
+    examples:
+    - value: '0'
+    range: integer
+  race___7:
+    examples:
+    - value: '1'
+    range: integer
+  race___8:
+    examples:
+    - value: '0'
+    range: integer
+  race___88:
+    examples:
+    - value: '0'
+    range: integer
+  race_other:
+    examples:
+    - value: Hispanic
+    range: string
+  hispanic_latino:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___1:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___2:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___3:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___4:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___5:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___6:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___7:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___8:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___88:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity_other:
+    examples:
+    - value: Gutemalen
+    range: string
+  gender_identity:
+    examples:
+    - value: '1'
+    range: integer
+  gender_identity_other:
+    examples:
+    - value: Nonbinary
+    range: string
+  usa_born:
+    examples:
+    - value: '1'
+    range: integer
+  time_in_usa:
+    examples:
+    - value: '78.0'
+    range: float
+  usa_months_vs_years:
+    examples:
+    - value: '2'
+    range: integer
+  education:
+    examples:
+    - value: '8'
+    range: integer
+  education_other:
+    examples:
+    - value: 9grade
+    range: string
+  work_for_pay:
+    examples:
+    - value: '0'
+    range: integer
+  work_level:
+    examples:
+    - value: '1.0'
+    range: float
+  family_needs:
+    examples:
+    - value: '5'
+    range: integer
+  individual_needs:
+    examples:
+    - value: '5'
+    range: integer
+  language_used:
+    examples:
+    - value: en-US
+    range: language_used_enum
+  language_used_name:
+    range: string
+  demographics_complete:
+    examples:
+    - value: '2'
+    range: integer
+  health_history_timestamp:
+    examples:
+    - value: '2025-09-30 14:56:40'
+    range: string
+  general_health:
+    examples:
+    - value: '3'
+    range: integer
+  healthcare_usage:
+    examples:
+    - value: '1'
+    range: integer
+  affording_healthcare:
+    examples:
+    - value: '0'
+    range: integer
+  smoking:
+    examples:
+    - value: '3'
+    range: integer
+  diabetes:
+    examples:
+    - value: '1'
+    range: integer
+  hypertension:
+    examples:
+    - value: '1'
+    range: integer
+  chronic_pain:
+    examples:
+    - value: '1'
+    range: integer
+  health_history_complete:
+    examples:
+    - value: '2'
+    range: integer
+  dental_history_timestamp:
+    examples:
+    - value: '2025-09-30 14:59:56'
+    range: datetime
+  oral_health_self_eval:
+    examples:
+    - value: '5'
+    range: integer
+  dental_home:
+    examples:
+    - value: '0'
+    range: integer
+  last_dental_visit:
+    examples:
+    - value: '1'
+    range: integer
+  visit_avoid___1:
+    examples:
+    - value: '0'
+    range: integer
+  visit_avoid___2:
+    examples:
+    - value: '0'
+    range: integer
+  visit_avoid___3:
+    examples:
+    - value: '0'
+    range: integer
+  visit_avoid___4:
+    examples:
+    - value: '0'
+    range: integer
+  visit_avoid___5:
+    examples:
+    - value: '0'
+    range: integer
+  visit_avoid___6:
+    examples:
+    - value: '0'
+    range: integer
+  visit_avoid___7:
+    examples:
+    - value: '0'
+    range: integer
+  visit_avoid___8:
+    examples:
+    - value: '0'
+    range: integer
+  visit_avoid___9:
+    examples:
+    - value: '0'
+    range: integer
+  visit_avoid___10:
+    examples:
+    - value: '0'
+    range: integer
+  visit_avoid___11:
+    examples:
+    - value: '0'
+    range: integer
+  visit_avoid___88:
+    examples:
+    - value: '0'
+    range: integer
+  avoid_other:
+    examples:
+    - value: Don't have cavity
+    range: string
+  last_dental_reason___1:
+    examples:
+    - value: '0'
+    range: integer
+  last_dental_reason___2:
+    examples:
+    - value: '0'
+    range: integer
+  last_dental_reason___3:
+    examples:
+    - value: '0'
+    range: integer
+  last_dental_reason___4:
+    examples:
+    - value: '0'
+    range: integer
+  last_dental_reason___5:
+    examples:
+    - value: '0'
+    range: integer
+  last_dental_reason___6:
+    examples:
+    - value: '0'
+    range: integer
+  last_dental_reason___7:
+    examples:
+    - value: '0'
+    range: integer
+  last_dental_reason___8:
+    examples:
+    - value: '1'
+    range: integer
+  last_dental_reason___9:
+    examples:
+    - value: '0'
+    range: integer
+  last_dental_reason___10:
+    examples:
+    - value: '0'
+    range: integer
+  last_dental_reason___88:
+    examples:
+    - value: '0'
+    range: integer
+  last_dental_other:
+    examples:
+    - value: Multiple procedures
+    range: string
+  affording_dentistry:
+    examples:
+    - value: '0'
+    range: integer
+  checkup_feeling:
+    examples:
+    - value: '3'
+    range: integer
+  negative_experiences:
+    examples:
+    - value: '3'
+    range: integer
+  negative_reason___1:
+    examples:
+    - value: '0'
+    range: integer
+  negative_reason___2:
+    examples:
+    - value: '0'
+    range: integer
+  negative_reason___3:
+    examples:
+    - value: '0'
+    range: integer
+  negative_reason___4:
+    examples:
+    - value: '0'
+    range: integer
+  negative_reason___5:
+    examples:
+    - value: '0'
+    range: integer
+  negative_reason___6:
+    examples:
+    - value: '0'
+    range: integer
+  negative_reason___7:
+    examples:
+    - value: '0'
+    range: integer
+  negative_reason___88:
+    examples:
+    - value: '0'
+    range: integer
+  neg_reason_other:
+    examples:
+    - value: Receptionist took money and said she didn't get it
+    range: string
+  dental_specialist:
+    examples:
+    - value: '1'
+    range: integer
+  dental_insurance:
+    examples:
+    - value: '1'
+    range: integer
+  perio_diagnosis:
+    examples:
+    - value: '1'
+    range: integer
+  perio_treatment:
+    examples:
+    - value: '1'
+    range: integer
+  perio_mobility:
+    examples:
+    - value: '1'
+    range: integer
+  oral_cancer:
+    examples:
+    - value: '0'
+    range: integer
+  dry_mouth:
+    examples:
+    - value: '0'
+    range: integer
+  dental_history_complete:
+    examples:
+    - value: '2'
+    range: integer
+  idaf4c_timestamp:
+    examples:
+    - value: '2025-09-30 15:05:05'
+    range: datetime
+  idaf_1_a:
+    examples:
+    - value: '3'
+    range: integer
+  idaf_1_b:
+    examples:
+    - value: '3.0'
+    range: float
+  idaf_1_c:
+    examples:
+    - value: '4'
+    range: integer
+  idaf_1_d:
+    examples:
+    - value: '2'
+    range: integer
+  idaf_1_e:
+    examples:
+    - value: '2'
+    range: integer
+  idaf_1_f:
+    examples:
+    - value: '2.0'
+    range: float
+  idaf_1_g:
+    examples:
+    - value: '3.0'
+    range: float
+  idaf_1_h:
+    examples:
+    - value: '2.0'
+    range: float
+  idaf_2_a:
+    examples:
+    - value: '0'
+    range: integer
+  idaf_2_b:
+    examples:
+    - value: '0'
+    range: integer
+  idaf_2_c:
+    examples:
+    - value: '0'
+    range: integer
+  idaf_2_d:
+    examples:
+    - value: '0'
+    range: integer
+  idaf_2_e:
+    examples:
+    - value: '1'
+    range: integer
+  idaf_3_a:
+    examples:
+    - value: '5'
+    range: integer
+  idaf_3_b:
+    examples:
+    - value: '1'
+    range: integer
+  idaf_3_c:
+    examples:
+    - value: '1'
+    range: integer
+  idaf_3_d:
+    examples:
+    - value: '1'
+    range: integer
+  idaf_3_e:
+    examples:
+    - value: '1'
+    range: integer
+  idaf_3_f:
+    examples:
+    - value: '1'
+    range: integer
+  idaf_3_g:
+    examples:
+    - value: '1'
+    range: integer
+  idaf_3_h:
+    examples:
+    - value: '1'
+    range: integer
+  idaf_3_i:
+    examples:
+    - value: '1'
+    range: integer
+  idaf_3_j:
+    examples:
+    - value: '2'
+    range: integer
+  idaf4c_complete:
+    examples:
+    - value: '2'
+    range: integer
+  dfs_timestamp:
+    examples:
+    - value: '2025-09-30 15:08:21'
+    range: datetime
+  dfs_1:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_2:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_3:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_4:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_5:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_6:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_7:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_8:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_9:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_10:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_11:
+    examples:
+    - value: '2.0'
+    range: float
+  dfs_12:
+    examples:
+    - value: '2.0'
+    range: float
+  dfs_13:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_14:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_15:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_16:
+    examples:
+    - value: '2.0'
+    range: float
+  dfs_17:
+    examples:
+    - value: '2.0'
+    range: float
+  dfs_18:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_19:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_20:
+    examples:
+    - value: '2.0'
+    range: float
+  dfs_complete:
+    examples:
+    - value: '2'
+    range: integer
+  difficult_life_experiences_histo:
+    examples:
+    - value: '2025-09-30 15:10:21'
+    range: datetime
+  physical_violence_child:
+    examples:
+    - value: '2'
+    range: integer
+  physical_violence_adult:
+    examples:
+    - value: '2'
+    range: integer
+  physical_timeline_adult:
+    examples:
+    - value: '2.0'
+    range: float
+  sexual_abuse_child:
+    examples:
+    - value: '0'
+    range: integer
+  sexual_assault_adult:
+    examples:
+    - value: '0'
+    range: integer
+  sexual_timeline_adult:
+    examples:
+    - value: '2.0'
+    range: float
+  family_violence_child:
+    examples:
+    - value: '2'
+    range: integer
+  family_violence_adult:
+    examples:
+    - value: '2'
+    range: integer
+  family_timeline_adult:
+    examples:
+    - value: '2.0'
+    range: float
+  community_violence_child:
+    examples:
+    - value: '0'
+    range: integer
+  community_violence_adult:
+    examples:
+    - value: '0'
+    range: integer
+  community_timeline_adult:
+    examples:
+    - value: '2.0'
+    range: float
+  v159:
+    examples:
+    - value: '2'
+    range: integer
+  age:
+    examples:
+    - value: '4'
+    range: integer
+  sex:
+    examples:
+    - value: '0'
+    range: integer
+  race1:
+    examples:
+    - value: '1.0'
+    range: float
+  insur:
+    examples:
+    - value: '1.0'
+    range: float
+  dv2:
+    examples:
+    - value: '1.0'
+    range: float
+  dfsscore:
+    examples:
+    - value: '25'
+    range: integer
+  dfsavoid:
+    examples:
+    - value: '2'
+    range: integer
+  dfsphy:
+    examples:
+    - value: '5'
+    range: integer
+  dfsstim:
+    examples:
+    - value: '18'
+    range: integer
+  dfs2:
+    examples:
+    - value: '0'
+    range: integer
+  phychild:
+    examples:
+    - value: '0.0'
+    range: float
+  phyadult:
+    examples:
+    - value: '1.0'
+    range: float
+  phy:
+    examples:
+    - value: '1.0'
+    range: float
+  sexchild:
+    examples:
+    - value: '0.0'
+    range: float
+  sexadult:
+    examples:
+    - value: '0.0'
+    range: float
+  sexual:
+    examples:
+    - value: '0.0'
+    range: float
+  comchild:
+    examples:
+    - value: '0.0'
+    range: float
+  comadult:
+    examples:
+    - value: '0.0'
+    range: float
+  com:
+    examples:
+    - value: '0.0'
+    range: float
+  famchild:
+    examples:
+    - value: '1.0'
+    range: float
+  famadult:
+    examples:
+    - value: '0.0'
+    range: float
+  family:
+    examples:
+    - value: '1.0'
+    range: float
+  home:
+    examples:
+    - value: '0.0'
+    range: float
+  violence:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_1_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_2_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_3_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_4_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_5_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_6_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_7_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_8_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_9_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_10_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_11_3cat:
+    examples:
+    - value: '2.0'
+    range: float
+  dfs_12_3cat:
+    examples:
+    - value: '2.0'
+    range: float
+  dfs_13_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_14_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_15_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_16_3cat:
+    examples:
+    - value: '2.0'
+    range: float
+  dfs_17_3cat:
+    examples:
+    - value: '2.0'
+    range: float
+  dfs_18_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_19_3cat:
+    examples:
+    - value: '1.0'
+    range: float
+  dfs_20_3cat:
+    examples:
+    - value: '2.0'
+    range: float
+  education2:
+    examples:
+    - value: '2'
+    range: integer
+  soh:
+    examples:
+    - value: '0.0'
+    range: float
+  idafc_total:
+    examples:
+    - value: '21'
+    range: integer
+  idafc2:
+    examples:
+    - value: '1'
+    range: integer
+  idafcmean:
+    examples:
+    - value: '3'
+    range: integer
+  site:
+    examples:
+    - value: '2'
+    range: integer

@@ -5,3 +5,5 @@ Choose a schema:
 - [COHRA2 Schema](cohra2/)
 - [ADA OHWB Schema](ada_ohwb/)
 - [CareQuest SOHEA Schema](cq_sohea/)
+- [TIC Clinical Schema](tic_clinical/)
+- [TIC Provider Schema](tic_provider/)

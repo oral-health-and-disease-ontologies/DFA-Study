@@ -22,3 +22,5 @@ nav:
   - COHRA2 Schema: cohra2/index.md
   - ADA Oral Health and Well Being Schema: ada_ohwb/index.md
   - CareQuest SOHEA Schema: cq_sohea/index.md
+  - TIC Clinical Schema: tic_clinical/index.md
+  - TIC Provider Schema: tic_provider/index.md

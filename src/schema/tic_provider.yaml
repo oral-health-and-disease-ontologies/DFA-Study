@@ -1,0 +1,663 @@
+id: https://w3id.org/OHD/DFA-study/tic_provider
+name: tic_provider
+title: TIC Provider Schema
+license: https://mit-license.org/
+
+description: Schema for TIC Provider data
+
+imports:
+  - linkml:types
+  - core
+default_range: string
+default_prefix: tic_provider
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  core: https://w3id.org/OHD/DFA-study/core/
+  tic_provider: https://w3id.org/OHD/DFA-study/tic_provider/
+  OHD:  http://purl.obolibrary.org/obo/OHD_
+  dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
+
+classes:
+  TIC_PROVIDERDataset:
+    is_a: Dataset
+    description: >-
+      The TIC Provider Dataset
+    slot_usage:
+      records:
+        range: TIC_PROVIDERRecord
+
+  TIC_PROVIDERRecord:
+    is_a: Record
+    description: >-
+      A record in the TIC Provider dataset
+    slots:
+    - record_id
+    - redcap_survey_identifier
+    - consent_timestamp
+    - consent___1
+    - consent_complete
+    - research_survey_timestamp
+    - provider_type
+    - provider_other
+    - work_experience
+    - work_months_or_years
+    - specialty___1
+    - specialty___2
+    - specialty___3
+    - specialty___4
+    - specialty___5
+    - specialty___6
+    - specialty___7
+    - specialty___8
+    - specialty___9
+    - specialty___10
+    - specialty___11
+    - specialty___12
+    - specialty___13
+    - specialty___14
+    - specialty___15
+    - specialty___16
+    - specialty___17
+    - specialty___18
+    - specialty___19
+    - more_training
+    - training_specifics
+    - age
+    - race___1
+    - race___2
+    - race___3
+    - race___4
+    - race___5
+    - race___6
+    - race___7
+    - race___8
+    - race_other
+    - hispanic_latino
+    - ethnicity___1
+    - ethnicity___2
+    - ethnicity___3
+    - ethnicity___4
+    - ethnicity___5
+    - ethnicity___6
+    - ethnicity___7
+    - ethnicity___8
+    - ethnicity___88
+    - ethnicity_other
+    - gender
+    - gender_other
+    - state
+    - other_state
+    - utah_county
+    - pt_age___1
+    - pt_age___2
+    - pt_age___3
+    - medicaid
+    - medicaid_proportion
+    - white_proportion
+    - hispanic_proportion
+    - tic_definition
+    - tic_familiar
+    - tic_relevance
+    - dental_tic_training
+    - other_tic_training
+    - impactful_exp___1
+    - impactful_exp___2
+    - impactful_exp___3
+    - impactful_exp___4
+    - impactful_exp___5
+    - impactful_exp___6
+    - impactful_exp___7
+    - impactful_exp___8
+    - impactful_exp___9
+    - impactful_exp___10
+    - impactful_exp___11
+    - other_impactful
+    - symptoms___1
+    - symptoms___2
+    - symptoms___3
+    - symptoms___4
+    - symptoms___5
+    - symptoms___6
+    - symptoms___7
+    - symptoms___8
+    - symptoms___9
+    - symptoms___10
+    - symptoms___11
+    - symptoms___12
+    - symptoms___13
+    - symptoms___14
+    - symptoms___15
+    - symptoms___16
+    - attitude_scope
+    - attitude_training
+    - attitude_implementation
+    - attitude_interaction
+    - attitude_personal
+    - attitude_time
+    - attitude_org
+    - attitude_support
+    - competency_scope
+    - competency_training
+    - competency_implementation
+    - competency_interaction
+    - competency_personal
+    - competency_time
+    - competency_org
+    - competency_support
+    - practices_scope
+    - practices_training
+    - practices_implementation
+    - practices_interaction
+    - practices_personal
+    - practices_time
+    - practices_org
+    - practices_support
+    - research_survey_complete
+    unique_keys:
+      redcap_survey_identifier_key:
+        unique_key_name: redcap_survey_identifier_key
+        unique_key_slots:
+        - redcap_survey_identifier
+      gender_other_key:
+        unique_key_name: gender_other_key
+        unique_key_slots:
+        - gender_other
+      other_state_key:
+        unique_key_name: other_state_key
+        unique_key_slots:
+        - other_state
+      other_impactful_key:
+        unique_key_name: other_impactful_key
+        unique_key_slots:
+        - other_impactful
+
+slots:
+  record_id:
+    examples:
+    - value: '232'
+    identifier: true
+    range: integer
+  redcap_survey_identifier:
+    range: string
+  consent_timestamp:
+    examples:
+    - value: '2025-06-20 07:29:11'
+    range: datetime
+  consent___1:
+    examples:
+    - value: '1'
+    range: integer
+  consent_complete:
+    examples:
+    - value: '2'
+    range: integer
+  research_survey_timestamp:
+    examples:
+    - value: '2025-06-20 07:38:58'
+    range: string
+  provider_type:
+    examples:
+    - value: '3'
+    range: integer
+  provider_other:
+    examples:
+    - value: Office staff
+    range: string
+  work_experience:
+    examples:
+    - value: '7.0'
+    range: float
+  work_months_or_years:
+    examples:
+    - value: '2'
+    range: integer
+  specialty___1:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___2:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___3:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___4:
+    examples:
+    - value: '1'
+    range: integer
+  specialty___5:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___6:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___7:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___8:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___9:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___10:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___11:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___12:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___13:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___14:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___15:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___16:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___17:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___18:
+    examples:
+    - value: '0'
+    range: integer
+  specialty___19:
+    examples:
+    - value: '0'
+    range: integer
+  more_training:
+    examples:
+    - value: '0'
+    range: integer
+  training_specifics:
+    examples:
+    - value: BSW working on an MSW
+    range: string
+  age:
+    examples:
+    - value: '26'
+    range: integer
+  race___1:
+    examples:
+    - value: '0'
+    range: integer
+  race___2:
+    examples:
+    - value: '0'
+    range: integer
+  race___3:
+    examples:
+    - value: '0'
+    range: integer
+  race___4:
+    examples:
+    - value: '0'
+    range: integer
+  race___5:
+    examples:
+    - value: '0'
+    range: integer
+  race___6:
+    examples:
+    - value: '0'
+    range: integer
+  race___7:
+    examples:
+    - value: '0'
+    range: integer
+  race___8:
+    examples:
+    - value: '1'
+    range: integer
+  race_other:
+    examples:
+    - value: Hispanic
+    range: string
+  hispanic_latino:
+    examples:
+    - value: '1'
+    range: integer
+  ethnicity___1:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___2:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___3:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___4:
+    examples:
+    - value: '1'
+    range: integer
+  ethnicity___5:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___6:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___7:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___8:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity___88:
+    examples:
+    - value: '0'
+    range: integer
+  ethnicity_other:
+    examples:
+    - value: Guatemalan
+    range: string
+  gender:
+    examples:
+    - value: '2'
+    range: integer
+  gender_other:
+    examples:
+    - value: 'No'
+    range: string
+  state:
+    examples:
+    - value: '1'
+    range: integer
+  other_state:
+    examples:
+    - value: Washington
+    range: string
+  utah_county:
+    examples:
+    - value: '8.0'
+    range: float
+  pt_age___1:
+    examples:
+    - value: '0'
+    range: integer
+  pt_age___2:
+    examples:
+    - value: '1'
+    range: integer
+  pt_age___3:
+    examples:
+    - value: '0'
+    range: integer
+  medicaid:
+    examples:
+    - value: '1'
+    range: integer
+  medicaid_proportion:
+    examples:
+    - value: '1.0'
+    range: float
+  white_proportion:
+    examples:
+    - value: '3'
+    range: integer
+  hispanic_proportion:
+    examples:
+    - value: '2'
+    range: integer
+  tic_definition:
+    examples:
+    - value: '0'
+    range: integer
+  tic_familiar:
+    examples:
+    - value: '1'
+    range: integer
+  tic_relevance:
+    examples:
+    - value: '5'
+    range: integer
+  dental_tic_training:
+    examples:
+    - value: '1.0'
+    range: float
+  other_tic_training:
+    examples:
+    - value: '0'
+    range: integer
+  impactful_exp___1:
+    examples:
+    - value: '1'
+    range: integer
+  impactful_exp___2:
+    examples:
+    - value: '1'
+    range: integer
+  impactful_exp___3:
+    examples:
+    - value: '1'
+    range: integer
+  impactful_exp___4:
+    examples:
+    - value: '1'
+    range: integer
+  impactful_exp___5:
+    examples:
+    - value: '1'
+    range: integer
+  impactful_exp___6:
+    examples:
+    - value: '1'
+    range: integer
+  impactful_exp___7:
+    examples:
+    - value: '1'
+    range: integer
+  impactful_exp___8:
+    examples:
+    - value: '1'
+    range: integer
+  impactful_exp___9:
+    examples:
+    - value: '1'
+    range: integer
+  impactful_exp___10:
+    examples:
+    - value: '1'
+    range: integer
+  impactful_exp___11:
+    examples:
+    - value: '0'
+    range: integer
+  other_impactful:
+    examples:
+    - value: Character defect
+    range: string
+  symptoms___1:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___2:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___3:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___4:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___5:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___6:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___7:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___8:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___9:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___10:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___11:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___12:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___13:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___14:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___15:
+    examples:
+    - value: '1'
+    range: integer
+  symptoms___16:
+    examples:
+    - value: '0'
+    range: integer
+  attitude_scope:
+    examples:
+    - value: '2.0'
+    range: float
+  attitude_training:
+    examples:
+    - value: '5'
+    range: integer
+  attitude_implementation:
+    examples:
+    - value: '4'
+    range: integer
+  attitude_interaction:
+    examples:
+    - value: '2'
+    range: integer
+  attitude_personal:
+    examples:
+    - value: '2'
+    range: integer
+  attitude_time:
+    examples:
+    - value: '3'
+    range: integer
+  attitude_org:
+    examples:
+    - value: '3'
+    range: integer
+  attitude_support:
+    examples:
+    - value: '3'
+    range: integer
+  competency_scope:
+    examples:
+    - value: '4'
+    range: integer
+  competency_training:
+    examples:
+    - value: '2'
+    range: integer
+  competency_implementation:
+    examples:
+    - value: '4'
+    range: integer
+  competency_interaction:
+    examples:
+    - value: '4'
+    range: integer
+  competency_personal:
+    examples:
+    - value: '4'
+    range: integer
+  competency_time:
+    examples:
+    - value: '4'
+    range: integer
+  competency_org:
+    examples:
+    - value: '3'
+    range: integer
+  competency_support:
+    examples:
+    - value: '3'
+    range: integer
+  practices_scope:
+    examples:
+    - value: '4'
+    range: integer
+  practices_training:
+    examples:
+    - value: '4'
+    range: integer
+  practices_implementation:
+    examples:
+    - value: '4'
+    range: integer
+  practices_interaction:
+    examples:
+    - value: '4'
+    range: integer
+  practices_personal:
+    examples:
+    - value: '4'
+    range: integer
+  practices_time:
+    examples:
+    - value: '4'
+    range: integer
+  practices_org:
+    examples:
+    - value: '3'
+    range: integer
+  practices_support:
+    examples:
+    - value: '3'
+    range: integer
+  research_survey_complete:
+    examples:
+    - value: '2'
+    range: integer

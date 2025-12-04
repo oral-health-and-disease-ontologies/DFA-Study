@@ -13,6 +13,14 @@ CQ_SOHEA_SCHEMA_DIR = $(SRC)/schema
 CQ_SOHEA_SCHEMA = $(CQ_SOHEA_SCHEMA_DIR)/cq_sohea.yaml
 CQ_SOHEA_DOCS_DIR = $(DOCSDIR)/cq_sohea
 
+TIC_CLINICAL_SCHEMA_DIR = $(SRC)/schema
+TIC_CLINICAL_SCHEMA = $(TIC_CLINICAL_SCHEMA_DIR)/tic_clinical.yaml
+TIC_CLINICAL_DOCS_DIR = $(DOCSDIR)/tic_clinical
+
+TIC_PROVIDER_SCHEMA_DIR = $(SRC)/schema
+TIC_PROVIDER_SCHEMA = $(TIC_PROVIDER_SCHEMA_DIR)/tic_provider.yaml
+TIC_PROVIDER_DOCS_DIR = $(DOCSDIR)/tic_provider
+
 # --- linkml products --- #
 cohra2-jsonschema: $(COHRA2_SCHEMA)
 	gen-json-schema $< > jsonschema/cohra2.json
@@ -38,6 +46,22 @@ cq_sohea-owl: $(CQ_SOHEA_SCHEMA)
 	src/scripts/pun-annotations-to-ttl.py $< > temp/pun.tmp.ttl 
 	robot merge -i temp/cq_sohea.tmp.ttl -i temp/pun.tmp.ttl -o owl/cq_sohea.ttl
 
+tic_clinical-jsonschema: $(TIC_CLINICAL_SCHEMA)
+	gen-json-schema $< > jsonschema/tic_clinical.json
+
+tic_clinical-owl: $(TIC_CLINICAL_SCHEMA)
+	gen-owl $< > temp/tic_clinical.tmp.ttl
+	src/scripts/pun-annotations-to-ttl.py $< > temp/pun.tmp.ttl
+	robot merge -i temp/tic_clinical.tmp.ttl -i temp/pun.tmp.ttl -o owl/tic_clinical.ttl
+
+tic_provider-jsonschema: $(TIC_PROVIDER_SCHEMA)
+	gen-json-schema $< > jsonschema/tic_provider.json
+
+tic_provider-owl: $(TIC_PROVIDER_SCHEMA)
+	gen-owl $< > temp/tic_provider.tmp.ttl
+	src/scripts/pun-annotations-to-ttl.py $< > temp/pun.tmp.ttl
+	robot merge -i temp/tic_provider.tmp.ttl -i temp/pun.tmp.ttl -o owl/tic_provider.ttl
+
 ## remove products
 clean-products:
 # don't delete README files
@@ -52,6 +76,8 @@ gendoc:
 	mkdir -p $(COHRA2_DOCS_DIR)
 	mkdir -p $(ADA_OHWB_DOCS_DIR)
 	mkdir -p $(CQ_SOHEA_DOCS_DIR)
+	mkdir -p $(TIC_CLINICAL_DOCS_DIR)
+	mkdir -p $(TIC_PROVIDER_DOCS_DIR)
 	mkdir -p docs/images
 
 	@# copy existing markdown files (if they exist)
@@ -62,6 +88,8 @@ gendoc:
 	gen-doc -d $(COHRA2_DOCS_DIR) $(COHRA2_SCHEMA)
 	gen-doc -d $(ADA_OHWB_DOCS_DIR) $(ADA_OHWB_SCHEMA)
 	gen-doc -d $(CQ_SOHEA_DOCS_DIR) $(CQ_SOHEA_SCHEMA)
+	gen-doc -d $(TIC_CLINICAL_DOCS_DIR) $(TIC_CLINICAL_SCHEMA)
+	gen-doc -d $(TIC_PROVIDER_DOCS_DIR) $(TIC_PROVIDER_SCHEMA)
 
 
 ## remove docs
