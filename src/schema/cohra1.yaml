@@ -13,6 +13,7 @@ prefixes:
   OHD:  http://purl.obolibrary.org/obo/OHD_
   dcterms: http://purl.org/dc/terms/
   dwc: http://rs.tdwg.org/dwc/terms/
+  dfs: https://w3id.org/OHD/DFA-study/dfs/
 
 imports:
   - linkml:types
