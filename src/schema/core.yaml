@@ -36,3 +36,4 @@ slots:
     multivalued: true
     inlined_as_list: true
     range: Record
+
