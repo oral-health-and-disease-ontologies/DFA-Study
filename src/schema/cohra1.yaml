@@ -1,0 +1,209 @@
+id: https://w3id.org/OHD/DFA-study/cohra1
+name: cohra1
+title: COHRA1 Study Schema
+license: https://mit-license.org/
+
+description: >-
+  LinkML schema for defining data elements used in the COHRA1 study.
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  core: https://w3id.org/OHD/DFA-study/core/
+  cohra1: https://w3id.org/OHD/DFA-study/cohra1/
+  OHD:  http://purl.obolibrary.org/obo/OHD_
+  dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
+  dfs: https://w3id.org/OHD/DFA-study/dfs/
+
+imports:
+  - linkml:types
+  - core
+  - dfs
+default_prefix: cohra1
+
+classes:
+  COHRA1Dataset:
+    is_a: Dataset
+    description: >-
+      The COHRA1 dataset
+    slot_usage:
+      records:
+        range: COHRA1Record
+
+  COHRA1Record:
+    is_a: Record
+    description: >-
+      A record in the COHRA1 dataset
+    slots:
+      - Participant_ID
+      - Site
+      - Pedigree_name
+      - AGE
+      - Sex
+      - demRace
+      - Ethnicity
+      - DF01
+      - DF02
+      - DF03
+      - DF04
+      - DF05
+      - DF06
+      - DF07
+      - DF08
+      - DF09
+      - DF10
+      - DF11
+      - DF12
+      - DF13
+      - DF14
+      - DF15
+      - DF16
+      - DF17
+      - DF18
+      - DF19
+      - DF20
+      - DF21
+      - DF22
+      - DF23
+      - DF24
+      - DF25
+      - DF26
+      - DF27
+      - DF28
+      - DF29
+      - AvoidanceAnticipatoryFear
+      - FearOfSpecificDentalStimuli
+      - PhysiologicalArousal
+      - TotalDFSScore
+      - FearOfPainScore
+      - FearOfMinorPain
+      - FearOfSeverePain
+      - FearOfMedical
+
+slots:
+  Participant_ID: 
+    description: >-
+      The participant's study ID.
+    range: integer
+  Site:
+    description: >-
+      The code for the study site where the assessment was given.
+    range: SiteCOHRA1
+  Pedigree_name:
+    description: >-
+      The Family pedigree number assigned by genetic relationship.
+    range: integer
+  AGE:
+    description: >-
+      The particpant's age at the time of the visit.
+    range: float
+  Sex:
+    description: >-
+      The particpant's sex
+    range: SexCOHRA
+  demRace:
+    description: >-
+      What is your race/ethnicity?
+    range: demRaceCOHRA
+  Ethnicity:
+    description: >-
+      Hispanic or Latino
+    range: NoYesCOHRA
+  DF21:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Breaking your arm.
+    range: LikertFear
+  DF22:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having a foot doctor remove a wart from your foot with a sharp instrument.
+    range: LikertFear
+  DF23:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting a paper cut on your finger.
+    range: LikertFear
+  DF24:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your mouth.
+    range: LikertFear
+  DF25:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting strong soap in both your eyes while bathing or showering.
+    range: LikertFear
+  DF26:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having someone slam a heavy car door on your hand.
+    range: LikertFear
+  DF27:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Gulping a hot drink before it has cooled.
+    range: LikertFear
+  DF28:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your hip/buttocks.
+    range: LikertFear
+  DF29:
+    description: >-
+      Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Falling down a flight of concrete stairs.
+    range: LikertFear
+  AvoidanceAnticipatoryFear:
+    description: >-
+      Sum of responses related to avoidance/anticipatory fear, including DF01, DF02, DF08, DF09, DF10, DF11, DF12, and DF13.
+    any_of:
+      - range: Score0to40
+      - range: MissingResponse
+  FearOfSpecificDentalStimuli:
+    description: >-
+      Sum of responses related to fear of specific dental stimuli, including DF14, DF15, DF16, DF17, DF18, and DF19.
+    any_of:
+      - range: Score0to30
+      - range: MissingResponse
+  PhysiologicalArousal:
+    description: >-
+      Sum of responses related to physiological arousal, including DF03, DF04, DF05, DF06, and DF07.
+    any_of:
+      - range: Score0to25
+      - range: MissingResponse
+  TotalDFSScore:
+    description: >-
+      Total score of all DFS items, including DF01 through DF20.
+    any_of:
+      - range: Score0to100
+      - range: MissingResponse
+  FearOfPainScore:
+    description: >-
+      Total score of all Fear of Pain items, including DF21 through DF29.
+    any_of:
+      - range: Score9to45
+      - range: MissingResponse
+  FearOfMinorPain:
+    description: >-
+      Sum of responses related to fear of minor pain, including DF23, DF25, and DF27.
+    any_of:
+      - range: Score3to15
+      - range: MissingResponse
+  FearOfSeverePain:
+    description: >-
+      Sum of responses related to fear of severe pain, including DF21, DF26, and DF29.
+    any_of:
+      - range: Score3to15
+      - range: MissingResponse
+  FearOfMedical:
+    description: >-
+      Sum of responses related to fear of pain resulting from a medical procedure, including DF22, DF24, and DF28.
+    any_of:
+      - range: Score3to15
+      - range: MissingResponse
+
+enums:
+  SiteCOHRA1:
+    description: >-
+      Enumeration for the COHRA1 study site where the assessment was given.
+    permissible_values:
+      "C1-WV":
+        description: "COHRA1 - West Virginia"
+      "C1-BR":
+        description: "COHRA1 - Bradford"
+      "C1-BU":
+        description: "COHRA1 - Burgettstown"
+      "C1-BK":
+        description: "COHRA1 - Braddock"
