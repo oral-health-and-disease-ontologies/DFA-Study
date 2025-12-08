@@ -13,10 +13,12 @@ prefixes:
   OHD:  http://purl.obolibrary.org/obo/OHD_
   dcterms: http://purl.org/dc/terms/
   dwc: http://rs.tdwg.org/dwc/terms/
+  mdas: https://w3id.org/OHD/DFA-study/mdas/
 
 imports:
   - linkml:types
   - core
+  - mdas
 default_range: string
 default_prefix: cq_sohea
 
@@ -168,26 +170,6 @@ slots:
     description: >-
       [At my last oral health visit, my oral health provider tried to make me feel comfortable and at ease] How much do you agree with the following statements about your last oral health visit?
     range: LikertDKSR
-  S3_Q4A:
-    description: >-
-      [If you went to the dentist for treatment tomorrow] How would you feel in the following scenarios?
-    range: AnxietyDKSR
-  S3_Q4B:
-    description: >-
-      [If you were sitting in the waiting room (waiting for treatment)] How would you feel in the following scenarios?
-    range: AnxietyDKSR
-  S3_Q4C:
-    description: >-
-      [If you were about to have a tooth drilled] How would you feel in the following scenarios?
-    range: AnxietyDKSR
-  S3_Q4D:
-    description: >-
-      [If you were about to have your teeth scaled and polished] How would you feel in the following scenarios?
-    range: AnxietyDKSR
-  S3_Q4E:
-    description: >-
-      [If you were about to have a local anesthetic injection in your gum above an upper back tooth] How would you feel in the following scenarios?
-    range: AnxietyDKSR
   S3_Q11:
     description: >-
       Have you received sedation at a dental visit in the last two years?
