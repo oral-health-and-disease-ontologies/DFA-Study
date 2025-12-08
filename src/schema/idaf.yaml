@@ -1,0 +1,244 @@
+id: https://w3id.org/OHD/DFA-study/idaf
+name: idaf_schema
+title: Index of Dental Anxiety and Fear
+license: https://mit-license.org/
+
+description: >-
+  LinkML schema for defining data elements used in the IDAF-4C+ assessment instrument.
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  core: https://w3id.org/OHD/DFA-study/core/
+  idaf: https://w3id.org/OHD/DFA-study/idaf/
+  OHD:  http://purl.obolibrary.org/obo/OHD_
+  dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
+
+imports:
+  - linkml:types
+  - core
+default_range: string
+default_prefix: dfs
+
+slots:
+  idaf_1_a:
+    description: >-
+      (1a) I feel anxious shortly before going to the dentist.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008055 # IDAF 1A
+    range: LikertDR
+
+  idaf_1_b:
+    description: >-
+      (1b) I generally avoid going to the dentist because I find the experience unpleasant or distressing.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008056 # IDAF 1B
+    range: LikertDR
+
+  idaf_1_c:
+    description: >-
+      (1c) I get nervous or edgy about upcoming dental visits.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008057 # IDAF 1C
+    range: LikertDR
+
+  idaf_1_d:
+    description: >-
+      (1d) I think that something really bad would happen to me if I were to visit a dentist.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008058 # IDAF 1D
+    range: LikertDR
+  
+  idaf_1_e:
+    description: >-
+      (1e) I feel afraid or fearful when visiting the dentist.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008059 # IDAF 1E
+    range: LikertDR
+
+  idaf_1_f:
+    description: >-
+      (1f) My heart beats faster when I go to the dentist.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008060 # IDAF 1F
+    range: LikertDR
+
+  idaf_1_g:
+    description: >-
+      (1g) I delay making appointments to go to the dentist.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008061 # IDAF 1G
+    range: LikertDR
+
+  idaf_1_h:
+    description: >-
+      (1h) I often think about all the things that might go wrong prior to going to the dentist.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008062 # IDAF 1H
+    range: LikertDR
+
+  idaf_2_a:
+    description: >-
+      (2a) Going to the dentist is actively avoided or else endured with intense fear or anxiety
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008063 # IDAF 2A
+    range: NoYesDR
+
+  idaf_2_b:
+    description: >-
+      (2b) My fear of going to the dentist has been present for at least 6 month
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008064 # IDAF 2B
+    range: NoYesDR
+
+  idaf_2_c:
+    description: >-
+      (2c) My fear, anxiety or avoidance of going to the dentist significantly affects my life in some way (dental pain, avoiding eating some foods, embarrassed or self-conscious about appearance of teeth or mouth, etc.)
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008065 # IDAF 2C
+    range: NoYesDR
+
+  idaf_2_d:
+    description: >-
+      (2d) I am afraid of going to the dentist because I am concerned I may have a panic attack (abrupt fear with sweating, pounding liteart, fear of dying or losing control, chest pain etc.)
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008066 # IDAF 2D
+    range: NoYesDR
+
+  idaf_2_e:
+    description: >-
+      (2e) I am afraid of going to the dentist because I am generally highly self-conscious or concerned about being watched or judged in social situations.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008067 # IDAF 2E
+    range: NoYesDR
+
+  idaf_3_a:
+    description: >-
+      (3a) Painful or uncomfortable procedures 
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008068 # IDAF 3A
+    range: DegreeLikertDR
+
+  idaf_3_b:
+    description: >-
+      (3b)  Feeling embarrassed or ashamed  
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008069 # IDAF 3B
+    range: DegreeLikertDR
+
+  idaf_3_c:
+    description: >-
+      (3c)  Not being in control of what is happening 
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008070 # IDAF 3C
+    range: DegreeLikertDR
+
+  idaf_3_d:
+    description: >-
+      (3d)  Feeling sick, queasy or disgusted  
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008071 # IDAF 3D
+    range: DegreeLikertDR
+
+  idaf_3_e:
+    description: >-
+      (3e)  Numbness caused by the anesthetic 
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008072 # IDAF 3E
+    range: DegreeLikertDR
+
+  idaf_3_f:
+    description: >-
+      (3f)  Not knowing what the dentist is going to do  
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008073 # IDAF 3F
+    range: DegreeLikertDR
+
+  idaf_3_g:
+    description: >-
+      (3g)  The cost of dental treatment 
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008074 # IDAF 3G
+    range: DegreeLikertDR
+
+  idaf_3_h:
+    description: >-
+      (3h) Needles or injections 
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008075 # IDAF 3H
+    range: DegreeLikertDR
+
+  idaf_3_i:
+    description: >-
+      (3i)  Gagging or choking  
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008076 # IDAF 3I
+    range: DegreeLikertDR
+
+  idaf_3_j:
+    description: >-
+      (3j)  Having an unsympathetic or unkind dentist  
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008077 # IDAF 3J
+    range: DegreeLikertDR
+
+enums:
+  LikertDR:
+    description: >-
+      A standard 5-point Likert scale ranging from "Strongly Disagree" to "Strongly Agree", including an option for 'Decline to respond'.
+    permissible_values:
+      1:
+        description: Strongly Disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104476
+      2:
+        description: Disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104479
+      3:
+        description: Neither Agree nor Disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C103804
+      4:
+        description: Agree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104478
+      5:
+        description: Strongly Agree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104475
+      88:
+        description: Decline to respond
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  NoYesDR:
+    descripion: >-
+      A simple No/Yes enumeration with an option for 'Decline to respond'.
+    permissible_values:
+      0:
+        description: No
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      1:
+        description: Yes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      88:
+        description: Decline to respond
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  DegreeLikertDR:
+    description: >-
+      A standard 5-point frequency Likert scale ranging from "Not At All" to "Very Much", including an option for 'Decline to respond'.
+    permissible_values:
+      1:
+        description: Not At All
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91213
+      2:
+        description: A Little
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91214 
+      3:
+        description: Somewhat
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91215 
+      4:
+        description: Much
+        meaning: http://purl.obolibrary.org/obo/NCIT_C126287
+      5:
+        description: Very Much
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91217 
+      88:
+        description: Decline to respond
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024

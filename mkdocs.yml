@@ -23,3 +23,11 @@ nav:
   - COHRA1 Schema: cohra1/index.md
   - COHRA2 Schema: cohra2/index.md
   - DFA Study Schema: index.md
+  - DFS Study Schema: dfs/index.md
+  - COHRA2 Schema: cohra2/index.md
+  - ADA Oral Health and Well Being Schema: ada_ohwb/index.md
+  - CareQuest SOHEA Schema: cq_sohea/index.md
+  - TIC Clinical Schema: tic_clinical/index.md
+  - TIC Provider Schema: tic_provider/index.md
+  - Modified Dental Anxiety Scale Schema: mdas/index.md
+  - IDAF Schema: idaf/index.md

@@ -13,10 +13,13 @@ prefixes:
   OHD:  http://purl.obolibrary.org/obo/OHD_
   dcterms: http://purl.org/dc/terms/
   dwc: http://rs.tdwg.org/dwc/terms/
+  dfs: https://w3id.org/OHD/DFA-study/dfs/
 
 imports:
   - linkml:types
   - core
+  - dfs
+default_range: string
 default_prefix: cohra2
 
 classes:
@@ -237,6 +240,7 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000441 # DFS 20
     range: LikertFear
+    range: NoYesCOHRA2
   DF21:
     description: >-
       Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Breaking your arm.
