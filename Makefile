@@ -9,9 +9,21 @@ ADA_OHWB_SCHEMA_DIR = $(SRC)/schema
 ADA_OHWB_SCHEMA = $(ADA_OHWB_SCHEMA_DIR)/ada_ohwb.yaml
 ADA_OHWB_DOCS_DIR = $(DOCSDIR)/ada_ohwb
 
+DFS_SCHEMA_DIR = $(SRC)/schema
+DFS_SCHEMA = $(DFS_SCHEMA_DIR)/dfs.yaml
+DFS_DOCS_DIR = $(DOCSDIR)/dfs
+
 CQ_SOHEA_SCHEMA_DIR = $(SRC)/schema
 CQ_SOHEA_SCHEMA = $(CQ_SOHEA_SCHEMA_DIR)/cq_sohea.yaml
 CQ_SOHEA_DOCS_DIR = $(DOCSDIR)/cq_sohea
+
+MDAS_SCHEMA_DIR = $(SRC)/schema
+MDAS_SCHEMA = $(MDAS_SCHEMA_DIR)/mdas.yaml
+MDAS_DOCS_DIR = $(DOCSDIR)/mdas
+
+IDAF_SCHEMA_DIR = $(SRC)/schema
+IDAF_SCHEMA = $(IDAF_SCHEMA_DIR)/idaf.yaml
+IDAF_DOCS_DIR = $(DOCSDIR)/idaf
 
 # --- linkml products --- #
 cohra2-jsonschema: $(COHRA2_SCHEMA)
@@ -30,6 +42,14 @@ ada_ohwb-owl: $(ADA_OHWB_SCHEMA)
 	src/scripts/pun-annotations-to-ttl.py $< > temp/pun.tmp.ttl 
 	robot merge -i temp/ada_ohwb.tmp.ttl -i temp/pun.tmp.ttl -o owl/ada_ohwb.ttl 
 
+dfs-jsonschema: $(DFS_SCHEMA)
+	gen-json-schema $< > jsonschema/dfs.json
+
+dfs-owl: $(DFS_SCHEMA)
+	gen-owl $< > temp/dfs.tmp.ttl
+	src/scripts/pun-annotations-to-ttl.py $< > temp/pun.tmp.ttl 
+	robot merge -i temp/dfs.tmp.ttl -i temp/pun.tmp.ttl
+
 cq_sohea-jsonschema: $(CQ_SOHEA_SCHEMA)
 	gen-json-schema $< > jsonschema/cq_sohea.json
 
@@ -37,6 +57,22 @@ cq_sohea-owl: $(CQ_SOHEA_SCHEMA)
 	gen-owl $< > temp/cq_sohea.tmp.ttl 
 	src/scripts/pun-annotations-to-ttl.py $< > temp/pun.tmp.ttl 
 	robot merge -i temp/cq_sohea.tmp.ttl -i temp/pun.tmp.ttl -o owl/cq_sohea.ttl
+
+mdas-jsonschema: $(MDAS_SCHEMA)
+	gen-json-schema $< > jsonschema/mdas.json
+
+mdas-owl: $(MDAS_SCHEMA)
+	gen-owl $< > temp/mdas.tmp.ttl 
+	src/scripts/pun-annotations-to-ttl.py $< > temp/pun.tmp.ttl 
+	robot merge -i temp/mdas.tmp.ttl -i temp/pun.tmp.ttl -o owl/mdas.ttl
+
+idaf-jsonschema: $(IDAF_SCHEMA)
+	gen-json-schema $< > jsonschema/idaf.json
+
+idaf-owl: $(IDAF_SCHEMA)
+	gen-owl $< > temp/idaf.tmp.ttl
+	src/scripts/pun-annotations-to-ttl.py $< > temp/pun.tmp.ttl 
+	robot merge -i temp/idaf.tmp.ttl -i temp/pun.tmp.ttl
 
 ## remove products
 clean-products:
@@ -51,7 +87,10 @@ gendoc:
 	@# create target folders
 	mkdir -p $(COHRA2_DOCS_DIR)
 	mkdir -p $(ADA_OHWB_DOCS_DIR)
+	mkdir -p $(DFS_DOCS_DIR)
 	mkdir -p $(CQ_SOHEA_DOCS_DIR)
+	mkdir -p $(MDAS_DOCS_DIR)
+	mkdir -p $(IDAF_DOCS_DIR)
 	mkdir -p docs/images
 
 	@# copy existing markdown files (if they exist)
@@ -61,7 +100,10 @@ gendoc:
 	@# generate documentation
 	gen-doc -d $(COHRA2_DOCS_DIR) $(COHRA2_SCHEMA)
 	gen-doc -d $(ADA_OHWB_DOCS_DIR) $(ADA_OHWB_SCHEMA)
+	gen-doc -d $(DFS_DOCS_DIR) $(DFS_SCHEMA)
 	gen-doc -d $(CQ_SOHEA_DOCS_DIR) $(CQ_SOHEA_SCHEMA)
+	gen-doc -d $(MDAS_DOCS_DIR) $(MDAS_SCHEMA)
+	gen-doc -d $(IDAF_DOCS_DIR) $(IDAF_SCHEMA)
 
 
 ## remove docs
