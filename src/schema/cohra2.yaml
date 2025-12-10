@@ -239,8 +239,9 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: All things considered, how fearful are you of having dental work done?
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000441 # DFS 20
-    range: LikertFear
-    range: NoYesCOHRA2
+    any_of:
+      - range: LikertFear
+      - range: NoYesCOHRA
   DF21:
     description: >-
       Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Breaking your arm.

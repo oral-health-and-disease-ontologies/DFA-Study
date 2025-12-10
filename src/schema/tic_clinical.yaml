@@ -3,7 +3,8 @@ name: tic_clinical
 title: TIC Clinical Schema
 license: https://mit-license.org/
 
-description: Schema for TIC Clinical data
+description: >-
+  Schema for TIC Clinical data
 
 imports:
   - linkml:types
@@ -552,7 +553,7 @@ slots:
     range: integer
   avoid_other:
     examples:
-    - value: Don't have cavity
+    - value: "Don't have cavity"
     range: string
   last_dental_reason___1:
     examples:
@@ -648,7 +649,7 @@ slots:
     range: integer
   neg_reason_other:
     examples:
-    - value: Receptionist took money and said she didn't get it
+    - value: "Receptionist took money and said she didn't get it"
     range: string
   dental_specialist:
     examples:
@@ -694,6 +695,106 @@ slots:
     examples:
     - value: '2025-09-30 15:08:21'
     range: datetime
+  dfs_1:
+    description: Local alias for DFS Question 1
+    mappings:
+      - dfs:DF01
+    range: FreqNH
+  dfs_2:
+    description: Local alias for DFS Question 2
+    mappings:
+      - dfs:DF02
+    range: FreqNH
+  dfs_3:
+    description: Local alias for DFS Question 3
+    mappings:
+      - dfs:DF03
+    range: FreqNH
+  dfs_4:
+    description: Local alias for DFS Question 4
+    mappings:
+      - dfs:DF04
+    range: FreqNH
+  dfs_5:
+    description: Local alias for DFS Question 5
+    mappings:
+      - dfs:DF05
+    range: FreqNH
+  dfs_6:
+    description: Local alias for DFS Question 6
+    mappings:
+      - dfs:DF06
+    range: FreqNH
+  dfs_7:
+    description: Local alias for DFS Question 7
+    mappings:
+      - dfs:DF07
+    range: FreqNH
+  dfs_8:
+    description: Local alias for DFS Question 8
+    mappings:
+      - dfs:DF08
+    range: LikertFearNH
+  dfs_9:
+    description: Local alias for DFS Question 9
+    mappings:
+      - dfs:DF09
+    range: LikertFearNH
+  dfs_10:
+    description: Local alias for DFS Question 10
+    mappings:
+      - dfs:DF10
+    range: LikertFearNH
+  dfs_11:
+    description: Local alias for DFS Question 11
+    mappings:
+      - dfs:DF11
+    range: LikertFearNH
+  dfs_12:
+    description: Local alias for DFS Question 12
+    mappings:
+      - dfs:DF12
+    range: LikertFearNH
+  dfs_13:
+    description: Local alias for DFS Question 13
+    mappings:
+      - dfs:DF13
+    range: LikertFearNH
+  dfs_14:
+    description: Local alias for DFS Question 14
+    mappings:
+      - dfs:DF14
+    range: LikertFearNH
+  dfs_15:
+    description: Local alias for DFS Question 15
+    mappings:
+      - dfs:DF15
+    range: LikertFearNH
+  dfs_16:
+    description: Local alias for DFS Question 16
+    mappings:
+      - dfs:DF16
+    range: LikertFearNH
+  dfs_17:
+    description: Local alias for DFS Question 17
+    mappings:
+      - dfs:DF17
+    range: LikertFearNH
+  dfs_18:
+    description: Local alias for DFS Question 18
+    mappings:
+      - dfs:DF18
+    range: LikertFearNH
+  dfs_19:
+    description: Local alias for DFS Question 19
+    mappings:
+      - dfs:DF19
+    range: LikertFearNH
+  dfs_20:
+    description: Local alias for DFS Question 20
+    mappings:
+      - dfs:DF20
+    range: LikertFearNH
   dfs_complete:
     examples:
     - value: '2'
