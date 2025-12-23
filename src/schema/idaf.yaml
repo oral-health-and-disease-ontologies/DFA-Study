@@ -207,7 +207,7 @@ enums:
         meaning: http://purl.obolibrary.org/obo/NCIT_C51024
 
   NoYesDR:
-    descripion: >-
+    description: >-
       A simple No/Yes enumeration with an option for 'Decline to respond'.
     permissible_values:
       0:

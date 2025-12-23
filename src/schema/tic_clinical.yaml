@@ -3,7 +3,8 @@ name: tic_clinical
 title: TIC Clinical Schema
 license: https://mit-license.org/
 
-description: Schema for TIC Clinical data
+description: >-
+  Schema for TIC Clinical data
 
 imports:
   - linkml:types
@@ -552,7 +553,7 @@ slots:
     range: integer
   avoid_other:
     examples:
-    - value: Don't have cavity
+    - value: "Don't have cavity"
     range: string
   last_dental_reason___1:
     examples:
@@ -648,7 +649,7 @@ slots:
     range: integer
   neg_reason_other:
     examples:
-    - value: Receptionist took money and said she didn't get it
+    - value: "Receptionist took money and said she didn't get it"
     range: string
   dental_specialist:
     examples:
