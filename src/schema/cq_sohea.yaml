@@ -1,6 +1,6 @@
 id: https://w3id.org/OHD/DFA-study/cq_sohea
 name: cq_sohea
-title: CareQuest State of Oral Health Equity in America (SOHEA) Study Schema
+title: CareQuest State of Oral Health Equity in America (SOHEA) Study Schema 2023
 license: https://mit-license.org/
 
 description: >-
@@ -116,19 +116,19 @@ slots:
     range: YesNoUnsureSR
   Q9A_4:
     description: >-
-      [Avoid stress of an urgent dental visit] Why do you plan on seeing an oral health provider in the next year for routine or preventive care?
+      Avoid stress of an urgent dental visit [Why do you plan on seeing an oral health provider in the next year for routine or preventive care?]
     range: NoYes0
   Q10_1:
     description: >-
-      [Fear of COVID-19 exposure] Which of the following reasons explain why you do not plan on seeing an oral health care provider in the next year for routine or preventive care?
+      Fear of COVID-19 exposure [Which of the following reasons explain why you do not plan on seeing an oral health care provider in the next year for routine or preventive care?]
     range: NoYes0
   Q10_2:
     description: >-
-      [Fear of the dentist or procedures] Which of the following reasons explain why you do not plan on seeing an oral health care provider in the next year for routine or preventive care?
+      Fear of the dentist or procedures [Which of the following reasons explain why you do not plan on seeing an oral health care provider in the next year for routine or preventive care?]
     range: NoYes0
   Q10_7:
     description: >-
-      [I don't think the dental team will respect me] Which of the following reasons explain why you do not plan on seeing an oral health care provider in the next year for routine or preventive care?
+      I don't think the dental team will respect me [Which of the following reasons explain why you do not plan on seeing an oral health care provider in the next year for routine or preventive care?]
     range: NoYes0
   Q14:
     description: >-
@@ -140,11 +140,11 @@ slots:
     range: VisitSymptom
   Q24D_7:
     description: >-
-      [Afraid of the dentist] Why did you not visit a dentist, oral health provider, or emergency department about the symptom?
+      Afraid of the dentist [Why did you not visit a dentist, oral health provider, or emergency department about the symptom?]
     range: NoYes0
   Q24D_10:
     description: >-
-      [I was afraid of COVID-19 exposure in dental office] Why did you not visit a dentist, oral health provider, or emergency department about the symptom?
+      I was afraid of COVID-19 exposure in dental office [Why did you not visit a dentist, oral health provider, or emergency department about the symptom?]
     range: NoYes0
   S3_Q1:
     description: >-
@@ -156,19 +156,19 @@ slots:
     range: HoursDaysDKSR
   S3_Q3DA:
     description: >-
-      [At my last oral health visit, my oral health provider believed me when I reported my oral health needs, knowledge, and behaviors] How much do you agree with the following statements about your last oral health visit?
+      At my last oral health visit, my oral health provider believed me when I reported my oral health needs, knowledge, and behaviors [How much do you agree with the following statements about your last oral health visit?]
     range: LikertDKSR
   S3_Q3DB:
     description: >-
-      [At my last oral health visit, my oral health provider respected me] How much do you agree with the following statements about your last oral health visit?
+      At my last oral health visit, my oral health provider respected me [How much do you agree with the following statements about your last oral health visit?]
     range: LikertDKSR
   S3_Q3DC:
     description: >-
-      [At my last oral health visit, I trusted the oral health provider I saw] How much do you agree with the following statements about your last oral health visit?
+      At my last oral health visit, I trusted the oral health provider I saw [How much do you agree with the following statements about your last oral health visit?]
     range: LikertDKSR
   S3_Q3DD:
     description: >-
-      [At my last oral health visit, my oral health provider tried to make me feel comfortable and at ease] How much do you agree with the following statements about your last oral health visit?
+      At my last oral health visit, my oral health provider tried to make me feel comfortable and at ease [How much do you agree with the following statements about your last oral health visit?]
     range: LikertDKSR
   S3_Q11:
     description: >-
@@ -200,43 +200,43 @@ slots:
     range: AnnualCosts
   S4_Q7A:
     description: >-
-      [Overall health screening] Are you comfortable with your oral health provider measuring or screening for the following?
+      Overall health screening [Are you comfortable with your oral health provider measuring or screening for the following?]
     range: YesNoDKSR
   S4_Q7B:
     description: >-
-      [Height, Weight (BMI)] Are you comfortable with your oral health provider measuring or screening for the following?
+      Height, Weight (BMI) [Are you comfortable with your oral health provider measuring or screening for the following?]
     range: YesNoDKSR
   S4_Q7C:
     description: >-
-      [Blood Pressure] Are you comfortable with your oral health provider measuring or screening for the following?
+      Blood Pressure [Are you comfortable with your oral health provider measuring or screening for the following?]
     range: YesNoDKSR
   S4_Q7D:
     description: >-
-      [Screening for Diabetes] Are you comfortable with your oral health provider measuring or screening for the following?
+      Screening for Diabetes [Are you comfortable with your oral health provider measuring or screening for the following?]
     range: YesNoDKSR
   S4_Q7E:
     description: >-
-      [Screening for Oral Cancer] Are you comfortable with your oral health provider measuring or screening for the following?
+      Screening for Oral Cancer [Are you comfortable with your oral health provider measuring or screening for the following?]
     range: YesNoDKSR
   S4_Q7F:
     description: >-
-      [Screening for COVID-19] Are you comfortable with your oral health provider measuring or screening for the following?
+      Screening for COVID-19 [Are you comfortable with your oral health provider measuring or screening for the following?]
     range: YesNoDKSR
   S4_Q7G:
     description: >-
-      [Screening for HIV] Are you comfortable with your oral health provider measuring or screening for the following?
+      Screening for HIV [Are you comfortable with your oral health provider measuring or screening for the following?]
     range: YesNoDKSR
   S4_Q7H:
     description: >-
-      [Vaccination history] Are you comfortable with your oral health provider measuring or screening for the following?
+      Vaccination history [Are you comfortable with your oral health provider measuring or screening for the following?]
     range: YesNoDKSR
   S4_Q7I:
     description: >-
-      [Tobacco cessation] Are you comfortable with your oral health provider measuring or screening for the following?
+      Tobacco cessation [Are you comfortable with your oral health provider measuring or screening for the following?]
     range: YesNoDKSR
   S4_Q7J:
     description: >-
-      [Addiction Risk Assessment for drugs or alcohol] Are you comfortable with your oral health provider measuring or screening for the following?
+      Addiction Risk Assessment for drugs or alcohol [Are you comfortable with your oral health provider measuring or screening for the following?]
     range: YesNoDKSR
   S5_Q4:
     description: >-
@@ -248,91 +248,91 @@ slots:
     range: PastTime
   S6_Q16A1A:
     description: >-
-      [You received poorer oral health care than others] How often have any of the following things happened to you in the last year?
+      You received poorer oral health care than others [How often have any of the following things happened to you in the last year?]
     range: InverseFrequencyDKSR
   S6_Q16A1B:
     description: >-
-      [You felt that a dentist or oral health team member acted as if he or she thinks you are not smart] How often have any of the following things happened to you in the last year?
+      You felt that a dentist or oral health team member acted as if he or she thinks you are not smart [How often have any of the following things happened to you in the last year?]
     range: InverseFrequencyDKSR
   S6_Q16A1C:
     description: >-
-      [You felt that a dentist or oral health team member acted as if he or she is afraid of you] How often have any of the following things happened to you in the last year?
+      You felt that a dentist or oral health team member acted as if he or she is afraid of you [How often have any of the following things happened to you in the last year?]
     range: InverseFrequencyDKSR
   S6_Q16A1D:
     description: >-
-      [You felt that a dentist or oral health team member acted as if he or she is better than you] How often have any of the following things happened to you in the last year?
+      You felt that a dentist or oral health team member acted as if he or she is better than you [How often have any of the following things happened to you in the last year?]
     range: InverseFrequencyDKSR
   S6_Q16A1E:
     description: >-
-      [You felt like your dentist or oral health team was not listening to what you were saying] How often have any of the following things happened to you in the last year?
+      You felt like your dentist or oral health team was not listening to what you were saying [How often have any of the following things happened to you in the last year?]
     range: InverseFrequencyDKSR
   S6_Q16A1F:
     description: >-
-      [A dentist or oral health team member called you names or insulted you] How often have any of the following things happened to you in the last year?
+      A dentist or oral health team member called you names or insulted you [How often have any of the following things happened to you in the last year?]
     range: InverseFrequencyDKSR
   S6_Q16A1G:
     description: >-
-      [You felt that a dentist or oral health team member threatened or harassed you] How often have any of the following things happened to you in the last year?
+      You felt that a dentist or oral health team member threatened or harassed you [How often have any of the following things happened to you in the last year?]
     range: InverseFrequencyDKSR
   S6_Q17_1:
     description: >-
-      [Race/Ethnicity] Have you experienced discrimination as a result of any of the following in your lifetime?
+      Race/Ethnicity [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_2:
     description: >-
-      [Age] Have you experienced discrimination as a result of any of the following in your lifetime?
+      Age [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_3:
     description: >-
-      [Gender] Have you experienced discrimination as a result of any of the following in your lifetime?
+      Gender [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_4:
     description: >-
-      [Religion] Have you experienced discrimination as a result of any of the following in your lifetime?
+      Religion [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_5:
     description: >-
-      [Physical appearance] Have you experienced discrimination as a result of any of the following in your lifetime?
+      Physical appearance [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_6:
     description: >-
-      [Sexual orientation] Have you experienced discrimination as a result of any of the following in your lifetime?
+      Sexual orientation [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_7:
     description: >-
-      [Language] Have you experienced discrimination as a result of any of the following in your lifetime?
+      Language [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_8:
     description: >-
-      [A visible disability] Have you experienced discrimination as a result of any of the following in your lifetime?
+      A visible disability [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_9:
     description: >-
-      [An invisible disability] Have you experienced discrimination as a result of any of the following in your lifetime?
+      An invisible disability [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_10:
     description: >-
-      [Other] Have you experienced discrimination as a result of any of the following in your lifetime?
+      Other [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_11:
     description: >-
-      [None of the above] Have you experienced discrimination as a result of any of the following in your lifetime?
+      None of the above [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_12:
     description: >-
-      [I'd rather not say] Have you experienced discrimination as a result of any of the following in your lifetime?
+      I'd rather not say [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_DK:
     description: >-
-      [DON'T KNOW] Have you experienced discrimination as a result of any of the following in your lifetime?
+      DON'T KNOW [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_SKP:
     description: >-
-      [SKIPPED ON WEB] Have you experienced discrimination as a result of any of the following in your lifetime?
+      SKIPPED ON WEB [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q17_REF:
     description: >-
-      [REFUSED] Have you experienced discrimination as a result of any of the following in your lifetime?
+      REFUSED [Have you experienced discrimination as a result of any of the following in your lifetime?]
     range: NoYes0
   S6_Q19:
     description: >-
