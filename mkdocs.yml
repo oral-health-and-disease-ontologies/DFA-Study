@@ -23,7 +23,8 @@ nav:
   - COHRA1 Schema: cohra1/index.md
   - COHRA2 Schema: cohra2/index.md
   - DFS Study Schema: dfs/index.md
+  - IDAF Schema: idaf/index.md
+  - Superdataset Schema: superdataset/index.md
   - TIC Clinical Schema: tic_clinical/index.md
   - TIC Provider Schema: tic_provider/index.md
   - Modified Dental Anxiety Scale Schema: mdas/index.md
-  - IDAF Schema: idaf/index.md

@@ -200,6 +200,7 @@ enums:
     permissible_values:
       1: 
         description: "Never"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C70543
       2:
         description: "Once or twice"
       3:

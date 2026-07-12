@@ -36,6 +36,10 @@ IDAF_SCHEMA_DIR = $(SRC)/schema
 IDAF_SCHEMA = $(IDAF_SCHEMA_DIR)/idaf.yaml
 IDAF_DOCS_DIR = $(DOCSDIR)/idaf
 
+SUPERDATASET_SCHEMA_DIR = $(SRC)/schema
+SUPERDATASET_SCHEMA = $(SUPERDATASET_SCHEMA_DIR)/superdataset.yaml
+SUPERDATASET_DOCS_DIR = $(DOCSDIR)/superdataset
+
 # --- linkml products --- #
 cohra1-jsonschema: $(COHRA1_SCHEMA)
 	gen-json-schema $< > jsonschema/cohra1.json
@@ -108,6 +112,14 @@ idaf-owl: $(IDAF_SCHEMA)
 	src/scripts/pun-annotations-to-ttl.py $< > temp/pun.tmp.ttl 
 	robot merge -i temp/idaf.tmp.ttl -i temp/pun.tmp.ttl
 
+superdataset-jsonschema: $(SUPERDATASET_SCHEMA)
+	gen-json-schema $< > jsonschema/superdataset.json
+
+superdataset-owl: $(SUPERDATASET_SCHEMA)
+	gen-owl $< > temp/superdataset.tmp.ttl
+	src/scripts/pun-annotations-to-ttl.py $< > temp/pun.tmp.ttl 
+	robot merge -i temp/superdataset.tmp.ttl -i temp/pun.tmp.ttl
+
 ## remove products
 clean-products:
 # don't delete README files
@@ -128,6 +140,7 @@ gendoc:
 	mkdir -p $(TIC_PROVIDER_DOCS_DIR)
 	mkdir -p $(MDAS_DOCS_DIR)
 	mkdir -p $(IDAF_DOCS_DIR)
+	mkdir -p $(SUPERDATASET_DOCS_DIR)
 	mkdir -p docs/images
 
 	@# copy existing markdown files (if they exist)
@@ -144,6 +157,7 @@ gendoc:
 	gen-doc -d $(TIC_PROVIDER_DOCS_DIR) $(TIC_PROVIDER_SCHEMA)
 	gen-doc -d $(MDAS_DOCS_DIR) $(MDAS_SCHEMA)
 	gen-doc -d $(IDAF_DOCS_DIR) $(IDAF_SCHEMA)
+	gen-doc -d $(SUPERDATASET_DOCS_DIR) $(SUPERDATASET_SCHEMA)
 
 
 ## remove docs
