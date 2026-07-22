@@ -98,6 +98,11 @@ classes:
       - idaf_3_h
       - idaf_3_i
       - idaf_3_j
+      - S3_Q4A
+      - S3_Q4B
+      - S3_Q4C
+      - S3_Q4D
+      - S3_Q4E
       - source
       - count_missing
       - agegrp
@@ -221,7 +226,7 @@ slots:
       When having dental work done, my muscles become tense.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000423 # DFS 03
-    range: FrequencyMissing
+    range: LikertAmountMissing
     title: dfs3
 
   dfs_4:
@@ -229,7 +234,7 @@ slots:
       When having dental work done, my breathing rate increases.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000424 # DFS 04
-    range: FrequencyMissing
+    range: LikertAmountMissing
     title: dfs4
 
   dfs_5:
@@ -237,7 +242,7 @@ slots:
       When having dental work done, I perspire.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000426 # DFS 05
-    range: FrequencyMissing
+    range: LikertAmountMissing
     title: dfs5
 
   dfs_6:
@@ -245,7 +250,7 @@ slots:
       When having dental work done, I feel nauseated and sick to my stomach.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000427 # DFS 06
-    range: FrequencyMissing
+    range: LikertAmountMissing
     title: dfs6
 
   dfs_7:
@@ -253,7 +258,7 @@ slots:
       When having dental work done, my heart beats faster.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000428 # DFS 07
-    range: FrequencyMissing
+    range: LikertAmountMissing
     title: dfs7
 
   dfs_8:
@@ -261,7 +266,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Making an appointment for dentistry.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000429 # DFS 08
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs8
 
   dfs_9:
@@ -269,7 +274,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Approching the dentist's office.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000430 # DFS 09
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs9
 
   dfs_10:
@@ -277,7 +282,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Sitting in the waiting room.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000431 # DFS 10
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs10
 
   dfs_11:
@@ -285,7 +290,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Being seated in the dental chair.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000432 # DFS 11
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs11
 
   dfs_12:
@@ -293,7 +298,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: The smell of the dentist's office.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000433 # DFS 12
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs12
 
   dfs_13:
@@ -301,7 +306,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the dentist walk in.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000434 # DFS 13
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs13
 
   dfs_14:
@@ -309,7 +314,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the anesthetic needle.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000435 # DFS 14
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs14
 
   dfs_15:
@@ -317,7 +322,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the needle injected.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000436 # DFS 15
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs15
 
   dfs_16:
@@ -325,7 +330,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the drill.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000437 # DFS 16
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs16
 
   dfs_17:
@@ -333,7 +338,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Hearing the drill.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000438 # DFS 17
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs17
 
   dfs_18:
@@ -341,7 +346,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the vibrations of the drill.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000439 # DFS 18
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs18
 
   dfs_19:
@@ -349,7 +354,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Having your teeth cleaned.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000440 # DFS 19
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs19
 
   dfs_20:
@@ -357,7 +362,7 @@ slots:
       Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: All things considered, how fearful are you of having dental work done?
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000441 # DFS 20
-    range: LikertFearPeriod
+    range: LikertAmountMissing
     title: dfs20
 
   idaf_1_a:
@@ -542,6 +547,47 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008077 # IDAF 3J
     range: DegreeLikertMissing
+    title: idaf3j
+
+  S3_Q4A:
+    description: >-
+      If you went to the dentist for treatment tomorrow [How would you feel in the following scenarios?]
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000446 # MDAS 1
+    range: AnxietyMissing
+    title: mdas1
+
+  S3_Q4B:
+    description: >-
+      If you were sitting in the waiting room (waiting for treatment) [How would you feel in the following scenarios?]
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000447 # MDAS 2
+    range: AnxietyMissing
+    title: mdas2
+
+  S3_Q4C:
+    description: >-
+      If you were about to have a tooth drilled [How would you feel in the following scenarios?]
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000448 # MDAS 3
+    range: AnxietyMissing
+    title: mdas3
+
+  S3_Q4D:
+    description: >-
+      If you were about to have your teeth scaled and polished [How would you feel in the following scenarios?]
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000449 # MDAS 4
+    range: AnxietyMissing
+    title: mdas4
+
+  S3_Q4E:
+    description: >-
+      If you were about to have a local anesthetic injection in your gum above an upper back tooth [How would you feel in the following scenarios?]
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000450 # MDAS 5
+    range: AnxietyMissing
+    title: mdas5
 
   source:
     description: >-
@@ -729,25 +775,25 @@ enums:
           Missing
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
 
-  LikertFearPeriod:
+  LikertAmountMissing:
     description: >-
       An enumeration for a Likert scale of degree of fear with a missing option.
     permissible_values:
       1:
         description: >-
-          Not afraid at all
+          Not at all
       2:
         description: >-
-          A little afraid
+          A little
       3:
         description: >-
-          Somewhat afraid
+          Somewhat
       4:
         description: >-
-          Pretty much afraid
+          Much
       5:
         description: >-
-          Very afraid
+          Very much
       ".":
         description: >-
           Missing
@@ -796,5 +842,27 @@ enums:
         description: Very Much
         meaning: http://purl.obolibrary.org/obo/NCIT_C91217 
       ".":
+        description: Missing
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+
+  AnxietyMissing:
+    description: >-
+      Enumeration for answering whether an individual would feel anxious in some scenario.
+    permissible_values:
+      1: 
+        description: Not anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C111675
+      2:
+        description: Slightly anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C120244
+      3:
+        description: Fairly anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C111676
+      4:
+        description: Very anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C120252
+      5:
+        description: Extremely anxious
+      ".": 
         description: Missing
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
