@@ -97,7 +97,502 @@ types:
     minimum_value: 3
     maximum_value: 15
 
+  0to120:
+    description: "Integer score between 0 and 120."
+    base: integer
+    minimum_value: 0
+    maximum_value: 120
+
 enums:
+
+# ADA OHWB Enums
+  FrequencyMSK:
+    description: >-
+      Enumeration for the frequency with which an individual experiences some phenomenon, including options for 'don't know' and 'missing'.
+    permissible_values:
+      1: 
+        description: "Never"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C70543
+      2:
+        description: "Once or twice"
+      3:
+        description: "A few times"
+      4:
+        description: "Often"
+      5:
+        description: "Nearly every time"
+      -5555:
+        description: "Not Asked on Form at This Time"
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+
+  IncomeLevel:
+    description: >-
+      Enumeration for level of income
+    permissible_values:
+      1:
+        description: "7500"
+      2:
+        description: "20000"
+      3:
+        description: "30000"
+      4:
+        description: "42500"
+      5:
+        description: "62500"
+      6:
+        description: "87500"
+      7:
+        description: "112500"
+      8:
+        description: "137500"
+      9:
+        description: "175000"
+      10:
+        description: "225000"
+      11:
+        description: "250000"
+
+  ComputeIncomeLevel:
+    description: >-
+      Enumeration for computed income level
+    permissible_values:
+      1:
+        description: "Low income (>138%)"
+      2:
+        description: "Medium income (139%-400%)"
+      3:
+        description: "High (401%+)"
+
+  MaleFemaleOHWB:
+    description: >-
+      Enumeration for male/female status in ADA_OHWB
+    permissible_values:
+      1:
+        description: "Male"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205465
+      2:
+        description: "Female"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205464
+  
+  EmploymentStatus:
+    description: >-
+      Enumeration for employment status
+    permissible_values:
+      1:
+        description: "Employed full time"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C148254
+      2:
+        description: "Employed part-time"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C148255
+      3:
+        description: "Self-employed"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C116000
+      4:
+        description: "Not employed, but looking for work"
+      5:
+        description: "Not employed and not looking for work"
+      6:
+        description: "Retired"
+      7:
+        description: "Not employed, unable to work due to a disability or illness"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C198129
+      8:
+        description: "Student"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C75561
+      9:
+        description: "Stay-at-home spouse or partner"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C75560
+
+  Education:
+    description: >-
+      Enumeration for highest level of education completed
+    permissible_values:
+      1:
+        description: "Less than high school"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C173723
+      2:
+        description: "Completed some high school"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C198650
+      3:
+        description: "Completed high school"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67136
+      70:
+        description: "Associate Degree"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67140
+      71:
+        description: "Job-specific training program(s) after high school"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67141
+      72:
+        description: "Some college, but no degree"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67137
+      73:
+        description: "Some college, but no 4 year degree"
+      74:
+        description: "College (such as B.A., B.S.)"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C159746
+      75:
+        description: "Some graduate school, but no degree"
+      76:
+        description: "Graduate degree (such as MBA, MS, M.D., Ph.D.)"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C168226
+
+  IncomeCategory:
+    description: >-
+      Enumeration for 2014 household income category
+    permissible_values:
+      1:
+        description: "Less than $15,000"
+      2:
+        description: "$15,000 to $24,999"
+      3:
+        description: "$25,000 to $34,999"
+      4:
+        description: "$35,000 to $49,999"
+      5:
+        description: "$50,000 to $74,999"
+      6:
+        description: "$75,000 to $99,999"
+      7:
+        description: "$100,000 to $124,999"
+      8:
+        description: "$125,000 to $149,999"
+      9:
+        description: "$150,000 to $199,999"
+      10:
+        description: "$200,000 to $249,999"
+      11:
+        description: "$250,000 or more"
+
+  RaceEthnicityOHWB:
+    description: >-
+      Enumeration for respondant race/ethnicity in ADA_OHWB
+    permissible_values:
+      1:
+        description: "White"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41261
+      2:
+        description: "Black"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C42331
+      3:
+        description: "Asian or Pacific Islander"
+      4:
+        description: "Native American or Alaskan Native"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41259
+      5:
+        description: "Mixed Race"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67109
+      6:
+        description: "Some other race"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104495
+      7:
+        description: "Hispanic"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17459
+      8:
+        description: "African American"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C16352
+      94:
+        description: "Decline to Answer"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  YesNoDK_OHWB:
+    description: >-
+      Enumeration for yes/no responses starting with 'yes' option, including a 'don't know' option, in ADA_OHWB
+    permissible_values:
+      1:
+        description: "Yes"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      2:
+        description: "No"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      3:
+        description: "Don't know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+
+  Frequency:
+    description: >-
+      Enumeration for frequency of occurrence
+    permissible_values:
+      1:
+        description: "Never"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C70543
+      2:
+        description: "Rarely"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C73116
+      3:
+        description: "Occasionally"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C151974
+      4:
+        description: "Very Often"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91245
+      8:
+        description: "Don't know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+
+  Agreement:
+    description: >-
+      Enumeration for level of agreement
+    permissible_values:
+      1:
+        description: "Strongly disagree"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104476
+      2:
+        description: "Somewhat disagree"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C153546
+      3:
+        description: "Somewhat agree"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C153547
+      4:
+        description: "Strongly agree"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104475
+      8:
+        description: "Don't know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+
+  NoYesOHWB:
+    description: >-
+      Enumeration for yes/no responses starting with 'no' option
+    permissible_values:
+      1:
+        description: "No"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      2:
+        description: "Yes"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+
+  Difficulty:
+    description: >-
+      Enumeration for difficulty level
+    permissible_values:
+      1:
+        description: "Very difficult"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C129484
+      2:
+        description: "Somewhat difficult"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C121165
+      3:
+        description: "Somewhat easy"
+      4:
+        description: "Very easy"
+
+  TimeSinceDentalVisit:
+    description: >-
+      Enumeration for time since last dental visit
+    permissible_values:
+      1:
+        description: "Less than 12 months"
+      2:
+        description: "1 to 2 years"
+      3:
+        description: "3 to 5 years"
+      4:
+        description: "More than 5 years"
+      7:
+        description: "N/A -I've never been to a dentist."
+
+  YesNoOHWB:
+    description: >-
+      Enumeration for yes/no responses starting with 'yes' option
+    permissible_values:
+      1:
+        description: "Yes"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      2:
+        description: "No"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+
+  MaritalStatus:
+    description: >-
+      Enumeration for marital status
+    permissible_values:
+      1:
+        description: "Never married"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51774
+      2:
+        description: "Married or civil union"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C150743
+      3:
+        description: "Divorced"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51776
+      4:
+        description: "Separated"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C156541
+      5:
+        description: "Widow/Widower"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51775
+      6:
+        description: "Living with a partner"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C150733
+      7:
+        description: "Unknown"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17998
+      9:
+        description: "Decline to answer"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  State:
+    description: >-
+      Enumeration for US states/territory respondant lives in
+    permissible_values:
+      101:
+        description: "Alabama"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43479
+      102:
+        description: "Alaska"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43506
+      103:
+        description: "Arizona"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43505
+      104:
+        description: "Arkansas"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43495
+      105:
+        description: "California"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43509
+      106:
+        description: "Colorado"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43501
+      107:
+        description: "Connecticut"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43466
+      108:
+        description: "Delaware"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43470
+      109:
+        description: "District of Columbia"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C108007
+      110:
+        description: "Florida"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43478
+      111:
+        description: "Georgia"  
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43477
+      112:
+        description: "Hawaii"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43510
+      113:
+        description: "Idaho"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43499
+      114:
+        description: "Illinois"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43491
+      115:
+        description: "Indiana"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43483
+      116:
+        description: "Iowa"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43487
+      117:
+        description: "Kansas"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43493
+      118:
+        description: "Kentucky"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43484
+      119:
+        description: "Louisiana"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43496
+      120:
+        description: "Maine"  
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43457
+      121:
+        description: "Maryland"   
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43471  
+      122:
+        description: "Massachusetts"  
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43463
+      123:   
+        description: "Michigan"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43481
+      124:
+        description: "Minnesota"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43486
+      125:
+        description: "Mississippi"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43480
+      126:
+        description: "Missouri"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43492
+      127:
+        description: "Montana"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43490
+      128:
+        description: "Nebraska"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43494
+      129:
+        description: "Nevada"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43503
+      130:
+        description: "New Hampshire"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43460
+      131:
+        description: "New Jersey"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43467
+      132:
+        description: "New Mexico"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43504
+      133:
+        description: "New York"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43468
+      134:
+        description: "North Carolina"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43474
+      135:
+        description: "North Dakota"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43488
+      136:
+        description: "Ohio"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43482
+      137:
+        description: "Oklahoma"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43497
+      138:  
+        description: "Oregon"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43508
+      139:
+        description: "Pennsylvania"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43469
+      140:  
+        description: "Rhode Island"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43464
+      141:
+        description: "South Carolina"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43475
+      142:
+        description: "South Dakota"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43489
+      143:  
+        description: "Tennessee"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43476
+      144:
+        description: "Texas"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43498
+      145:
+        description: "Utah"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43502
+      146:
+        description: "Vermont"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43462
+      147:
+        description: "Virginia"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43472
+      148:
+        description: "Washington"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43507
+      149:
+        description: "West Virginia"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43473
+      150:
+        description: "Wisconsin"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43485
+      151:
+        description: "Wyoming"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43500
+
+# COHRA Enums
   SexCOHRA:
     description: >-
       Enumeration for the sex of the participant.
@@ -169,80 +664,6 @@ enums:
         description: "Don't Know"
         meaning: http://purl.obolibrary.org/obo/NCIT_C67142
 
-  LikertFearNH:
-    description: >-
-      Enumeration for respondant level of fear toward some situation, including an option for didn't happen because never happened to me.
-    permissible_values:
-      1: 
-        description: "Not afraid at all"
-      2:
-        description: "A little afraid"
-      3:
-        description: "Somewhat afraid"
-      4:
-        description: "Pretty much afraid"
-      5:
-        description: "Very afraid"
-      9:
-        description: "I don't know, because this never happened to me."
-      -5555:
-        description: "Not Asked on Form at This Time"
-      -9999:
-        description: "Missing"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
-      -8888:
-        description: "Don't Know"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
-  
-  Frequency:
-    description: >-
-      Enumeration for the frequency with which an individual experiences some phenomenon.
-    permissible_values:
-      1: 
-        description: "Never"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C70543
-      2:
-        description: "Once or twice"
-      3:
-        description: "A few times"
-      4:
-        description: "Often"
-      5:
-        description: "Nearly every time"
-      -5555:
-        description: "Not Asked on Form at This Time"
-      -9999:
-        description: "Missing"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
-      -8888:
-        description: "Don't Know"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
-
-  FreqNH:
-    description: >-
-      Enumeration for the frequency with which an individual experiences some phenomenon, including an option for didn't happen because never happened to me.
-    permissible_values:
-      1: 
-        description: "Never"
-      2:
-        description: "Once or twice"
-      3:
-        description: "A few times"
-      4:
-        description: "Often"
-      5:
-        description: "Nearly every time"
-      9:
-        description: "I don't know, because this never happened to me."
-      -8888:
-        description: "Don't Know"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
-      -5555:
-        description: "Not Asked on Form at This Time"
-      -9999:
-        description: "Missing"
-        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
-
   LikertFear:
     description: >-
       Enumeration for respondant level of fear toward some situation.
@@ -276,4 +697,1191 @@ enums:
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
       -5555:
         description: "Not Asked on Form at This Time"
+
+  SiteCOHRA1:
+    description: >-
+      Enumeration for the COHRA1 study site where the assessment was given.
+    permissible_values:
+      "C1-WV":
+        description: "COHRA1 - West Virginia"
+      "C1-BR":
+        description: "COHRA1 - Bradford"
+      "C1-BU":
+        description: "COHRA1 - Burgettstown"
+      "C1-BK":
+        description: "COHRA1 - Braddock"
+
+  TimepointEnum:
+    description: >-
+      Enumeration for the point in time at which the participant answered the questionnaire relative to birth of child.
+    permissible_values:
+      0:
+        description: "Prenatal Phone Questionnaire"
+      1:
+        description: "Birth (Pitt)"
+      2:
+        description: "First Postnatam Phone Questionnaire (2 Months Old)"
+      3:
+        description: "1st Tooth (Pitt)"
+      4:
+        description: "Second Postnatal Phone Questionnaire (6 Months Old)"
+      5: 
+        description: "Third Postnatal Phone Questionnaire (12 Months Old)"
+      6:
+        description: "Fourth Postnatal Phone Questionnaire (18 Months Old)"
+      7:
+        description: "Fifth Postnatal Phone Questionnaire (24 Months Old)"
+      8:
+        description: "Sixth Postnatal Phone Questionnaire (30 Months Old)"
+      9:
+        description: "Seventh Postnatal Phone Questionnaire (36 Months Old)"
+      10:
+        description: "Eighth Postnatal Phone Questionnaire (3.5 Years Old)"
+      11:
+        description: "Ninth Postnatal Phone Questionnaire (4 Years Old)"
+      12:
+        description: "Tenth Postnatal Phone Questionnaire (4.5 Years Old)"
+      13:
+        description: "Eleventh Postnatal Phone Questionnaire (5 Years Old)"
+      14:
+        description: "Twelfth Postnatal Phone Questionnaire (5.5 Years Old)"
+      15:
+        description: "Thirteenth Postnatal Phone Questionnaire (6 Years Old)"
+      16:
+        description: "Fourteenth Postnatal Phone Questionnaire (6.5 Years Old)"
+      17:
+        description: "Fifteenth Postnatal Phone Questionnaire (7 Years Old)"
+      18:
+        description: "Sixteenth Postnatal Phone Questionnaire (7.5 Years Old)"
+      19:
+        description: "Seventeenth Postnatal Phone Questionnaire (8 Years Old)"
+      20:
+        description: "Eighteenth Postnatal Phone Questionnaire (8.5 Years Old)"
+      21:
+        description: "Nineteenth Postnatal Phone Questionnaire (9 Years Old)"
+      22:
+        description: "Twentieth Postnatal Phone Questionnaire (9.5 Years Old)"
+      23:
+        description: "Twenty-first Postnatal Phone Questionnaire (10 Years Old)"
+
+  SiteCOHRA2:
+    description: >-
+      Enumeration for the COHRA2 study site where the assessment was given.
+    permissible_values:
+      "C2-WV":
+        description: "COHRA2 - West Virginia"
+      "C2-PA":
+        description: "COHRA2 - Pittsburgh"
+
+
+# CQ SOHEA Enums
+
+  YesNoUnsureSR:
+    description: >-
+      Enumeration for yes/no/unsure responses which also includes answering that the respondant skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: Yes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      2:
+        description: No
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      77:
+        description: Unsure
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  NoYes0:
+    description: >-
+      Enumeration for no/yes responses where the first option is 0.
+    permissible_values:
+      0: 
+        description: No
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      1:
+        description: Yes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+
+  FrequencyDKSR:
+    description: >-
+      Enumeration for frequency responses which also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: Very often
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91245
+      2:
+        description: Fairly often
+        meaning: http://purl.obolibrary.org/obo/NCIT_C95144
+      3:
+        description: Occassionally
+        meaning: http://purl.obolibrary.org/obo/NCIT_C151974
+      4:
+        description: Hardly ever
+        meaning: http://purl.obolibrary.org/obo/NCIT_C114685
+      5:
+        description: Never
+        meaning: http://purl.obolibrary.org/obo/NCIT_C176245
+      77:
+        description: Don't know
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  VisitSymptom:
+    description: >-
+      Enumeration for answering whether an individual visited a dentist, oral health provider, or emergency department about a symptom.
+    permissible_values:
+      1: 
+        description: Yes, I went to the dentist or oral health provider
+      2:
+        description: Yes, I went to the emergency department
+      3:
+        description: No, I went to neither
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      9:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  TimeSinceDentalVisitDKSR:
+    description: >-
+      Enumeration for time since last dental visit which also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: Less than 6 months ago
+      2:
+        description: Between 6 months ago and one year ago
+        meaning: http://purl.obolibrary.org/obo/NCIT_C82447
+      3:
+        description: More than a year and less than two years ago
+      4:
+        description: More than 2 and less than 5 years ago
+      5:
+        description: 5 or more years ago
+      6:
+        description: Never
+        meaning: http://purl.obolibrary.org/obo/NCIT_C176245
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+    
+  HoursDaysDKSR:
+    description: >-
+      Enumeration for periods of hours or days which also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: 1-2 hours
+      2:
+        description: 3-4 hours
+      3:
+        description: 5-8 hours
+      4:
+        description: 1 day
+      5:
+        description: 2 days
+      6:
+        description: 3 or more days
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+  
+  LikertDKSR:
+    description: >-
+      Enumeration for Likert scale responses which also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: Strongly agree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104475
+      2:
+        description: Somewhat agree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C153547
+      3:
+        description: Neither agree nor disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C103804
+      4:
+        description: Somewhat disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C153546
+      5:
+        description: Strongly disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104476
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+  
+  YesNoDKSR:
+    description: >-
+      Enumeration for yes/no responses which also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: Yes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      2:
+        description: No
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  SedationReason:
+    description: >-
+      Enumeration for reasons why an individual received sedation at their most recent dental procedure.
+    permissible_values:
+      1: 
+        description: My dentist recommended it
+      2:
+        description: I requested it because I was worried the procedure would be painful or uncomfortable
+      3:
+        description: I requested it because I had anxiety about the procedure
+      4:
+        description: Other
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17649
+      77:
+        description: Unsure
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+  
+  TreatmentDecisionBasis:
+    description: >-
+      Enumeration for patients' impression of whether an their oral health provider makes treatment decisions based more often on the best care or what is most profitable.
+    permissible_values:
+      1: 
+        description: Based on the best care for you
+      2:
+        description: Based on what is most profitable for the provider
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  Sexuality:
+    description: >-
+      Enumeration for sexual orientation.
+    permissible_values:
+      1: 
+        description: Gay/Lesbian or Gay
+        meaning: http://purl.obolibrary.org/obo/GSSO_001591
+      2:
+        description: Straight, that is, not gay/not lesbian or gay
+        meaning: http://purl.obolibrary.org/obo/GSSO_001592
+      3:
+        description: Bisexual
+        meaning: http://purl.obolibrary.org/obo/GSSO_001590
+      4:
+        description: Something else
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104495
+      77:
+        description: I don't know the answer
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+  
+  ImportanceLikert:
+    description: >-
+      Enumeration for level of importance in a Likert scale format.
+    permissible_values:
+      1: 
+        description: Very important
+        meaning: http://purl.obolibrary.org/obo/NCIT_C115921
+      2:
+        description: Important
+        meaning: http://purl.obolibrary.org/obo/NCIT_C115916
+      3:
+        description: Neutral
+        meaning: http://purl.obolibrary.org/obo/NCIT_C154573
+      4:
+        description: Low importance
+        meaning: http://purl.obolibrary.org/obo/NCIT_C115925
+      5:
+        description: Not at all important
+        meaning: http://purl.obolibrary.org/obo/NCIT_C115926
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+  
+  AnnualCosts:
+    description: >-
+      Enumeration for ranges of annual costs.
+    permissible_values:
+      1: 
+        description: Less than $500 a year
+      2:
+        description: $500-$999 a year
+      3:
+        description: $1,000 to $1,999 a year
+      4:
+        description: $2,000 to $2,999 a year
+      5:
+        description: over $3,000 a year
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  PastTime:
+    description: >-
+      Enumeration for periods of time in the past.
+    permissible_values:
+      1: 
+        description: Within the last year
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205531
+      2:
+        description: 1-2 years
+      3:
+        description: 3-5 years
+      4:
+        description: 6 or more years ago
+      5:
+        description: Never
+        meaning: http://purl.obolibrary.org/obo/NCIT_C176245
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  InverseFrequencyDKSR:
+    description: >-
+      Enumeration for frequency responses which starts from 'Never' and also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      1: 
+        description: Never
+        meaning: http://purl.obolibrary.org/obo/NCIT_C176245
+      2:
+        description: Rarely
+        meaning: http://purl.obolibrary.org/obo/NCIT_C73116
+      3:
+        description: Sometimes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C90025
+      4:
+        description: Most of the time
+        meaning: http://purl.obolibrary.org/obo/NCIT_C110991
+      5:
+        description: Always
+        meaning: http://purl.obolibrary.org/obo/NCIT_C70670
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  YesNoIRNSDKSR:
+    description: >-
+      Enumeration for yes/no responses where the option of 'I'd rather not say' is included instead of 'unsure' and also includes answering that the respondant doesn't know, skipped the question on the web or refused to answer it.
+    permissible_values:
+      0: 
+        description: No
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      1:
+        description: Yes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      3:
+        description: I'd rather not say
+        meaning: http://purl.obolibrary.org/obo/NCIT_C132222
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  UnknownGender:
+    description: >-
+      Enumeration for gender where the first option is 'Unknown'.
+    permissible_values:
+      0: 
+        description: Unknown
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17998
+      1:
+        description: Male
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205465
+      2:
+        description: Female
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205464
+
+  AgeRanges:
+    description: >-
+      Enumeration for age ranges.
+    permissible_values:
+      1: 
+        description: 18-24
+      2:
+        description: 25-34
+      3:
+        description: 35-44
+      4:
+        description: 45-54
+      5:
+        description: 55-64
+      6:
+        description: 65-74
+      7:
+        description: 75+
+      99:
+        description: Under 18
+
+  RaceEthnicity:
+    description: >-
+      Enumeration for combined race and ethnicity.
+    permissible_values:
+      1: 
+        description: White, non-Hispanic
+        meaning: http://purl.obolibrary.org/obo/NCIT_C41261
+      2:
+        description: Black, non-Hispanic
+        meaning: http://purl.obolibrary.org/obo/NCIT_C42331
+      3:
+        description: Other, non-Hispanic 
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104495
+      4:
+        description: Hispanic
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17459
+      5:
+        description: 2+, non-Hispanic
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67109
+      6:
+        description: Asian, non-Hispanic
+        meaning: http://purl.obolibrary.org/obo/NCIT_C16352
+
+  Education5:
+    description: >-
+      Enumeration for 5-level education.
+    permissible_values:
+      1: 
+        description: Less than HS
+        meaning: http://purl.obolibrary.org/obo/NCIT_C173723
+      2:
+        description: HS graduate or equivalent
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67136
+      3:
+        description: Some college/ associates degree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67140
+      4:
+        description: Bachelor's degree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C70555
+      5:
+        description: Post grad study/professional degree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C168226
+
+  Marital5:
+    description: >-
+      Enumeration for marital status with 5 categories.
+    permissible_values:
+      1: 
+        description: Married
+        meaning: http://purl.obolibrary.org/obo/NCIT_C150743
+      2:
+        description: Widowed
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51775
+      3:
+        description: Divorced
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51776
+      4:
+        description: Separated
+        meaning: http://purl.obolibrary.org/obo/NCIT_C156541
+      99:
+        description: Never married
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51774
+
+  EmploymentStatus7:
+    description: >-
+      Enumeration for employment status in 7 categories.
+    permissible_values:
+      1: 
+        description: Working - as a paid employee
+        meaning: http://purl.unep.org/sdg/SDGIO_00010029
+      2:
+        description: Working - self-employed
+        meaning: http://purl.obolibrary.org/obo/NCIT_C116000
+      3:
+        description: Not working - on temporary layoff from a job
+        meaning: http://purl.obolibrary.org/obo/NCIT_C165486
+      4:
+        description: Not working - looking for work
+      5:
+        description: Not working - retired
+      6:
+        description: Not working - disabled
+      7:
+        description: Not working - other
+
+  HouseholdIncome18:
+    description: >-
+      Enumeration for household income in 18 categories.
+    permissible_values:
+      1: 
+        description: Less than $5,000
+      2:
+        description: $5,000 to less than $9,999
+      3:
+        description: $10,000 to less than $14,999
+      4:
+        description: $15,000 to less than $19,999
+      5:
+        description: $20,000 to less than $24,999
+      6:
+        description: $25,000 to less than $29,999   
+      7:
+        description: $30,000 to less than $34,999
+      8:
+        description: $35,000 to less than $39,999
+      9:
+        description: $40,000 to less than $44,999
+      10:
+        description: $45,000 to less than $49,999
+      11:
+        description: $50,000 to less than $59,999
+      12:
+        description: $60,000 to less than $74,999
+      13:
+        description: $75,000 to less than $99,999
+      14:
+        description: $100,000 to less than $124,999
+      15:
+        description: $125,000 to less than $149,999
+      16:
+        description: $150,000 to less than $174,999
+      17:
+        description: $175,000 to less than $199,999
+      18:
+        description: $200,000 or more
+
+  DKRState:
+    description: >-
+      Enumeration for US states including a code for 'DON'T KNOW' and 'REFUSED'.
+    permissible_values:
+      77: 
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+      AK: 
+        description: Alaska
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43506
+      AL: 
+        description: Alabama
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43479
+      AR:
+        description: Arkansas
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43495
+      AZ:
+        description: Arizona
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43505
+      CA:
+        description: California
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43509
+      CO:
+        description: Colorado
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43501
+      CT:
+        description: Connecticut
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43466
+      DC:
+        description: District of Columbia
+        meaning: http://purl.obolibrary.org/obo/NCIT_C108007
+      DE:
+        description: Delaware
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43470
+      FL:
+        description: Florida
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43478
+      GA:
+        description: Georgia
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43477
+      HI:
+        description: Hawaii
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43510
+      IA:
+        description: Iowa
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43487
+      ID:
+        description: Idaho
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43499
+      IL:
+        description: Illinois
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43491
+      IN:
+        description: Indiana
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43483
+      KS:
+        description: Kansas
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43493
+      KY:
+        description: Kentucky
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43484
+      LA:
+        description: Louisiana
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43496
+      MA:
+        description: Massachusetts
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43463
+      MD:
+        description: Maryland
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43471 
+      ME:
+        description: Maine
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43457
+      MI:
+        description: Michigan
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43481
+      MN:
+        description: Minnesota
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43486
+      MO:
+        description: Missouri
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43492
+      MS:
+        description: Mississippi
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43480
+      MT:
+        description: Montana
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43490
+      NC:
+        description: North Carolina
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43474
+      ND:
+        description: North Dakota
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43488
+      NE:
+        description: Nebraska
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43494
+      NH:
+        description: New Hampshire
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43460
+      NJ:
+        description: New Jersey
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43467
+      NM:
+        description: New Mexico
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43504
+      NV:
+        description: Nevada
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43503
+      NY:
+        description: New York
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43468
+      OE:
+        description: Oregon
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43508
+      OH:
+        description: Ohio
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43482
+      OK:
+        description: Oklahoma
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43497
+      OR:
+        description: Ohio
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43508
+      PA:
+        description: Pennsylvania
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43469
+      RI:
+        description: Rhode Island
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43464
+      SC:
+        description: South Carolina
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43475
+      SD:
+        description: South Dakota
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43489
+      TN:
+        description: Tennessee
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43476
+      TX:
+        description: Texas
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43498
+      UT:
+        description: Utah
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43502
+      VA:
+        description: Virginia
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43472
+      VI:
+        description: Virgin Islands
+        meaning: http://purl.obolibrary.org/obo/NCIT_C17255
+      VT:
+        description: Vermont
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43462
+      WA:
+        description: Washington
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43507
+      WI:
+        description: Wisconsin
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43485
+      WV:
+        description: West Virginia
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43473
+      WY:
+        description: Wyoming
+        meaning: http://purl.obolibrary.org/obo/NCIT_C43500
+
+# DFS Enums
+  BlankLikert:
+    description: >-
+      Enumeration consisting of a likert scale used by COHRA and Superdataset as sub-slots of DFS
+    permissible_values:
+      1:
+      2:
+      3:
+      4:
+      5:
+
+  FreqNH:
+    description: >-
+      Enumeration for the frequency with which an individual experiences some phenomenon, including an option for didn't happen because never happened to me.
+    permissible_values:
+      1: 
+        description: "Never"
+      2:
+        description: "Once or twice"
+      3:
+        description: "A few times"
+      4:
+        description: "Often"
+      5:
+        description: "Nearly every time"
+      9:
+        description: "I don't know, because this never happened to me."
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      -5555:
+        description: "Not Asked on Form at This Time"
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+
+  LikertFearNH:
+    description: >-
+      Enumeration for respondant level of fear toward some situation, including an option for didn't happen because never happened to me.
+    permissible_values:
+      1: 
+        description: "Not afraid at all"
+      2:
+        description: "A little afraid"
+      3:
+        description: "Somewhat afraid"
+      4:
+        description: "Pretty much afraid"
+      5:
+        description: "Very afraid"
+      9:
+        description: "I don't know, because this never happened to me."
+      -5555:
+        description: "Not Asked on Form at This Time"
+      -9999:
+        description: "Missing"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -8888:
+        description: "Don't Know"
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+
+# IDAF Enums
+
+  LikertDR:
+    description: >-
+      A standard 5-point Likert scale ranging from "Strongly Disagree" to "Strongly Agree", including an option for 'Decline to respond'.
+    permissible_values:
+      1:
+        description: Strongly Disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104476
+      2:
+        description: Disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104479
+      3:
+        description: Neither Agree nor Disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C103804
+      4:
+        description: Agree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104478
+      5:
+        description: Strongly Agree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104475
+      88:
+        description: Decline to respond
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  NoYesDR:
+    description: >-
+      A simple No/Yes enumeration with an option for 'Decline to respond'.
+    permissible_values:
+      0:
+        description: No
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      1:
+        description: Yes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      88:
+        description: Decline to respond
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+  DegreeLikertDR:
+    description: >-
+      A standard 5-point frequency Likert scale ranging from "Not At All" to "Very Much", including an option for 'Decline to respond'.
+    permissible_values:
+      1:
+        description: Not At All
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91213
+      2:
+        description: A Little
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91214 
+      3:
+        description: Somewhat
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91215 
+      4:
+        description: Much
+        meaning: http://purl.obolibrary.org/obo/NCIT_C126287
+      5:
+        description: Very Much
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91217 
+      88:
+        description: Decline to respond
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+# MDAS Enums
+
+  AnxietyDKSR:
+    description: >-
+      Enumeration for answering whether an individual would feel anxious in some scenario.
+    permissible_values:
+      1: 
+        description: Not anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C111675
+      2:
+        description: Slightly anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C120244
+      3:
+        description: Fairly anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C111676
+      4:
+        description: Very anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C120252
+      5:
+        description: Extremely anxious
+      77:
+        description: DON'T KNOW
+        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
+      98:
+        description: SKIPPED ON WEB
+      99:
+        description: REFUSED
+        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
+
+# Superdataset Enums
+
+  Years1-5:
+    description: >-
+      An enumeration for a range of years.
+    permissible_values:
+      ".":
+        description: >-
+          Missing
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      1:
+        description: >-
+          1 year or less
+      2:
+        description: >-
+          1 to 2 years
+      3:
+        description: >-
+          2 to 5 years
+      4:
+        description: >-
+          5 or more years
+      5:
+        description: >-
+          never
+        meaning: http://purl.obolibrary.org/obo/NCIT_C70543
+
+  SexSuperdataset:
+    description: >-
+      An enumeration for the sex of the participant.
+    permissible_values:
+      1:
+        description: >-
+          Male
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205465
+      2:
+        description: >-
+          Female
+        meaning: http://purl.obolibrary.org/obo/NCIT_C205464
+      3:
+        description: >-
+          Other
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104495
+      ".":
+        description: >-
+          Missing
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+    
+  NoYesPeriod:
+    description: >-
+      An enumeration for yes/no responses with a missing option.
+    permissible_values:
+      0:
+        description: >-
+          No
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      1:
+        description: >-
+          Yes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+      ".":
+        description: >-
+          Missing
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+
+  NoYes:
+    description: >-
+      An enumeration for yes/no responses.
+    permissible_values:
+      0:
+        description: >-
+          No
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49487
+      1:
+        description: >-
+          Yes
+        meaning: http://purl.obolibrary.org/obo/NCIT_C49488
+
+  PeriodMissing:
+    description: >-
+      An enumeration for a missing value.
+    permissible_values:
+      ".":
+        description: >-
+          Missing
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+
+  StudySource:
+    description: >-
+      An enumeration for the source of data.
+    permissible_values:
+      "bph":
+        description: >-
+          Boston Public Housing
+      "bwhs":
+        description: >-
+          Black Women's Health Study
+      "cohra1":
+        description: >-
+          COHRA1
+      "cohra2":
+        description: >-
+          COHRA2
+      "f31":
+        description: >-
+          F31  
+      "randall":
+        description: >-
+          Randall  
+      "tic":
+        description: >-
+          Utah TIC
+  
+  AgeGroup:
+    description: >-
+      An enumeration for the age group of the participant.
+    permissible_values:
+      1:
+        description: >-
+          0-17 years
+      2:
+        description: >-
+          18-34 years
+      3:
+        description: >-
+          35-44 years
+      4:
+        description: >-
+          45-54 years
+      5:
+        description: >-
+          55-64 years
+      6:
+        description: >-
+          65+ years
+      ".":
+        description: >-
+          Missing
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+
+  FrequencyMissing:
+    description: >-
+      An enumeration for a Likert scale of frequency with a missing option.
+    permissible_values:
+      1:
+        description: >-
+          Never
+        meaning: http://purl.obolibrary.org/obo/NCIT_C70543
+      2:
+        description: >-
+          Once or twice
+      3:
+        description: >-
+          A few times
+      4:
+        description: >-
+          Often
+      5:
+        description: >-
+          Nearly every time
+      -9999:
+        description: >-
+          Missing
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -8888:
+        description: Not asked for in study
+
+  LikertAmountMissing:
+    description: >-
+      An enumeration for a Likert scale of degree of fear with a missing option.
+    permissible_values:
+      1:
+        description: >-
+          Not at all
+      2:
+        description: >-
+          A little
+      3:
+        description: >-
+          Somewhat
+      4:
+        description: >-
+          Much
+      5:
+        description: >-
+          Very much
+      -9999:
+        description: >-
+          Missing
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -8888:
+        description: Not asked for in study
+
+  LikertMissing:
+    description: >-
+      A standard 5-point Likert scale ranging from "Strongly Disagree" to "Strongly Agree", including an option for 'Missing'.
+    permissible_values:
+      1:
+        description: Strongly Disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104476
+      2:
+        description: Disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104479
+      3:
+        description: Neither Agree nor Disagree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C103804
+      4:
+        description: Agree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104478
+      5:
+        description: Strongly Agree
+        meaning: http://purl.obolibrary.org/obo/NCIT_C104475
+      ".":
+        description: Missing
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+
+  DegreeLikertMissing:
+    description: >-
+      A standard 5-point frequency Likert scale ranging from "Not At All" to "Very Much", including an option for 'Missing'.
+    permissible_values:
+      1:
+        description: Not At All
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91213
+      2:
+        description: A Little
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91214 
+      3:
+        description: Somewhat
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91215 
+      4:
+        description: Much
+        meaning: http://purl.obolibrary.org/obo/NCIT_C126287
+      5:
+        description: Very Much
+        meaning: http://purl.obolibrary.org/obo/NCIT_C91217 
+      ".":
+        description: Missing
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+
+  AnxietyMissing:
+    description: >-
+      Enumeration for answering whether an individual would feel anxious in some scenario.
+    permissible_values:
+      1: 
+        description: Not anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C111675
+      2:
+        description: Slightly anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C120244
+      3:
+        description: Fairly anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C111676
+      4:
+        description: Very anxious
+        meaning: http://purl.obolibrary.org/obo/NCIT_C120252
+      5:
+        description: Extremely anxious
+      ".": 
+        description: Missing
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+
+# TIC Clinical Enums
+# TIC Provider Enums
+
   
