@@ -17,9 +17,7 @@ prefixes:
 imports:
   - linkml:types
   - core
-  - dfs
-  - idaf
-  - mdas
+
 default_prefix: superdataset
 
 classes:
@@ -55,54 +53,54 @@ classes:
       - Other_race
       - More_than_one_race
       - Missing_race
-      - dfs_1
-      - dfs_2
-      - dfs_3
-      - dfs_4
-      - dfs_5
-      - dfs_6
-      - dfs_7
-      - dfs_8
-      - dfs_9
-      - dfs_10
-      - dfs_11
-      - dfs_12
-      - dfs_13
-      - dfs_14
-      - dfs_15
-      - dfs_16
-      - dfs_17
-      - dfs_18
-      - dfs_19
-      - dfs_20
-      - idaf_1_a
-      - idaf_1_b
-      - idaf_1_c
-      - idaf_1_d
-      - idaf_1_e
-      - idaf_1_f
-      - idaf_1_g
-      - idaf_1_h
-      - idaf_2_a
-      - idaf_2_b
-      - idaf_2_c
-      - idaf_2_d
-      - idaf_2_e
-      - idaf_3_a
-      - idaf_3_b
-      - idaf_3_c
-      - idaf_3_d
-      - idaf_3_e
-      - idaf_3_f
-      - idaf_3_g
-      - idaf_3_h
-      - idaf_3_i
-      - idaf_3_j
-      - S3_Q4A
-      - S3_Q4B
-      - S3_Q4C
-      - S3_Q4D
-      - S3_Q4E
+      - dfs1
+      - dfs2
+      - dfs3
+      - dfs4
+      - dfs5
+      - dfs6
+      - dfs7
+      - dfs8
+      - dfs9
+      - dfs10
+      - dfs11
+      - dfs12
+      - dfs13
+      - dfs14
+      - dfs15
+      - dfs16
+      - dfs17
+      - dfs18
+      - dfs19
+      - dfs20
+      - idaf1a
+      - idaf1b
+      - idaf1c
+      - idaf1d
+      - idaf1e
+      - idaf1f
+      - idaf1g
+      - idaf1h
+      - idaf2a
+      - idaf2b
+      - idaf2c
+      - idaf2d
+      - idaf2e
+      - idaf3a
+      - idaf3b
+      - idaf3c
+      - idaf3d
+      - idaf3e
+      - idaf3f
+      - idaf3g
+      - idaf3h
+      - idaf3i
+      - idaf3j
+      - mdas1
+      - mdas2
+      - mdas3
+      - mdas4
+      - mdas5
       - source
       - count_missing
       - agegrp
@@ -211,7 +209,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000421 # DFS 01
     range: FrequencyMissing
-    is_a: dfs_1
+    close_mappings:
+      - dfs:dfs_1
 
   dfs2:
     description: >-
@@ -219,7 +218,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000422 # DFS 02
     range: FrequencyMissing
-    is_a: dfs_2
+    close_mappings:
+      - dfs:dfs_2
 
   dfs3:
     description: >-
@@ -227,7 +227,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000423 # DFS 03
     range: LikertAmountMissing
-    is_a: dfs_3
+    close_mappings:
+      - dfs:dfs_3
 
   dfs4:
     description: >-
@@ -235,7 +236,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000424 # DFS 04
     range: LikertAmountMissing
-    is_a: dfs_4
+    close_mappings:
+      - dfs:dfs_4
 
   dfs5:
     description: >-
@@ -243,7 +245,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000426 # DFS 05
     range: LikertAmountMissing
-    is_a: dfs_5
+    close_mappings:
+      - dfs:dfs_5
 
   dfs6:
     description: >-
@@ -251,7 +254,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000427 # DFS 06
     range: LikertAmountMissing
-    is_a: dfs_6
+    close_mappings:
+      - dfs:dfs_6
 
   dfs7:
     description: >-
@@ -259,7 +263,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000428 # DFS 07
     range: LikertAmountMissing
-    is_a: dfs_7
+    close_mappings:
+      - dfs:dfs_7
 
   dfs8:
     description: >-
@@ -267,7 +272,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000429 # DFS 08
     range: LikertAmountMissing
-    is_a: dfs_8
+    close_mappings:
+      - dfs:dfs_8
 
   dfs9:
     description: >-
@@ -275,7 +281,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000430 # DFS 09
     range: LikertAmountMissing
-    is_a: dfs_9
+    close_mappings:
+      - dfs:dfs_9
 
   dfs10:
     description: >-
@@ -283,7 +290,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000431 # DFS 10
     range: LikertAmountMissing
-    is_a: dfs_10
+    close_mappings:
+      - dfs:dfs_10
 
   dfs11:
     description: >-
@@ -291,7 +299,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000432 # DFS 11
     range: LikertAmountMissing
-    is_a: dfs_11
+    close_mappings:
+      - dfs:dfs_11
 
   dfs12:
     description: >-
@@ -299,7 +308,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000433 # DFS 12
     range: LikertAmountMissing
-    is_a: dfs_12
+    close_mappings:
+      - dfs:dfs_12
 
   dfs13:
     description: >-
@@ -307,7 +317,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000434 # DFS 13
     range: LikertAmountMissing
-    is_a: dfs_13
+    close_mappings:
+      - dfs:dfs_13
 
   dfs14:
     description: >-
@@ -315,7 +326,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000435 # DFS 14
     range: LikertAmountMissing
-    is_a: dfs_14
+    close_mappings:
+      - dfs:dfs_14
 
   dfs15:
     description: >-
@@ -323,7 +335,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000436 # DFS 15
     range: LikertAmountMissing
-    is_a: dfs_15
+    close_mappings:
+      - dfs:dfs_15
 
   dfs16:
     description: >-
@@ -331,7 +344,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000437 # DFS 16
     range: LikertAmountMissing
-    is_a: dfs_16
+    close_mappings:
+      - dfs:dfs_16
 
   dfs17:
     description: >-
@@ -339,7 +353,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000438 # DFS 17
     range: LikertAmountMissing
-    is_a: dfs_17
+    close_mappings:
+      - dfs:dfs_17
 
   dfs18:
     description: >-
@@ -347,7 +362,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000439 # DFS 18
     range: LikertAmountMissing
-    is_a: dfs_18
+    close_mappings:
+      - dfs:dfs_18
 
   dfs19:
     description: >-
@@ -355,7 +371,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000440 # DFS 19
     range: LikertAmountMissing
-    is_a: dfs_19
+    close_mappings:
+      - dfs:dfs_19
 
   dfs20:
     description: >-
@@ -363,7 +380,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000441 # DFS 20
     range: LikertAmountMissing
-    is_a: dfs_20
+    close_mappings:
+      - dfs:dfs_20
 
   idaf1a:
     description: >-
@@ -371,7 +389,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008055 # IDAF 1A
     range: LikertMissing
-    is_a: idaf_1_a
+    close_mappings:
+      - idaf:idaf_1_a
 
   idaf1b:
     description: >-
@@ -379,7 +398,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008056 # IDAF 1B
     range: LikertMissing
-    is_a: idaf_1_b
+    close_mappings:
+      - idaf:idaf_1_b
 
   idaf1c:
     description: >-
@@ -387,7 +407,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008057 # IDAF 1C
     range: LikertMissing
-    is_a: idaf_1_c
+    close_mappings:
+      - idaf:idaf_1_c
 
   idaf1d:
     description: >-
@@ -395,15 +416,17 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008058 # IDAF 1D
     range: LikertMissing
-    is_a: idaf_1_d
-  
+    close_mappings:
+      - idaf:idaf_1_d
+
   idaf1e:
     description: >-
       (1e) I feel afraid or fearful when visiting the dentist.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008059 # IDAF 1E
     range: LikertMissing
-    is_a: idaf_1_e
+    close_mappings:
+      - idaf:idaf_1_e
 
   idaf1f:
     description: >-
@@ -411,7 +434,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008060 # IDAF 1F
     range: LikertMissing
-    is_a: idaf_1_f
+    close_mappings:
+      - idaf:idaf_1_f
 
   idaf1g:
     description: >-
@@ -419,7 +443,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008061 # IDAF 1G
     range: LikertMissing
-    is_a: idaf_1_g
+    close_mappings:
+      - idaf:idaf_1_g
 
   idaf1h:
     description: >-
@@ -427,7 +452,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008062 # IDAF 1H
     range: LikertMissing
-    is_a: idaf_1_h
+    close_mappings:
+      - idaf:idaf_1_h
 
   idaf2a:
     description: >-
@@ -435,7 +461,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008063 # IDAF 2A
     range: NoYesPeriod
-    is_a: idaf_2_a
+    close_mappings:
+      - idaf:idaf_2_a
 
   idaf2b:
     description: >-
@@ -443,7 +470,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008064 # IDAF 2B
     range: NoYesPeriod
-    is_a: idaf_2_b
+    close_mappings:
+      - idaf:idaf_2_b
 
   idaf2c:
     description: >-
@@ -451,7 +479,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008065 # IDAF 2C
     range: NoYesPeriod
-    is_a: idaf_2_c
+    close_mappings:
+      - idaf:idaf_2_c
 
   idaf2d:
     description: >-
@@ -459,7 +488,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008066 # IDAF 2D
     range: NoYesPeriod
-    is_a: idaf_2_d
+    close_mappings:
+      - idaf:idaf_2_d
 
   idaf2e:
     description: >-
@@ -467,7 +497,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008067 # IDAF 2E
     range: NoYesPeriod
-    is_a: idaf_2_e
+    close_mappings:
+      - idaf:idaf_2_e
 
   idaf3a:
     description: >-
@@ -475,7 +506,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008068 # IDAF 3A
     range: DegreeLikertMissing
-    is_a: idaf_3_a
+    close_mappings:
+      - idaf:idaf_3_a
 
   idaf3b:
     description: >-
@@ -483,7 +515,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008069 # IDAF 3B
     range: DegreeLikertMissing
-    is_a: idaf_3_b
+    close_mappings:
+      - idaf:idaf_3_b
 
   idaf3c:
     description: >-
@@ -491,7 +524,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008070 # IDAF 3C
     range: DegreeLikertMissing
-    is_a: idaf_3_c
+    close_mappings:
+      - idaf:idaf_3_c
 
   idaf3d:
     description: >-
@@ -499,7 +533,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008071 # IDAF 3D
     range: DegreeLikertMissing
-    is_a: idaf_3_d
+    close_mappings:
+      - idaf:idaf_3_d
 
   idaf3e:
     description: >-
@@ -507,7 +542,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008072 # IDAF 3E
     range: DegreeLikertMissing
-    is_a: idaf_3_e
+    close_mappings:
+      - idaf:idaf_3_e
 
   idaf3f:
     description: >-
@@ -515,7 +551,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008073 # IDAF 3F
     range: DegreeLikertMissing
-    is_a: idaf_3_f
+    close_mappings:
+      - idaf:idaf_3_f
 
   idaf3g:
     description: >-
@@ -523,7 +560,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008074 # IDAF 3G
     range: DegreeLikertMissing
-    is_a: idaf_3_g
+    close_mappings:
+      - idaf:idaf_3_g
 
   idaf3h:
     description: >-
@@ -531,7 +569,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008075 # IDAF 3H
     range: DegreeLikertMissing
-    is_a: idaf_3_h
+    close_mappings:
+      - idaf:idaf_3_h
 
   idaf3i:
     description: >-
@@ -539,7 +578,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008076 # IDAF 3I
     range: DegreeLikertMissing
-    is_a: idaf_3_i
+    close_mappings:
+      - idaf:idaf_3_i
 
   idaf3j:
     description: >-
@@ -547,7 +587,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008077 # IDAF 3J
     range: DegreeLikertMissing
-    is_a: idaf_3_j
+    close_mappings:
+      - idaf:idaf_3_j
 
   mdas1:
     description: >-
@@ -555,15 +596,17 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000446 # MDAS 1
     range: AnxietyMissing
-    is_a: S3_Q4A
-
+    close_mappings:
+      - mdas:S3_Q4A
+  
   mdas2:
     description: >-
       If you were sitting in the waiting room (waiting for treatment) [How would you feel in the following scenarios?]
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000447 # MDAS 2
     range: AnxietyMissing
-    is_a: S3_Q4B
+    close_mappings:
+      - mdas:S3_Q4B
 
   mdas3:
     description: >-
@@ -571,7 +614,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000448 # MDAS 3
     range: AnxietyMissing
-    is_a: S3_Q4C
+    close_mappings:
+      - mdas:S3_Q4C
 
   mdas4:
     description: >-
@@ -579,7 +623,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000449 # MDAS 4
     range: AnxietyMissing
-    is_a: S3_Q4D
+    close_mappings:
+      - mdas:S3_Q4D
 
   mdas5:
     description: >-
@@ -587,7 +632,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000450 # MDAS 5
     range: AnxietyMissing
-    is_a: S3_Q4E
+    close_mappings:
+      - mdas:S3_Q4E
 
   source:
     description: >-
