@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://oral-health-and-disease-ontologies.github.io/DFA-Study/superdataset/SUPERDATASETRecord/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Class: SUPERDATASETRecord - DFA Study Schema</title>
+<link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../../css/brands.min.css" rel="stylesheet"/>
+<link href="../../css/solid.min.css" rel="stylesheet"/>
+<link href="../../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="../..">DFA Study Schema</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="../../ada_ohwb/">ADA Oral Health and Well Being Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../cq_sohea/">CareQuest SOHEA Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../cohra1/">COHRA1 Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../cohra2/">COHRA2 Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../dfs/">DFS Study Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../idaf/">IDAF Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../">Superdataset Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../tic_clinical/">TIC Clinical Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../tic_provider/">TIC Provider Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../mdas/">Modified Dental Anxiety Scale Schema</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://github.com/oral-health-and-disease-ontologies/DFA-Study/?query=root/DFA-Study/docs/superdataset/SUPERDATASETRecord.md"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#class-superdatasetrecord">Class: SUPERDATASETRecord</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="class-superdatasetrecord">Class: SUPERDATASETRecord</h1>
+<p><em>A record in the Superdataset dataset</em></p>
+<div data-search-exclude="" markdown="1">
+
+
+
+URI: [superdataset:SUPERDATASETRecord](https://w3id.org/OHD/DFA-study/superdataset/SUPERDATASETRecord)
+
+
+
+
+
+
+<div class="mermaid"> classDiagram
+    class SUPERDATASETRecord
+    click SUPERDATASETRecord href "../SUPERDATASETRecord/"
+      Record &lt;|-- SUPERDATASETRecord
+        click Record href "../Record/"
+
+      SUPERDATASETRecord : Age
+
+      SUPERDATASETRecord : agegrp
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" AgeGroup : agegrp
+        click AgeGroup href "../AgeGroup/"
+
+
+
+      SUPERDATASETRecord : American_indian
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : American_indian
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : Asian
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : Asian
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : Black
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : Black
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : count_missing
+
+      SUPERDATASETRecord : dfs1
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" FrequencyMissing : dfs1
+        click FrequencyMissing href "../FrequencyMissing/"
+
+
+
+      SUPERDATASETRecord : dfs10
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs10
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs11
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs11
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs12
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs12
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs13
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs13
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs14
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs14
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs15
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs15
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs16
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs16
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs17
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs17
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs18
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs18
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs19
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs19
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs2
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" FrequencyMissing : dfs2
+        click FrequencyMissing href "../FrequencyMissing/"
+
+
+
+      SUPERDATASETRecord : dfs20
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs20
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs3
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs3
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs4
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs4
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs5
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs5
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs6
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs6
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs7
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs7
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs8
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs8
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : dfs9
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertAmountMissing : dfs9
+        click LikertAmountMissing href "../LikertAmountMissing/"
+
+
+
+      SUPERDATASETRecord : Ethnicity
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYesPeriod : Ethnicity
+        click NoYesPeriod href "../NoYesPeriod/"
+
+
+
+      SUPERDATASETRecord : Hispanic
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : Hispanic
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : idaf1a
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertMissing : idaf1a
+        click LikertMissing href "../LikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf1b
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertMissing : idaf1b
+        click LikertMissing href "../LikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf1c
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertMissing : idaf1c
+        click LikertMissing href "../LikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf1d
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertMissing : idaf1d
+        click LikertMissing href "../LikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf1e
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertMissing : idaf1e
+        click LikertMissing href "../LikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf1f
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertMissing : idaf1f
+        click LikertMissing href "../LikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf1g
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertMissing : idaf1g
+        click LikertMissing href "../LikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf1h
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" LikertMissing : idaf1h
+        click LikertMissing href "../LikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf2a
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYesPeriod : idaf2a
+        click NoYesPeriod href "../NoYesPeriod/"
+
+
+
+      SUPERDATASETRecord : idaf2b
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYesPeriod : idaf2b
+        click NoYesPeriod href "../NoYesPeriod/"
+
+
+
+      SUPERDATASETRecord : idaf2c
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYesPeriod : idaf2c
+        click NoYesPeriod href "../NoYesPeriod/"
+
+
+
+      SUPERDATASETRecord : idaf2d
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYesPeriod : idaf2d
+        click NoYesPeriod href "../NoYesPeriod/"
+
+
+
+      SUPERDATASETRecord : idaf2e
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYesPeriod : idaf2e
+        click NoYesPeriod href "../NoYesPeriod/"
+
+
+
+      SUPERDATASETRecord : idaf3a
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" DegreeLikertMissing : idaf3a
+        click DegreeLikertMissing href "../DegreeLikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf3b
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" DegreeLikertMissing : idaf3b
+        click DegreeLikertMissing href "../DegreeLikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf3c
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" DegreeLikertMissing : idaf3c
+        click DegreeLikertMissing href "../DegreeLikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf3d
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" DegreeLikertMissing : idaf3d
+        click DegreeLikertMissing href "../DegreeLikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf3e
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" DegreeLikertMissing : idaf3e
+        click DegreeLikertMissing href "../DegreeLikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf3f
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" DegreeLikertMissing : idaf3f
+        click DegreeLikertMissing href "../DegreeLikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf3g
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" DegreeLikertMissing : idaf3g
+        click DegreeLikertMissing href "../DegreeLikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf3h
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" DegreeLikertMissing : idaf3h
+        click DegreeLikertMissing href "../DegreeLikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf3i
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" DegreeLikertMissing : idaf3i
+        click DegreeLikertMissing href "../DegreeLikertMissing/"
+
+
+
+      SUPERDATASETRecord : idaf3j
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" DegreeLikertMissing : idaf3j
+        click DegreeLikertMissing href "../DegreeLikertMissing/"
+
+
+
+      SUPERDATASETRecord : Last_Dental_Visit
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" Years1-5 : Last_Dental_Visit
+        click Years1-5 href "../Years1-5/"
+
+
+
+      SUPERDATASETRecord : mdas1
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" AnxietyMissing : mdas1
+        click AnxietyMissing href "../AnxietyMissing/"
+
+
+
+      SUPERDATASETRecord : mdas2
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" AnxietyMissing : mdas2
+        click AnxietyMissing href "../AnxietyMissing/"
+
+
+
+      SUPERDATASETRecord : mdas3
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" AnxietyMissing : mdas3
+        click AnxietyMissing href "../AnxietyMissing/"
+
+
+
+      SUPERDATASETRecord : mdas4
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" AnxietyMissing : mdas4
+        click AnxietyMissing href "../AnxietyMissing/"
+
+
+
+      SUPERDATASETRecord : mdas5
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" AnxietyMissing : mdas5
+        click AnxietyMissing href "../AnxietyMissing/"
+
+
+
+      SUPERDATASETRecord : Missing_race
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : Missing_race
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : More_than_one_race
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : More_than_one_race
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : NA
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : NA
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : NA_AN
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : NA_AN
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : Native_hawaiian
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : Native_hawaiian
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : Other_pacific_islander
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : Other_pacific_islander
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : Other_race
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : Other_race
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : Participant_id
+
+      SUPERDATASETRecord : Sex
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" SexSuperdataset : Sex
+        click SexSuperdataset href "../SexSuperdataset/"
+
+
+
+      SUPERDATASETRecord : source
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" StudySource : source
+        click StudySource href "../StudySource/"
+
+
+
+      SUPERDATASETRecord : White
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : White
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : White_Hispanic
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : White_Hispanic
+        click NoYes href "../NoYes/"
+
+
+
+      SUPERDATASETRecord : White_Hispanic_NA
+
+
+
+
+
+        SUPERDATASETRecord --&gt; "0..1" NoYes : White_Hispanic_NA
+        click NoYes href "../NoYes/"
+
+
+
+
+</div>
+
+
+
+
+
+
+## Inheritance
+* [Record](Record.md)
+    * **SUPERDATASETRecord**
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [Participant_id](Participant_id.md) | 0..1 <br/> [Integer](Integer.md) | The participant's study ID | direct |
+| [Last_Dental_Visit](Last_Dental_Visit.md) | 0..1 <br/> [Years1-5](Years1-5.md) | How long has it been since you last visited a dentist or dental clinic for an... | direct |
+| [Sex](Sex.md) | 0..1 <br/> [SexSuperdataset](SexSuperdataset.md) | The participant's sex | direct |
+| [Age](Age.md) | 0..1 <br/> [String](String.md) or <br/>[0to120](0to120.md) or <br/>[PeriodMissing](PeriodMissing.md) | The participant's age in years | direct |
+| [Ethnicity](Ethnicity.md) | 0..1 <br/> [NoYesPeriod](NoYesPeriod.md) | The participant's ethnicity is Hispanic | direct |
+| [Hispanic](Hispanic.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's ethnicity is Hispanic | direct |
+| [White](White.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's ethnicity is White | direct |
+| [White_Hispanic](White_Hispanic.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's ethnicity is White and Hispanic | direct |
+| [White_Hispanic_NA](White_Hispanic_NA.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's ethnicity is White, Hispanic, and Native American | direct |
+| [Black](Black.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's ethnicity is Black | direct |
+| [NA_AN](NA_AN.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's ethnicity is Native American and Alaskan Native | direct |
+| [NA](NA.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's ethnicity is Native American | direct |
+| [Asian](Asian.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's ethnicity is Asian | direct |
+| [American_indian](American_indian.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's ethnicity is American Indian | direct |
+| [Native_hawaiian](Native_hawaiian.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's ethnicity is Native Hawaiian | direct |
+| [Other_pacific_islander](Other_pacific_islander.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's ethnicity is Other Pacific Islander | direct |
+| [Other_race](Other_race.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's race is another not listed | direct |
+| [More_than_one_race](More_than_one_race.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's race is more than one | direct |
+| [Missing_race](Missing_race.md) | 0..1 <br/> [NoYes](NoYes.md) | The participant's race is not recorded | direct |
+| [dfs1](dfs1.md) | 0..1 <br/> [FrequencyMissing](FrequencyMissing.md) | Has fear of dental work ever caused you to put off making an appointment? | direct |
+| [dfs2](dfs2.md) | 0..1 <br/> [FrequencyMissing](FrequencyMissing.md) | Has fear of dental work ever caused you to cancel or not appear for an appoin... | direct |
+| [dfs3](dfs3.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | When having dental work done, my muscles become tense | direct |
+| [dfs4](dfs4.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | When having dental work done, my breathing rate increases | direct |
+| [dfs5](dfs5.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | When having dental work done, I perspire | direct |
+| [dfs6](dfs6.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | When having dental work done, I feel nauseated and sick to my stomach | direct |
+| [dfs7](dfs7.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | When having dental work done, my heart beats faster | direct |
+| [dfs8](dfs8.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs9](dfs9.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs10](dfs10.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs11](dfs11.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs12](dfs12.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs13](dfs13.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs14](dfs14.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs15](dfs15.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs16](dfs16.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs17](dfs17.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs18](dfs18.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs19](dfs19.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs20](dfs20.md) | 0..1 <br/> [LikertAmountMissing](LikertAmountMissing.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [idaf1a](idaf1a.md) | 0..1 <br/> [LikertMissing](LikertMissing.md) | (1a) I feel anxious shortly before going to the dentist | direct |
+| [idaf1b](idaf1b.md) | 0..1 <br/> [LikertMissing](LikertMissing.md) | (1b) I generally avoid going to the dentist because I find the experience unp... | direct |
+| [idaf1c](idaf1c.md) | 0..1 <br/> [LikertMissing](LikertMissing.md) | (1c) I get nervous or edgy about upcoming dental visits | direct |
+| [idaf1d](idaf1d.md) | 0..1 <br/> [LikertMissing](LikertMissing.md) | (1d) I think that something really bad would happen to me if I were to visit ... | direct |
+| [idaf1e](idaf1e.md) | 0..1 <br/> [LikertMissing](LikertMissing.md) | (1e) I feel afraid or fearful when visiting the dentist | direct |
+| [idaf1f](idaf1f.md) | 0..1 <br/> [LikertMissing](LikertMissing.md) | (1f) My heart beats faster when I go to the dentist | direct |
+| [idaf1g](idaf1g.md) | 0..1 <br/> [LikertMissing](LikertMissing.md) | (1g) I delay making appointments to go to the dentist | direct |
+| [idaf1h](idaf1h.md) | 0..1 <br/> [LikertMissing](LikertMissing.md) | (1h) I often think about all the things that might go wrong prior to going to... | direct |
+| [idaf2a](idaf2a.md) | 0..1 <br/> [NoYesPeriod](NoYesPeriod.md) | (2a) Going to the dentist is actively avoided or else endured with intense fe... | direct |
+| [idaf2b](idaf2b.md) | 0..1 <br/> [NoYesPeriod](NoYesPeriod.md) | (2b) My fear of going to the dentist has been present for at least 6 month | direct |
+| [idaf2c](idaf2c.md) | 0..1 <br/> [NoYesPeriod](NoYesPeriod.md) | (2c) My fear, anxiety or avoidance of going to the dentist significantly affe... | direct |
+| [idaf2d](idaf2d.md) | 0..1 <br/> [NoYesPeriod](NoYesPeriod.md) | (2d) I am afraid of going to the dentist because I am concerned I may have a ... | direct |
+| [idaf2e](idaf2e.md) | 0..1 <br/> [NoYesPeriod](NoYesPeriod.md) | (2e) I am afraid of going to the dentist because I am generally highly self-c... | direct |
+| [idaf3a](idaf3a.md) | 0..1 <br/> [DegreeLikertMissing](DegreeLikertMissing.md) | (3a) Painful or uncomfortable procedures  | direct |
+| [idaf3b](idaf3b.md) | 0..1 <br/> [DegreeLikertMissing](DegreeLikertMissing.md) | (3b)  Feeling embarrassed or ashamed   | direct |
+| [idaf3c](idaf3c.md) | 0..1 <br/> [DegreeLikertMissing](DegreeLikertMissing.md) | (3c)  Not being in control of what is happening  | direct |
+| [idaf3d](idaf3d.md) | 0..1 <br/> [DegreeLikertMissing](DegreeLikertMissing.md) | (3d)  Feeling sick, queasy or disgusted   | direct |
+| [idaf3e](idaf3e.md) | 0..1 <br/> [DegreeLikertMissing](DegreeLikertMissing.md) | (3e)  Numbness caused by the anesthetic  | direct |
+| [idaf3f](idaf3f.md) | 0..1 <br/> [DegreeLikertMissing](DegreeLikertMissing.md) | (3f)  Not knowing what the dentist is going to do   | direct |
+| [idaf3g](idaf3g.md) | 0..1 <br/> [DegreeLikertMissing](DegreeLikertMissing.md) | (3g)  The cost of dental treatment  | direct |
+| [idaf3h](idaf3h.md) | 0..1 <br/> [DegreeLikertMissing](DegreeLikertMissing.md) | (3h) Needles or injections  | direct |
+| [idaf3i](idaf3i.md) | 0..1 <br/> [DegreeLikertMissing](DegreeLikertMissing.md) | (3i)  Gagging or choking   | direct |
+| [idaf3j](idaf3j.md) | 0..1 <br/> [DegreeLikertMissing](DegreeLikertMissing.md) | (3j)  Having an unsympathetic or unkind dentist   | direct |
+| [mdas1](mdas1.md) | 0..1 <br/> [AnxietyMissing](AnxietyMissing.md) | If you went to the dentist for treatment tomorrow [How would you feel in the ... | direct |
+| [mdas2](mdas2.md) | 0..1 <br/> [AnxietyMissing](AnxietyMissing.md) | If you were sitting in the waiting room (waiting for treatment) [How would yo... | direct |
+| [mdas3](mdas3.md) | 0..1 <br/> [AnxietyMissing](AnxietyMissing.md) | If you were about to have a tooth drilled [How would you feel in the followin... | direct |
+| [mdas4](mdas4.md) | 0..1 <br/> [AnxietyMissing](AnxietyMissing.md) | If you were about to have your teeth scaled and polished [How would you feel ... | direct |
+| [mdas5](mdas5.md) | 0..1 <br/> [AnxietyMissing](AnxietyMissing.md) | If you were about to have a local anesthetic injection in your gum above an u... | direct |
+| [source](source.md) | 0..1 <br/> [StudySource](StudySource.md) | The source of the data | direct |
+| [count_missing](count_missing.md) | 0..1 <br/> [Integer](Integer.md) | The count of missing values in the record | direct |
+| [agegrp](agegrp.md) | 0..1 <br/> [AgeGroup](AgeGroup.md) | The age group of the participant | direct |
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [SUPERDATASETDataset](SUPERDATASETDataset.md) | [records](records.md) | range | [SUPERDATASETRecord](SUPERDATASETRecord.md) |
+
+
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/OHD/DFA-study/superdataset
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | superdataset:SUPERDATASETRecord |
+| native | superdataset:SUPERDATASETRecord |
+
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+<pre><code class="language-yaml">name: SUPERDATASETRecord
+description: A record in the Superdataset dataset
+from_schema: https://w3id.org/OHD/DFA-study/superdataset
+is_a: Record
+slots:
+- Participant_id
+- Last_Dental_Visit
+- Sex
+- Age
+- Ethnicity
+- Hispanic
+- White
+- White_Hispanic
+- White_Hispanic_NA
+- Black
+- NA_AN
+- NA
+- Asian
+- American_indian
+- Native_hawaiian
+- Other_pacific_islander
+- Other_race
+- More_than_one_race
+- Missing_race
+- dfs1
+- dfs2
+- dfs3
+- dfs4
+- dfs5
+- dfs6
+- dfs7
+- dfs8
+- dfs9
+- dfs10
+- dfs11
+- dfs12
+- dfs13
+- dfs14
+- dfs15
+- dfs16
+- dfs17
+- dfs18
+- dfs19
+- dfs20
+- idaf1a
+- idaf1b
+- idaf1c
+- idaf1d
+- idaf1e
+- idaf1f
+- idaf1g
+- idaf1h
+- idaf2a
+- idaf2b
+- idaf2c
+- idaf2d
+- idaf2e
+- idaf3a
+- idaf3b
+- idaf3c
+- idaf3d
+- idaf3e
+- idaf3f
+- idaf3g
+- idaf3h
+- idaf3i
+- idaf3j
+- mdas1
+- mdas2
+- mdas3
+- mdas4
+- mdas5
+- source
+- count_missing
+- agegrp
+
+</code></pre>
+</details>
+
+### Induced
+
+<details>
+<pre><code class="language-yaml">name: SUPERDATASETRecord
+description: A record in the Superdataset dataset
+from_schema: https://w3id.org/OHD/DFA-study/superdataset
+is_a: Record
+attributes:
+  Participant_id:
+    name: Participant_id
+    description: The participant's study ID.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: integer
+  Last_Dental_Visit:
+    name: Last_Dental_Visit
+    description: How long has it been since you last visited a dentist or dental clinic
+      for any reason?
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: Years1-5
+  Sex:
+    name: Sex
+    description: The participant's sex
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: SexSuperdataset
+  Age:
+    name: Age
+    description: The participant's age in years.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    any_of:
+    - range: 0to120
+    - range: PeriodMissing
+  Ethnicity:
+    name: Ethnicity
+    description: The participant's ethnicity is Hispanic.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYesPeriod
+  Hispanic:
+    name: Hispanic
+    description: The participant's ethnicity is Hispanic.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  White:
+    name: White
+    description: The participant's ethnicity is White.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  White_Hispanic:
+    name: White_Hispanic
+    description: The participant's ethnicity is White and Hispanic.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  White_Hispanic_NA:
+    name: White_Hispanic_NA
+    description: The participant's ethnicity is White, Hispanic, and Native American.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  Black:
+    name: Black
+    description: The participant's ethnicity is Black.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  NA_AN:
+    name: NA_AN
+    description: The participant's ethnicity is Native American and Alaskan Native.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  NA:
+    name: NA
+    description: The participant's ethnicity is Native American.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  Asian:
+    name: Asian
+    description: The participant's ethnicity is Asian.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  American_indian:
+    name: American_indian
+    description: The participant's ethnicity is American Indian.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  Native_hawaiian:
+    name: Native_hawaiian
+    description: The participant's ethnicity is Native Hawaiian.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  Other_pacific_islander:
+    name: Other_pacific_islander
+    description: The participant's ethnicity is Other Pacific Islander.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  Other_race:
+    name: Other_race
+    description: The participant's race is another not listed.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  More_than_one_race:
+    name: More_than_one_race
+    description: The participant's race is more than one.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  Missing_race:
+    name: Missing_race
+    description: The participant's race is not recorded.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYes
+  dfs1:
+    name: dfs1
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000421
+    description: Has fear of dental work ever caused you to put off making an appointment?
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_1
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: FrequencyMissing
+  dfs2:
+    name: dfs2
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000422
+    description: Has fear of dental work ever caused you to cancel or not appear for
+      an appointment?
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_2
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: FrequencyMissing
+  dfs3:
+    name: dfs3
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000423
+    description: When having dental work done, my muscles become tense.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_3
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs4:
+    name: dfs4
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000424
+    description: When having dental work done, my breathing rate increases.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_4
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs5:
+    name: dfs5
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000426
+    description: When having dental work done, I perspire.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_5
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs6:
+    name: dfs6
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000427
+    description: When having dental work done, I feel nauseated and sick to my stomach.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_6
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs7:
+    name: dfs7
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000428
+    description: When having dental work done, my heart beats faster.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_7
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs8:
+    name: dfs8
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000429
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Making an appointment for dentistry.'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_8
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs9:
+    name: dfs9
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000430
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Approching the dentist''s office.'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_9
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs10:
+    name: dfs10
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000431
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Sitting in the waiting room.'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_10
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs11:
+    name: dfs11
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000432
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Being seated in the dental chair.'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_11
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs12:
+    name: dfs12
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000433
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: The smell of the dentist''s office.'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_12
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs13:
+    name: dfs13
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000434
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Seeing the dentist walk in.'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_13
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs14:
+    name: dfs14
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000435
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Seeing the anesthetic needle.'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_14
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs15:
+    name: dfs15
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000436
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Feeling the needle injected.'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_15
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs16:
+    name: dfs16
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000437
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Seeing the drill.'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_16
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs17:
+    name: dfs17
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000438
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Hearing the drill.'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_17
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs18:
+    name: dfs18
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000439
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Feeling the vibrations of the drill.'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_18
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs19:
+    name: dfs19
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000440
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Having your teeth cleaned.'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_19
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  dfs20:
+    name: dfs20
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000441
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: All things considered, how fearful are you of
+      having dental work done?'
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - dfs:dfs_20
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertAmountMissing
+  idaf1a:
+    name: idaf1a
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008055
+    description: (1a) I feel anxious shortly before going to the dentist.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_1_a
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertMissing
+  idaf1b:
+    name: idaf1b
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008056
+    description: (1b) I generally avoid going to the dentist because I find the experience
+      unpleasant or distressing.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_1_b
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertMissing
+  idaf1c:
+    name: idaf1c
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008057
+    description: (1c) I get nervous or edgy about upcoming dental visits.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_1_c
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertMissing
+  idaf1d:
+    name: idaf1d
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008058
+    description: (1d) I think that something really bad would happen to me if I were
+      to visit a dentist.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_1_d
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertMissing
+  idaf1e:
+    name: idaf1e
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008059
+    description: (1e) I feel afraid or fearful when visiting the dentist.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_1_e
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertMissing
+  idaf1f:
+    name: idaf1f
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008060
+    description: (1f) My heart beats faster when I go to the dentist.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_1_f
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertMissing
+  idaf1g:
+    name: idaf1g
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008061
+    description: (1g) I delay making appointments to go to the dentist.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_1_g
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertMissing
+  idaf1h:
+    name: idaf1h
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008062
+    description: (1h) I often think about all the things that might go wrong prior
+      to going to the dentist.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_1_h
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: LikertMissing
+  idaf2a:
+    name: idaf2a
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008063
+    description: (2a) Going to the dentist is actively avoided or else endured with
+      intense fear or anxiety
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_2_a
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYesPeriod
+  idaf2b:
+    name: idaf2b
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008064
+    description: (2b) My fear of going to the dentist has been present for at least
+      6 month
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_2_b
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYesPeriod
+  idaf2c:
+    name: idaf2c
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008065
+    description: (2c) My fear, anxiety or avoidance of going to the dentist significantly
+      affects my life in some way (dental pain, avoiding eating some foods, embarrassed
+      or self-conscious about appearance of teeth or mouth, etc.)
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_2_c
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYesPeriod
+  idaf2d:
+    name: idaf2d
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008066
+    description: (2d) I am afraid of going to the dentist because I am concerned I
+      may have a panic attack (abrupt fear with sweating, pounding liteart, fear of
+      dying or losing control, chest pain etc.)
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_2_d
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYesPeriod
+  idaf2e:
+    name: idaf2e
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008067
+    description: (2e) I am afraid of going to the dentist because I am generally highly
+      self-conscious or concerned about being watched or judged in social situations.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_2_e
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: NoYesPeriod
+  idaf3a:
+    name: idaf3a
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008068
+    description: '(3a) Painful or uncomfortable procedures '
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_3_a
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: DegreeLikertMissing
+  idaf3b:
+    name: idaf3b
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008069
+    description: '(3b)  Feeling embarrassed or ashamed  '
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_3_b
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: DegreeLikertMissing
+  idaf3c:
+    name: idaf3c
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008070
+    description: '(3c)  Not being in control of what is happening '
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_3_c
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: DegreeLikertMissing
+  idaf3d:
+    name: idaf3d
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008071
+    description: '(3d)  Feeling sick, queasy or disgusted  '
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_3_d
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: DegreeLikertMissing
+  idaf3e:
+    name: idaf3e
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008072
+    description: '(3e)  Numbness caused by the anesthetic '
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_3_e
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: DegreeLikertMissing
+  idaf3f:
+    name: idaf3f
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008073
+    description: '(3f)  Not knowing what the dentist is going to do  '
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_3_f
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: DegreeLikertMissing
+  idaf3g:
+    name: idaf3g
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008074
+    description: '(3g)  The cost of dental treatment '
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_3_g
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: DegreeLikertMissing
+  idaf3h:
+    name: idaf3h
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008075
+    description: '(3h) Needles or injections '
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_3_h
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: DegreeLikertMissing
+  idaf3i:
+    name: idaf3i
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008076
+    description: '(3i)  Gagging or choking  '
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_3_i
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: DegreeLikertMissing
+  idaf3j:
+    name: idaf3j
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008077
+    description: '(3j)  Having an unsympathetic or unkind dentist  '
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - idaf:idaf_3_j
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: DegreeLikertMissing
+  mdas1:
+    name: mdas1
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000446
+    description: If you went to the dentist for treatment tomorrow [How would you
+      feel in the following scenarios?]
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - mdas:S3_Q4A
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: AnxietyMissing
+  mdas2:
+    name: mdas2
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000447
+    description: If you were sitting in the waiting room (waiting for treatment) [How
+      would you feel in the following scenarios?]
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - mdas:S3_Q4B
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: AnxietyMissing
+  mdas3:
+    name: mdas3
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000448
+    description: If you were about to have a tooth drilled [How would you feel in
+      the following scenarios?]
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - mdas:S3_Q4C
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: AnxietyMissing
+  mdas4:
+    name: mdas4
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000449
+    description: If you were about to have your teeth scaled and polished [How would
+      you feel in the following scenarios?]
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - mdas:S3_Q4D
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: AnxietyMissing
+  mdas5:
+    name: mdas5
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000450
+    description: If you were about to have a local anesthetic injection in your gum
+      above an upper back tooth [How would you feel in the following scenarios?]
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    close_mappings:
+    - mdas:S3_Q4E
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: AnxietyMissing
+  source:
+    name: source
+    description: The source of the data.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: StudySource
+  count_missing:
+    name: count_missing
+    description: The count of missing values in the record.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: integer
+  agegrp:
+    name: agegrp
+    description: The age group of the participant.
+    from_schema: https://w3id.org/OHD/DFA-study/superdataset
+    rank: 1000
+    owner: SUPERDATASETRecord
+    domain_of:
+    - SUPERDATASETRecord
+    range: AgeGroup
+
+</code></pre>
+</details></div></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../../js/base.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../javascripts/tablesort.js"></script>
+<script src="../../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

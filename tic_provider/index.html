@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://oral-health-and-disease-ontologies.github.io/DFA-Study/tic_provider/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>TIC Provider Schema - DFA Study Schema</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">DFA Study Schema</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../ada_ohwb/" class="nav-link">ADA Oral Health and Well Being Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../cq_sohea/" class="nav-link">CareQuest SOHEA Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../cohra1/" class="nav-link">COHRA1 Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../cohra2/" class="nav-link">COHRA2 Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../dfs/" class="nav-link">DFS Study Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../idaf/" class="nav-link">IDAF Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../superdataset/" class="nav-link">Superdataset Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../tic_clinical/" class="nav-link">TIC Clinical Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">TIC Provider Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../mdas/" class="nav-link">Modified Dental Anxiety Scale Schema</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../tic_clinical/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../mdas/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/oral-health-and-disease-ontologies/DFA-Study/?query=root/DFA-Study/docs/tic_provider/index.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#tic-provider-schema" class="nav-link">TIC Provider Schema</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#classes" class="nav-link">Classes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#slots" class="nav-link">Slots</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#enumerations" class="nav-link">Enumerations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#types" class="nav-link">Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#subsets" class="nav-link">Subsets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="tic-provider-schema">TIC Provider Schema</h1>
+<p>Schema for TIC Provider data</p>
+<p>URI: <a href="https://w3id.org/OHD/DFA-study/tic_provider">https://w3id.org/OHD/DFA-study/tic_provider</a></p>
+<p>Name: tic_provider</p>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Dataset/">Dataset</a></td>
+<td>The dataset for the study</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TICPROVIDERDataset/">TICPROVIDERDataset</a></td>
+<td>The TIC Provider Dataset</td>
+</tr>
+<tr>
+<td><a href="Record/">Record</a></td>
+<td>A record in the dataset</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TICPROVIDERRecord/">TICPROVIDERRecord</a></td>
+<td>A record in the TIC Provider dataset</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="age/">age</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="attitude_implementation/">attitude_implementation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="attitude_interaction/">attitude_interaction</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="attitude_org/">attitude_org</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="attitude_personal/">attitude_personal</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="attitude_scope/">attitude_scope</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="attitude_support/">attitude_support</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="attitude_time/">attitude_time</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="attitude_training/">attitude_training</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="competency_implementation/">competency_implementation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="competency_interaction/">competency_interaction</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="competency_org/">competency_org</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="competency_personal/">competency_personal</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="competency_scope/">competency_scope</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="competency_support/">competency_support</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="competency_time/">competency_time</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="competency_training/">competency_training</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="consent___1/">consent___1</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="consent_complete/">consent_complete</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="consent_timestamp/">consent_timestamp</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="dental_tic_training/">dental_tic_training</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ethnicity___1/">ethnicity___1</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ethnicity___2/">ethnicity___2</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ethnicity___3/">ethnicity___3</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ethnicity___4/">ethnicity___4</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ethnicity___5/">ethnicity___5</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ethnicity___6/">ethnicity___6</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ethnicity___7/">ethnicity___7</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ethnicity___8/">ethnicity___8</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ethnicity___88/">ethnicity___88</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ethnicity_other/">ethnicity_other</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="gender/">gender</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="gender_other/">gender_other</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="hispanic_latino/">hispanic_latino</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="hispanic_proportion/">hispanic_proportion</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="impactful_exp___1/">impactful_exp___1</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="impactful_exp___10/">impactful_exp___10</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="impactful_exp___11/">impactful_exp___11</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="impactful_exp___2/">impactful_exp___2</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="impactful_exp___3/">impactful_exp___3</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="impactful_exp___4/">impactful_exp___4</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="impactful_exp___5/">impactful_exp___5</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="impactful_exp___6/">impactful_exp___6</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="impactful_exp___7/">impactful_exp___7</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="impactful_exp___8/">impactful_exp___8</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="impactful_exp___9/">impactful_exp___9</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="medicaid/">medicaid</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="medicaid_proportion/">medicaid_proportion</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="more_training/">more_training</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="other_impactful/">other_impactful</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="other_state/">other_state</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="other_tic_training/">other_tic_training</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="practices_implementation/">practices_implementation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="practices_interaction/">practices_interaction</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="practices_org/">practices_org</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="practices_personal/">practices_personal</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="practices_scope/">practices_scope</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="practices_support/">practices_support</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="practices_time/">practices_time</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="practices_training/">practices_training</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="provider_other/">provider_other</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="provider_type/">provider_type</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="pt_age___1/">pt_age___1</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="pt_age___2/">pt_age___2</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="pt_age___3/">pt_age___3</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="race___1/">race___1</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="race___2/">race___2</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="race___3/">race___3</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="race___4/">race___4</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="race___5/">race___5</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="race___6/">race___6</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="race___7/">race___7</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="race___8/">race___8</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="race_other/">race_other</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="record_id/">record_id</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="records/">records</a></td>
+<td>Slot for connecting the dataset to its records</td>
+</tr>
+<tr>
+<td><a href="redcap_survey_identifier/">redcap_survey_identifier</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="research_survey_complete/">research_survey_complete</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="research_survey_timestamp/">research_survey_timestamp</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___1/">specialty___1</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___10/">specialty___10</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___11/">specialty___11</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___12/">specialty___12</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___13/">specialty___13</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___14/">specialty___14</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___15/">specialty___15</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___16/">specialty___16</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___17/">specialty___17</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___18/">specialty___18</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___19/">specialty___19</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___2/">specialty___2</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___3/">specialty___3</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___4/">specialty___4</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___5/">specialty___5</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___6/">specialty___6</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___7/">specialty___7</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___8/">specialty___8</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="specialty___9/">specialty___9</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="state/">state</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___1/">symptoms___1</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___10/">symptoms___10</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___11/">symptoms___11</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___12/">symptoms___12</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___13/">symptoms___13</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___14/">symptoms___14</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___15/">symptoms___15</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___16/">symptoms___16</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___2/">symptoms___2</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___3/">symptoms___3</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___4/">symptoms___4</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___5/">symptoms___5</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___6/">symptoms___6</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___7/">symptoms___7</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___8/">symptoms___8</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="symptoms___9/">symptoms___9</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="tic_definition/">tic_definition</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="tic_familiar/">tic_familiar</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="tic_relevance/">tic_relevance</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="training_specifics/">training_specifics</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="utah_county/">utah_county</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="white_proportion/">white_proportion</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="work_experience/">work_experience</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="work_months_or_years/">work_months_or_years</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="enumerations">Enumerations</h2>
+<table>
+<thead>
+<tr>
+<th>Enumeration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AgeGroup/">AgeGroup</a></td>
+<td>An enumeration for the age group of the participant</td>
+</tr>
+<tr>
+<td><a href="AgeRanges/">AgeRanges</a></td>
+<td>Enumeration for age ranges</td>
+</tr>
+<tr>
+<td><a href="Agreement/">Agreement</a></td>
+<td>Enumeration for level of agreement</td>
+</tr>
+<tr>
+<td><a href="AnnualCosts/">AnnualCosts</a></td>
+<td>Enumeration for ranges of annual costs</td>
+</tr>
+<tr>
+<td><a href="AnxietyDKSR/">AnxietyDKSR</a></td>
+<td>Enumeration for answering whether an individual would feel anxious in some sc...</td>
+</tr>
+<tr>
+<td><a href="AnxietyMissing/">AnxietyMissing</a></td>
+<td>Enumeration for answering whether an individual would feel anxious in some sc...</td>
+</tr>
+<tr>
+<td><a href="BlankLikert/">BlankLikert</a></td>
+<td>Enumeration consisting of a likert scale used by COHRA and Superdataset as su...</td>
+</tr>
+<tr>
+<td><a href="ComputeIncomeLevel/">ComputeIncomeLevel</a></td>
+<td>Enumeration for computed income level</td>
+</tr>
+<tr>
+<td><a href="DegreeLikertDR/">DegreeLikertDR</a></td>
+<td>A standard 5-point frequency Likert scale ranging from "Not At All" to "Very ...</td>
+</tr>
+<tr>
+<td><a href="DegreeLikertMissing/">DegreeLikertMissing</a></td>
+<td>A standard 5-point frequency Likert scale ranging from "Not At All" to "Very ...</td>
+</tr>
+<tr>
+<td><a href="DemRaceCOHRA/">DemRaceCOHRA</a></td>
+<td>Enumeration of participant race/ethnicity in COHRA</td>
+</tr>
+<tr>
+<td><a href="Difficulty/">Difficulty</a></td>
+<td>Enumeration for difficulty level</td>
+</tr>
+<tr>
+<td><a href="DKRState/">DKRState</a></td>
+<td>Enumeration for US states including a code for 'DON'T KNOW' and 'REFUSED'</td>
+</tr>
+<tr>
+<td><a href="Education/">Education</a></td>
+<td>Enumeration for highest level of education completed</td>
+</tr>
+<tr>
+<td><a href="Education5/">Education5</a></td>
+<td>Enumeration for 5-level education</td>
+</tr>
+<tr>
+<td><a href="EmploymentStatus/">EmploymentStatus</a></td>
+<td>Enumeration for employment status</td>
+</tr>
+<tr>
+<td><a href="EmploymentStatus7/">EmploymentStatus7</a></td>
+<td>Enumeration for employment status in 7 categories</td>
+</tr>
+<tr>
+<td><a href="FreqNH/">FreqNH</a></td>
+<td>Enumeration for the frequency with which an individual experiences some pheno...</td>
+</tr>
+<tr>
+<td><a href="Frequency/">Frequency</a></td>
+<td>Enumeration for frequency of occurrence</td>
+</tr>
+<tr>
+<td><a href="FrequencyDKSR/">FrequencyDKSR</a></td>
+<td>Enumeration for frequency responses which also includes answering that the re...</td>
+</tr>
+<tr>
+<td><a href="FrequencyMissing/">FrequencyMissing</a></td>
+<td>An enumeration for a Likert scale of frequency with a missing option</td>
+</tr>
+<tr>
+<td><a href="FrequencyMSK/">FrequencyMSK</a></td>
+<td>Enumeration for the frequency with which an individual experiences some pheno...</td>
+</tr>
+<tr>
+<td><a href="HoursDaysDKSR/">HoursDaysDKSR</a></td>
+<td>Enumeration for periods of hours or days which also includes answering that t...</td>
+</tr>
+<tr>
+<td><a href="HouseholdIncome18/">HouseholdIncome18</a></td>
+<td>Enumeration for household income in 18 categories</td>
+</tr>
+<tr>
+<td><a href="ImportanceLikert/">ImportanceLikert</a></td>
+<td>Enumeration for level of importance in a Likert scale format</td>
+</tr>
+<tr>
+<td><a href="IncomeCategory/">IncomeCategory</a></td>
+<td>Enumeration for 2014 household income category</td>
+</tr>
+<tr>
+<td><a href="IncomeLevel/">IncomeLevel</a></td>
+<td>Enumeration for level of income</td>
+</tr>
+<tr>
+<td><a href="InverseFrequencyDKSR/">InverseFrequencyDKSR</a></td>
+<td>Enumeration for frequency responses which starts from 'Never' and also includ...</td>
+</tr>
+<tr>
+<td><a href="LikertAmountMissing/">LikertAmountMissing</a></td>
+<td>An enumeration for a Likert scale of degree of fear with a missing option</td>
+</tr>
+<tr>
+<td><a href="LikertDKSR/">LikertDKSR</a></td>
+<td>Enumeration for Likert scale responses which also includes answering that the...</td>
+</tr>
+<tr>
+<td><a href="LikertDR/">LikertDR</a></td>
+<td>A standard 5-point Likert scale ranging from "Strongly Disagree" to "Strongly...</td>
+</tr>
+<tr>
+<td><a href="LikertFear/">LikertFear</a></td>
+<td>Enumeration for respondant level of fear toward some situation</td>
+</tr>
+<tr>
+<td><a href="LikertFearNH/">LikertFearNH</a></td>
+<td>Enumeration for respondant level of fear toward some situation, including an ...</td>
+</tr>
+<tr>
+<td><a href="LikertMissing/">LikertMissing</a></td>
+<td>A standard 5-point Likert scale ranging from "Strongly Disagree" to "Strongly...</td>
+</tr>
+<tr>
+<td><a href="MaleFemaleOHWB/">MaleFemaleOHWB</a></td>
+<td>Enumeration for male/female status in ADA_OHWB</td>
+</tr>
+<tr>
+<td><a href="Marital5/">Marital5</a></td>
+<td>Enumeration for marital status with 5 categories</td>
+</tr>
+<tr>
+<td><a href="MaritalStatus/">MaritalStatus</a></td>
+<td>Enumeration for marital status</td>
+</tr>
+<tr>
+<td><a href="MissingResponse/">MissingResponse</a></td>
+<td>Enumeration for missing response</td>
+</tr>
+<tr>
+<td><a href="NoYes/">NoYes</a></td>
+<td>An enumeration for yes/no responses</td>
+</tr>
+<tr>
+<td><a href="NoYes0/">NoYes0</a></td>
+<td>Enumeration for no/yes responses where the first option is 0</td>
+</tr>
+<tr>
+<td><a href="NoYesCOHRA/">NoYesCOHRA</a></td>
+<td>Enumeration for yes/no responses in COHRA</td>
+</tr>
+<tr>
+<td><a href="NoYesDR/">NoYesDR</a></td>
+<td>A simple No/Yes enumeration with an option for 'Decline to respond'</td>
+</tr>
+<tr>
+<td><a href="NoYesOHWB/">NoYesOHWB</a></td>
+<td>Enumeration for yes/no responses starting with 'no' option</td>
+</tr>
+<tr>
+<td><a href="NoYesPeriod/">NoYesPeriod</a></td>
+<td>An enumeration for yes/no responses with a missing option</td>
+</tr>
+<tr>
+<td><a href="PastTime/">PastTime</a></td>
+<td>Enumeration for periods of time in the past</td>
+</tr>
+<tr>
+<td><a href="PeriodMissing/">PeriodMissing</a></td>
+<td>An enumeration for a missing value</td>
+</tr>
+<tr>
+<td><a href="RaceEthnicity/">RaceEthnicity</a></td>
+<td>Enumeration for combined race and ethnicity</td>
+</tr>
+<tr>
+<td><a href="RaceEthnicityOHWB/">RaceEthnicityOHWB</a></td>
+<td>Enumeration for respondant race/ethnicity in ADA_OHWB</td>
+</tr>
+<tr>
+<td><a href="SedationReason/">SedationReason</a></td>
+<td>Enumeration for reasons why an individual received sedation at their most rec...</td>
+</tr>
+<tr>
+<td><a href="SexCOHRA/">SexCOHRA</a></td>
+<td>Enumeration for the sex of the participant</td>
+</tr>
+<tr>
+<td><a href="SexSuperdataset/">SexSuperdataset</a></td>
+<td>An enumeration for the sex of the participant</td>
+</tr>
+<tr>
+<td><a href="Sexuality/">Sexuality</a></td>
+<td>Enumeration for sexual orientation</td>
+</tr>
+<tr>
+<td><a href="SiteCOHRA1/">SiteCOHRA1</a></td>
+<td>Enumeration for the COHRA1 study site where the assessment was given</td>
+</tr>
+<tr>
+<td><a href="SiteCOHRA2/">SiteCOHRA2</a></td>
+<td>Enumeration for the COHRA2 study site where the assessment was given</td>
+</tr>
+<tr>
+<td><a href="State/">State</a></td>
+<td>Enumeration for US states/territory respondant lives in</td>
+</tr>
+<tr>
+<td><a href="StudySource/">StudySource</a></td>
+<td>An enumeration for the source of data</td>
+</tr>
+<tr>
+<td><a href="TimepointEnum/">TimepointEnum</a></td>
+<td>Enumeration for the point in time at which the participant answered the quest...</td>
+</tr>
+<tr>
+<td><a href="TimeSinceDentalVisit/">TimeSinceDentalVisit</a></td>
+<td>Enumeration for time since last dental visit</td>
+</tr>
+<tr>
+<td><a href="TimeSinceDentalVisitDKSR/">TimeSinceDentalVisitDKSR</a></td>
+<td>Enumeration for time since last dental visit which also includes answering th...</td>
+</tr>
+<tr>
+<td><a href="TreatmentDecisionBasis/">TreatmentDecisionBasis</a></td>
+<td>Enumeration for patients' impression of whether an their oral health provider...</td>
+</tr>
+<tr>
+<td><a href="UnknownGender/">UnknownGender</a></td>
+<td>Enumeration for gender where the first option is 'Unknown'</td>
+</tr>
+<tr>
+<td><a href="VisitSymptom/">VisitSymptom</a></td>
+<td>Enumeration for answering whether an individual visited a dentist, oral healt...</td>
+</tr>
+<tr>
+<td><a href="Years1-5/">Years1-5</a></td>
+<td>An enumeration for a range of years</td>
+</tr>
+<tr>
+<td><a href="YesNoDKOHWB/">YesNoDKOHWB</a></td>
+<td>Enumeration for yes/no responses starting with 'yes' option, including a 'don...</td>
+</tr>
+<tr>
+<td><a href="YesNoDKSR/">YesNoDKSR</a></td>
+<td>Enumeration for yes/no responses which also includes answering that the respo...</td>
+</tr>
+<tr>
+<td><a href="YesNoIRNSDKSR/">YesNoIRNSDKSR</a></td>
+<td>Enumeration for yes/no responses where the option of 'I'd rather not say' is ...</td>
+</tr>
+<tr>
+<td><a href="YesNoOHWB/">YesNoOHWB</a></td>
+<td>Enumeration for yes/no responses starting with 'yes' option</td>
+</tr>
+<tr>
+<td><a href="YesNoUnsureSR/">YesNoUnsureSR</a></td>
+<td>Enumeration for yes/no/unsure responses which also includes answering that th...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="0to120/">0to120</a></td>
+<td>Integer score between 0 and 120</td>
+</tr>
+<tr>
+<td><a href="Boolean/">Boolean</a></td>
+<td>A binary (true or false) value</td>
+</tr>
+<tr>
+<td><a href="Curie/">Curie</a></td>
+<td>a compact URI</td>
+</tr>
+<tr>
+<td><a href="Date/">Date</a></td>
+<td>a date (year, month and day) in an idealized calendar</td>
+</tr>
+<tr>
+<td><a href="DateOrDatetime/">DateOrDatetime</a></td>
+<td>Either a date or a datetime</td>
+</tr>
+<tr>
+<td><a href="Datetime/">Datetime</a></td>
+<td>The combination of a date and time</td>
+</tr>
+<tr>
+<td><a href="Decimal/">Decimal</a></td>
+<td>A real number with arbitrary precision that conforms to the xsd:decimal speci...</td>
+</tr>
+<tr>
+<td><a href="Double/">Double</a></td>
+<td>A real number that conforms to the xsd:double specification</td>
+</tr>
+<tr>
+<td><a href="Float/">Float</a></td>
+<td>A real number that conforms to the xsd:float specification</td>
+</tr>
+<tr>
+<td><a href="Integer/">Integer</a></td>
+<td>An integer</td>
+</tr>
+<tr>
+<td><a href="Jsonpath/">Jsonpath</a></td>
+<td>A string encoding a JSON Path</td>
+</tr>
+<tr>
+<td><a href="Jsonpointer/">Jsonpointer</a></td>
+<td>A string encoding a JSON Pointer</td>
+</tr>
+<tr>
+<td><a href="Ncname/">Ncname</a></td>
+<td>Prefix part of CURIE</td>
+</tr>
+<tr>
+<td><a href="Nodeidentifier/">Nodeidentifier</a></td>
+<td>A URI, CURIE or BNODE that represents a node in a model</td>
+</tr>
+<tr>
+<td><a href="Objectidentifier/">Objectidentifier</a></td>
+<td>A URI or CURIE that represents an object in the model</td>
+</tr>
+<tr>
+<td><a href="Score0to100/">Score0to100</a></td>
+<td>Integer score between 0 and 100</td>
+</tr>
+<tr>
+<td><a href="Score0to25/">Score0to25</a></td>
+<td>Integer score between 0 and 25</td>
+</tr>
+<tr>
+<td><a href="Score0to30/">Score0to30</a></td>
+<td>Integer score between 0 and 30</td>
+</tr>
+<tr>
+<td><a href="Score0to40/">Score0to40</a></td>
+<td>Integer score between 0 and 40</td>
+</tr>
+<tr>
+<td><a href="Score20to100/">Score20to100</a></td>
+<td>Integer score between 20 and 100</td>
+</tr>
+<tr>
+<td><a href="Score3to15/">Score3to15</a></td>
+<td>Integer score between 3 and 15</td>
+</tr>
+<tr>
+<td><a href="Score5to25/">Score5to25</a></td>
+<td>Integer score between 5 and 25</td>
+</tr>
+<tr>
+<td><a href="Score6to30/">Score6to30</a></td>
+<td>Integer score between 6 and 30</td>
+</tr>
+<tr>
+<td><a href="Score8to40/">Score8to40</a></td>
+<td>Integer score between 8 and 40</td>
+</tr>
+<tr>
+<td><a href="Score9to45/">Score9to45</a></td>
+<td>Integer score between 9 and 45</td>
+</tr>
+<tr>
+<td><a href="Sparqlpath/">Sparqlpath</a></td>
+<td>A string encoding a SPARQL Property Path</td>
+</tr>
+<tr>
+<td><a href="String/">String</a></td>
+<td>A character string</td>
+</tr>
+<tr>
+<td><a href="Time/">Time</a></td>
+<td>A time object represents a (local) time of day, independent of any particular...</td>
+</tr>
+<tr>
+<td><a href="Uri/">Uri</a></td>
+<td>a complete URI</td>
+</tr>
+<tr>
+<td><a href="Uriorcurie/">Uriorcurie</a></td>
+<td>a URI or a CURIE</td>
+</tr>
+</tbody>
+</table>
+<h2 id="subsets">Subsets</h2>
+<table>
+<thead>
+<tr>
+<th>Subset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../javascripts/tablesort.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

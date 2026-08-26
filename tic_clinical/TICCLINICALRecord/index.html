@@ -1,0 +1,3872 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://oral-health-and-disease-ontologies.github.io/DFA-Study/tic_clinical/TICCLINICALRecord/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Class: TICCLINICALRecord - DFA Study Schema</title>
+<link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../../css/brands.min.css" rel="stylesheet"/>
+<link href="../../css/solid.min.css" rel="stylesheet"/>
+<link href="../../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="../..">DFA Study Schema</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="../../ada_ohwb/">ADA Oral Health and Well Being Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../cq_sohea/">CareQuest SOHEA Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../cohra1/">COHRA1 Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../cohra2/">COHRA2 Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../dfs/">DFS Study Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../idaf/">IDAF Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../superdataset/">Superdataset Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../">TIC Clinical Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../tic_provider/">TIC Provider Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../mdas/">Modified Dental Anxiety Scale Schema</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://github.com/oral-health-and-disease-ontologies/DFA-Study/?query=root/DFA-Study/docs/tic_clinical/TICCLINICALRecord.md"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#class-ticclinicalrecord">Class: TICCLINICALRecord</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="class-ticclinicalrecord">Class: TICCLINICALRecord</h1>
+<p><em>A record in the TIC Clinical dataset</em></p>
+<div data-search-exclude="" markdown="1">
+
+
+
+URI: [tic_clinical:TICCLINICALRecord](https://w3id.org/OHD/DFA-study/tic_clinical/TICCLINICALRecord)
+
+
+
+
+
+
+<div class="mermaid"> classDiagram
+    class TICCLINICALRecord
+    click TICCLINICALRecord href "../TICCLINICALRecord/"
+      Record &lt;|-- TICCLINICALRecord
+        click Record href "../Record/"
+
+      TICCLINICALRecord : affording_dentistry
+
+      TICCLINICALRecord : affording_healthcare
+
+      TICCLINICALRecord : age
+
+      TICCLINICALRecord : age_in_years
+
+      TICCLINICALRecord : avoid_other
+
+      TICCLINICALRecord : checkup_feeling
+
+      TICCLINICALRecord : chronic_pain
+
+      TICCLINICALRecord : com
+
+      TICCLINICALRecord : comadult
+
+      TICCLINICALRecord : comchild
+
+      TICCLINICALRecord : community_timeline_adult
+
+      TICCLINICALRecord : community_violence_adult
+
+      TICCLINICALRecord : community_violence_child
+
+      TICCLINICALRecord : demographics_complete
+
+      TICCLINICALRecord : demographics_timestamp
+
+      TICCLINICALRecord : dental_history_complete
+
+      TICCLINICALRecord : dental_history_timestamp
+
+      TICCLINICALRecord : dental_home
+
+      TICCLINICALRecord : dental_insurance
+
+      TICCLINICALRecord : dental_specialist
+
+      TICCLINICALRecord : dfs2
+
+      TICCLINICALRecord : dfs_1
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_1
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_10
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_10
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_10_3cat
+
+      TICCLINICALRecord : dfs_11
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_11
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_11_3cat
+
+      TICCLINICALRecord : dfs_12
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_12
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_12_3cat
+
+      TICCLINICALRecord : dfs_13
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_13
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_13_3cat
+
+      TICCLINICALRecord : dfs_14
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_14
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_14_3cat
+
+      TICCLINICALRecord : dfs_15
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_15
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_15_3cat
+
+      TICCLINICALRecord : dfs_16
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_16
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_16_3cat
+
+      TICCLINICALRecord : dfs_17
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_17
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_17_3cat
+
+      TICCLINICALRecord : dfs_18
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_18
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_18_3cat
+
+      TICCLINICALRecord : dfs_19
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_19
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_19_3cat
+
+      TICCLINICALRecord : dfs_1_3cat
+
+      TICCLINICALRecord : dfs_2
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_2
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_20
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_20
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_20_3cat
+
+      TICCLINICALRecord : dfs_2_3cat
+
+      TICCLINICALRecord : dfs_3
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_3
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_3_3cat
+
+      TICCLINICALRecord : dfs_4
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_4
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_4_3cat
+
+      TICCLINICALRecord : dfs_5
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_5
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_5_3cat
+
+      TICCLINICALRecord : dfs_6
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_6
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_6_3cat
+
+      TICCLINICALRecord : dfs_7
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_7
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_7_3cat
+
+      TICCLINICALRecord : dfs_8
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_8
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_8_3cat
+
+      TICCLINICALRecord : dfs_9
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" BlankLikert : dfs_9
+        click BlankLikert href "../BlankLikert/"
+
+
+
+      TICCLINICALRecord : dfs_9_3cat
+
+      TICCLINICALRecord : dfs_complete
+
+      TICCLINICALRecord : dfs_timestamp
+
+      TICCLINICALRecord : dfsavoid
+
+      TICCLINICALRecord : dfsphy
+
+      TICCLINICALRecord : dfsscore
+
+      TICCLINICALRecord : dfsstim
+
+      TICCLINICALRecord : diabetes
+
+      TICCLINICALRecord : difficult_life_experiences_histo
+
+      TICCLINICALRecord : dry_mouth
+
+      TICCLINICALRecord : dv2
+
+      TICCLINICALRecord : education
+
+      TICCLINICALRecord : education2
+
+      TICCLINICALRecord : education_other
+
+      TICCLINICALRecord : ethnicity___1
+
+      TICCLINICALRecord : ethnicity___2
+
+      TICCLINICALRecord : ethnicity___3
+
+      TICCLINICALRecord : ethnicity___4
+
+      TICCLINICALRecord : ethnicity___5
+
+      TICCLINICALRecord : ethnicity___6
+
+      TICCLINICALRecord : ethnicity___7
+
+      TICCLINICALRecord : ethnicity___8
+
+      TICCLINICALRecord : ethnicity___88
+
+      TICCLINICALRecord : ethnicity_other
+
+      TICCLINICALRecord : famadult
+
+      TICCLINICALRecord : famchild
+
+      TICCLINICALRecord : family
+
+      TICCLINICALRecord : family_needs
+
+      TICCLINICALRecord : family_timeline_adult
+
+      TICCLINICALRecord : family_violence_adult
+
+      TICCLINICALRecord : family_violence_child
+
+      TICCLINICALRecord : gender_identity
+
+      TICCLINICALRecord : gender_identity_other
+
+      TICCLINICALRecord : general_health
+
+      TICCLINICALRecord : health_history_complete
+
+      TICCLINICALRecord : health_history_timestamp
+
+      TICCLINICALRecord : healthcare_usage
+
+      TICCLINICALRecord : hispanic_latino
+
+      TICCLINICALRecord : home
+
+      TICCLINICALRecord : hypertension
+
+      TICCLINICALRecord : idaf4c_complete
+
+      TICCLINICALRecord : idaf4c_timestamp
+
+      TICCLINICALRecord : idaf_1_a
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" LikertDR : idaf_1_a
+        click LikertDR href "../LikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_1_b
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" LikertDR : idaf_1_b
+        click LikertDR href "../LikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_1_c
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" LikertDR : idaf_1_c
+        click LikertDR href "../LikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_1_d
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" LikertDR : idaf_1_d
+        click LikertDR href "../LikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_1_e
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" LikertDR : idaf_1_e
+        click LikertDR href "../LikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_1_f
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" LikertDR : idaf_1_f
+        click LikertDR href "../LikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_1_g
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" LikertDR : idaf_1_g
+        click LikertDR href "../LikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_1_h
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" LikertDR : idaf_1_h
+        click LikertDR href "../LikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_2_a
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" NoYesDR : idaf_2_a
+        click NoYesDR href "../NoYesDR/"
+
+
+
+      TICCLINICALRecord : idaf_2_b
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" NoYesDR : idaf_2_b
+        click NoYesDR href "../NoYesDR/"
+
+
+
+      TICCLINICALRecord : idaf_2_c
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" NoYesDR : idaf_2_c
+        click NoYesDR href "../NoYesDR/"
+
+
+
+      TICCLINICALRecord : idaf_2_d
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" NoYesDR : idaf_2_d
+        click NoYesDR href "../NoYesDR/"
+
+
+
+      TICCLINICALRecord : idaf_2_e
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" NoYesDR : idaf_2_e
+        click NoYesDR href "../NoYesDR/"
+
+
+
+      TICCLINICALRecord : idaf_3_a
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" DegreeLikertDR : idaf_3_a
+        click DegreeLikertDR href "../DegreeLikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_3_b
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" DegreeLikertDR : idaf_3_b
+        click DegreeLikertDR href "../DegreeLikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_3_c
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" DegreeLikertDR : idaf_3_c
+        click DegreeLikertDR href "../DegreeLikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_3_d
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" DegreeLikertDR : idaf_3_d
+        click DegreeLikertDR href "../DegreeLikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_3_e
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" DegreeLikertDR : idaf_3_e
+        click DegreeLikertDR href "../DegreeLikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_3_f
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" DegreeLikertDR : idaf_3_f
+        click DegreeLikertDR href "../DegreeLikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_3_g
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" DegreeLikertDR : idaf_3_g
+        click DegreeLikertDR href "../DegreeLikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_3_h
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" DegreeLikertDR : idaf_3_h
+        click DegreeLikertDR href "../DegreeLikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_3_i
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" DegreeLikertDR : idaf_3_i
+        click DegreeLikertDR href "../DegreeLikertDR/"
+
+
+
+      TICCLINICALRecord : idaf_3_j
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" DegreeLikertDR : idaf_3_j
+        click DegreeLikertDR href "../DegreeLikertDR/"
+
+
+
+      TICCLINICALRecord : idafc2
+
+      TICCLINICALRecord : idafc_total
+
+      TICCLINICALRecord : idafcmean
+
+      TICCLINICALRecord : individual_needs
+
+      TICCLINICALRecord : insur
+
+      TICCLINICALRecord : language_used
+
+
+
+
+
+        TICCLINICALRecord --&gt; "0..1" LanguageUsedEnum : language_used
+        click LanguageUsedEnum href "../LanguageUsedEnum/"
+
+
+
+      TICCLINICALRecord : language_used_name
+
+      TICCLINICALRecord : last_dental_other
+
+      TICCLINICALRecord : last_dental_reason___1
+
+      TICCLINICALRecord : last_dental_reason___10
+
+      TICCLINICALRecord : last_dental_reason___2
+
+      TICCLINICALRecord : last_dental_reason___3
+
+      TICCLINICALRecord : last_dental_reason___4
+
+      TICCLINICALRecord : last_dental_reason___5
+
+      TICCLINICALRecord : last_dental_reason___6
+
+      TICCLINICALRecord : last_dental_reason___7
+
+      TICCLINICALRecord : last_dental_reason___8
+
+      TICCLINICALRecord : last_dental_reason___88
+
+      TICCLINICALRecord : last_dental_reason___9
+
+      TICCLINICALRecord : last_dental_visit
+
+      TICCLINICALRecord : neg_reason_other
+
+      TICCLINICALRecord : negative_experiences
+
+      TICCLINICALRecord : negative_reason___1
+
+      TICCLINICALRecord : negative_reason___2
+
+      TICCLINICALRecord : negative_reason___3
+
+      TICCLINICALRecord : negative_reason___4
+
+      TICCLINICALRecord : negative_reason___5
+
+      TICCLINICALRecord : negative_reason___6
+
+      TICCLINICALRecord : negative_reason___7
+
+      TICCLINICALRecord : negative_reason___88
+
+      TICCLINICALRecord : oral_cancer
+
+      TICCLINICALRecord : oral_health_self_eval
+
+      TICCLINICALRecord : perio_diagnosis
+
+      TICCLINICALRecord : perio_mobility
+
+      TICCLINICALRecord : perio_treatment
+
+      TICCLINICALRecord : phy
+
+      TICCLINICALRecord : phyadult
+
+      TICCLINICALRecord : phychild
+
+      TICCLINICALRecord : physical_timeline_adult
+
+      TICCLINICALRecord : physical_violence_adult
+
+      TICCLINICALRecord : physical_violence_child
+
+      TICCLINICALRecord : race1
+
+      TICCLINICALRecord : race___1
+
+      TICCLINICALRecord : race___2
+
+      TICCLINICALRecord : race___3
+
+      TICCLINICALRecord : race___4
+
+      TICCLINICALRecord : race___5
+
+      TICCLINICALRecord : race___6
+
+      TICCLINICALRecord : race___7
+
+      TICCLINICALRecord : race___8
+
+      TICCLINICALRecord : race___88
+
+      TICCLINICALRecord : race_other
+
+      TICCLINICALRecord : record_id
+
+      TICCLINICALRecord : redcap_survey_identifier
+
+      TICCLINICALRecord : sex
+
+      TICCLINICALRecord : sexadult
+
+      TICCLINICALRecord : sexchild
+
+      TICCLINICALRecord : sexual
+
+      TICCLINICALRecord : sexual_abuse_child
+
+      TICCLINICALRecord : sexual_assault_adult
+
+      TICCLINICALRecord : sexual_timeline_adult
+
+      TICCLINICALRecord : site
+
+      TICCLINICALRecord : smoking
+
+      TICCLINICALRecord : soh
+
+      TICCLINICALRecord : study_site
+
+      TICCLINICALRecord : time_in_usa
+
+      TICCLINICALRecord : usa_born
+
+      TICCLINICALRecord : usa_months_vs_years
+
+      TICCLINICALRecord : v159
+
+      TICCLINICALRecord : violence
+
+      TICCLINICALRecord : visit_avoid___1
+
+      TICCLINICALRecord : visit_avoid___10
+
+      TICCLINICALRecord : visit_avoid___11
+
+      TICCLINICALRecord : visit_avoid___2
+
+      TICCLINICALRecord : visit_avoid___3
+
+      TICCLINICALRecord : visit_avoid___4
+
+      TICCLINICALRecord : visit_avoid___5
+
+      TICCLINICALRecord : visit_avoid___6
+
+      TICCLINICALRecord : visit_avoid___7
+
+      TICCLINICALRecord : visit_avoid___8
+
+      TICCLINICALRecord : visit_avoid___88
+
+      TICCLINICALRecord : visit_avoid___9
+
+      TICCLINICALRecord : work_for_pay
+
+      TICCLINICALRecord : work_level
+
+
+</div>
+
+
+
+
+
+
+## Inheritance
+* [Record](Record.md)
+    * **TICCLINICALRecord**
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [record_id](record_id.md) | 1 <br/> [Integer](Integer.md) |  | direct |
+| [redcap_survey_identifier](redcap_survey_identifier.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [demographics_timestamp](demographics_timestamp.md) | 0..1 <br/> [Datetime](Datetime.md) |  | direct |
+| [study_site](study_site.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [age_in_years](age_in_years.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [race___1](race___1.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [race___2](race___2.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [race___3](race___3.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [race___4](race___4.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [race___5](race___5.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [race___6](race___6.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [race___7](race___7.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [race___8](race___8.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [race___88](race___88.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [race_other](race_other.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [hispanic_latino](hispanic_latino.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [ethnicity___1](ethnicity___1.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [ethnicity___2](ethnicity___2.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [ethnicity___3](ethnicity___3.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [ethnicity___4](ethnicity___4.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [ethnicity___5](ethnicity___5.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [ethnicity___6](ethnicity___6.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [ethnicity___7](ethnicity___7.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [ethnicity___8](ethnicity___8.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [ethnicity___88](ethnicity___88.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [ethnicity_other](ethnicity_other.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [gender_identity](gender_identity.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [gender_identity_other](gender_identity_other.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [usa_born](usa_born.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [time_in_usa](time_in_usa.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [usa_months_vs_years](usa_months_vs_years.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [education](education.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [education_other](education_other.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [work_for_pay](work_for_pay.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [work_level](work_level.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [family_needs](family_needs.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [individual_needs](individual_needs.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [language_used](language_used.md) | 0..1 <br/> [LanguageUsedEnum](LanguageUsedEnum.md) |  | direct |
+| [language_used_name](language_used_name.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [demographics_complete](demographics_complete.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [health_history_timestamp](health_history_timestamp.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [general_health](general_health.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [healthcare_usage](healthcare_usage.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [affording_healthcare](affording_healthcare.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [smoking](smoking.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [diabetes](diabetes.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [hypertension](hypertension.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [chronic_pain](chronic_pain.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [health_history_complete](health_history_complete.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [dental_history_timestamp](dental_history_timestamp.md) | 0..1 <br/> [Datetime](Datetime.md) |  | direct |
+| [oral_health_self_eval](oral_health_self_eval.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [dental_home](dental_home.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [last_dental_visit](last_dental_visit.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [visit_avoid___1](visit_avoid___1.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [visit_avoid___2](visit_avoid___2.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [visit_avoid___3](visit_avoid___3.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [visit_avoid___4](visit_avoid___4.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [visit_avoid___5](visit_avoid___5.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [visit_avoid___6](visit_avoid___6.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [visit_avoid___7](visit_avoid___7.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [visit_avoid___8](visit_avoid___8.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [visit_avoid___9](visit_avoid___9.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [visit_avoid___10](visit_avoid___10.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [visit_avoid___11](visit_avoid___11.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [visit_avoid___88](visit_avoid___88.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [avoid_other](avoid_other.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [last_dental_reason___1](last_dental_reason___1.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [last_dental_reason___2](last_dental_reason___2.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [last_dental_reason___3](last_dental_reason___3.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [last_dental_reason___4](last_dental_reason___4.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [last_dental_reason___5](last_dental_reason___5.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [last_dental_reason___6](last_dental_reason___6.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [last_dental_reason___7](last_dental_reason___7.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [last_dental_reason___8](last_dental_reason___8.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [last_dental_reason___9](last_dental_reason___9.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [last_dental_reason___10](last_dental_reason___10.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [last_dental_reason___88](last_dental_reason___88.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [last_dental_other](last_dental_other.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [affording_dentistry](affording_dentistry.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [checkup_feeling](checkup_feeling.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [negative_experiences](negative_experiences.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [negative_reason___1](negative_reason___1.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [negative_reason___2](negative_reason___2.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [negative_reason___3](negative_reason___3.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [negative_reason___4](negative_reason___4.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [negative_reason___5](negative_reason___5.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [negative_reason___6](negative_reason___6.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [negative_reason___7](negative_reason___7.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [negative_reason___88](negative_reason___88.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [neg_reason_other](neg_reason_other.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [dental_specialist](dental_specialist.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [dental_insurance](dental_insurance.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [perio_diagnosis](perio_diagnosis.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [perio_treatment](perio_treatment.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [perio_mobility](perio_mobility.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [oral_cancer](oral_cancer.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [dry_mouth](dry_mouth.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [dental_history_complete](dental_history_complete.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [idaf4c_timestamp](idaf4c_timestamp.md) | 0..1 <br/> [Datetime](Datetime.md) |  | direct |
+| [idaf_1_a](idaf_1_a.md) | 0..1 <br/> [LikertDR](LikertDR.md) | (1a) I feel anxious shortly before going to the dentist | direct |
+| [idaf_1_b](idaf_1_b.md) | 0..1 <br/> [LikertDR](LikertDR.md) | (1b) I generally avoid going to the dentist because I find the experience unp... | direct |
+| [idaf_1_c](idaf_1_c.md) | 0..1 <br/> [LikertDR](LikertDR.md) | (1c) I get nervous or edgy about upcoming dental visits | direct |
+| [idaf_1_d](idaf_1_d.md) | 0..1 <br/> [LikertDR](LikertDR.md) | (1d) I think that something really bad would happen to me if I were to visit ... | direct |
+| [idaf_1_e](idaf_1_e.md) | 0..1 <br/> [LikertDR](LikertDR.md) | (1e) I feel afraid or fearful when visiting the dentist | direct |
+| [idaf_1_f](idaf_1_f.md) | 0..1 <br/> [LikertDR](LikertDR.md) | (1f) My heart beats faster when I go to the dentist | direct |
+| [idaf_1_g](idaf_1_g.md) | 0..1 <br/> [LikertDR](LikertDR.md) | (1g) I delay making appointments to go to the dentist | direct |
+| [idaf_1_h](idaf_1_h.md) | 0..1 <br/> [LikertDR](LikertDR.md) | (1h) I often think about all the things that might go wrong prior to going to... | direct |
+| [idaf_2_a](idaf_2_a.md) | 0..1 <br/> [NoYesDR](NoYesDR.md) | (2a) Going to the dentist is actively avoided or else endured with intense fe... | direct |
+| [idaf_2_b](idaf_2_b.md) | 0..1 <br/> [NoYesDR](NoYesDR.md) | (2b) My fear of going to the dentist has been present for at least 6 month | direct |
+| [idaf_2_c](idaf_2_c.md) | 0..1 <br/> [NoYesDR](NoYesDR.md) | (2c) My fear, anxiety or avoidance of going to the dentist significantly affe... | direct |
+| [idaf_2_d](idaf_2_d.md) | 0..1 <br/> [NoYesDR](NoYesDR.md) | (2d) I am afraid of going to the dentist because I am concerned I may have a ... | direct |
+| [idaf_2_e](idaf_2_e.md) | 0..1 <br/> [NoYesDR](NoYesDR.md) | (2e) I am afraid of going to the dentist because I am generally highly self-c... | direct |
+| [idaf_3_a](idaf_3_a.md) | 0..1 <br/> [DegreeLikertDR](DegreeLikertDR.md) | (3a) Painful or uncomfortable procedures  | direct |
+| [idaf_3_b](idaf_3_b.md) | 0..1 <br/> [DegreeLikertDR](DegreeLikertDR.md) | (3b)  Feeling embarrassed or ashamed   | direct |
+| [idaf_3_c](idaf_3_c.md) | 0..1 <br/> [DegreeLikertDR](DegreeLikertDR.md) | (3c)  Not being in control of what is happening  | direct |
+| [idaf_3_d](idaf_3_d.md) | 0..1 <br/> [DegreeLikertDR](DegreeLikertDR.md) | (3d)  Feeling sick, queasy or disgusted   | direct |
+| [idaf_3_e](idaf_3_e.md) | 0..1 <br/> [DegreeLikertDR](DegreeLikertDR.md) | (3e)  Numbness caused by the anesthetic  | direct |
+| [idaf_3_f](idaf_3_f.md) | 0..1 <br/> [DegreeLikertDR](DegreeLikertDR.md) | (3f)  Not knowing what the dentist is going to do   | direct |
+| [idaf_3_g](idaf_3_g.md) | 0..1 <br/> [DegreeLikertDR](DegreeLikertDR.md) | (3g)  The cost of dental treatment  | direct |
+| [idaf_3_h](idaf_3_h.md) | 0..1 <br/> [DegreeLikertDR](DegreeLikertDR.md) | (3h) Needles or injections  | direct |
+| [idaf_3_i](idaf_3_i.md) | 0..1 <br/> [DegreeLikertDR](DegreeLikertDR.md) | (3i)  Gagging or choking   | direct |
+| [idaf_3_j](idaf_3_j.md) | 0..1 <br/> [DegreeLikertDR](DegreeLikertDR.md) | (3j)  Having an unsympathetic or unkind dentist   | direct |
+| [idaf4c_complete](idaf4c_complete.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [dfs_timestamp](dfs_timestamp.md) | 0..1 <br/> [Datetime](Datetime.md) |  | direct |
+| [dfs_1](dfs_1.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Has fear of dental work ever caused you to put off making an appointment? | direct |
+| [dfs_2](dfs_2.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Has fear of dental work ever caused you to cancel or not appear for an appoin... | direct |
+| [dfs_3](dfs_3.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | When having dental work done, my muscles become tense | direct |
+| [dfs_4](dfs_4.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | When having dental work done, my breathing rate increases | direct |
+| [dfs_5](dfs_5.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | When having dental work done, I perspire | direct |
+| [dfs_6](dfs_6.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | When having dental work done, I feel nauseated and sick to my stomach | direct |
+| [dfs_7](dfs_7.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | When having dental work done, my heart beats faster | direct |
+| [dfs_8](dfs_8.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_9](dfs_9.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_10](dfs_10.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_11](dfs_11.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_12](dfs_12.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_13](dfs_13.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_14](dfs_14.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_15](dfs_15.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_16](dfs_16.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_17](dfs_17.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_18](dfs_18.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_19](dfs_19.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_20](dfs_20.md) | 0..1 <br/> [BlankLikert](BlankLikert.md) | Please rate how much fear, anxiety, or unpleasantness each of these dental si... | direct |
+| [dfs_complete](dfs_complete.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [difficult_life_experiences_histo](difficult_life_experiences_histo.md) | 0..1 <br/> [Datetime](Datetime.md) |  | direct |
+| [physical_violence_child](physical_violence_child.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [physical_violence_adult](physical_violence_adult.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [physical_timeline_adult](physical_timeline_adult.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [sexual_abuse_child](sexual_abuse_child.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [sexual_assault_adult](sexual_assault_adult.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [sexual_timeline_adult](sexual_timeline_adult.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [family_violence_child](family_violence_child.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [family_violence_adult](family_violence_adult.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [family_timeline_adult](family_timeline_adult.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [community_violence_child](community_violence_child.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [community_violence_adult](community_violence_adult.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [community_timeline_adult](community_timeline_adult.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [v159](v159.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [age](age.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [sex](sex.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [race1](race1.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [insur](insur.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dv2](dv2.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfsscore](dfsscore.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [dfsavoid](dfsavoid.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [dfsphy](dfsphy.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [dfsstim](dfsstim.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [dfs2](dfs2.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [phychild](phychild.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [phyadult](phyadult.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [phy](phy.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [sexchild](sexchild.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [sexadult](sexadult.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [sexual](sexual.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [comchild](comchild.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [comadult](comadult.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [com](com.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [famchild](famchild.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [famadult](famadult.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [family](family.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [home](home.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [violence](violence.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_1_3cat](dfs_1_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_2_3cat](dfs_2_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_3_3cat](dfs_3_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_4_3cat](dfs_4_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_5_3cat](dfs_5_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_6_3cat](dfs_6_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_7_3cat](dfs_7_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_8_3cat](dfs_8_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_9_3cat](dfs_9_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_10_3cat](dfs_10_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_11_3cat](dfs_11_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_12_3cat](dfs_12_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_13_3cat](dfs_13_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_14_3cat](dfs_14_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_15_3cat](dfs_15_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_16_3cat](dfs_16_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_17_3cat](dfs_17_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_18_3cat](dfs_18_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_19_3cat](dfs_19_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [dfs_20_3cat](dfs_20_3cat.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [education2](education2.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [soh](soh.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [idafc_total](idafc_total.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [idafc2](idafc2.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [idafcmean](idafcmean.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+| [site](site.md) | 0..1 <br/> [Integer](Integer.md) |  | direct |
+
+## Unique Keys
+
+
+### redcap_survey_identifier_key
+
+**Unique key slots:** redcap_survey_identifier
+
+### demographics_timestamp_key
+
+**Unique key slots:** demographics_timestamp
+
+### education_other_key
+
+**Unique key slots:** education_other
+
+### language_used_name_key
+
+**Unique key slots:** language_used_name
+
+### health_history_timestamp_key
+
+**Unique key slots:** health_history_timestamp
+
+### dental_history_timestamp_key
+
+**Unique key slots:** dental_history_timestamp
+
+### idaf4c_timestamp_key
+
+**Unique key slots:** idaf4c_timestamp
+
+### dfs_timestamp_key
+
+**Unique key slots:** dfs_timestamp
+
+### difficult_life_experiences_histo_key
+
+**Unique key slots:** difficult_life_experiences_histo
+
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [TICCLINICALDataset](TICCLINICALDataset.md) | [records](records.md) | range | [TICCLINICALRecord](TICCLINICALRecord.md) |
+
+
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/OHD/DFA-study/tic_clinical
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | tic_clinical:TICCLINICALRecord |
+| native | tic_clinical:TICCLINICALRecord |
+
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+<pre><code class="language-yaml">name: TIC_CLINICALRecord
+description: A record in the TIC Clinical dataset
+from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+is_a: Record
+slots:
+- record_id
+- redcap_survey_identifier
+- demographics_timestamp
+- study_site
+- age_in_years
+- race___1
+- race___2
+- race___3
+- race___4
+- race___5
+- race___6
+- race___7
+- race___8
+- race___88
+- race_other
+- hispanic_latino
+- ethnicity___1
+- ethnicity___2
+- ethnicity___3
+- ethnicity___4
+- ethnicity___5
+- ethnicity___6
+- ethnicity___7
+- ethnicity___8
+- ethnicity___88
+- ethnicity_other
+- gender_identity
+- gender_identity_other
+- usa_born
+- time_in_usa
+- usa_months_vs_years
+- education
+- education_other
+- work_for_pay
+- work_level
+- family_needs
+- individual_needs
+- language_used
+- language_used_name
+- demographics_complete
+- health_history_timestamp
+- general_health
+- healthcare_usage
+- affording_healthcare
+- smoking
+- diabetes
+- hypertension
+- chronic_pain
+- health_history_complete
+- dental_history_timestamp
+- oral_health_self_eval
+- dental_home
+- last_dental_visit
+- visit_avoid___1
+- visit_avoid___2
+- visit_avoid___3
+- visit_avoid___4
+- visit_avoid___5
+- visit_avoid___6
+- visit_avoid___7
+- visit_avoid___8
+- visit_avoid___9
+- visit_avoid___10
+- visit_avoid___11
+- visit_avoid___88
+- avoid_other
+- last_dental_reason___1
+- last_dental_reason___2
+- last_dental_reason___3
+- last_dental_reason___4
+- last_dental_reason___5
+- last_dental_reason___6
+- last_dental_reason___7
+- last_dental_reason___8
+- last_dental_reason___9
+- last_dental_reason___10
+- last_dental_reason___88
+- last_dental_other
+- affording_dentistry
+- checkup_feeling
+- negative_experiences
+- negative_reason___1
+- negative_reason___2
+- negative_reason___3
+- negative_reason___4
+- negative_reason___5
+- negative_reason___6
+- negative_reason___7
+- negative_reason___88
+- neg_reason_other
+- dental_specialist
+- dental_insurance
+- perio_diagnosis
+- perio_treatment
+- perio_mobility
+- oral_cancer
+- dry_mouth
+- dental_history_complete
+- idaf4c_timestamp
+- idaf_1_a
+- idaf_1_b
+- idaf_1_c
+- idaf_1_d
+- idaf_1_e
+- idaf_1_f
+- idaf_1_g
+- idaf_1_h
+- idaf_2_a
+- idaf_2_b
+- idaf_2_c
+- idaf_2_d
+- idaf_2_e
+- idaf_3_a
+- idaf_3_b
+- idaf_3_c
+- idaf_3_d
+- idaf_3_e
+- idaf_3_f
+- idaf_3_g
+- idaf_3_h
+- idaf_3_i
+- idaf_3_j
+- idaf4c_complete
+- dfs_timestamp
+- dfs_1
+- dfs_2
+- dfs_3
+- dfs_4
+- dfs_5
+- dfs_6
+- dfs_7
+- dfs_8
+- dfs_9
+- dfs_10
+- dfs_11
+- dfs_12
+- dfs_13
+- dfs_14
+- dfs_15
+- dfs_16
+- dfs_17
+- dfs_18
+- dfs_19
+- dfs_20
+- dfs_complete
+- difficult_life_experiences_histo
+- physical_violence_child
+- physical_violence_adult
+- physical_timeline_adult
+- sexual_abuse_child
+- sexual_assault_adult
+- sexual_timeline_adult
+- family_violence_child
+- family_violence_adult
+- family_timeline_adult
+- community_violence_child
+- community_violence_adult
+- community_timeline_adult
+- v159
+- age
+- sex
+- race1
+- insur
+- dv2
+- dfsscore
+- dfsavoid
+- dfsphy
+- dfsstim
+- dfs2
+- phychild
+- phyadult
+- phy
+- sexchild
+- sexadult
+- sexual
+- comchild
+- comadult
+- com
+- famchild
+- famadult
+- family
+- home
+- violence
+- dfs_1_3cat
+- dfs_2_3cat
+- dfs_3_3cat
+- dfs_4_3cat
+- dfs_5_3cat
+- dfs_6_3cat
+- dfs_7_3cat
+- dfs_8_3cat
+- dfs_9_3cat
+- dfs_10_3cat
+- dfs_11_3cat
+- dfs_12_3cat
+- dfs_13_3cat
+- dfs_14_3cat
+- dfs_15_3cat
+- dfs_16_3cat
+- dfs_17_3cat
+- dfs_18_3cat
+- dfs_19_3cat
+- dfs_20_3cat
+- education2
+- soh
+- idafc_total
+- idafc2
+- idafcmean
+- site
+unique_keys:
+  redcap_survey_identifier_key:
+    unique_key_name: redcap_survey_identifier_key
+    unique_key_slots:
+    - redcap_survey_identifier
+  demographics_timestamp_key:
+    unique_key_name: demographics_timestamp_key
+    unique_key_slots:
+    - demographics_timestamp
+  education_other_key:
+    unique_key_name: education_other_key
+    unique_key_slots:
+    - education_other
+  language_used_name_key:
+    unique_key_name: language_used_name_key
+    unique_key_slots:
+    - language_used_name
+  health_history_timestamp_key:
+    unique_key_name: health_history_timestamp_key
+    unique_key_slots:
+    - health_history_timestamp
+  dental_history_timestamp_key:
+    unique_key_name: dental_history_timestamp_key
+    unique_key_slots:
+    - dental_history_timestamp
+  idaf4c_timestamp_key:
+    unique_key_name: idaf4c_timestamp_key
+    unique_key_slots:
+    - idaf4c_timestamp
+  dfs_timestamp_key:
+    unique_key_name: dfs_timestamp_key
+    unique_key_slots:
+    - dfs_timestamp
+  difficult_life_experiences_histo_key:
+    unique_key_name: difficult_life_experiences_histo_key
+    unique_key_slots:
+    - difficult_life_experiences_histo
+
+</code></pre>
+</details>
+
+### Induced
+
+<details>
+<pre><code class="language-yaml">name: TIC_CLINICALRecord
+description: A record in the TIC Clinical dataset
+from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+is_a: Record
+attributes:
+  record_id:
+    name: record_id
+    examples:
+    - value: '470'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    identifier: true
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+    required: true
+  redcap_survey_identifier:
+    name: redcap_survey_identifier
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: string
+  demographics_timestamp:
+    name: demographics_timestamp
+    examples:
+    - value: '2025-09-30 14:55:49'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: datetime
+  study_site:
+    name: study_site
+    examples:
+    - value: '13'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  age_in_years:
+    name: age_in_years
+    examples:
+    - value: '78'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  race___1:
+    name: race___1
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  race___2:
+    name: race___2
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  race___3:
+    name: race___3
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  race___4:
+    name: race___4
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  race___5:
+    name: race___5
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  race___6:
+    name: race___6
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  race___7:
+    name: race___7
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  race___8:
+    name: race___8
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  race___88:
+    name: race___88
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  race_other:
+    name: race_other
+    examples:
+    - value: Hispanic
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: string
+  hispanic_latino:
+    name: hispanic_latino
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  ethnicity___1:
+    name: ethnicity___1
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  ethnicity___2:
+    name: ethnicity___2
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  ethnicity___3:
+    name: ethnicity___3
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  ethnicity___4:
+    name: ethnicity___4
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  ethnicity___5:
+    name: ethnicity___5
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  ethnicity___6:
+    name: ethnicity___6
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  ethnicity___7:
+    name: ethnicity___7
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  ethnicity___8:
+    name: ethnicity___8
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  ethnicity___88:
+    name: ethnicity___88
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  ethnicity_other:
+    name: ethnicity_other
+    examples:
+    - value: Gutemalen
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: string
+  gender_identity:
+    name: gender_identity
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  gender_identity_other:
+    name: gender_identity_other
+    examples:
+    - value: Nonbinary
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: string
+  usa_born:
+    name: usa_born
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  time_in_usa:
+    name: time_in_usa
+    examples:
+    - value: '78.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  usa_months_vs_years:
+    name: usa_months_vs_years
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  education:
+    name: education
+    examples:
+    - value: '8'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  education_other:
+    name: education_other
+    examples:
+    - value: 9grade
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: string
+  work_for_pay:
+    name: work_for_pay
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  work_level:
+    name: work_level
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  family_needs:
+    name: family_needs
+    examples:
+    - value: '5'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  individual_needs:
+    name: individual_needs
+    examples:
+    - value: '5'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  language_used:
+    name: language_used
+    examples:
+    - value: en-US
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: language_used_enum
+  language_used_name:
+    name: language_used_name
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: string
+  demographics_complete:
+    name: demographics_complete
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  health_history_timestamp:
+    name: health_history_timestamp
+    examples:
+    - value: '2025-09-30 14:56:40'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: string
+  general_health:
+    name: general_health
+    examples:
+    - value: '3'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  healthcare_usage:
+    name: healthcare_usage
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  affording_healthcare:
+    name: affording_healthcare
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  smoking:
+    name: smoking
+    examples:
+    - value: '3'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  diabetes:
+    name: diabetes
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  hypertension:
+    name: hypertension
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  chronic_pain:
+    name: chronic_pain
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  health_history_complete:
+    name: health_history_complete
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  dental_history_timestamp:
+    name: dental_history_timestamp
+    examples:
+    - value: '2025-09-30 14:59:56'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: datetime
+  oral_health_self_eval:
+    name: oral_health_self_eval
+    examples:
+    - value: '5'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  dental_home:
+    name: dental_home
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  last_dental_visit:
+    name: last_dental_visit
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  visit_avoid___1:
+    name: visit_avoid___1
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  visit_avoid___2:
+    name: visit_avoid___2
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  visit_avoid___3:
+    name: visit_avoid___3
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  visit_avoid___4:
+    name: visit_avoid___4
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  visit_avoid___5:
+    name: visit_avoid___5
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  visit_avoid___6:
+    name: visit_avoid___6
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  visit_avoid___7:
+    name: visit_avoid___7
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  visit_avoid___8:
+    name: visit_avoid___8
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  visit_avoid___9:
+    name: visit_avoid___9
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  visit_avoid___10:
+    name: visit_avoid___10
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  visit_avoid___11:
+    name: visit_avoid___11
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  visit_avoid___88:
+    name: visit_avoid___88
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  avoid_other:
+    name: avoid_other
+    examples:
+    - value: Don't have cavity
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: string
+  last_dental_reason___1:
+    name: last_dental_reason___1
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  last_dental_reason___2:
+    name: last_dental_reason___2
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  last_dental_reason___3:
+    name: last_dental_reason___3
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  last_dental_reason___4:
+    name: last_dental_reason___4
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  last_dental_reason___5:
+    name: last_dental_reason___5
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  last_dental_reason___6:
+    name: last_dental_reason___6
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  last_dental_reason___7:
+    name: last_dental_reason___7
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  last_dental_reason___8:
+    name: last_dental_reason___8
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  last_dental_reason___9:
+    name: last_dental_reason___9
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  last_dental_reason___10:
+    name: last_dental_reason___10
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  last_dental_reason___88:
+    name: last_dental_reason___88
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  last_dental_other:
+    name: last_dental_other
+    examples:
+    - value: Multiple procedures
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: string
+  affording_dentistry:
+    name: affording_dentistry
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  checkup_feeling:
+    name: checkup_feeling
+    examples:
+    - value: '3'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  negative_experiences:
+    name: negative_experiences
+    examples:
+    - value: '3'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  negative_reason___1:
+    name: negative_reason___1
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  negative_reason___2:
+    name: negative_reason___2
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  negative_reason___3:
+    name: negative_reason___3
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  negative_reason___4:
+    name: negative_reason___4
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  negative_reason___5:
+    name: negative_reason___5
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  negative_reason___6:
+    name: negative_reason___6
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  negative_reason___7:
+    name: negative_reason___7
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  negative_reason___88:
+    name: negative_reason___88
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  neg_reason_other:
+    name: neg_reason_other
+    examples:
+    - value: Receptionist took money and said she didn't get it
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: string
+  dental_specialist:
+    name: dental_specialist
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  dental_insurance:
+    name: dental_insurance
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  perio_diagnosis:
+    name: perio_diagnosis
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  perio_treatment:
+    name: perio_treatment
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  perio_mobility:
+    name: perio_mobility
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  oral_cancer:
+    name: oral_cancer
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  dry_mouth:
+    name: dry_mouth
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  dental_history_complete:
+    name: dental_history_complete
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  idaf4c_timestamp:
+    name: idaf4c_timestamp
+    examples:
+    - value: '2025-09-30 15:05:05'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: datetime
+  idaf_1_a:
+    name: idaf_1_a
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008055
+    description: (1a) I feel anxious shortly before going to the dentist.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: LikertDR
+  idaf_1_b:
+    name: idaf_1_b
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008056
+    description: (1b) I generally avoid going to the dentist because I find the experience
+      unpleasant or distressing.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: LikertDR
+  idaf_1_c:
+    name: idaf_1_c
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008057
+    description: (1c) I get nervous or edgy about upcoming dental visits.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: LikertDR
+  idaf_1_d:
+    name: idaf_1_d
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008058
+    description: (1d) I think that something really bad would happen to me if I were
+      to visit a dentist.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: LikertDR
+  idaf_1_e:
+    name: idaf_1_e
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008059
+    description: (1e) I feel afraid or fearful when visiting the dentist.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: LikertDR
+  idaf_1_f:
+    name: idaf_1_f
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008060
+    description: (1f) My heart beats faster when I go to the dentist.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: LikertDR
+  idaf_1_g:
+    name: idaf_1_g
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008061
+    description: (1g) I delay making appointments to go to the dentist.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: LikertDR
+  idaf_1_h:
+    name: idaf_1_h
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008062
+    description: (1h) I often think about all the things that might go wrong prior
+      to going to the dentist.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: LikertDR
+  idaf_2_a:
+    name: idaf_2_a
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008063
+    description: (2a) Going to the dentist is actively avoided or else endured with
+      intense fear or anxiety
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: NoYesDR
+  idaf_2_b:
+    name: idaf_2_b
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008064
+    description: (2b) My fear of going to the dentist has been present for at least
+      6 month
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: NoYesDR
+  idaf_2_c:
+    name: idaf_2_c
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008065
+    description: (2c) My fear, anxiety or avoidance of going to the dentist significantly
+      affects my life in some way (dental pain, avoiding eating some foods, embarrassed
+      or self-conscious about appearance of teeth or mouth, etc.)
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: NoYesDR
+  idaf_2_d:
+    name: idaf_2_d
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008066
+    description: (2d) I am afraid of going to the dentist because I am concerned I
+      may have a panic attack (abrupt fear with sweating, pounding liteart, fear of
+      dying or losing control, chest pain etc.)
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: NoYesDR
+  idaf_2_e:
+    name: idaf_2_e
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008067
+    description: (2e) I am afraid of going to the dentist because I am generally highly
+      self-conscious or concerned about being watched or judged in social situations.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: NoYesDR
+  idaf_3_a:
+    name: idaf_3_a
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008068
+    description: '(3a) Painful or uncomfortable procedures '
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: DegreeLikertDR
+  idaf_3_b:
+    name: idaf_3_b
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008069
+    description: '(3b)  Feeling embarrassed or ashamed  '
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: DegreeLikertDR
+  idaf_3_c:
+    name: idaf_3_c
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008070
+    description: '(3c)  Not being in control of what is happening '
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: DegreeLikertDR
+  idaf_3_d:
+    name: idaf_3_d
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008071
+    description: '(3d)  Feeling sick, queasy or disgusted  '
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: DegreeLikertDR
+  idaf_3_e:
+    name: idaf_3_e
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008072
+    description: '(3e)  Numbness caused by the anesthetic '
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: DegreeLikertDR
+  idaf_3_f:
+    name: idaf_3_f
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008073
+    description: '(3f)  Not knowing what the dentist is going to do  '
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: DegreeLikertDR
+  idaf_3_g:
+    name: idaf_3_g
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008074
+    description: '(3g)  The cost of dental treatment '
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: DegreeLikertDR
+  idaf_3_h:
+    name: idaf_3_h
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008075
+    description: '(3h) Needles or injections '
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: DegreeLikertDR
+  idaf_3_i:
+    name: idaf_3_i
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008076
+    description: '(3i)  Gagging or choking  '
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: DegreeLikertDR
+  idaf_3_j:
+    name: idaf_3_j
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0008077
+    description: '(3j)  Having an unsympathetic or unkind dentist  '
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: DegreeLikertDR
+  idaf4c_complete:
+    name: idaf4c_complete
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  dfs_timestamp:
+    name: dfs_timestamp
+    examples:
+    - value: '2025-09-30 15:08:21'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: datetime
+  dfs_1:
+    name: dfs_1
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000421
+    description: Has fear of dental work ever caused you to put off making an appointment?
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_2:
+    name: dfs_2
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000422
+    description: Has fear of dental work ever caused you to cancel or not appear for
+      an appointment?
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_3:
+    name: dfs_3
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000423
+    description: When having dental work done, my muscles become tense.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_4:
+    name: dfs_4
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000424
+    description: When having dental work done, my breathing rate increases.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_5:
+    name: dfs_5
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000426
+    description: When having dental work done, I perspire.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_6:
+    name: dfs_6
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000427
+    description: When having dental work done, I feel nauseated and sick to my stomach.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_7:
+    name: dfs_7
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000428
+    description: When having dental work done, my heart beats faster.
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_8:
+    name: dfs_8
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000429
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Making an appointment for dentistry.'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_9:
+    name: dfs_9
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000430
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Approching the dentist''s office.'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_10:
+    name: dfs_10
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000431
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Sitting in the waiting room.'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_11:
+    name: dfs_11
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000432
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Being seated in the dental chair.'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_12:
+    name: dfs_12
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000433
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: The smell of the dentist''s office.'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_13:
+    name: dfs_13
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000434
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Seeing the dentist walk in.'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_14:
+    name: dfs_14
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000435
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Seeing the anesthetic needle.'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_15:
+    name: dfs_15
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000436
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Feeling the needle injected.'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_16:
+    name: dfs_16
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000437
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Seeing the drill.'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_17:
+    name: dfs_17
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000438
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Hearing the drill.'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_18:
+    name: dfs_18
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000439
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Feeling the vibrations of the drill.'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_19:
+    name: dfs_19
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000440
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: Having your teeth cleaned.'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_20:
+    name: dfs_20
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OHD:0000441
+    description: 'Please rate how much fear, anxiety, or unpleasantness each of these
+      dental situations causes you: All things considered, how fearful are you of
+      having dental work done?'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: BlankLikert
+  dfs_complete:
+    name: dfs_complete
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  difficult_life_experiences_histo:
+    name: difficult_life_experiences_histo
+    examples:
+    - value: '2025-09-30 15:10:21'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: datetime
+  physical_violence_child:
+    name: physical_violence_child
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  physical_violence_adult:
+    name: physical_violence_adult
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  physical_timeline_adult:
+    name: physical_timeline_adult
+    examples:
+    - value: '2.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  sexual_abuse_child:
+    name: sexual_abuse_child
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  sexual_assault_adult:
+    name: sexual_assault_adult
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  sexual_timeline_adult:
+    name: sexual_timeline_adult
+    examples:
+    - value: '2.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  family_violence_child:
+    name: family_violence_child
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  family_violence_adult:
+    name: family_violence_adult
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  family_timeline_adult:
+    name: family_timeline_adult
+    examples:
+    - value: '2.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  community_violence_child:
+    name: community_violence_child
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  community_violence_adult:
+    name: community_violence_adult
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  community_timeline_adult:
+    name: community_timeline_adult
+    examples:
+    - value: '2.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  v159:
+    name: v159
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  age:
+    name: age
+    examples:
+    - value: '4'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  sex:
+    name: sex
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  race1:
+    name: race1
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  insur:
+    name: insur
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dv2:
+    name: dv2
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfsscore:
+    name: dfsscore
+    examples:
+    - value: '25'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  dfsavoid:
+    name: dfsavoid
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  dfsphy:
+    name: dfsphy
+    examples:
+    - value: '5'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  dfsstim:
+    name: dfsstim
+    examples:
+    - value: '18'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  dfs2:
+    name: dfs2
+    examples:
+    - value: '0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  phychild:
+    name: phychild
+    examples:
+    - value: '0.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  phyadult:
+    name: phyadult
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  phy:
+    name: phy
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  sexchild:
+    name: sexchild
+    examples:
+    - value: '0.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  sexadult:
+    name: sexadult
+    examples:
+    - value: '0.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  sexual:
+    name: sexual
+    examples:
+    - value: '0.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  comchild:
+    name: comchild
+    examples:
+    - value: '0.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  comadult:
+    name: comadult
+    examples:
+    - value: '0.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  com:
+    name: com
+    examples:
+    - value: '0.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  famchild:
+    name: famchild
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  famadult:
+    name: famadult
+    examples:
+    - value: '0.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  family:
+    name: family
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  home:
+    name: home
+    examples:
+    - value: '0.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  violence:
+    name: violence
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_1_3cat:
+    name: dfs_1_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_2_3cat:
+    name: dfs_2_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_3_3cat:
+    name: dfs_3_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_4_3cat:
+    name: dfs_4_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_5_3cat:
+    name: dfs_5_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_6_3cat:
+    name: dfs_6_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_7_3cat:
+    name: dfs_7_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_8_3cat:
+    name: dfs_8_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_9_3cat:
+    name: dfs_9_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_10_3cat:
+    name: dfs_10_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_11_3cat:
+    name: dfs_11_3cat
+    examples:
+    - value: '2.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_12_3cat:
+    name: dfs_12_3cat
+    examples:
+    - value: '2.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_13_3cat:
+    name: dfs_13_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_14_3cat:
+    name: dfs_14_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_15_3cat:
+    name: dfs_15_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_16_3cat:
+    name: dfs_16_3cat
+    examples:
+    - value: '2.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_17_3cat:
+    name: dfs_17_3cat
+    examples:
+    - value: '2.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_18_3cat:
+    name: dfs_18_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_19_3cat:
+    name: dfs_19_3cat
+    examples:
+    - value: '1.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  dfs_20_3cat:
+    name: dfs_20_3cat
+    examples:
+    - value: '2.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  education2:
+    name: education2
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  soh:
+    name: soh
+    examples:
+    - value: '0.0'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: float
+  idafc_total:
+    name: idafc_total
+    examples:
+    - value: '21'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  idafc2:
+    name: idafc2
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  idafcmean:
+    name: idafcmean
+    examples:
+    - value: '3'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+  site:
+    name: site
+    examples:
+    - value: '2'
+    from_schema: https://w3id.org/OHD/DFA-study/tic_clinical
+    rank: 1000
+    owner: TIC_CLINICALRecord
+    domain_of:
+    - TIC_CLINICALRecord
+    range: integer
+unique_keys:
+  redcap_survey_identifier_key:
+    unique_key_name: redcap_survey_identifier_key
+    unique_key_slots:
+    - redcap_survey_identifier
+  demographics_timestamp_key:
+    unique_key_name: demographics_timestamp_key
+    unique_key_slots:
+    - demographics_timestamp
+  education_other_key:
+    unique_key_name: education_other_key
+    unique_key_slots:
+    - education_other
+  language_used_name_key:
+    unique_key_name: language_used_name_key
+    unique_key_slots:
+    - language_used_name
+  health_history_timestamp_key:
+    unique_key_name: health_history_timestamp_key
+    unique_key_slots:
+    - health_history_timestamp
+  dental_history_timestamp_key:
+    unique_key_name: dental_history_timestamp_key
+    unique_key_slots:
+    - dental_history_timestamp
+  idaf4c_timestamp_key:
+    unique_key_name: idaf4c_timestamp_key
+    unique_key_slots:
+    - idaf4c_timestamp
+  dfs_timestamp_key:
+    unique_key_name: dfs_timestamp_key
+    unique_key_slots:
+    - dfs_timestamp
+  difficult_life_experiences_histo_key:
+    unique_key_name: difficult_life_experiences_histo_key
+    unique_key_slots:
+    - difficult_life_experiences_histo
+
+</code></pre>
+</details></div></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../../js/base.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../javascripts/tablesort.js"></script>
+<script src="../../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://oral-health-and-disease-ontologies.github.io/DFA-Study/ada_ohwb/ADAOHWBRecord/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Class: ADAOHWBRecord - DFA Study Schema</title>
+<link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../../css/brands.min.css" rel="stylesheet"/>
+<link href="../../css/solid.min.css" rel="stylesheet"/>
+<link href="../../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="../..">DFA Study Schema</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="../">ADA Oral Health and Well Being Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../cq_sohea/">CareQuest SOHEA Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../cohra1/">COHRA1 Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../cohra2/">COHRA2 Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../dfs/">DFS Study Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../idaf/">IDAF Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../superdataset/">Superdataset Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../tic_clinical/">TIC Clinical Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../tic_provider/">TIC Provider Schema</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../mdas/">Modified Dental Anxiety Scale Schema</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://github.com/oral-health-and-disease-ontologies/DFA-Study/?query=root/DFA-Study/docs/ada_ohwb/ADAOHWBRecord.md"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#class-adaohwbrecord">Class: ADAOHWBRecord</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="class-adaohwbrecord">Class: ADAOHWBRecord</h1>
+<p><em>A record in the ADA OHWB dataset</em></p>
+<div data-search-exclude="" markdown="1">
+
+
+
+URI: [ada_ohwb:ADAOHWBRecord](https://w3id.org/OHD/DFA-study/ada_ohwb/ADAOHWBRecord)
+
+
+
+
+
+
+<div class="mermaid"> classDiagram
+    class ADAOHWBRecord
+    click ADAOHWBRecord href "../ADAOHWBRecord/"
+      Record &lt;|-- ADAOHWBRecord
+        click Record href "../Record/"
+
+      ADAOHWBRecord : MQ602
+
+      ADAOHWBRecord : MQ603
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" IncomeLevel : MQ603
+        click IncomeLevel href "../IncomeLevel/"
+
+
+
+      ADAOHWBRecord : MQ605
+
+      ADAOHWBRecord : MQ607
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" ComputeIncomeLevel : MQ607
+        click ComputeIncomeLevel href "../ComputeIncomeLevel/"
+
+
+
+      ADAOHWBRecord : Q268
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" MaleFemaleOHWB : Q268
+        click MaleFemaleOHWB href "../MaleFemaleOHWB/"
+
+
+
+      ADAOHWBRecord : Q280
+
+      ADAOHWBRecord : Q318
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" State : Q318
+        click State href "../State/"
+
+
+
+      ADAOHWBRecord : Q350
+
+      ADAOHWBRecord : Q364
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" MaritalStatus : Q364
+        click MaritalStatus href "../MaritalStatus/"
+
+
+
+      ADAOHWBRecord : Q368
+
+      ADAOHWBRecord : Q372
+
+      ADAOHWBRecord : Q410
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" EmploymentStatus : Q410
+        click EmploymentStatus href "../EmploymentStatus/"
+
+
+
+      ADAOHWBRecord : Q437
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" Education : Q437
+        click Education href "../Education/"
+
+
+
+      ADAOHWBRecord : Q462
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" IncomeCategory : Q462
+        click IncomeCategory href "../IncomeCategory/"
+
+
+
+      ADAOHWBRecord : Q485
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" RaceEthnicityOHWB : Q485
+        click RaceEthnicityOHWB href "../RaceEthnicityOHWB/"
+
+
+
+      ADAOHWBRecord : Q600
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" YesNoDKOHWB : Q600
+        click YesNoDKOHWB href "../YesNoDKOHWB/"
+
+
+
+      ADAOHWBRecord : Q710
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" YesNoDKOHWB : Q710
+        click YesNoDKOHWB href "../YesNoDKOHWB/"
+
+
+
+      ADAOHWBRecord : Q715_4
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" Frequency : Q715_4
+        click Frequency href "../Frequency/"
+
+
+
+      ADAOHWBRecord : Q715_5
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" Frequency : Q715_5
+        click Frequency href "../Frequency/"
+
+
+
+      ADAOHWBRecord : Q715_6
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" Frequency : Q715_6
+        click Frequency href "../Frequency/"
+
+
+
+      ADAOHWBRecord : Q715_9
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" Frequency : Q715_9
+        click Frequency href "../Frequency/"
+
+
+
+      ADAOHWBRecord : Q725_4
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" Agreement : Q725_4
+        click Agreement href "../Agreement/"
+
+
+
+      ADAOHWBRecord : Q725_5
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" Agreement : Q725_5
+        click Agreement href "../Agreement/"
+
+
+
+      ADAOHWBRecord : Q730
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" YesNoDKOHWB : Q730
+        click YesNoDKOHWB href "../YesNoDKOHWB/"
+
+
+
+      ADAOHWBRecord : Q735
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" YesNoDKOHWB : Q735
+        click YesNoDKOHWB href "../YesNoDKOHWB/"
+
+
+
+      ADAOHWBRecord : Q740_1
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q740_1
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q740_2
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q740_2
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q740_3
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q740_3
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q740_4
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q740_4
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q740_5
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q740_5
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q740_6
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q740_6
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q740_96
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q740_96
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q740_98
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q740_98
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q740_99
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q740_99
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q745_1
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q745_1
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q745_2
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q745_2
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q745_3
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q745_3
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q745_4
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q745_4
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q745_5
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q745_5
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q745_6
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q745_6
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q745_96
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q745_96
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q745_98
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q745_98
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q745_99
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q745_99
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q750
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" Difficulty : Q750
+        click Difficulty href "../Difficulty/"
+
+
+
+      ADAOHWBRecord : Q760
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" YesNoOHWB : Q760
+        click YesNoOHWB href "../YesNoOHWB/"
+
+
+
+      ADAOHWBRecord : Q765
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" TimeSinceDentalVisit : Q765
+        click TimeSinceDentalVisit href "../TimeSinceDentalVisit/"
+
+
+
+      ADAOHWBRecord : Q770
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" YesNoDKOHWB : Q770
+        click YesNoDKOHWB href "../YesNoDKOHWB/"
+
+
+
+      ADAOHWBRecord : Q775_1
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q775_1
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q775_2
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q775_2
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q775_3
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q775_3
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q775_4
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q775_4
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q775_5
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q775_5
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q775_6
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q775_6
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q775_7
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q775_7
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q775_8
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q775_8
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q775_9
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q775_9
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q775_96
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q775_96
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : Q775_97
+
+
+
+
+
+        ADAOHWBRecord --&gt; "0..1" NoYesOHWB : Q775_97
+        click NoYesOHWB href "../NoYesOHWB/"
+
+
+
+      ADAOHWBRecord : RESPID
+
+
+</div>
+
+
+
+
+
+
+## Inheritance
+* [Record](Record.md)
+    * **ADAOHWBRecord**
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [RESPID](RESPID.md) | 0..1 <br/> [Integer](Integer.md) | The respondant's study ID | direct |
+| [Q710](Q710.md) | 0..1 <br/> [YesNoDKOHWB](YesNoDKOHWB.md) | Have you ever felt that the appearance of your mouth and teeth affected your ... | direct |
+| [Q715_4](Q715_4.md) | 0..1 <br/> [Frequency](Frequency.md) | Felt anxiety: How often have you experienced each of the following problems r... | direct |
+| [Q715_5](Q715_5.md) | 0..1 <br/> [Frequency](Frequency.md) | Felt embarrassment: How often have you experienced each of the following prob... | direct |
+| [Q715_6](Q715_6.md) | 0..1 <br/> [Frequency](Frequency.md) | Avoided smiling: How often have you experienced each of the following problem... | direct |
+| [Q715_9](Q715_9.md) | 0..1 <br/> [Frequency](Frequency.md) | Reduced participation in social activities: How often have you experienced ea... | direct |
+| [Q725_4](Q725_4.md) | 0..1 <br/> [Agreement](Agreement.md) | I need to see the dentist twice a year: How strongly do you agree or disagree... | direct |
+| [Q725_5](Q725_5.md) | 0..1 <br/> [Agreement](Agreement.md) | It is easier to get ahead in life if I have straight bright teeth: How strong... | direct |
+| [Q730](Q730.md) | 0..1 <br/> [YesNoDKOHWB](YesNoDKOHWB.md) | Do you currently have health insurance for 2015? | direct |
+| [Q735](Q735.md) | 0..1 <br/> [YesNoDKOHWB](YesNoDKOHWB.md) | Do you currently have dental insurance for 2015? | direct |
+| [Q740_1](Q740_1.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Employer (mine or my spouse/partner's): How did you obtain your own individua... | direct |
+| [Q740_2](Q740_2.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Through the new health insurance marketplace: How did you obtain your own ind... | direct |
+| [Q740_3](Q740_3.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Directly from the insurance company, not through the marketplace: How did you... | direct |
+| [Q740_4](Q740_4.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Medicaid (including state versions such as Montana Medicaid or New York State... | direct |
+| [Q740_5](Q740_5.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Medicare: How did you obtain your own individual health insurance for 2015? | direct |
+| [Q740_6](Q740_6.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Through a government program other than Medicaid/Medicare: How did you obtain... | direct |
+| [Q740_96](Q740_96.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Other: How did you obtain your own individual health insurance for 2015? | direct |
+| [Q740_98](Q740_98.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Don't know: How did you obtain your own individual health insurance for 2015? | direct |
+| [Q740_99](Q740_99.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | N/A- I do not have health insurance for 2015: How did you obtain your own ind... | direct |
+| [Q745_1](Q745_1.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Employer (mine or my spouse/partner's): How did you obtain your own individua... | direct |
+| [Q745_2](Q745_2.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Through the new health insurance marketplace: How did you obtain your own ind... | direct |
+| [Q745_3](Q745_3.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Directly from the insurance company, not through the marketplace: How did you... | direct |
+| [Q745_4](Q745_4.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Medicaid (including state versions such as Montana Medicaid or New York State... | direct |
+| [Q745_5](Q745_5.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Medicare: How did you obtain your own individual dental insurance for 2015? | direct |
+| [Q745_6](Q745_6.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Through a government program other than Medicaid/Medicare (e | direct |
+| [Q745_96](Q745_96.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Other: How did you obtain your own individual dental insurance for 2015? | direct |
+| [Q745_98](Q745_98.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Don't know: How did you obtain your own individual dental insurance for 2015? | direct |
+| [Q745_99](Q745_99.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | N/A- I do not have health insurance for 2015: How did you obtain your own ind... | direct |
+| [Q750](Q750.md) | 0..1 <br/> [Difficulty](Difficulty.md) | How easy or difficult is it for you to find a dentist that accepts your denta... | direct |
+| [Q760](Q760.md) | 0..1 <br/> [YesNoOHWB](YesNoOHWB.md) | Do you have a single dentist or dental office that is your usual source of de... | direct |
+| [Q765](Q765.md) | 0..1 <br/> [TimeSinceDentalVisit](TimeSinceDentalVisit.md) | How long since you last had a dental visit? | direct |
+| [Q770](Q770.md) | 0..1 <br/> [YesNoDKOHWB](YesNoDKOHWB.md) | Do you plan to visit the dentist in the next 12 months? | direct |
+| [Q775_1](Q775_1.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | My mouth is healthy so I do not need to visit the dentist: Why did you not vi... | direct |
+| [Q775_2](Q775_2.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | I do not know where to go to receive dental services: Why did you not visit t... | direct |
+| [Q775_3](Q775_3.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | I cannot afford to go to the dentist: Why did you not visit the dentist more ... | direct |
+| [Q775_4](Q775_4.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | It is too hard to find a dentist that accepts my dental plan or Medicaid: Why... | direct |
+| [Q775_5](Q775_5.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | I cannot find the time to get to a dentist (e | direct |
+| [Q775_6](Q775_6.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Many services are not covered by my dental plan or Medicaid, so I end up havi... | direct |
+| [Q775_7](Q775_7.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | I cannot travel to a dentist easily (e | direct |
+| [Q775_8](Q775_8.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | I do not have any of my original teeth (i | direct |
+| [Q775_9](Q775_9.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | I am afraid of going to the dentist: Why did you not visit the dentist more f... | direct |
+| [Q775_96](Q775_96.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | Other: Why did you not visit the dentist more frequently? | direct |
+| [Q775_97](Q775_97.md) | 0..1 <br/> [NoYesOHWB](NoYesOHWB.md) | No reason: Why did you not visit the dentist more frequently? | direct |
+| [Q368](Q368.md) | 0..1 <br/> [Integer](Integer.md) | Including yourself, how many people age 18 or older live in your household? | direct |
+| [Q372](Q372.md) | 0..1 <br/> [Integer](Integer.md) | How many people under the age of 18 live in your household? | direct |
+| [MQ602](MQ602.md) | 0..1 <br/> [Integer](Integer.md) | Total number of people live in your household | direct |
+| [MQ603](MQ603.md) | 0..1 <br/> [IncomeLevel](IncomeLevel.md) | Income Level | direct |
+| [MQ605](MQ605.md) | 0..1 <br/> [Float](Float.md) | Compute Income Level1 | direct |
+| [MQ607](MQ607.md) | 0..1 <br/> [ComputeIncomeLevel](ComputeIncomeLevel.md) | Compute Income Level2 | direct |
+| [Q600](Q600.md) | 0..1 <br/> [YesNoDKOHWB](YesNoDKOHWB.md) | Are you currently receiving any Medicaid benefits? | direct |
+| [Q268](Q268.md) | 0..1 <br/> [MaleFemaleOHWB](MaleFemaleOHWB.md) | Are you male/female? | direct |
+| [Q280](Q280.md) | 0..1 <br/> [Integer](Integer.md) | Respondent Age (at time of data collection) | direct |
+| [Q318](Q318.md) | 0..1 <br/> [State](State.md) | In what state or territory do you currently reside? | direct |
+| [Q350](Q350.md) | 0..1 <br/> [Integer](Integer.md) | How many hours per week do you typically spend on the Internet or World Wide ... | direct |
+| [Q410](Q410.md) | 0..1 <br/> [EmploymentStatus](EmploymentStatus.md) | Which one of the following best describes your employment status? | direct |
+| [Q462](Q462.md) | 0..1 <br/> [IncomeCategory](IncomeCategory.md) | Which of the following income categories best describes your total 2014 house... | direct |
+| [Q364](Q364.md) | 0..1 <br/> [MaritalStatus](MaritalStatus.md) | What is your marital status? | direct |
+| [Q437](Q437.md) | 0..1 <br/> [Education](Education.md) | What is the highest level of education you have completed or the highest degr... | direct |
+| [Q485](Q485.md) | 0..1 <br/> [RaceEthnicityOHWB](RaceEthnicityOHWB.md) | Race/Ethnicity | direct |
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [ADAOHWBDataset](ADAOHWBDataset.md) | [records](records.md) | range | [ADAOHWBRecord](ADAOHWBRecord.md) |
+
+
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | ada_ohwb:ADAOHWBRecord |
+| native | ada_ohwb:ADAOHWBRecord |
+
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+<pre><code class="language-yaml">name: ADA_OHWBRecord
+description: A record in the ADA OHWB dataset
+from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+is_a: Record
+slots:
+- RESPID
+- Q710
+- Q715_4
+- Q715_5
+- Q715_6
+- Q715_9
+- Q725_4
+- Q725_5
+- Q730
+- Q735
+- Q740_1
+- Q740_2
+- Q740_3
+- Q740_4
+- Q740_5
+- Q740_6
+- Q740_96
+- Q740_98
+- Q740_99
+- Q745_1
+- Q745_2
+- Q745_3
+- Q745_4
+- Q745_5
+- Q745_6
+- Q745_96
+- Q745_98
+- Q745_99
+- Q750
+- Q760
+- Q765
+- Q770
+- Q775_1
+- Q775_2
+- Q775_3
+- Q775_4
+- Q775_5
+- Q775_6
+- Q775_7
+- Q775_8
+- Q775_9
+- Q775_96
+- Q775_97
+- Q368
+- Q372
+- MQ602
+- MQ603
+- MQ605
+- MQ607
+- Q600
+- Q268
+- Q280
+- Q318
+- Q350
+- Q410
+- Q462
+- Q364
+- Q437
+- Q485
+
+</code></pre>
+</details>
+
+### Induced
+
+<details>
+<pre><code class="language-yaml">name: ADA_OHWBRecord
+description: A record in the ADA OHWB dataset
+from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+is_a: Record
+attributes:
+  RESPID:
+    name: RESPID
+    description: The respondant's study ID.
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: integer
+  Q710:
+    name: Q710
+    description: Have you ever felt that the appearance of your mouth and teeth affected
+      your ability to interview for a job?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: YesNoDK_OHWB
+  Q715_4:
+    name: Q715_4
+    description: 'Felt anxiety: How often have you experienced each of the following
+      problems related to your mouth and teeth during the past 12 months?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: Frequency
+  Q715_5:
+    name: Q715_5
+    description: 'Felt embarrassment: How often have you experienced each of the following
+      problems related to your mouth and teeth during the past 12 months?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: Frequency
+  Q715_6:
+    name: Q715_6
+    description: 'Avoided smiling: How often have you experienced each of the following
+      problems related to your mouth and teeth during the past 12 months?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: Frequency
+  Q715_9:
+    name: Q715_9
+    description: 'Reduced participation in social activities: How often have you experienced
+      each of the following problems related to your mouth and teeth during the past
+      12 months?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: Frequency
+  Q725_4:
+    name: Q725_4
+    description: 'I need to see the dentist twice a year: How strongly do you agree
+      or disagree with the following statements about how you perceive the health
+      of your mouth?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: Agreement
+  Q725_5:
+    name: Q725_5
+    description: 'It is easier to get ahead in life if I have straight bright teeth:
+      How strongly do you agree or disagree with the following statements about how
+      you perceive the health of your mouth?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: Agreement
+  Q730:
+    name: Q730
+    description: Do you currently have health insurance for 2015?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: YesNoDK_OHWB
+  Q735:
+    name: Q735
+    description: Do you currently have dental insurance for 2015?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: YesNoDK_OHWB
+  Q740_1:
+    name: Q740_1
+    description: 'Employer (mine or my spouse/partner''s): How did you obtain your
+      own individual health insurance for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q740_2:
+    name: Q740_2
+    description: 'Through the new health insurance marketplace: How did you obtain
+      your own individual health insurance for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q740_3:
+    name: Q740_3
+    description: 'Directly from the insurance company, not through the marketplace:
+      How did you obtain your own individual health insurance for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q740_4:
+    name: Q740_4
+    description: 'Medicaid (including state versions such as Montana Medicaid or New
+      York State of Health Medicaid): How did you obtain your own individual health
+      insurance for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q740_5:
+    name: Q740_5
+    description: 'Medicare: How did you obtain your own individual health insurance
+      for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q740_6:
+    name: Q740_6
+    description: 'Through a government program other than Medicaid/Medicare: How did
+      you obtain your own individual health insurance for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q740_96:
+    name: Q740_96
+    description: 'Other: How did you obtain your own individual health insurance for
+      2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q740_98:
+    name: Q740_98
+    description: 'Don''t know: How did you obtain your own individual health insurance
+      for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q740_99:
+    name: Q740_99
+    description: 'N/A- I do not have health insurance for 2015: How did you obtain
+      your own individual health insurance for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q745_1:
+    name: Q745_1
+    description: 'Employer (mine or my spouse/partner''s): How did you obtain your
+      own individual dental insurance for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q745_2:
+    name: Q745_2
+    description: 'Through the new health insurance marketplace: How did you obtain
+      your own individual dental insurance for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q745_3:
+    name: Q745_3
+    description: 'Directly from the insurance company, not through the marketplace:
+      How did you obtain your own individual dental insurance for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q745_4:
+    name: Q745_4
+    description: 'Medicaid (including state versions such as Montana Medicaid or New
+      York State of Health Medicaid): How did you obtain your own individual dental
+      insurance for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q745_5:
+    name: Q745_5
+    description: 'Medicare: How did you obtain your own individual dental insurance
+      for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q745_6:
+    name: Q745_6
+    description: 'Through a government program other than Medicaid/Medicare (e.g.,
+      VA, TRICARE, SSI): How did you obtain your own individual dental insurance for
+      2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q745_96:
+    name: Q745_96
+    description: 'Other: How did you obtain your own individual dental insurance for
+      2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q745_98:
+    name: Q745_98
+    description: 'Don''t know: How did you obtain your own individual dental insurance
+      for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q745_99:
+    name: Q745_99
+    description: 'N/A- I do not have health insurance for 2015: How did you obtain
+      your own individual dental insurance for 2015?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q750:
+    name: Q750
+    description: How easy or difficult is it for you to find a dentist that accepts
+      your dental insurance?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: Difficulty
+  Q760:
+    name: Q760
+    description: Do you have a single dentist or dental office that is your usual
+      source of dental care?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: YesNoOHWB
+  Q765:
+    name: Q765
+    description: How long since you last had a dental visit?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: TimeSinceDentalVisit
+  Q770:
+    name: Q770
+    description: Do you plan to visit the dentist in the next 12 months?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: YesNoDK_OHWB
+  Q775_1:
+    name: Q775_1
+    description: 'My mouth is healthy so I do not need to visit the dentist: Why did
+      you not visit the dentist more frequently?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q775_2:
+    name: Q775_2
+    description: 'I do not know where to go to receive dental services: Why did you
+      not visit the dentist more frequently?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q775_3:
+    name: Q775_3
+    description: 'I cannot afford to go to the dentist: Why did you not visit the
+      dentist more frequently?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q775_4:
+    name: Q775_4
+    description: 'It is too hard to find a dentist that accepts my dental plan or
+      Medicaid: Why did you not visit the dentist more frequently?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q775_5:
+    name: Q775_5
+    description: 'I cannot find the time to get to a dentist (e.g., cannot get the
+      time off from work, dentist does not have convenient office hours): Why did
+      you not visit the dentist more frequently?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q775_6:
+    name: Q775_6
+    description: 'Many services are not covered by my dental plan or Medicaid, so
+      I end up having to pay with my own money: Why did you not visit the dentist
+      more frequently?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q775_7:
+    name: Q775_7
+    description: 'I cannot travel to a dentist easily (e.g., do not have transportation,
+      located too far away): Why did you not visit the dentist more frequently?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q775_8:
+    name: Q775_8
+    description: 'I do not have any of my original teeth (i.e. I have no teeth, or
+      I have dentures): Why did you not visit the dentist more frequently?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q775_9:
+    name: Q775_9
+    description: 'I am afraid of going to the dentist: Why did you not visit the dentist
+      more frequently?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q775_96:
+    name: Q775_96
+    description: 'Other: Why did you not visit the dentist more frequently?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q775_97:
+    name: Q775_97
+    description: 'No reason: Why did you not visit the dentist more frequently?'
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: NoYesOHWB
+  Q368:
+    name: Q368
+    description: Including yourself, how many people age 18 or older live in your
+      household?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: integer
+  Q372:
+    name: Q372
+    description: How many people under the age of 18 live in your household?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: integer
+  MQ602:
+    name: MQ602
+    description: Total number of people live in your household.
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: integer
+  MQ603:
+    name: MQ603
+    description: Income Level
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: IncomeLevel
+  MQ605:
+    name: MQ605
+    description: Compute Income Level1
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: float
+  MQ607:
+    name: MQ607
+    description: Compute Income Level2
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: ComputeIncomeLevel
+  Q600:
+    name: Q600
+    description: Are you currently receiving any Medicaid benefits?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: YesNoDK_OHWB
+  Q268:
+    name: Q268
+    description: Are you male/female?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: MaleFemaleOHWB
+  Q280:
+    name: Q280
+    description: Respondent Age (at time of data collection)
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: integer
+  Q318:
+    name: Q318
+    description: In what state or territory do you currently reside?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: State
+  Q350:
+    name: Q350
+    description: How many hours per week do you typically spend on the Internet or
+      World Wide Web?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: integer
+  Q410:
+    name: Q410
+    description: Which one of the following best describes your employment status?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: EmploymentStatus
+  Q462:
+    name: Q462
+    description: Which of the following income categories best describes your total
+      2014 household income before/after taxes?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: IncomeCategory
+  Q364:
+    name: Q364
+    description: What is your marital status?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: MaritalStatus
+  Q437:
+    name: Q437
+    description: What is the highest level of education you have completed or the
+      highest degree you have received?
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: Education
+  Q485:
+    name: Q485
+    description: Race/Ethnicity.
+    from_schema: https://w3id.org/OHD/DFA-study/ada_ohwb
+    rank: 1000
+    owner: ADA_OHWBRecord
+    domain_of:
+    - ADA_OHWBRecord
+    range: RaceEthnicityOHWB
+
+</code></pre>
+</details></div></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../../js/base.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../javascripts/tablesort.js"></script>
+<script src="../../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>
