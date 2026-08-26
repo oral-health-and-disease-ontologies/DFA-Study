@@ -313,17 +313,3 @@ slots:
     any_of:
       - range: Score3to15
       - range: MissingResponse
-
-enums:
-  SiteCOHRA1:
-    description: >-
-      Enumeration for the COHRA1 study site where the assessment was given.
-    permissible_values:
-      "C1-WV":
-        description: "COHRA1 - West Virginia"
-      "C1-BR":
-        description: "COHRA1 - Bradford"
-      "C1-BU":
-        description: "COHRA1 - Burgettstown"
-      "C1-BK":
-        description: "COHRA1 - Braddock"

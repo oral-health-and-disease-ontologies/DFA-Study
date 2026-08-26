@@ -1,0 +1,651 @@
+id: https://w3id.org/OHD/DFA-study/superdataset
+name: superdataset
+title: DFS Superdataset Schema
+license: https://mit-license.org/
+
+description: >-
+  LinkML schema for defining data elements used in the DFS Superdataset.
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  core: https://w3id.org/OHD/DFA-study/core/
+  superdataset: https://w3id.org/OHD/DFA-study/superdataset/
+  OHD:  http://purl.obolibrary.org/obo/OHD_
+  dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
+
+imports:
+  - linkml:types
+  - core
+
+default_prefix: superdataset
+
+classes:
+  SUPERDATASETDataset:
+    is_a: Dataset
+    description: >-
+      The Superdataset dataset
+    slot_usage:
+      records:
+        range: SUPERDATASETRecord
+
+  SUPERDATASETRecord:
+    is_a: Record
+    description: >-
+      A record in the Superdataset dataset
+    slots:
+      - Participant_id
+      - Last_Dental_Visit
+      - Sex
+      - Age
+      - Ethnicity
+      - Hispanic
+      - White
+      - White_Hispanic
+      - White_Hispanic_NA
+      - Black
+      - NA_AN
+      - NA
+      - Asian
+      - American_indian
+      - Native_hawaiian
+      - Other_pacific_islander
+      - Other_race
+      - More_than_one_race
+      - Missing_race
+      - dfs1
+      - dfs2
+      - dfs3
+      - dfs4
+      - dfs5
+      - dfs6
+      - dfs7
+      - dfs8
+      - dfs9
+      - dfs10
+      - dfs11
+      - dfs12
+      - dfs13
+      - dfs14
+      - dfs15
+      - dfs16
+      - dfs17
+      - dfs18
+      - dfs19
+      - dfs20
+      - idaf1a
+      - idaf1b
+      - idaf1c
+      - idaf1d
+      - idaf1e
+      - idaf1f
+      - idaf1g
+      - idaf1h
+      - idaf2a
+      - idaf2b
+      - idaf2c
+      - idaf2d
+      - idaf2e
+      - idaf3a
+      - idaf3b
+      - idaf3c
+      - idaf3d
+      - idaf3e
+      - idaf3f
+      - idaf3g
+      - idaf3h
+      - idaf3i
+      - idaf3j
+      - mdas1
+      - mdas2
+      - mdas3
+      - mdas4
+      - mdas5
+      - source
+      - count_missing
+      - agegrp
+
+slots:
+  Participant_id:
+    description: >-
+      The participant's study ID.
+    range: integer
+
+  Last_Dental_Visit:
+    description: >-
+      How long has it been since you last visited a dentist or dental clinic for any reason?
+    range: Years1-5
+
+  Sex:
+    description: >-
+      The participant's sex
+    range: SexSuperdataset
+
+  Age:
+    description: >-
+      The participant's age in years.
+    any_of:
+      - range: 0to120
+      - range: PeriodMissing
+
+  Ethnicity:
+    description: >-
+      The participant's ethnicity is Hispanic.
+    range: NoYesPeriod
+
+  Hispanic:
+    description: >-
+      The participant's ethnicity is Hispanic.
+    range: NoYes
+
+  White:
+    description: >-
+      The participant's ethnicity is White.
+    range: NoYes
+
+  White_Hispanic:
+    description: >-
+      The participant's ethnicity is White and Hispanic.
+    range: NoYes
+
+  White_Hispanic_NA:
+    description: >-
+      The participant's ethnicity is White, Hispanic, and Native American.
+    range: NoYes
+
+  Black:
+    description: >-
+      The participant's ethnicity is Black.
+    range: NoYes
+  
+  NA_AN:
+    description: >-
+      The participant's ethnicity is Native American and Alaskan Native.
+    range: NoYes
+  
+  NA:
+    description: >-
+      The participant's ethnicity is Native American.
+    range: NoYes
+
+  Asian:
+    description: >-
+      The participant's ethnicity is Asian.
+    range: NoYes
+  
+  American_indian:
+    description: >-
+      The participant's ethnicity is American Indian.
+    range: NoYes
+
+  Native_hawaiian:
+    description: >-
+      The participant's ethnicity is Native Hawaiian.
+    range: NoYes
+
+  Other_pacific_islander:
+    description: >-
+      The participant's ethnicity is Other Pacific Islander.
+    range: NoYes
+  
+  Other_race:
+    description: >-
+      The participant's race is another not listed.
+    range: NoYes
+
+  More_than_one_race:
+    description: >-
+      The participant's race is more than one.
+    range: NoYes
+
+  Missing_race:
+    description: >-
+      The participant's race is not recorded.
+    range: NoYes
+
+  dfs1:
+    description: >-
+      Has fear of dental work ever caused you to put off making an appointment?
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000421 # DFS 01
+    range: FrequencyMissing
+    close_mappings:
+      - dfs:dfs_1
+
+  dfs2:
+    description: >-
+      Has fear of dental work ever caused you to cancel or not appear for an appointment?
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000422 # DFS 02
+    range: FrequencyMissing
+    close_mappings:
+      - dfs:dfs_2
+
+  dfs3:
+    description: >-
+      When having dental work done, my muscles become tense.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000423 # DFS 03
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_3
+
+  dfs4:
+    description: >-
+      When having dental work done, my breathing rate increases.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000424 # DFS 04
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_4
+
+  dfs5:
+    description: >-
+      When having dental work done, I perspire.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000426 # DFS 05
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_5
+
+  dfs6:
+    description: >-
+      When having dental work done, I feel nauseated and sick to my stomach.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000427 # DFS 06
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_6
+
+  dfs7:
+    description: >-
+      When having dental work done, my heart beats faster.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000428 # DFS 07
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_7
+
+  dfs8:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Making an appointment for dentistry.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000429 # DFS 08
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_8
+
+  dfs9:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Approching the dentist's office.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000430 # DFS 09
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_9
+
+  dfs10:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Sitting in the waiting room.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000431 # DFS 10
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_10
+
+  dfs11:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Being seated in the dental chair.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000432 # DFS 11
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_11
+
+  dfs12:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: The smell of the dentist's office.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000433 # DFS 12
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_12
+
+  dfs13:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the dentist walk in.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000434 # DFS 13
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_13
+
+  dfs14:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the anesthetic needle.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000435 # DFS 14
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_14
+
+  dfs15:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the needle injected.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000436 # DFS 15
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_15
+
+  dfs16:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the drill.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000437 # DFS 16
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_16
+
+  dfs17:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Hearing the drill.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000438 # DFS 17
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_17
+
+  dfs18:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the vibrations of the drill.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000439 # DFS 18
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_18
+
+  dfs19:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Having your teeth cleaned.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000440 # DFS 19
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_19
+
+  dfs20:
+    description: >-
+      Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: All things considered, how fearful are you of having dental work done?
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000441 # DFS 20
+    range: LikertAmountMissing
+    close_mappings:
+      - dfs:dfs_20
+
+  idaf1a:
+    description: >-
+      (1a) I feel anxious shortly before going to the dentist.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008055 # IDAF 1A
+    range: LikertMissing
+    close_mappings:
+      - idaf:idaf_1_a
+
+  idaf1b:
+    description: >-
+      (1b) I generally avoid going to the dentist because I find the experience unpleasant or distressing.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008056 # IDAF 1B
+    range: LikertMissing
+    close_mappings:
+      - idaf:idaf_1_b
+
+  idaf1c:
+    description: >-
+      (1c) I get nervous or edgy about upcoming dental visits.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008057 # IDAF 1C
+    range: LikertMissing
+    close_mappings:
+      - idaf:idaf_1_c
+
+  idaf1d:
+    description: >-
+      (1d) I think that something really bad would happen to me if I were to visit a dentist.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008058 # IDAF 1D
+    range: LikertMissing
+    close_mappings:
+      - idaf:idaf_1_d
+
+  idaf1e:
+    description: >-
+      (1e) I feel afraid or fearful when visiting the dentist.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008059 # IDAF 1E
+    range: LikertMissing
+    close_mappings:
+      - idaf:idaf_1_e
+
+  idaf1f:
+    description: >-
+      (1f) My heart beats faster when I go to the dentist.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008060 # IDAF 1F
+    range: LikertMissing
+    close_mappings:
+      - idaf:idaf_1_f
+
+  idaf1g:
+    description: >-
+      (1g) I delay making appointments to go to the dentist.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008061 # IDAF 1G
+    range: LikertMissing
+    close_mappings:
+      - idaf:idaf_1_g
+
+  idaf1h:
+    description: >-
+      (1h) I often think about all the things that might go wrong prior to going to the dentist.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008062 # IDAF 1H
+    range: LikertMissing
+    close_mappings:
+      - idaf:idaf_1_h
+
+  idaf2a:
+    description: >-
+      (2a) Going to the dentist is actively avoided or else endured with intense fear or anxiety
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008063 # IDAF 2A
+    range: NoYesPeriod
+    close_mappings:
+      - idaf:idaf_2_a
+
+  idaf2b:
+    description: >-
+      (2b) My fear of going to the dentist has been present for at least 6 month
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008064 # IDAF 2B
+    range: NoYesPeriod
+    close_mappings:
+      - idaf:idaf_2_b
+
+  idaf2c:
+    description: >-
+      (2c) My fear, anxiety or avoidance of going to the dentist significantly affects my life in some way (dental pain, avoiding eating some foods, embarrassed or self-conscious about appearance of teeth or mouth, etc.)
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008065 # IDAF 2C
+    range: NoYesPeriod
+    close_mappings:
+      - idaf:idaf_2_c
+
+  idaf2d:
+    description: >-
+      (2d) I am afraid of going to the dentist because I am concerned I may have a panic attack (abrupt fear with sweating, pounding liteart, fear of dying or losing control, chest pain etc.)
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008066 # IDAF 2D
+    range: NoYesPeriod
+    close_mappings:
+      - idaf:idaf_2_d
+
+  idaf2e:
+    description: >-
+      (2e) I am afraid of going to the dentist because I am generally highly self-conscious or concerned about being watched or judged in social situations.
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008067 # IDAF 2E
+    range: NoYesPeriod
+    close_mappings:
+      - idaf:idaf_2_e
+
+  idaf3a:
+    description: >-
+      (3a) Painful or uncomfortable procedures 
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008068 # IDAF 3A
+    range: DegreeLikertMissing
+    close_mappings:
+      - idaf:idaf_3_a
+
+  idaf3b:
+    description: >-
+      (3b)  Feeling embarrassed or ashamed  
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008069 # IDAF 3B
+    range: DegreeLikertMissing
+    close_mappings:
+      - idaf:idaf_3_b
+
+  idaf3c:
+    description: >-
+      (3c)  Not being in control of what is happening 
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008070 # IDAF 3C
+    range: DegreeLikertMissing
+    close_mappings:
+      - idaf:idaf_3_c
+
+  idaf3d:
+    description: >-
+      (3d)  Feeling sick, queasy or disgusted  
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008071 # IDAF 3D
+    range: DegreeLikertMissing
+    close_mappings:
+      - idaf:idaf_3_d
+
+  idaf3e:
+    description: >-
+      (3e)  Numbness caused by the anesthetic 
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008072 # IDAF 3E
+    range: DegreeLikertMissing
+    close_mappings:
+      - idaf:idaf_3_e
+
+  idaf3f:
+    description: >-
+      (3f)  Not knowing what the dentist is going to do  
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008073 # IDAF 3F
+    range: DegreeLikertMissing
+    close_mappings:
+      - idaf:idaf_3_f
+
+  idaf3g:
+    description: >-
+      (3g)  The cost of dental treatment 
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008074 # IDAF 3G
+    range: DegreeLikertMissing
+    close_mappings:
+      - idaf:idaf_3_g
+
+  idaf3h:
+    description: >-
+      (3h) Needles or injections 
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008075 # IDAF 3H
+    range: DegreeLikertMissing
+    close_mappings:
+      - idaf:idaf_3_h
+
+  idaf3i:
+    description: >-
+      (3i)  Gagging or choking  
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008076 # IDAF 3I
+    range: DegreeLikertMissing
+    close_mappings:
+      - idaf:idaf_3_i
+
+  idaf3j:
+    description: >-
+      (3j)  Having an unsympathetic or unkind dentist  
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008077 # IDAF 3J
+    range: DegreeLikertMissing
+    close_mappings:
+      - idaf:idaf_3_j
+
+  mdas1:
+    description: >-
+      If you went to the dentist for treatment tomorrow [How would you feel in the following scenarios?]
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000446 # MDAS 1
+    range: AnxietyMissing
+    close_mappings:
+      - mdas:S3_Q4A
+  
+  mdas2:
+    description: >-
+      If you were sitting in the waiting room (waiting for treatment) [How would you feel in the following scenarios?]
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000447 # MDAS 2
+    range: AnxietyMissing
+    close_mappings:
+      - mdas:S3_Q4B
+
+  mdas3:
+    description: >-
+      If you were about to have a tooth drilled [How would you feel in the following scenarios?]
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000448 # MDAS 3
+    range: AnxietyMissing
+    close_mappings:
+      - mdas:S3_Q4C
+
+  mdas4:
+    description: >-
+      If you were about to have your teeth scaled and polished [How would you feel in the following scenarios?]
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000449 # MDAS 4
+    range: AnxietyMissing
+    close_mappings:
+      - mdas:S3_Q4D
+
+  mdas5:
+    description: >-
+      If you were about to have a local anesthetic injection in your gum above an upper back tooth [How would you feel in the following scenarios?]
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000450 # MDAS 5
+    range: AnxietyMissing
+    close_mappings:
+      - mdas:S3_Q4E
+
+  source:
+    description: >-
+      The source of the data.
+    range: StudySource
+  
+  count_missing:
+    description: >-
+      The count of missing values in the record.
+    range: integer
+
+  agegrp:
+    description: >-
+      The age group of the participant.
+    range: AgeGroup

@@ -55,31 +55,3 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000450 # MDAS 5
     range: AnxietyDKSR
-
-enums:
-  AnxietyDKSR:
-    description: >-
-      Enumeration for answering whether an individual would feel anxious in some scenario.
-    permissible_values:
-      1: 
-        description: Not anxious
-        meaning: http://purl.obolibrary.org/obo/NCIT_C111675
-      2:
-        description: Slightly anxious
-        meaning: http://purl.obolibrary.org/obo/NCIT_C120244
-      3:
-        description: Fairly anxious
-        meaning: http://purl.obolibrary.org/obo/NCIT_C111676
-      4:
-        description: Very anxious
-        meaning: http://purl.obolibrary.org/obo/NCIT_C120252
-      5:
-        description: Extremely anxious
-      77:
-        description: DON'T KNOW
-        meaning: http://purl.obolibrary.org/obo/NCIT_C67142
-      98:
-        description: SKIPPED ON WEB
-      99:
-        description: REFUSED
-        meaning: http://purl.obolibrary.org/obo/NCIT_C51024
