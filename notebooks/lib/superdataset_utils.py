@@ -11,7 +11,30 @@ import matplotlib.pyplot as plt
 import textwrap 
 import numpy as np
 import seaborn as sns
+import re
 
+DFS_QUESTIONS = {
+    1:  "Has fear of dental work ever caused you to put off making an appointment?",
+    2:  "Has fear of dental work ever caused you to cancel or not appear for an appointment?",
+    3:  "When having dental work done, my muscles become tense.",
+    4:  "When having dental work done, my breathing rate increases.",
+    5:  "When having dental work done, I perspire.",
+    6:  "When having dental work done, I feel nauseated and sick to my stomach.",
+    7:  "When having dental work done, my heart beats faster.",
+    8:  "Please rate how much fear, anxiety, or unpleasantness for making an appointment for dentistry.",
+    9:  "Please rate how much fear, anxiety, or unpleasantness for approaching the dentist's office.",
+    10: "Please rate how much fear, anxiety, or unpleasantness for sitting in the waiting room.",
+    11: "Please rate how much fear, anxiety, or unpleasantness for being seated in the dental chair.",
+    12: "Please rate how much fear, anxiety, or unpleasantness for the smell of the dentist's office.",
+    13: "Please rate how much fear, anxiety, or unpleasantness for seeing the dentist walk in.",
+    14: "Please rate how much fear, anxiety, or unpleasantness for seeing the anesthetic needle.",
+    15: "Please rate how much fear, anxiety, or unpleasantness for feeling the needle injected.",
+    16: "Please rate how much fear, anxiety, or unpleasantness for seeing the drill.",
+    17: "Please rate how much fear, anxiety, or unpleasantness for hearing the drill.",
+    18: "Please rate how much fear, anxiety, or unpleasantness for feeling the vibrations of the drill.",
+    19: "Please rate how much fear, anxiety, or unpleasantness for having your teeth cleaned.",
+    20: "All things considered, how fearful are you of having dental work done?",
+}
 
 # DFS subscale and total columns
 DFS_SUBSCALE_AND_TOTAL_COLS = [
@@ -20,7 +43,6 @@ DFS_SUBSCALE_AND_TOTAL_COLS = [
     'dfs_physiological_arousal',
     'dfs_total_score'
 ]
-
 
 # DFS individual item question columns (dfs1–dfs20)
 DFS_QUESTION_COLS = [f'dfs{i}' for i in range(1, 21)]
@@ -32,6 +54,26 @@ PARTICIPANT_COLS = [
     'Sex', 
     'Age'
 ]
+
+
+def dfs_question(item: str) -> str:
+    """Return the text of a DFS question.
+
+    Accepts forms like 'dfs1', 'dfs01', 'DFS 01', 'dfs_1', or '1'.
+    """
+    match = re.fullmatch(r"\s*(?:dfs)?[\s_]*0*(\d+)\s*", str(item), flags=re.IGNORECASE)
+    if not match:
+        raise ValueError(f"Unrecognized DFS item: {item!r}")
+    num = int(match.group(1))
+    if num not in DFS_QUESTIONS:
+        raise KeyError(f"No DFS question {num}; valid items are 1–{max(DFS_QUESTIONS)}.")
+    return DFS_QUESTIONS[num]
+
+
+def dfs_label(item: str) -> str:
+    """Return a short label for a DFS question, e.g. 'dfs17' -> 'hearing the drill'."""
+    q = dfs_question(item)
+    return q.split(" for ", 1)[1].rstrip(".") if " for " in q else q
 
 
 def load_superdataset(filepath: str) -> pd.DataFrame:
