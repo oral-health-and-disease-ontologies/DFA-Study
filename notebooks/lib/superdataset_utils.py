@@ -14,26 +14,26 @@ import seaborn as sns
 import re
 
 DFS_QUESTIONS = {
-    1:  "Has fear of dental work ever caused you to put off making an appointment?",
-    2:  "Has fear of dental work ever caused you to cancel or not appear for an appointment?",
-    3:  "When having dental work done, my muscles become tense.",
-    4:  "When having dental work done, my breathing rate increases.",
-    5:  "When having dental work done, I perspire.",
-    6:  "When having dental work done, I feel nauseated and sick to my stomach.",
-    7:  "When having dental work done, my heart beats faster.",
-    8:  "Please rate how much fear, anxiety, or unpleasantness for making an appointment for dentistry.",
-    9:  "Please rate how much fear, anxiety, or unpleasantness for approaching the dentist's office.",
-    10: "Please rate how much fear, anxiety, or unpleasantness for sitting in the waiting room.",
-    11: "Please rate how much fear, anxiety, or unpleasantness for being seated in the dental chair.",
-    12: "Please rate how much fear, anxiety, or unpleasantness for the smell of the dentist's office.",
-    13: "Please rate how much fear, anxiety, or unpleasantness for seeing the dentist walk in.",
-    14: "Please rate how much fear, anxiety, or unpleasantness for seeing the anesthetic needle.",
-    15: "Please rate how much fear, anxiety, or unpleasantness for feeling the needle injected.",
-    16: "Please rate how much fear, anxiety, or unpleasantness for seeing the drill.",
-    17: "Please rate how much fear, anxiety, or unpleasantness for hearing the drill.",
-    18: "Please rate how much fear, anxiety, or unpleasantness for feeling the vibrations of the drill.",
-    19: "Please rate how much fear, anxiety, or unpleasantness for having your teeth cleaned.",
-    20: "All things considered, how fearful are you of having dental work done?",
+    "dfs1":  "Has fear of dental work ever caused you to put off making an appointment?",
+    "dfs2":  "Has fear of dental work ever caused you to cancel or not appear for an appointment?",
+    "dsf3":  "When having dental work done, my muscles become tense.",
+    "dfs4":  "When having dental work done, my breathing rate increases.",
+    "dfs5":  "When having dental work done, I perspire.",
+    "dfs6":  "When having dental work done, I feel nauseated and sick to my stomach.",
+    "dfs7":  "When having dental work done, my heart beats faster.",
+    "dfs8":  "Please rate how much fear, anxiety, or unpleasantness for making an appointment for dentistry.",
+    "dfs9":  "Please rate how much fear, anxiety, or unpleasantness for approaching the dentist's office.",
+    "dfs10": "Please rate how much fear, anxiety, or unpleasantness for sitting in the waiting room.",
+    "dfs11": "Please rate how much fear, anxiety, or unpleasantness for being seated in the dental chair.",
+    "dfs12": "Please rate how much fear, anxiety, or unpleasantness for the smell of the dentist's office.",
+    "dfs13": "Please rate how much fear, anxiety, or unpleasantness for seeing the dentist walk in.",
+    "dfs14": "Please rate how much fear, anxiety, or unpleasantness for seeing the anesthetic needle.",
+    "dfs15": "Please rate how much fear, anxiety, or unpleasantness for feeling the needle injected.",
+    "dfs16": "Please rate how much fear, anxiety, or unpleasantness for seeing the drill.",
+    "dfs17": "Please rate how much fear, anxiety, or unpleasantness for hearing the drill.",
+    "dfs18": "Please rate how much fear, anxiety, or unpleasantness for feeling the vibrations of the drill.",
+    "dfs19": "Please rate how much fear, anxiety, or unpleasantness for having your teeth cleaned.",
+    "dfs20": "All things considered, how fearful are you of having dental work done?",
 }
 
 # DFS subscale and total columns
@@ -46,6 +46,73 @@ DFS_SUBSCALE_AND_TOTAL_COLS = [
 
 # DFS individual item question columns (dfs1–dfs20)
 DFS_QUESTION_COLS = [f'dfs{i}' for i in range(1, 21)]
+
+IDAF_QUESTIONS = {
+    'idaf1a': 'I feel anxious shortly before going to the dentist.',
+    'idaf1b': 'I generally avoid going to the dentist because I find the experience unpleasant or distressing.',
+    'idaf1c': 'I get nervous or edgy about upcoming dental visits.',
+    'idaf1d': 'I  think that something really bad would happen to me if I were to visit a dentist.',
+    'idaf1e': 'I feel afraid or fearful when visiting the dentist.',
+    'idaf1f': 'My heart beats faster when I go to the dentist.',
+    'idaf1g': 'I delay making appointments to go to the dentist.',
+    'idaf1h': 'I often think about all the things that might go wrong prior to going to the dentist.',
+    'idaf2a': 'Going to the dentist is actively avoided or else endured with intense fear or anxiety.',
+    'idaf2b': 'My fear of going to the dentist has been present for at least 6 months.',
+    'idaf2c': 'My fear, anxiety or avoidance of going to the dentist significantly affects my life in some way (dental pain, avoiding eating some foods, embarrassed or self-conscious about appearance of teeth or mouth, etc.).',
+    'idaf2d': 'I am afraid of going to the dentist because I am concerned I may have a panic attack (abrupt fear with sweating, pounding heart, fear of dying or losing control, chest pain etc.).',
+    'idaf2e': 'I am afraid of going to the dentist because I am generally highly self-conscious or concerned about being watched or judged in social situations.',
+    'idaf3a': 'To what extent are you anxious about painful or uncomfortable procedures?',  
+    'idaf3b': 'To what extent are you anxious about feeling embarrassed or ashamed?', 
+    'idaf3c': 'To what extent are you anxious about not being in control of what is happening?',
+    'idaf3d': 'To what extent are you anxious about feeling sick, queasy or disgusted?',
+    'idaf3e': 'To what extent are you anxious about numbness caused by the anesthetic?',
+    'idaf3f': 'To what extent are you anxious about not knowing what the dentist is going to do?',
+    'idaf3g': 'To what extent are you anxious about the cost of dental treatment?',
+    'idaf3h': 'To what extent are you anxious about needles or injections?',
+    'idaf3i': 'To what extent are you anxious about gagging or choking?',
+    'idaf3j': 'To what extent are you anxious about having an unsympathetic or unkind dentist?'
+}
+
+IDAF_QUESTION_COLS = [
+    'idaf1a', 
+    'idaf1b', 
+    'idaf1c', 
+    'idaf1d', 
+    'idaf1e', 
+    'idaf1f', 
+    'idaf1g', 
+    'idaf1h',
+    'idaf2a', 
+    'idaf2b', 
+    'idaf2c', 
+    'idaf2d', 
+    'idaf2e', 
+    'idaf3a', 
+    'idaf3b',
+    'idaf3c', 
+    'idaf3d', 
+    'idaf3e', 
+    'idaf3f', 
+    'idaf3g', 
+    'idaf3h', 
+    'idaf3i',
+    'idaf3j'
+]
+
+MDAS_QUESTIONS = {
+    'mdas1': 'If you went to your Dentist for TREATMENT TOMORROW, how would you feel?',
+    'mdas2': 'If you were sitting in the WAITING ROOM (waiting for treatment), how would you feel?',
+    'mdas3': 'If you were about to have a TOOTH DRILLED, how would you feel?',
+    'mdas4': 'If you were about to have your TEETH SCALED AND POLISHED, how would you feel?',
+    'mdas5': 'If you were about to have a LOCAL ANAESTHETIC INJECTION in your gum, above an upper back tooth, how would you feel?'
+}
+MDAS_QUESTION_COLS = [
+    'mdas1', 
+    'mdas2', 
+    'mdas3', 
+    'mdas4', 
+    'mdas5'
+]
 
 # Participant-level demographic / administrative columns kept in subset
 PARTICIPANT_COLS = [
@@ -64,7 +131,7 @@ def dfs_question(item: str) -> str:
     match = re.fullmatch(r"\s*(?:dfs)?[\s_]*0*(\d+)\s*", str(item), flags=re.IGNORECASE)
     if not match:
         raise ValueError(f"Unrecognized DFS item: {item!r}")
-    num = int(match.group(1))
+    num = f"dfs{match.group(1)}"
     if num not in DFS_QUESTIONS:
         raise KeyError(f"No DFS question {num}; valid items are 1–{max(DFS_QUESTIONS)}.")
     return DFS_QUESTIONS[num]
