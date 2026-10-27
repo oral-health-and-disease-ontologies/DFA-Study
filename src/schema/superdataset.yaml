@@ -39,6 +39,7 @@ classes:
       - Sex
       - Age
       - Ethnicity
+      - Race
       - Hispanic
       - White
       - White_Hispanic
@@ -133,6 +134,11 @@ slots:
       The participant's ethnicity is Hispanic.
     range: NoYesPeriod
 
+  Race:
+    description: >-
+      The participant's race.
+    range: integer
+    
   Hispanic:
     description: >-
       The participant's ethnicity is Hispanic.
