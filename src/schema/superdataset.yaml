@@ -136,7 +136,7 @@ slots:
 
   Race:
     description: >-
-      The participant's race.
+      The participant's race. The value -9999 is used for missing values.
     range: integer
     
   Hispanic:
