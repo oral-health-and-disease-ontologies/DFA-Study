@@ -35,25 +35,13 @@ classes:
       A record in the Superdataset dataset
     slots:
       - Participant_id
+      - Participant_id_original
       - Last_Dental_Visit
       - Sex
       - Age
-      - Ethnicity
+      - agegrp
+      - Ethnicity_new
       - Race
-      - Hispanic
-      - White
-      - White_Hispanic
-      - White_Hispanic_NA
-      - Black
-      - NA_AN
-      - NA
-      - Asian
-      - American_indian
-      - Native_hawaiian
-      - Other_pacific_islander
-      - Other_race
-      - More_than_one_race
-      - Missing_race
       - dfs1
       - dfs2
       - dfs3
@@ -104,13 +92,25 @@ classes:
       - mdas5
       - source
       - count_missing
-      - agegrp
+      - dfs_flag
+      - idaf_flag
+      - mdas_flag
+      - dfs_total
+      - dfs_avoidance_fear
+      - dfs_specific_stimuli_fear
+      - dfs_physiological_arousal
+
 
 slots:
   Participant_id:
     description: >-
       The participant's study ID.
     range: integer
+
+  Participant_id_original:
+    description: >-
+      The participant's original study ID.
+    range: string
 
   Last_Dental_Visit:
     description: >-
@@ -128,8 +128,13 @@ slots:
     any_of:
       - range: 0to120
       - range: PeriodMissing
+    
+  agegrp:
+    description: >-
+      The age group of the participant.
+    range: AgeGroup
 
-  Ethnicity:
+  Ethnicity_new:
     description: >-
       The participant's ethnicity is Hispanic.
     range: NoYesPeriod
@@ -138,76 +143,6 @@ slots:
     description: >-
       The participant's race. The value -9999 is used for missing values.
     range: integer
-    
-  Hispanic:
-    description: >-
-      The participant's ethnicity is Hispanic.
-    range: NoYes
-
-  White:
-    description: >-
-      The participant's ethnicity is White.
-    range: NoYes
-
-  White_Hispanic:
-    description: >-
-      The participant's ethnicity is White and Hispanic.
-    range: NoYes
-
-  White_Hispanic_NA:
-    description: >-
-      The participant's ethnicity is White, Hispanic, and Native American.
-    range: NoYes
-
-  Black:
-    description: >-
-      The participant's ethnicity is Black.
-    range: NoYes
-  
-  NA_AN:
-    description: >-
-      The participant's ethnicity is Native American and Alaskan Native.
-    range: NoYes
-  
-  NA:
-    description: >-
-      The participant's ethnicity is Native American.
-    range: NoYes
-
-  Asian:
-    description: >-
-      The participant's ethnicity is Asian.
-    range: NoYes
-  
-  American_indian:
-    description: >-
-      The participant's ethnicity is American Indian.
-    range: NoYes
-
-  Native_hawaiian:
-    description: >-
-      The participant's ethnicity is Native Hawaiian.
-    range: NoYes
-
-  Other_pacific_islander:
-    description: >-
-      The participant's ethnicity is Other Pacific Islander.
-    range: NoYes
-  
-  Other_race:
-    description: >-
-      The participant's race is another not listed.
-    range: NoYes
-
-  More_than_one_race:
-    description: >-
-      The participant's race is more than one.
-    range: NoYes
-
-  Missing_race:
-    description: >-
-      The participant's race is not recorded.
-    range: NoYes
 
   dfs1:
     description: >-
@@ -651,7 +586,37 @@ slots:
       The count of missing values in the record.
     range: integer
 
-  agegrp:
+  dfs_flag:
     description: >-
-      The age group of the participant.
-    range: AgeGroup
+      The participant have dfs value or not.
+    range: integer
+  
+  idaf_flag:
+    description: >-
+      The participant have idaf value or not.
+    range: integer
+
+  mdas_flag:
+    description: >-
+      The participant have mdas value or not.
+    range: integer
+
+  dfs_total:
+    description: >-
+      Sum all 20 dfs items.
+    range: integer
+
+  dfs_avoidance_fear:
+    description: >-
+      Sum dfs items 1, 2, 8, 9, 10, 11, 12, 13.
+    range: integer
+
+  dfs_specific_stimuli_fear:
+    description: >-
+      Sum dfs items 14, 15, 16, 17, 18, 19.
+    range: integer
+
+  dfs_physiological_arousal:
+    description: >-
+      Sum dfs items 3, 4, 5, 6, 7.
+    range: integer
