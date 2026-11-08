@@ -40,7 +40,7 @@ classes:
       - Sex
       - Age
       - agegrp
-      - Ethnicity_new
+      - Ethnicity
       - Race
       - dfs1
       - dfs2
@@ -115,7 +115,7 @@ slots:
   Last_Dental_Visit:
     description: >-
       How long has it been since you last visited a dentist or dental clinic for any reason?
-    range: Years1-5
+    range: Years1to5
 
   Sex:
     description: >-
@@ -127,17 +127,17 @@ slots:
       The participant's age in years.
     any_of:
       - range: 0to120
-      - range: PeriodMissing
+      - range: ValueMissing
     
   agegrp:
     description: >-
       The age group of the participant.
     range: AgeGroup
 
-  Ethnicity_new:
+  Ethnicity:
     description: >-
       The participant's ethnicity is Hispanic.
-    range: NoYesPeriod
+    range: NoYesMissing
 
   Race:
     description: >-
@@ -401,7 +401,7 @@ slots:
       (2a) Going to the dentist is actively avoided or else endured with intense fear or anxiety
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008063 # IDAF 2A
-    range: NoYesPeriod
+    range: NoYesMissing
     close_mappings:
       - idaf:idaf_2_a
 
@@ -410,7 +410,7 @@ slots:
       (2b) My fear of going to the dentist has been present for at least 6 month
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008064 # IDAF 2B
-    range: NoYesPeriod
+    range: NoYesMissing
     close_mappings:
       - idaf:idaf_2_b
 
@@ -419,7 +419,7 @@ slots:
       (2c) My fear, anxiety or avoidance of going to the dentist significantly affects my life in some way (dental pain, avoiding eating some foods, embarrassed or self-conscious about appearance of teeth or mouth, etc.)
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008065 # IDAF 2C
-    range: NoYesPeriod
+    range: NoYesMissing
     close_mappings:
       - idaf:idaf_2_c
 
@@ -428,7 +428,7 @@ slots:
       (2d) I am afraid of going to the dentist because I am concerned I may have a panic attack (abrupt fear with sweating, pounding liteart, fear of dying or losing control, chest pain etc.)
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008066 # IDAF 2D
-    range: NoYesPeriod
+    range: NoYesMissing
     close_mappings:
       - idaf:idaf_2_d
 
@@ -437,7 +437,7 @@ slots:
       (2e) I am afraid of going to the dentist because I am generally highly self-conscious or concerned about being watched or judged in social situations.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008067 # IDAF 2E
-    range: NoYesPeriod
+    range: NoYesMissing
     close_mappings:
       - idaf:idaf_2_e
 

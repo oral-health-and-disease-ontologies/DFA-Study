@@ -678,7 +678,7 @@ enums:
         description: "Pretty much afraid"
       5:
         description: "Very afraid"
-      -8888:
+      8:
         description: "Don't Know"
         meaning: http://purl.obolibrary.org/obo/NCIT_C67142
       -5555:
@@ -1622,14 +1622,10 @@ enums:
 
 # Superdataset Enums
 
-  Years1-5:
+  Years1to5:
     description: >-
       An enumeration for a range of years.
     permissible_values:
-      ".":
-        description: >-
-          Missing
-        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
       1:
         description: >-
           1 year or less
@@ -1646,6 +1642,10 @@ enums:
         description: >-
           never
         meaning: http://purl.obolibrary.org/obo/NCIT_C70543
+      -9999:
+        description: >-
+          Missing
+        meaning: http://purl.obolibrary.org/obo/NCIT_C54031
 
   SexSuperdataset:
     description: >-
@@ -1663,12 +1663,12 @@ enums:
         description: >-
           Other
         meaning: http://purl.obolibrary.org/obo/NCIT_C104495
-      ".":
+      -9999:
         description: >-
           Missing
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
     
-  NoYesPeriod:
+  NoYesMissing:
     description: >-
       An enumeration for yes/no responses with a missing option.
     permissible_values:
@@ -1680,7 +1680,7 @@ enums:
         description: >-
           Yes
         meaning: http://purl.obolibrary.org/obo/NCIT_C49488
-      ".":
+      -9999:
         description: >-
           Missing
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
@@ -1698,11 +1698,11 @@ enums:
           Yes
         meaning: http://purl.obolibrary.org/obo/NCIT_C49488
 
-  PeriodMissing:
+  ValueMissing:
     description: >-
       An enumeration for a missing value.
     permissible_values:
-      ".":
+      -9999:
         description: >-
           Missing
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
@@ -1729,6 +1729,12 @@ enums:
       "randall":
         description: >-
           Randall  
+      "mdas":
+        description: >-
+          OHBSS mdas dataset
+      "sohea":
+        description: >-
+          CareQuest
       "tic":
         description: >-
           Utah TIC
@@ -1755,7 +1761,7 @@ enums:
       6:
         description: >-
           65+ years
-      ".":
+      -9999:
         description: >-
           Missing
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
@@ -1784,7 +1790,7 @@ enums:
         description: >-
           Missing
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
-      -8888:
+      -9876:
         description: Not asked for in study
 
   LikertAmountMissing:
@@ -1810,7 +1816,7 @@ enums:
         description: >-
           Missing
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
-      -8888:
+      -9876:
         description: Not asked for in study
 
   LikertMissing:
@@ -1832,9 +1838,11 @@ enums:
       5:
         description: Strongly Agree
         meaning: http://purl.obolibrary.org/obo/NCIT_C104475
-      ".":
+      -9999:
         description: Missing
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -9876:
+        description: Not asked for in study
 
   DegreeLikertMissing:
     description: >-
@@ -1855,9 +1863,11 @@ enums:
       5:
         description: Very Much
         meaning: http://purl.obolibrary.org/obo/NCIT_C91217 
-      ".":
+      -9999:
         description: Missing
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -9876:
+        description: Not asked for in study
 
   AnxietyMissing:
     description: >-
@@ -1877,9 +1887,11 @@ enums:
         meaning: http://purl.obolibrary.org/obo/NCIT_C120252
       5:
         description: Extremely anxious
-      ".": 
+      -9999:
         description: Missing
         meaning: http://purl.obolibrary.org/obo/NCIT_C54031
+      -9876:
+        description: Not asked for in study
 
 # TIC Clinical Enums
 # TIC Provider Enums
