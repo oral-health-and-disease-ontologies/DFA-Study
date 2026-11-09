@@ -1,6 +1,6 @@
 id: https://w3id.org/OHD/DFA-study/superdataset
 name: superdataset
-title: DFS Superdataset Schema
+title: DFA Superdataset Schema
 license: https://mit-license.org/
 
 description: >-
@@ -8,29 +8,26 @@ description: >-
 
 prefixes:
   linkml: https://w3id.org/linkml/
-  core: https://w3id.org/OHD/DFA-study/core/
   superdataset: https://w3id.org/OHD/DFA-study/superdataset/
   OHD:  http://purl.obolibrary.org/obo/OHD_
+  NCIT: NCIT
   dcterms: http://purl.org/dc/terms/
   dwc: http://rs.tdwg.org/dwc/terms/
 
 imports:
   - linkml:types
-  - core
 
 default_prefix: superdataset
 
 classes:
-  SUPERDATASETDataset:
-    is_a: Dataset
+  Dataset:
     description: >-
       The Superdataset dataset
     slot_usage:
       records:
-        range: SUPERDATASETRecord
+        range: Record
 
-  SUPERDATASETRecord:
-    is_a: Record
+  Record:
     description: >-
       A record in the Superdataset dataset
     slots:
@@ -620,3 +617,275 @@ slots:
     description: >-
       Sum dfs items 3, 4, 5, 6, 7.
     range: integer
+
+enums:
+  Years1to5:
+    description: >-
+      An enumeration for a range of years.
+    permissible_values:
+      1:
+        description: >-
+          1 year or less
+      2:
+        description: >-
+          1 to 2 years
+      3:
+        description: >-
+          2 to 5 years
+      4:
+        description: >-
+          5 or more years
+      5:
+        description: >-
+          never
+        meaning: NCIT:C70543
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+
+  SexSuperdataset:
+    description: >-
+      An enumeration for the sex of the participant.
+    permissible_values:
+      1:
+        description: >-
+          Male
+        meaning: NCIT:C205465
+      2:
+        description: >-
+          Female
+        meaning: NCIT:C205464
+      3:
+        description: >-
+          Other
+        meaning: NCIT:C104495
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+    
+  NoYesMissing:
+    description: >-
+      An enumeration for yes/no responses with a missing option.
+    permissible_values:
+      0:
+        description: >-
+          No
+        meaning: NCIT:C49487
+      1:
+        description: >-
+          Yes
+        meaning: NCIT:C49488
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+
+  NoYes:
+    description: >-
+      An enumeration for yes/no responses.
+    permissible_values:
+      0:
+        description: >-
+          No
+        meaning: NCIT:C49487
+      1:
+        description: >-
+          Yes
+        meaning: NCIT:C49488
+
+  ValueMissing:
+    description: >-
+      An enumeration for a missing value.
+    permissible_values:
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+
+  StudySource:
+    description: >-
+      An enumeration for the source of data.
+    permissible_values:
+      bph:
+        description: >-
+          Boston Public Housing
+      bwhs:
+        description: >-
+          Black Women's Health Study
+      cohra1:
+        description: >-
+          COHRA1
+      cohra2:
+        description: >-
+          COHRA2
+      f31:
+        description: >-
+          F31  
+      randall:
+        description: >-
+          Randall  
+      mdas:
+        description: >-
+          OHBSS mdas dataset
+      sohea:
+        description: >-
+          CareQuest
+      tic:
+        description: >-
+          Utah TIC
+  
+  AgeGroup:
+    description: >-
+      An enumeration for the age group of the participant.
+    permissible_values:
+      1:
+        description: >-
+          0-17 years
+      2:
+        description: >-
+          18-34 years
+      3:
+        description: >-
+          35-44 years
+      4:
+        description: >-
+          45-54 years
+      5:
+        description: >-
+          55-64 years
+      6:
+        description: >-
+          65+ years
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+
+  FrequencyMissing:
+    description: >-
+      An enumeration for a Likert scale of frequency with a missing option.
+    permissible_values:
+      1:
+        description: >-
+          Never
+        meaning: NCIT:C70543
+      2:
+        description: >-
+          Once or twice
+      3:
+        description: >-
+          A few times
+      4:
+        description: >-
+          Often
+      5:
+        description: >-
+          Nearly every time
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+      -9876:
+        description: Not asked for in study
+
+  LikertAmountMissing:
+    description: >-
+      An enumeration for a Likert scale of degree of fear with a missing option.
+    permissible_values:
+      1:
+        description: >-
+          Not at all
+      2:
+        description: >-
+          A little
+      3:
+        description: >-
+          Somewhat
+      4:
+        description: >-
+          Much
+      5:
+        description: >-
+          Very much
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+      -9876:
+        description: Not asked for in study
+
+  LikertMissing:
+    description: >-
+      A standard 5-point Likert scale ranging from "Strongly Disagree" to "Strongly Agree", including an option for 'Missing'.
+    permissible_values:
+      1:
+        description: Strongly Disagree
+        meaning: NCIT:C104476
+      2:
+        description: Disagree
+        meaning: NCIT:C104479
+      3:
+        description: Neither Agree nor Disagree
+        meaning: NCIT:C103804
+      4:
+        description: Agree
+        meaning: NCIT:C104478
+      5:
+        description: Strongly Agree
+        meaning: NCIT:C104475
+      -9999:
+        description: Missing
+        meaning: NCIT:C54031
+      -9876:
+        description: Not asked for in study
+
+  DegreeLikertMissing:
+    description: >-
+      A standard 5-point frequency Likert scale ranging from "Not At All" to "Very Much", including an option for 'Missing'.
+    permissible_values:
+      1:
+        description: Not At All
+        meaning: NCIT:C91213
+      2:
+        description: A Little
+        meaning: NCIT:C91214 
+      3:
+        description: Somewhat
+        meaning: NCIT:C91215 
+      4:
+        description: Much
+        meaning: NCIT:C126287
+      5:
+        description: Very Much
+        meaning: NCIT:C91217 
+      -9999:
+        description: Missing
+        meaning: NCIT:C54031
+      -9876:
+        description: Not asked for in study
+
+  AnxietyMissing:
+    description: >-
+      Enumeration for answering whether an individual would feel anxious in some scenario.
+    permissible_values:
+      1: 
+        description: Not anxious
+        meaning: NCIT:C111675
+      2:
+        description: Slightly anxious
+        meaning: NCIT:C120244
+      3:
+        description: Fairly anxious
+        meaning: NCIT:C111676
+      4:
+        description: Very anxious
+        meaning: NCIT:C120252
+      5:
+        description: Extremely anxious
+      -9999:
+        description: Missing
+        meaning: NCIT:C54031
+      -9876:
+        description: Not asked for in study
