@@ -122,9 +122,11 @@ slots:
   Age:
     description: >-
       The participant's age in years.
+    range: integer
     any_of:
-      - range: 0to120
-      - range: ValueMissing
+      - minimum_value: 0
+        maximum_value: 120
+      - equals_number: -9999
     
   agegrp:
     description: >-
