@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://oral-health-and-disease-ontologies.github.io/DFA-Study/cohra2/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>COHRA2 Schema - DFA Study Schema</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">DFA Study Schema</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../ada_ohwb/" class="nav-link">ADA Oral Health and Well Being Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../cq_sohea/" class="nav-link">CareQuest SOHEA Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../cohra1/" class="nav-link">COHRA1 Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">COHRA2 Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../dfs/" class="nav-link">DFS Study Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../idaf/" class="nav-link">IDAF Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../superdataset/" class="nav-link">Superdataset Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../tic_clinical/" class="nav-link">TIC Clinical Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../tic_provider/" class="nav-link">TIC Provider Schema</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../mdas/" class="nav-link">Modified Dental Anxiety Scale Schema</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../cohra1/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../dfs/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/oral-health-and-disease-ontologies/DFA-Study/?query=root/DFA-Study/docs/cohra2/index.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#cohra2-study-schema" class="nav-link">COHRA2 Study Schema</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#classes" class="nav-link">Classes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#slots" class="nav-link">Slots</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#enumerations" class="nav-link">Enumerations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#types" class="nav-link">Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#subsets" class="nav-link">Subsets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="cohra2-study-schema">COHRA2 Study Schema</h1>
+<p>LinkML schema for defining data elements used in the COHRA2 study.</p>
+<p>URI: <a href="https://w3id.org/OHD/DFA-study/cohra2">https://w3id.org/OHD/DFA-study/cohra2</a></p>
+<p>Name: cohra2</p>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AdditionalCOHRAScore/">AdditionalCOHRAScore</a></td>
+<td>Total score of all Fear of Pain items, including DF21 through DF29.</td>
+</tr>
+<tr>
+<td><a href="Age/">Age</a></td>
+<td>The particpant's age at the time of the visit.</td>
+</tr>
+<tr>
+<td><a href="AvoidanceAnticipatoryFear/">AvoidanceAnticipatoryFear</a></td>
+<td>Sum of responses related to avoidance/anticipatory fear, including DF01, DF02, DF08, DF09, DF10, DF11, DF12, and DF13.</td>
+</tr>
+<tr>
+<td><a href="demRace/">demRace</a></td>
+<td>What is your race/ethnicity?</td>
+</tr>
+<tr>
+<td><a href="DF21/">DF21</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Breaking your arm.</td>
+</tr>
+<tr>
+<td><a href="DF22/">DF22</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having a foot doctor remove a wart from your foot with a sharp instrument.</td>
+</tr>
+<tr>
+<td><a href="DF23/">DF23</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting a paper cut on your finger.</td>
+</tr>
+<tr>
+<td><a href="DF24/">DF24</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your mouth.</td>
+</tr>
+<tr>
+<td><a href="DF25/">DF25</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Getting strong soap in both your eyes while bathing or showering.</td>
+</tr>
+<tr>
+<td><a href="DF26/">DF26</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Having someone slam a heavy car door on your hand.</td>
+</tr>
+<tr>
+<td><a href="DF27/">DF27</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Gulping a hot drink before it has cooled.</td>
+</tr>
+<tr>
+<td><a href="DF28/">DF28</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Receiving an injection in your hip/buttocks.</td>
+</tr>
+<tr>
+<td><a href="DF29/">DF29</a></td>
+<td>Choose the appropriate number for each item to rate your FEAR OF PAIN in relation to each event: Falling down a flight of concrete stairs.</td>
+</tr>
+<tr>
+<td><a href="dfs_1/">dfs_1</a></td>
+<td><strong>DF01</strong> Has fear of dental work ever caused you to put off making an appointment?</td>
+</tr>
+<tr>
+<td><a href="dfs_10/">dfs_10</a></td>
+<td><strong>DF10</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Sitting in the waiting room.</td>
+</tr>
+<tr>
+<td><a href="dfs_11/">dfs_11</a></td>
+<td><strong>DF11</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Being seated in the dental chair.</td>
+</tr>
+<tr>
+<td><a href="dfs_12/">dfs_12</a></td>
+<td><strong>DF12</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: The smell of the dentist's office.</td>
+</tr>
+<tr>
+<td><a href="dfs_13/">dfs_13</a></td>
+<td><strong>DF13</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the dentist walk in.</td>
+</tr>
+<tr>
+<td><a href="dfs_14/">dfs_14</a></td>
+<td><strong>DF14</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the anesthetic needle.</td>
+</tr>
+<tr>
+<td><a href="dfs_15/">dfs_15</a></td>
+<td><strong>DF15</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the needle injected.</td>
+</tr>
+<tr>
+<td><a href="dfs_16/">dfs_16</a></td>
+<td><strong>DF16</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the drill.</td>
+</tr>
+<tr>
+<td><a href="dfs_17/">dfs_17</a></td>
+<td><strong>DF17</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Hearing the drill.</td>
+</tr>
+<tr>
+<td><a href="dfs_18/">dfs_18</a></td>
+<td><strong>DF18</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the vibrations of the drill.</td>
+</tr>
+<tr>
+<td><a href="dfs_19/">dfs_19</a></td>
+<td><strong>DF19</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Having your teeth cleaned.</td>
+</tr>
+<tr>
+<td><a href="dfs_2/">dfs_2</a></td>
+<td><strong>DF02</strong> Has fear of dental work ever caused you to cancel or not appear for an appointment?</td>
+</tr>
+<tr>
+<td><a href="dfs_20/">dfs_20</a></td>
+<td><strong>DF20</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: All things considered, how fearful are you of having dental work done?</td>
+</tr>
+<tr>
+<td><a href="dfs_3/">dfs_3</a></td>
+<td><strong>DF03</strong> When having dental work done, my muscles become tense.</td>
+</tr>
+<tr>
+<td><a href="dfs_4/">dfs_4</a></td>
+<td><strong>DF04</strong> When having dental work done, my breathing rate increases.</td>
+</tr>
+<tr>
+<td><a href="dfs_5/">dfs_5</a></td>
+<td><strong>DF05</strong> When having dental work done, I perspire.</td>
+</tr>
+<tr>
+<td><a href="dfs_6/">dfs_6</a></td>
+<td><strong>DF06</strong> When having dental work done, I feel nauseated and sick to my stomach.</td>
+</tr>
+<tr>
+<td><a href="dfs_7/">dfs_7</a></td>
+<td><strong>DF07</strong> When having dental work done, my heart beats faster.</td>
+</tr>
+<tr>
+<td><a href="dfs_8/">dfs_8</a></td>
+<td><strong>DF08</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Making an appointment for dentistry.</td>
+</tr>
+<tr>
+<td><a href="dfs_9/">dfs_9</a></td>
+<td><strong>DF09</strong> Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Approching the dentist's office.</td>
+</tr>
+<tr>
+<td><a href="Ethnicity/">Ethnicity</a></td>
+<td>Hispanic or Latino</td>
+</tr>
+<tr>
+<td><a href="FearOfMedical/">FearOfMedical</a></td>
+<td>Sum of responses related to fear of pain resulting from a medical procedure, including DF22, DF24, and DF28.</td>
+</tr>
+<tr>
+<td><a href="FearOfMinorPain/">FearOfMinorPain</a></td>
+<td>Sum of responses related to fear of minor pain, including DF23, DF25, and DF27.</td>
+</tr>
+<tr>
+<td><a href="FearOfSeverePain/">FearOfSeverePain</a></td>
+<td>Sum of responses related to fear of severe pain, including DF21, DF26, and DF29.</td>
+</tr>
+<tr>
+<td><a href="FearOfSpecificDentalStimuli/">FearOfSpecificDentalStimuli</a></td>
+<td>Sum of responses related to fear of specific dental stimuli, including DF14, DF15, DF16, DF17, DF18, and DF19.</td>
+</tr>
+<tr>
+<td><a href="Participant_ID/">Participant_ID</a></td>
+<td>The participant's study ID.</td>
+</tr>
+<tr>
+<td><a href="Pedigree_Name/">Pedigree_Name</a></td>
+<td>The Family pedigree number assigned by genetic relationship.</td>
+</tr>
+<tr>
+<td><a href="PhysiologicalArousal/">PhysiologicalArousal</a></td>
+<td>Sum of responses related to physiological arousal, including DF03, DF04, DF05, DF06, and DF07.</td>
+</tr>
+<tr>
+<td><a href="Sex/">Sex</a></td>
+<td>The particpant's sex</td>
+</tr>
+<tr>
+<td><a href="Site/">Site</a></td>
+<td>The code for the study site where the assessment was given.</td>
+</tr>
+<tr>
+<td><a href="Timepoint/">Timepoint</a></td>
+<td>The timepoint in the study when the visit occurred.</td>
+</tr>
+<tr>
+<td><a href="TimepointDesc/">TimepointDesc</a></td>
+<td>Description of the timepoint.</td>
+</tr>
+<tr>
+<td><a href="TotalScaleScore/">TotalScaleScore</a></td>
+<td>Total score of all DFS items, including DF01 through DF20.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enumerations">Enumerations</h2>
+<table>
+<thead>
+<tr>
+<th>Enumeration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="subsets">Subsets</h2>
+<table>
+<thead>
+<tr>
+<th>Subset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        <script src="../javascripts/tablesort.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
