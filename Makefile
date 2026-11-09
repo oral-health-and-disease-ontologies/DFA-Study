@@ -40,6 +40,7 @@ SUPERDATASET_SCHEMA_DIR = $(SRC)/schema
 SUPERDATASET_SCHEMA = $(SUPERDATASET_SCHEMA_DIR)/superdataset.yaml
 SUPERDATASET_DOCS_DIR = $(DOCSDIR)/superdataset
 
+GENDOC_OPTS = --verbose --no-render-imports --no-mergeimports --truncate-descriptions False 
 # --- linkml products --- #
 cohra1-jsonschema: $(COHRA1_SCHEMA)
 	gen-json-schema $< > jsonschema/cohra1.json
@@ -148,16 +149,16 @@ gendoc:
 	@if ls src/docs/images/*.* 1> /dev/null 2>&1; then cp src/docs/images/*.* docs/images/; fi
 
 	@# generate documentation
-	gen-doc -d $(COHRA1_DOCS_DIR) $(COHRA1_SCHEMA)
-	gen-doc -d $(COHRA2_DOCS_DIR) $(COHRA2_SCHEMA)
-	gen-doc -d $(ADA_OHWB_DOCS_DIR) $(ADA_OHWB_SCHEMA)
-	gen-doc -d $(DFS_DOCS_DIR) $(DFS_SCHEMA)
-	gen-doc -d $(CQ_SOHEA_DOCS_DIR) $(CQ_SOHEA_SCHEMA)
-	gen-doc -d $(TIC_CLINICAL_DOCS_DIR) $(TIC_CLINICAL_SCHEMA)
-	gen-doc -d $(TIC_PROVIDER_DOCS_DIR) $(TIC_PROVIDER_SCHEMA)
-	gen-doc -d $(MDAS_DOCS_DIR) $(MDAS_SCHEMA)
-	gen-doc -d $(IDAF_DOCS_DIR) $(IDAF_SCHEMA)
-	gen-doc -d $(SUPERDATASET_DOCS_DIR) $(SUPERDATASET_SCHEMA)
+	gen-doc $(GENDOC_OPTS) -d $(COHRA1_DOCS_DIR) $(COHRA1_SCHEMA)
+	gen-doc $(GENDOC_OPTS) -d $(COHRA2_DOCS_DIR) $(COHRA2_SCHEMA)
+	gen-doc $(GENDOC_OPTS) -d $(ADA_OHWB_DOCS_DIR) $(ADA_OHWB_SCHEMA)
+	gen-doc $(GENDOC_OPTS) -d $(DFS_DOCS_DIR) $(DFS_SCHEMA)
+	gen-doc $(GENDOC_OPTS) -d $(CQ_SOHEA_DOCS_DIR) $(CQ_SOHEA_SCHEMA)
+	gen-doc $(GENDOC_OPTS) -d $(TIC_CLINICAL_DOCS_DIR) $(TIC_CLINICAL_SCHEMA)
+	gen-doc $(GENDOC_OPTS) -d $(TIC_PROVIDER_DOCS_DIR) $(TIC_PROVIDER_SCHEMA)
+	gen-doc $(GENDOC_OPTS) -d $(MDAS_DOCS_DIR) $(MDAS_SCHEMA)
+	gen-doc $(GENDOC_OPTS) -d $(IDAF_DOCS_DIR) $(IDAF_SCHEMA)
+	gen-doc $(GENDOC_OPTS) -d $(SUPERDATASET_DOCS_DIR) $(SUPERDATASET_SCHEMA)
 
 
 ## remove docs
