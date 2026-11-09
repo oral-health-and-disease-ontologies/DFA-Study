@@ -10,7 +10,7 @@ prefixes:
   linkml: https://w3id.org/linkml/
   superdataset: https://w3id.org/OHD/DFA-study/superdataset/
   OHD:  http://purl.obolibrary.org/obo/OHD_
-  NCIT: NCIT
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
   dcterms: http://purl.org/dc/terms/
   dwc: http://rs.tdwg.org/dwc/terms/
 
@@ -22,14 +22,15 @@ default_prefix: superdataset
 classes:
   Dataset:
     description: >-
-      The Superdataset dataset
-    slot_usage:
+      The Superdataset dataset.
+    tree_root: true
+    attributes:
       records:
         range: Record
 
   Record:
     description: >-
-      A record in the Superdataset dataset
+      A record in the Superdataset dataset.
     slots:
       - Participant_id
       - Participant_id_original
@@ -121,7 +122,7 @@ slots:
 
   Age:
     description: >-
-      The participant's age in years.
+      The participant's age in years (0–120). The value -9999 is used for missing values.
     range: integer
     any_of:
       - minimum_value: 0
