@@ -1,6 +1,6 @@
 id: https://w3id.org/OHD/DFA-study/superdataset
 name: superdataset
-title: DFS Superdataset Schema
+title: DFA Superdataset Schema
 license: https://mit-license.org/
 
 description: >-
@@ -8,52 +8,37 @@ description: >-
 
 prefixes:
   linkml: https://w3id.org/linkml/
-  core: https://w3id.org/OHD/DFA-study/core/
   superdataset: https://w3id.org/OHD/DFA-study/superdataset/
   OHD:  http://purl.obolibrary.org/obo/OHD_
+  NCIT: NCIT
   dcterms: http://purl.org/dc/terms/
   dwc: http://rs.tdwg.org/dwc/terms/
 
 imports:
   - linkml:types
-  - core
 
 default_prefix: superdataset
 
 classes:
-  SUPERDATASETDataset:
-    is_a: Dataset
+  Dataset:
     description: >-
       The Superdataset dataset
     slot_usage:
       records:
-        range: SUPERDATASETRecord
+        range: Record
 
-  SUPERDATASETRecord:
-    is_a: Record
+  Record:
     description: >-
       A record in the Superdataset dataset
     slots:
       - Participant_id
+      - Participant_id_original
       - Last_Dental_Visit
       - Sex
       - Age
+      - agegrp
       - Ethnicity
       - Race
-      - Hispanic
-      - White
-      - White_Hispanic
-      - White_Hispanic_NA
-      - Black
-      - NA_AN
-      - NA
-      - Asian
-      - American_indian
-      - Native_hawaiian
-      - Other_pacific_islander
-      - Other_race
-      - More_than_one_race
-      - Missing_race
       - dfs1
       - dfs2
       - dfs3
@@ -104,7 +89,14 @@ classes:
       - mdas5
       - source
       - count_missing
-      - agegrp
+      - dfs_flag
+      - idaf_flag
+      - mdas_flag
+      - dfs_total
+      - dfs_avoidance_fear
+      - dfs_specific_stimuli_fear
+      - dfs_physiological_arousal
+
 
 slots:
   Participant_id:
@@ -112,10 +104,15 @@ slots:
       The participant's study ID.
     range: integer
 
+  Participant_id_original:
+    description: >-
+      The participant's original study ID.
+    range: string
+
   Last_Dental_Visit:
     description: >-
       How long has it been since you last visited a dentist or dental clinic for any reason?
-    range: Years1-5
+    range: Years1to5
 
   Sex:
     description: >-
@@ -127,87 +124,22 @@ slots:
       The participant's age in years.
     any_of:
       - range: 0to120
-      - range: PeriodMissing
+      - range: ValueMissing
+    
+  agegrp:
+    description: >-
+      The age group of the participant.
+    range: AgeGroup
 
   Ethnicity:
     description: >-
       The participant's ethnicity is Hispanic.
-    range: NoYesPeriod
+    range: NoYesMissing
 
   Race:
     description: >-
       The participant's race. The value -9999 is used for missing values.
     range: integer
-    
-  Hispanic:
-    description: >-
-      The participant's ethnicity is Hispanic.
-    range: NoYes
-
-  White:
-    description: >-
-      The participant's ethnicity is White.
-    range: NoYes
-
-  White_Hispanic:
-    description: >-
-      The participant's ethnicity is White and Hispanic.
-    range: NoYes
-
-  White_Hispanic_NA:
-    description: >-
-      The participant's ethnicity is White, Hispanic, and Native American.
-    range: NoYes
-
-  Black:
-    description: >-
-      The participant's ethnicity is Black.
-    range: NoYes
-  
-  NA_AN:
-    description: >-
-      The participant's ethnicity is Native American and Alaskan Native.
-    range: NoYes
-  
-  NA:
-    description: >-
-      The participant's ethnicity is Native American.
-    range: NoYes
-
-  Asian:
-    description: >-
-      The participant's ethnicity is Asian.
-    range: NoYes
-  
-  American_indian:
-    description: >-
-      The participant's ethnicity is American Indian.
-    range: NoYes
-
-  Native_hawaiian:
-    description: >-
-      The participant's ethnicity is Native Hawaiian.
-    range: NoYes
-
-  Other_pacific_islander:
-    description: >-
-      The participant's ethnicity is Other Pacific Islander.
-    range: NoYes
-  
-  Other_race:
-    description: >-
-      The participant's race is another not listed.
-    range: NoYes
-
-  More_than_one_race:
-    description: >-
-      The participant's race is more than one.
-    range: NoYes
-
-  Missing_race:
-    description: >-
-      The participant's race is not recorded.
-    range: NoYes
 
   dfs1:
     description: >-
@@ -466,7 +398,7 @@ slots:
       (2a) Going to the dentist is actively avoided or else endured with intense fear or anxiety
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008063 # IDAF 2A
-    range: NoYesPeriod
+    range: NoYesMissing
     close_mappings:
       - idaf:idaf_2_a
 
@@ -475,7 +407,7 @@ slots:
       (2b) My fear of going to the dentist has been present for at least 6 month
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008064 # IDAF 2B
-    range: NoYesPeriod
+    range: NoYesMissing
     close_mappings:
       - idaf:idaf_2_b
 
@@ -484,7 +416,7 @@ slots:
       (2c) My fear, anxiety or avoidance of going to the dentist significantly affects my life in some way (dental pain, avoiding eating some foods, embarrassed or self-conscious about appearance of teeth or mouth, etc.)
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008065 # IDAF 2C
-    range: NoYesPeriod
+    range: NoYesMissing
     close_mappings:
       - idaf:idaf_2_c
 
@@ -493,7 +425,7 @@ slots:
       (2d) I am afraid of going to the dentist because I am concerned I may have a panic attack (abrupt fear with sweating, pounding liteart, fear of dying or losing control, chest pain etc.)
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008066 # IDAF 2D
-    range: NoYesPeriod
+    range: NoYesMissing
     close_mappings:
       - idaf:idaf_2_d
 
@@ -502,7 +434,7 @@ slots:
       (2e) I am afraid of going to the dentist because I am generally highly self-conscious or concerned about being watched or judged in social situations.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008067 # IDAF 2E
-    range: NoYesPeriod
+    range: NoYesMissing
     close_mappings:
       - idaf:idaf_2_e
 
@@ -651,7 +583,309 @@ slots:
       The count of missing values in the record.
     range: integer
 
-  agegrp:
+  dfs_flag:
     description: >-
-      The age group of the participant.
-    range: AgeGroup
+      The participant have dfs value or not.
+    range: integer
+  
+  idaf_flag:
+    description: >-
+      The participant have idaf value or not.
+    range: integer
+
+  mdas_flag:
+    description: >-
+      The participant have mdas value or not.
+    range: integer
+
+  dfs_total:
+    description: >-
+      Sum all 20 dfs items.
+    range: integer
+
+  dfs_avoidance_fear:
+    description: >-
+      Sum dfs items 1, 2, 8, 9, 10, 11, 12, 13.
+    range: integer
+
+  dfs_specific_stimuli_fear:
+    description: >-
+      Sum dfs items 14, 15, 16, 17, 18, 19.
+    range: integer
+
+  dfs_physiological_arousal:
+    description: >-
+      Sum dfs items 3, 4, 5, 6, 7.
+    range: integer
+
+enums:
+  Years1to5:
+    description: >-
+      An enumeration for a range of years.
+    permissible_values:
+      1:
+        description: >-
+          1 year or less
+      2:
+        description: >-
+          1 to 2 years
+      3:
+        description: >-
+          2 to 5 years
+      4:
+        description: >-
+          5 or more years
+      5:
+        description: >-
+          never
+        meaning: NCIT:C70543
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+
+  SexSuperdataset:
+    description: >-
+      An enumeration for the sex of the participant.
+    permissible_values:
+      1:
+        description: >-
+          Male
+        meaning: NCIT:C205465
+      2:
+        description: >-
+          Female
+        meaning: NCIT:C205464
+      3:
+        description: >-
+          Other
+        meaning: NCIT:C104495
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+    
+  NoYesMissing:
+    description: >-
+      An enumeration for yes/no responses with a missing option.
+    permissible_values:
+      0:
+        description: >-
+          No
+        meaning: NCIT:C49487
+      1:
+        description: >-
+          Yes
+        meaning: NCIT:C49488
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+
+  NoYes:
+    description: >-
+      An enumeration for yes/no responses.
+    permissible_values:
+      0:
+        description: >-
+          No
+        meaning: NCIT:C49487
+      1:
+        description: >-
+          Yes
+        meaning: NCIT:C49488
+
+  ValueMissing:
+    description: >-
+      An enumeration for a missing value.
+    permissible_values:
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+
+  StudySource:
+    description: >-
+      An enumeration for the source of data.
+    permissible_values:
+      bph:
+        description: >-
+          Boston Public Housing
+      bwhs:
+        description: >-
+          Black Women's Health Study
+      cohra1:
+        description: >-
+          COHRA1
+      cohra2:
+        description: >-
+          COHRA2
+      f31:
+        description: >-
+          F31  
+      randall:
+        description: >-
+          Randall  
+      mdas:
+        description: >-
+          OHBSS mdas dataset
+      sohea:
+        description: >-
+          CareQuest
+      tic:
+        description: >-
+          Utah TIC
+  
+  AgeGroup:
+    description: >-
+      An enumeration for the age group of the participant.
+    permissible_values:
+      1:
+        description: >-
+          0-17 years
+      2:
+        description: >-
+          18-34 years
+      3:
+        description: >-
+          35-44 years
+      4:
+        description: >-
+          45-54 years
+      5:
+        description: >-
+          55-64 years
+      6:
+        description: >-
+          65+ years
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+
+  FrequencyMissing:
+    description: >-
+      An enumeration for a Likert scale of frequency with a missing option.
+    permissible_values:
+      1:
+        description: >-
+          Never
+        meaning: NCIT:C70543
+      2:
+        description: >-
+          Once or twice
+      3:
+        description: >-
+          A few times
+      4:
+        description: >-
+          Often
+      5:
+        description: >-
+          Nearly every time
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+      -9876:
+        description: Not asked for in study
+
+  LikertAmountMissing:
+    description: >-
+      An enumeration for a Likert scale of degree of fear with a missing option.
+    permissible_values:
+      1:
+        description: >-
+          Not at all
+      2:
+        description: >-
+          A little
+      3:
+        description: >-
+          Somewhat
+      4:
+        description: >-
+          Much
+      5:
+        description: >-
+          Very much
+      -9999:
+        description: >-
+          Missing
+        meaning: NCIT:C54031
+      -9876:
+        description: Not asked for in study
+
+  LikertMissing:
+    description: >-
+      A standard 5-point Likert scale ranging from "Strongly Disagree" to "Strongly Agree", including an option for 'Missing'.
+    permissible_values:
+      1:
+        description: Strongly Disagree
+        meaning: NCIT:C104476
+      2:
+        description: Disagree
+        meaning: NCIT:C104479
+      3:
+        description: Neither Agree nor Disagree
+        meaning: NCIT:C103804
+      4:
+        description: Agree
+        meaning: NCIT:C104478
+      5:
+        description: Strongly Agree
+        meaning: NCIT:C104475
+      -9999:
+        description: Missing
+        meaning: NCIT:C54031
+      -9876:
+        description: Not asked for in study
+
+  DegreeLikertMissing:
+    description: >-
+      A standard 5-point frequency Likert scale ranging from "Not At All" to "Very Much", including an option for 'Missing'.
+    permissible_values:
+      1:
+        description: Not At All
+        meaning: NCIT:C91213
+      2:
+        description: A Little
+        meaning: NCIT:C91214 
+      3:
+        description: Somewhat
+        meaning: NCIT:C91215 
+      4:
+        description: Much
+        meaning: NCIT:C126287
+      5:
+        description: Very Much
+        meaning: NCIT:C91217 
+      -9999:
+        description: Missing
+        meaning: NCIT:C54031
+      -9876:
+        description: Not asked for in study
+
+  AnxietyMissing:
+    description: >-
+      Enumeration for answering whether an individual would feel anxious in some scenario.
+    permissible_values:
+      1: 
+        description: Not anxious
+        meaning: NCIT:C111675
+      2:
+        description: Slightly anxious
+        meaning: NCIT:C120244
+      3:
+        description: Fairly anxious
+        meaning: NCIT:C111676
+      4:
+        description: Very anxious
+        meaning: NCIT:C120252
+      5:
+        description: Extremely anxious
+      -9999:
+        description: Missing
+        meaning: NCIT:C54031
+      -9876:
+        description: Not asked for in study
