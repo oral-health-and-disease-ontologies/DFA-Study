@@ -748,6 +748,9 @@
     {
       "name": "Participant_id",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/Participant_id",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "The participant's study ID.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/Participant_id",
@@ -761,6 +764,9 @@
     {
       "name": "Participant_id_original",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/Participant_id_original",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "The participant's original study ID.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/Participant_id_original",
@@ -774,6 +780,9 @@
     {
       "name": "Last_Dental_Visit",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/Last_Dental_Visit",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "How long has it been since you last visited a dentist or dental clinic for any reason?",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/Last_Dental_Visit",
@@ -787,6 +796,9 @@
     {
       "name": "Sex",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/Sex",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "The participant's sex",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/Sex",
@@ -800,6 +812,9 @@
     {
       "name": "Age",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/Age",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "The participant's age in years (0\u2013120). The value -9999 is used for missing values.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/Age",
@@ -824,6 +839,9 @@
     {
       "name": "agegrp",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/agegrp",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "The age group of the participant.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/agegrp",
@@ -835,11 +853,14 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "Ethnicity",
-      "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/Ethnicity",
+      "name": "Ethnicity_new",
+      "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/Ethnicity_new",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "The participant's ethnicity is Hispanic.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
-      "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/Ethnicity",
+      "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/Ethnicity_new",
       "owner": "Record",
       "domain_of": [
         "Record"
@@ -850,6 +871,9 @@
     {
       "name": "Race",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/Race",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "The participant's race. The value -9999 is used for missing values.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/Race",
@@ -863,6 +887,9 @@
     {
       "name": "dfs1",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs1",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -883,6 +910,9 @@
     {
       "name": "dfs2",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs2",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -903,6 +933,9 @@
     {
       "name": "dfs3",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs3",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -923,6 +956,9 @@
     {
       "name": "dfs4",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs4",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -943,6 +979,9 @@
     {
       "name": "dfs5",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs5",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -963,6 +1002,9 @@
     {
       "name": "dfs6",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs6",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -983,6 +1025,9 @@
     {
       "name": "dfs7",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs7",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1003,6 +1048,9 @@
     {
       "name": "dfs8",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs8",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1023,6 +1071,9 @@
     {
       "name": "dfs9",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs9",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1043,6 +1094,9 @@
     {
       "name": "dfs10",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs10",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1063,6 +1117,9 @@
     {
       "name": "dfs11",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs11",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1083,6 +1140,9 @@
     {
       "name": "dfs12",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs12",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1103,6 +1163,9 @@
     {
       "name": "dfs13",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs13",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1123,6 +1186,9 @@
     {
       "name": "dfs14",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs14",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1143,6 +1209,9 @@
     {
       "name": "dfs15",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs15",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1163,6 +1232,9 @@
     {
       "name": "dfs16",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs16",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1183,6 +1255,9 @@
     {
       "name": "dfs17",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs17",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1203,6 +1278,9 @@
     {
       "name": "dfs18",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs18",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1223,6 +1301,9 @@
     {
       "name": "dfs19",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs19",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1243,6 +1324,9 @@
     {
       "name": "dfs20",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs20",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1263,6 +1347,9 @@
     {
       "name": "idaf1a",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf1a",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1283,6 +1370,9 @@
     {
       "name": "idaf1b",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf1b",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1303,6 +1393,9 @@
     {
       "name": "idaf1c",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf1c",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1323,6 +1416,9 @@
     {
       "name": "idaf1d",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf1d",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1343,6 +1439,9 @@
     {
       "name": "idaf1e",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf1e",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1363,6 +1462,9 @@
     {
       "name": "idaf1f",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf1f",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1383,6 +1485,9 @@
     {
       "name": "idaf1g",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf1g",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1403,6 +1508,9 @@
     {
       "name": "idaf1h",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf1h",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1423,6 +1531,9 @@
     {
       "name": "idaf2a",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf2a",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1443,6 +1554,9 @@
     {
       "name": "idaf2b",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf2b",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1463,6 +1577,9 @@
     {
       "name": "idaf2c",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf2c",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1483,6 +1600,9 @@
     {
       "name": "idaf2d",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf2d",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1503,6 +1623,9 @@
     {
       "name": "idaf2e",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf2e",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1523,6 +1646,9 @@
     {
       "name": "idaf3a",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf3a",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1543,6 +1669,9 @@
     {
       "name": "idaf3b",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf3b",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1563,6 +1692,9 @@
     {
       "name": "idaf3c",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf3c",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1583,6 +1715,9 @@
     {
       "name": "idaf3d",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf3d",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1603,6 +1738,9 @@
     {
       "name": "idaf3e",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf3e",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1623,6 +1761,9 @@
     {
       "name": "idaf3f",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf3f",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1643,6 +1784,9 @@
     {
       "name": "idaf3g",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf3g",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1663,6 +1807,9 @@
     {
       "name": "idaf3h",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf3h",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1683,6 +1830,9 @@
     {
       "name": "idaf3i",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf3i",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1703,6 +1853,9 @@
     {
       "name": "idaf3j",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf3j",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1723,6 +1876,9 @@
     {
       "name": "mdas1",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/mdas1",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1743,6 +1899,9 @@
     {
       "name": "mdas2",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/mdas2",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1763,6 +1922,9 @@
     {
       "name": "mdas3",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/mdas3",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1783,6 +1945,9 @@
     {
       "name": "mdas4",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/mdas4",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1803,6 +1968,9 @@
     {
       "name": "mdas5",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/mdas5",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "annotations": [
         {
           "tag": "pun_as",
@@ -1823,6 +1991,9 @@
     {
       "name": "source",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/source",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "The source of the data.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/source",
@@ -1836,6 +2007,9 @@
     {
       "name": "count_missing",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/count_missing",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "The count of missing values in the record.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/count_missing",
@@ -1849,6 +2023,9 @@
     {
       "name": "dfs_flag",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs_flag",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "The participant have dfs value or not.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs_flag",
@@ -1862,6 +2039,9 @@
     {
       "name": "idaf_flag",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf_flag",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "The participant have idaf value or not.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/idaf_flag",
@@ -1875,6 +2055,9 @@
     {
       "name": "mdas_flag",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/mdas_flag",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "The participant have mdas value or not.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/mdas_flag",
@@ -1886,11 +2069,14 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "dfs_total",
-      "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs_total",
+      "name": "dfs_total_score",
+      "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs_total_score",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "Sum all 20 dfs items.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
-      "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs_total",
+      "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs_total_score",
       "owner": "Record",
       "domain_of": [
         "Record"
@@ -1901,6 +2087,9 @@
     {
       "name": "dfs_avoidance_fear",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs_avoidance_fear",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "Sum dfs items 1, 2, 8, 9, 10, 11, 12, 13.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs_avoidance_fear",
@@ -1914,6 +2103,9 @@
     {
       "name": "dfs_specific_stimuli_fear",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs_specific_stimuli_fear",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "Sum dfs items 14, 15, 16, 17, 18, 19.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs_specific_stimuli_fear",
@@ -1927,6 +2119,9 @@
     {
       "name": "dfs_physiological_arousal",
       "definition_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs_physiological_arousal",
+      "implements": [
+        "owl:DatatypeProperty"
+      ],
       "description": "Sum dfs items 3, 4, 5, 6, 7.",
       "from_schema": "https://w3id.org/OHD/DFA-study/superdataset",
       "slot_uri": "https://w3id.org/OHD/DFA-study/superdataset/dfs_physiological_arousal",
@@ -1985,7 +2180,7 @@
         "Sex",
         "Age",
         "agegrp",
-        "Ethnicity",
+        "Ethnicity_new",
         "Race",
         "dfs1",
         "dfs2",
@@ -2040,7 +2235,7 @@
         "dfs_flag",
         "idaf_flag",
         "mdas_flag",
-        "dfs_total",
+        "dfs_total_score",
         "dfs_avoidance_fear",
         "dfs_specific_stimuli_fear",
         "dfs_physiological_arousal"
@@ -2052,8 +2247,8 @@
   ],
   "metamodel_version": "1.12.0",
   "source_file": "superdataset.yaml",
-  "source_file_date": "2026-11-10T11:50:29",
-  "source_file_size": 21665,
+  "source_file_date": "2026-11-10T14:56:05",
+  "source_file_size": 24499,
   "@type": "SchemaDefinition",
   "@context": [
     "https://w3id.org/linkml/meta.context.jsonld",

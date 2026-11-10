@@ -102,12 +102,12 @@ superdataset:Age rdf:type owl:DatatypeProperty ;
                  skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
 
 
-###  https://w3id.org/OHD/DFA-study/superdataset/Ethnicity
-superdataset:Ethnicity rdf:type owl:DatatypeProperty ;
-                       rdfs:range xsd:integer ;
-                       rdfs:label "Ethnicity" ;
-                       skos:definition "The participant's ethnicity is Hispanic." ;
-                       skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
+###  https://w3id.org/OHD/DFA-study/superdataset/Ethnicity_new
+superdataset:Ethnicity_new rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:integer ;
+                           rdfs:label "Ethnicity_new" ;
+                           skos:definition "The participant's ethnicity is Hispanic." ;
+                           skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/Last_Dental_Visit
@@ -298,12 +298,12 @@ superdataset:dfs_specific_stimuli_fear rdf:type owl:DatatypeProperty ;
                                        skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
 
 
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs_total
-superdataset:dfs_total rdf:type owl:DatatypeProperty ;
-                       rdfs:range xsd:integer ;
-                       rdfs:label "dfs_total" ;
-                       skos:definition "Sum all 20 dfs items." ;
-                       skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs_total_score
+superdataset:dfs_total_score rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:integer ;
+                             rdfs:label "dfs_total_score" ;
+                             skos:definition "Sum all 20 dfs items." ;
+                             skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/idaf1a
@@ -831,7 +831,7 @@ superdataset:Record rdf:type owl:Class ;
                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:Ethnicity ;
+                                      owl:onProperty superdataset:Ethnicity_new ;
                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
@@ -959,7 +959,7 @@ superdataset:Record rdf:type owl:Class ;
                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:dfs_total ;
+                                      owl:onProperty superdataset:dfs_total_score ;
                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;

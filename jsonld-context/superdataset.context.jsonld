@@ -215,17 +215,17 @@
          "@type": "xsd:integer",
          "@id": "dfs_specific_stimuli_fear"
       },
-      "dfs_total": {
+      "dfs_total_score": {
          "@type": "xsd:integer",
-         "@id": "dfs_total"
+         "@id": "dfs_total_score"
       },
-      "Ethnicity": {
+      "Ethnicity_new": {
          "@context": {
             "text": "skos:notation",
             "description": "skos:prefLabel",
             "meaning": "@id"
          },
-         "@id": "Ethnicity"
+         "@id": "Ethnicity_new"
       },
       "idaf1a": {
          "@context": {

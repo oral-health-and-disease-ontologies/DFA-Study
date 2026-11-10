@@ -38,7 +38,7 @@ classes:
       - Sex
       - Age
       - agegrp
-      - Ethnicity
+      - Ethnicity_new
       - Race
       - dfs1
       - dfs2
@@ -93,7 +93,7 @@ classes:
       - dfs_flag
       - idaf_flag
       - mdas_flag
-      - dfs_total
+      - dfs_total_score
       - dfs_avoidance_fear
       - dfs_specific_stimuli_fear
       - dfs_physiological_arousal
@@ -146,7 +146,7 @@ slots:
     implements:
       - owl:DatatypeProperty
 
-  Ethnicity:
+  Ethnicity_new:
     description: >-
       The participant's ethnicity is Hispanic.
     range: NoYesMissing
@@ -627,7 +627,7 @@ slots:
     implements:
       - owl:DatatypeProperty
 
-  dfs_total:
+  dfs_total_score:
     description: >-
       Sum all 20 dfs items.
     range: integer
