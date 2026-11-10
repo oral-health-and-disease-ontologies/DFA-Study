@@ -699,10 +699,6 @@ superdataset:Dataset rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty superdataset:records ;
                                        owl:allValuesFrom superdataset:Record
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty superdataset:records ;
-                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                      ] ;
                      rdfs:label "Dataset" ;
                      skos:definition "The Superdataset dataset." ;

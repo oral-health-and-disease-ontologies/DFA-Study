@@ -27,6 +27,8 @@ classes:
     attributes:
       records:
         range: Record
+        multivalued: true
+        inlined_as_list: true
 
   Record:
     description: >-

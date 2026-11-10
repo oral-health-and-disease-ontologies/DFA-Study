@@ -30,7 +30,18 @@
         },
         "Dataset": {
             "additionalProperties": false,
-            "description": "The Superdataset dataset",
+            "description": "The Superdataset dataset.",
+            "properties": {
+                "records": {
+                    "items": {
+                        "$ref": "#/$defs/Record"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
             "title": "Dataset",
             "type": "object"
         },
@@ -111,21 +122,25 @@
         },
         "Record": {
             "additionalProperties": false,
-            "description": "A record in the Superdataset dataset",
+            "description": "A record in the Superdataset dataset.",
             "properties": {
                 "Age": {
                     "anyOf": [
-                        {},
                         {
-                            "$ref": "#/$defs/ValueMissing"
+                            "maximum": 120,
+                            "minimum": 0
+                        },
+                        {
+                            "const": -9999
                         },
                         {
                             "type": "null"
                         }
                     ],
-                    "description": "The participant's age in years."
+                    "description": "The participant's age in years (0\u2013120). The value -9999 is used for missing values.",
+                    "type": "integer"
                 },
-                "Ethnicity": {
+                "Ethnicity_new": {
                     "anyOf": [
                         {
                             "$ref": "#/$defs/NoYesMissing"
@@ -445,7 +460,7 @@
                         "null"
                     ]
                 },
-                "dfs_total": {
+                "dfs_total_score": {
                     "description": "Sum all 20 dfs items.",
                     "type": [
                         "integer",
@@ -840,8 +855,20 @@
     },
     "$id": "https://w3id.org/OHD/DFA-study/superdataset",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "additionalProperties": true,
+    "additionalProperties": false,
+    "description": "The Superdataset dataset.",
     "metamodel_version": "1.12.0",
+    "properties": {
+        "records": {
+            "items": {
+                "$ref": "#/$defs/Record"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        }
+    },
     "title": "superdataset",
     "type": "object",
     "version": null

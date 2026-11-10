@@ -2142,6 +2142,7 @@
         "Dataset"
       ],
       "range": "Record",
+      "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -2161,6 +2162,8 @@
         {
           "name": "records",
           "range": "Record",
+          "multivalued": true,
+          "inlined_as_list": true,
           "@type": "SlotDefinition"
         }
       ],
@@ -2247,8 +2250,8 @@
   ],
   "metamodel_version": "1.12.0",
   "source_file": "superdataset.yaml",
-  "source_file_date": "2026-11-10T14:56:05",
-  "source_file_size": 24499,
+  "source_file_date": "2026-11-10T16:55:48",
+  "source_file_size": 24555,
   "@type": "SchemaDefinition",
   "@context": [
     "https://w3id.org/linkml/meta.context.jsonld",
