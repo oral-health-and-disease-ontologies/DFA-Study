@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Extract field mappings from the jsonld file and write to a CSV file."""
+
 import json
 from typing import List
 from git_root import git_root

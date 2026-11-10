@@ -118,10 +118,16 @@ idaf-owl: $(IDAF_SCHEMA)
 superdataset-jsonschema: $(SUPERDATASET_SCHEMA)
 	gen-json-schema $< > jsonschema/superdataset.json
 
+superdataset-jsonld: $(SUPERDATASET_SCHEMA)
+	gen-jsonld $< > jsonld/superdataset.jsonld
+
 superdataset-owl: $(SUPERDATASET_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/superdataset.tmp.ttl
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl 
 	robot merge -i temp/superdataset.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/superdataset.ttl
+
+field-mappings:
+	python src/scripts/field-mappings-info.py
 
 ## remove products
 clean-products:
