@@ -3,13 +3,26 @@
 """Extract field mappings from the jsonld file and write to a CSV file."""
 
 import json
+import click
 from typing import List
 from git_root import git_root
 
-def main():
-    input = git_root('jsonld/trait-value.jsonld')
-    output = git_root('field-mappings/field-mappings.csv')
-
+CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
+@click.command(context_settings=CONTEXT_SETTINGS)
+@click.option(
+    '-i', '--input', 
+    help="input jsonld file", 
+    default=git_root('jsonld/superdataset.jsonld'),
+    show_default=True,
+    required=False
+)
+@click.option('-o', '--output', 
+    help="output csv file", 
+    default=git_root('field-mappings/superdataset-field-mappings.csv'),
+    show_default=True,
+    required=False
+)
+def cli(input, output):
     with open(input) as f:
         schema_dict  = json.load(f)
 
@@ -29,4 +42,4 @@ def main():
             
 
 if __name__ == "__main__":
-    main()
+    cli()
