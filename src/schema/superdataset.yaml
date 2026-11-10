@@ -4,7 +4,7 @@ title: DFA Superdataset Schema
 license: https://mit-license.org/
 
 description: >-
-  LinkML schema for defining data elements used in the DFS Superdataset.
+  LinkML schema for defining data elements used in the DFA Superdataset.
 
 prefixes:
   linkml: https://w3id.org/linkml/
