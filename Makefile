@@ -121,6 +121,9 @@ superdataset-jsonschema: $(SUPERDATASET_SCHEMA)
 superdataset-jsonld: $(SUPERDATASET_SCHEMA)
 	gen-jsonld $< > jsonld/superdataset.jsonld
 
+superdataset-jsonld-context: $(SUPERDATASET_SCHEMA)
+	gen-jsonld-context $< > jsonld-context/superdataset.context.jsonld
+
 superdataset-owl: $(SUPERDATASET_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/superdataset.tmp.ttl
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl 
