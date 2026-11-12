@@ -27,6 +27,26 @@ def get_columns_from_schema(schema:str) -> List:
     return list(view.all_slots(imports=False).keys())
 
 
+def get_string_columns_from_schema(schema:str) -> List:
+    """returns a list of the slots in the schema whose range is string
+
+    These columns are read as text so that values like IDs are not
+    converted to numbers by pandas (e.g., an ID of 123 should be "123").
+
+    Args:
+        schema (str): path to the linkml schema file
+
+    Returns:
+        List: a list of the slots in the schema with range string
+    """
+    view = SchemaView(schema) # load schema
+    default_range = view.schema.default_range or "string"
+    return [
+        name for name, slot in view.all_slots(imports=False).items()
+        if (slot.range or default_range) == "string"
+    ]
+
+
 def dataframe_row_dict_generator(df):
     """
     A generator that yields each row of a Pandas DataFrame as a dictionary.
@@ -68,7 +88,7 @@ def df_to_rdf_multi_process(
         str: nquads/ttl representation of data
     """
     context_dict = json.loads(_get_context(schema)) # generate jsonld context
-    del context_dict["comments"] # comments section from context dict
+    context_dict.pop("comments", None) # remove comments section from context dict (if present)
     
     # use partial function to set the context and chunksize the same for all records
     partial_process_rdf_chunk = partial(
@@ -108,7 +128,7 @@ def df_to_rdf(df: pd.DataFrame,
         str: nquads/ttl representation of data
     """
     context_dict = json.loads(_get_context(schema)) # generate jsonld context
-    del context_dict["comments"] # comments section from context dict
+    context_dict.pop("comments", None) # remove comments section from context dict (if present)
     
     # create records (list of dicts) from dataframe and filter out null values
     records = [
@@ -146,18 +166,23 @@ def main(
     """
     # get the columns from the slots in the schema
     # this ensures that the data will only come from the slot in the schema
-    cols = get_columns_from_schema(schema)
+    # (slots without a matching column, e.g. container slots like 'records', are ignored)
+    cols = set(get_columns_from_schema(schema))
+    usecols = lambda c: c in cols
+
+    # read string slots as text (e.g., keeps IDs from being converted to numbers)
+    dtype = {c: str for c in get_string_columns_from_schema(schema)}
 
     # file extension of input file
     file_ext = os.path.splitext(input)[-1]
 
     # load dataframe
     if file_ext == '.xlsx':
-        df = pd.read_excel(input, usecols=cols)
+        df = pd.read_excel(input, usecols=usecols, dtype=dtype)
     elif file_ext == '.tsv':
-        df = pd.read_table(input, usecols=cols)
+        df = pd.read_table(input, usecols=usecols, dtype=dtype)
     elif file_ext == '.csv':
-        df = pd.read_csv(input, usecols=cols)
+        df = pd.read_csv(input, usecols=usecols, dtype=dtype)
     else:
         raise Exception("Input file extension not recognized.")
 

@@ -105,7 +105,7 @@ slots:
   Participant_id:
     description: >-
       The participant's study ID.
-    range: integer
+    range: string
     implements:
       - owl:DatatypeProperty
 
@@ -126,7 +126,7 @@ slots:
   Sex:
     description: >-
       The participant's sex
-    range: SexSuperdataset 
+    range: SexSuperdataset
     implements:
       - owl:DatatypeProperty
 
@@ -720,6 +720,8 @@ enums:
         description: >-
           Missing
         meaning: NCIT:C54031
+      -9876:
+        description: Not asked for in study
 
   NoYes:
     description: >-
