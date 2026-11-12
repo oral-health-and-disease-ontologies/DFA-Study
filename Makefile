@@ -1,5 +1,7 @@
 DOCSDIR = docs
 SRC = src
+DATA_DIR = notebooks/DFA-data
+SUPERDATASET_DATA = $(DATA_DIR)/merged_dfa_data_cleaned_2026_09_30.csv
 
 COHRA1_SCHEMA_DIR = $(SRC)/schema
 COHRA1_SCHEMA = $(COHRA1_SCHEMA_DIR)/cohra1.yaml
@@ -134,6 +136,25 @@ superdataset-owl: $(SUPERDATASET_SCHEMA)
 	src/scripts/sparql-update.py temp/superdataset.tmp.ttl src/sparql/enum-ranges-to-xsd.ru > temp/superdataset.dl.tmp.ttl
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl
 	robot merge -i temp/superdataset.dl.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/superdataset.ttl
+
+superdataset-records.ttl: $(SUPERDATASET_DATA) $(SUPERDATASET_SCHEMA) owl/superdataset.ttl
+# convert superdataset records from spreadsheet to RDF for use in Jupyter notebooks
+	python src/scripts/spreadsheet-to-rdf.py \
+		-i $< \
+		-s $(word 2,$^) \
+		-o $(DATA_DIR)/$@
+
+superdataset-puns.ttl: $(SUPERDATASET_SCHEMA)
+# use pun annotations in the LinkML schema to create punning statements for use in Jupyter notebooks
+	python src/scripts/pun-annotations-to-ttl.py $< > $(DATA_DIR)/$@ 
+
+superdataset-data.ttl: owl/superdataset.ttl superdataset-puns.ttl superdataset-records.ttl
+# merge superdataset records and punning statements for use in Jupyter notebooks
+	robot merge \
+		-i $< \
+		-i $(DATA_DIR)/$(word 2,$^) \
+		-i $(DATA_DIR)/$(word 3,$^) \
+		-o $(DATA_DIR)/$@
 
 field-mappings:
 	python src/scripts/field-mappings-info.py

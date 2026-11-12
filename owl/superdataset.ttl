@@ -120,7 +120,7 @@ superdataset:Last_Dental_Visit rdf:type owl:DatatypeProperty ;
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/Participant_id
 superdataset:Participant_id rdf:type owl:DatatypeProperty ;
-                            rdfs:range xsd:integer ;
+                            rdfs:range xsd:string ;
                             rdfs:label "Participant_id" ;
                             skos:definition "The participant's study ID." ;
                             skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
@@ -775,7 +775,8 @@ superdataset:NoYesMissing rdf:type owl:Class ;
                           rdfs:label "NoYesMissing" ;
                           skos:definition "An enumeration for yes/no responses with a missing option." ;
                           skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                          linkml:permissible_values "-9999" ,
+                          linkml:permissible_values "-9876" ,
+                                                    "-9999" ,
                                                     "0" ,
                                                     "1" .
 
