@@ -4,7 +4,7 @@ title: DFA Superdataset Schema
 license: https://mit-license.org/
 
 description: >-
-  LinkML schema for defining data elements used in the DFS Superdataset.
+  LinkML schema for defining data elements used in the DFA Superdataset.
 
 prefixes:
   linkml: https://w3id.org/linkml/
@@ -27,6 +27,8 @@ classes:
     attributes:
       records:
         range: Record
+        multivalued: true
+        inlined_as_list: true
 
   Record:
     description: >-
@@ -38,7 +40,7 @@ classes:
       - Sex
       - Age
       - agegrp
-      - Ethnicity
+      - Ethnicity_new
       - Race
       - dfs1
       - dfs2
@@ -93,7 +95,7 @@ classes:
       - dfs_flag
       - idaf_flag
       - mdas_flag
-      - dfs_total
+      - dfs_total_score
       - dfs_avoidance_fear
       - dfs_specific_stimuli_fear
       - dfs_physiological_arousal
@@ -104,26 +106,36 @@ slots:
     description: >-
       The participant's study ID.
     range: integer
+    implements:
+      - owl:DatatypeProperty
 
   Participant_id_original:
     description: >-
       The participant's original study ID.
     range: string
+    implements:
+      - owl:DatatypeProperty
 
   Last_Dental_Visit:
     description: >-
       How long has it been since you last visited a dentist or dental clinic for any reason?
     range: Years1to5
+    implements:
+      - owl:DatatypeProperty
 
   Sex:
     description: >-
       The participant's sex
-    range: SexSuperdataset
+    range: SexSuperdataset 
+    implements:
+      - owl:DatatypeProperty
 
   Age:
     description: >-
       The participant's age in years (0–120). The value -9999 is used for missing values.
     range: integer
+    implements:
+      - owl:DatatypeProperty
     any_of:
       - minimum_value: 0
         maximum_value: 120
@@ -133,16 +145,22 @@ slots:
     description: >-
       The age group of the participant.
     range: AgeGroup
+    implements:
+      - owl:DatatypeProperty
 
-  Ethnicity:
+  Ethnicity_new:
     description: >-
       The participant's ethnicity is Hispanic.
     range: NoYesMissing
+    implements:
+      - owl:DatatypeProperty
 
   Race:
     description: >-
       The participant's race. The value -9999 is used for missing values.
     range: integer
+    implements:
+      - owl:DatatypeProperty
 
   dfs1:
     description: >-
@@ -150,6 +168,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000421 # DFS 01
     range: FrequencyMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs2:
     description: >-
@@ -157,6 +177,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000422 # DFS 02
     range: FrequencyMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs3:
     description: >-
@@ -164,6 +186,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000423 # DFS 03
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
 
   dfs4:
     description: >-
@@ -171,6 +195,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000424 # DFS 04
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs5:
     description: >-
@@ -178,6 +204,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000426 # DFS 05
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs6:
     description: >-
@@ -185,6 +213,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000427 # DFS 06
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs7:
     description: >-
@@ -192,6 +222,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000428 # DFS 07
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs8:
     description: >-
@@ -199,6 +231,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000429 # DFS 08
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs9:
     description: >-
@@ -206,6 +240,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000430 # DFS 09
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs10:
     description: >-
@@ -213,6 +249,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000431 # DFS 10
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs11:
     description: >-
@@ -220,6 +258,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000432 # DFS 11
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs12:
     description: >-
@@ -227,6 +267,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000433 # DFS 12
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs13:
     description: >-
@@ -234,6 +276,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000434 # DFS 13
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs14:
     description: >-
@@ -241,6 +285,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000435 # DFS 14
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs15:
     description: >-
@@ -248,6 +294,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000436 # DFS 15
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs16:
     description: >-
@@ -255,6 +303,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000437 # DFS 16
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs17:
     description: >-
@@ -262,6 +312,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000438 # DFS 17
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs18:
     description: >-
@@ -269,6 +321,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000439 # DFS 18
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs19:
     description: >-
@@ -276,6 +330,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000440 # DFS 19
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   dfs20:
     description: >-
@@ -283,6 +339,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000441 # DFS 20
     range: LikertAmountMissing
+    implements:
+      - owl:DatatypeProperty
     
   idaf1a:
     description: >-
@@ -290,6 +348,8 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008055 # IDAF 1A
     range: LikertMissing
+    implements:
+      - owl:DatatypeProperty
     
   idaf1b:
     description: >-
@@ -297,233 +357,305 @@ slots:
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008056 # IDAF 1B
     range: LikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf1c:
     description: >-
       (1c) I get nervous or edgy about upcoming dental visits.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008057 # IDAF 1C
     range: LikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf1d:
     description: >-
       (1d) I think that something really bad would happen to me if I were to visit a dentist.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008058 # IDAF 1D
     range: LikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf1e:
     description: >-
       (1e) I feel afraid or fearful when visiting the dentist.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008059 # IDAF 1E
     range: LikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf1f:
     description: >-
       (1f) My heart beats faster when I go to the dentist.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008060 # IDAF 1F
     range: LikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf1g:
     description: >-
       (1g) I delay making appointments to go to the dentist.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008061 # IDAF 1G
     range: LikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf1h:
     description: >-
       (1h) I often think about all the things that might go wrong prior to going to the dentist.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008062 # IDAF 1H
     range: LikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf2a:
     description: >-
       (2a) Going to the dentist is actively avoided or else endured with intense fear or anxiety
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008063 # IDAF 2A
     range: NoYesMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf2b:
     description: >-
       (2b) My fear of going to the dentist has been present for at least 6 month
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008064 # IDAF 2B
     range: NoYesMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf2c:
     description: >-
       (2c) My fear, anxiety or avoidance of going to the dentist significantly affects my life in some way (dental pain, avoiding eating some foods, embarrassed or self-conscious about appearance of teeth or mouth, etc.)
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008065 # IDAF 2C
     range: NoYesMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf2d:
     description: >-
       (2d) I am afraid of going to the dentist because I am concerned I may have a panic attack (abrupt fear with sweating, pounding liteart, fear of dying or losing control, chest pain etc.)
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008066 # IDAF 2D
     range: NoYesMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf2e:
     description: >-
       (2e) I am afraid of going to the dentist because I am generally highly self-conscious or concerned about being watched or judged in social situations.
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008067 # IDAF 2E
     range: NoYesMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf3a:
     description: >-
       (3a) Painful or uncomfortable procedures 
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008068 # IDAF 3A
     range: DegreeLikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf3b:
     description: >-
       (3b)  Feeling embarrassed or ashamed  
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008069 # IDAF 3B
     range: DegreeLikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf3c:
     description: >-
       (3c)  Not being in control of what is happening 
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008070 # IDAF 3C
     range: DegreeLikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf3d:
     description: >-
       (3d)  Feeling sick, queasy or disgusted  
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008071 # IDAF 3D
     range: DegreeLikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf3e:
     description: >-
       (3e)  Numbness caused by the anesthetic 
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008072 # IDAF 3E
     range: DegreeLikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf3f:
     description: >-
       (3f)  Not knowing what the dentist is going to do  
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008073 # IDAF 3F
     range: DegreeLikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf3g:
     description: >-
       (3g)  The cost of dental treatment 
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008074 # IDAF 3G
     range: DegreeLikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf3h:
     description: >-
       (3h) Needles or injections 
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008075 # IDAF 3H
     range: DegreeLikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf3i:
     description: >-
       (3i)  Gagging or choking  
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008076 # IDAF 3I
     range: DegreeLikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   idaf3j:
     description: >-
       (3j)  Having an unsympathetic or unkind dentist  
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0008077 # IDAF 3J
     range: DegreeLikertMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   mdas1:
     description: >-
       If you went to the dentist for treatment tomorrow [How would you feel in the following scenarios?]
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000446 # MDAS 1
     range: AnxietyMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   mdas2:
     description: >-
       If you were sitting in the waiting room (waiting for treatment) [How would you feel in the following scenarios?]
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000447 # MDAS 2
     range: AnxietyMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   mdas3:
     description: >-
       If you were about to have a tooth drilled [How would you feel in the following scenarios?]
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000448 # MDAS 3
     range: AnxietyMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   mdas4:
     description: >-
       If you were about to have your teeth scaled and polished [How would you feel in the following scenarios?]
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000449 # MDAS 4
     range: AnxietyMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   mdas5:
     description: >-
       If you were about to have a local anesthetic injection in your gum above an upper back tooth [How would you feel in the following scenarios?]
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OHD:0000450 # MDAS 5
     range: AnxietyMissing
-    
+    implements:
+      - owl:DatatypeProperty
+
   source:
     description: >-
       The source of the data.
     range: StudySource
-  
+    implements:
+      - owl:DatatypeProperty
+
   count_missing:
     description: >-
       The count of missing values in the record.
     range: integer
+    implements:
+      - owl:DatatypeProperty
 
   dfs_flag:
     description: >-
       The participant have dfs value or not.
     range: integer
-  
+    implements:
+      - owl:DatatypeProperty
+
   idaf_flag:
     description: >-
       The participant have idaf value or not.
     range: integer
+    implements:
+      - owl:DatatypeProperty
 
   mdas_flag:
     description: >-
       The participant have mdas value or not.
     range: integer
+    implements:
+      - owl:DatatypeProperty
 
-  dfs_total:
+  dfs_total_score:
     description: >-
       Sum all 20 dfs items.
     range: integer
+    implements:
+      - owl:DatatypeProperty
 
   dfs_avoidance_fear:
     description: >-
       Sum dfs items 1, 2, 8, 9, 10, 11, 12, 13.
     range: integer
+    implements:
+      - owl:DatatypeProperty
 
   dfs_specific_stimuli_fear:
     description: >-
       Sum dfs items 14, 15, 16, 17, 18, 19.
     range: integer
+    implements:
+      - owl:DatatypeProperty
 
   dfs_physiological_arousal:
     description: >-
       Sum dfs items 3, 4, 5, 6, 7.
     range: integer
+    implements:
+      - owl:DatatypeProperty
 
 enums:
   Years1to5:

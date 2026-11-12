@@ -41,7 +41,12 @@ SUPERDATASET_SCHEMA = $(SUPERDATASET_SCHEMA_DIR)/superdataset.yaml
 SUPERDATASET_DOCS_DIR = $(DOCSDIR)/superdataset
 
 GENDOC_OPTS = --verbose --no-render-imports --no-mergeimports --truncate-descriptions False 
-GENOWL_OPTS =  --skip-vacuous-min-zero-cardinality-axioms --skip-vacuous-local-range-axioms --consolidate-cardinality-axioms
+GENOWL_OPTS =\
+	--log_level ERROR \
+	--skip-vacuous-min-zero-cardinality-axioms \
+	--skip-vacuous-local-range-axioms \
+	--consolidate-cardinality-axioms \
+	--default-permissible-value-type rdfs:Literal
 
 # --- linkml products --- #
 cohra1-jsonschema: $(COHRA1_SCHEMA)
@@ -118,10 +123,20 @@ idaf-owl: $(IDAF_SCHEMA)
 superdataset-jsonschema: $(SUPERDATASET_SCHEMA)
 	gen-json-schema $< > jsonschema/superdataset.json
 
+superdataset-jsonld: $(SUPERDATASET_SCHEMA)
+	gen-jsonld $< > jsonld/superdataset.jsonld
+
+superdataset-jsonld-context: $(SUPERDATASET_SCHEMA)
+	gen-jsonld-context $< > jsonld-context/superdataset.context.jsonld
+
 superdataset-owl: $(SUPERDATASET_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/superdataset.tmp.ttl
-	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl 
-	robot merge -i temp/superdataset.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/superdataset.ttl
+	src/scripts/sparql-update.py temp/superdataset.tmp.ttl src/sparql/enum-ranges-to-xsd.ru > temp/superdataset.dl.tmp.ttl
+	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl
+	robot merge -i temp/superdataset.dl.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/superdataset.ttl
+
+field-mappings:
+	python src/scripts/field-mappings-info.py
 
 ## remove products
 clean-products:

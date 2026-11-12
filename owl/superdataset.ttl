@@ -3,7 +3,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix linkml: <https://w3id.org/linkml/> .
@@ -15,7 +14,7 @@
                                                        dcterms:license "https://mit-license.org/" ;
                                                        dcterms:title "DFA Superdataset Schema" ;
                                                        rdfs:label "superdataset" ;
-                                                       skos:definition "LinkML schema for defining data elements used in the DFS Superdataset." .
+                                                       skos:definition "LinkML schema for defining data elements used in the DFA Superdataset." .
 
 #################################################################
 #    Annotation properties
@@ -49,290 +48,10 @@ linkml:permissible_values rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/OHD/DFA-study/superdataset/Ethnicity
-superdataset:Ethnicity rdf:type owl:ObjectProperty ;
-                       rdfs:range superdataset:NoYesMissing ;
-                       rdfs:label "Ethnicity" ;
-                       skos:definition "The participant's ethnicity is Hispanic." ;
-                       skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/Last_Dental_Visit
-superdataset:Last_Dental_Visit rdf:type owl:ObjectProperty ;
-                               rdfs:range superdataset:Years1to5 ;
-                               rdfs:label "Last_Dental_Visit" ;
-                               skos:definition "How long has it been since you last visited a dentist or dental clinic for any reason?" ;
-                               skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/Sex
-superdataset:Sex rdf:type owl:ObjectProperty ;
-                 rdfs:range superdataset:SexSuperdataset ;
-                 rdfs:label "Sex" ;
-                 skos:definition "The participant's sex" ;
-                 skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/agegrp
-superdataset:agegrp rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:AgeGroup ;
-                    rdfs:label "agegrp" ;
-                    skos:definition "The age group of the participant." ;
-                    skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs1
-superdataset:dfs1 rdf:type owl:ObjectProperty ;
-                  rdfs:range superdataset:FrequencyMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs10
-superdataset:dfs10 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs11
-superdataset:dfs11 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs12
-superdataset:dfs12 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs13
-superdataset:dfs13 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs14
-superdataset:dfs14 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs15
-superdataset:dfs15 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs16
-superdataset:dfs16 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs17
-superdataset:dfs17 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs18
-superdataset:dfs18 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs19
-superdataset:dfs19 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs2
-superdataset:dfs2 rdf:type owl:ObjectProperty ;
-                  rdfs:range superdataset:FrequencyMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs20
-superdataset:dfs20 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs3
-superdataset:dfs3 rdf:type owl:ObjectProperty ;
-                  rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs4
-superdataset:dfs4 rdf:type owl:ObjectProperty ;
-                  rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs5
-superdataset:dfs5 rdf:type owl:ObjectProperty ;
-                  rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs6
-superdataset:dfs6 rdf:type owl:ObjectProperty ;
-                  rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs7
-superdataset:dfs7 rdf:type owl:ObjectProperty ;
-                  rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs8
-superdataset:dfs8 rdf:type owl:ObjectProperty ;
-                  rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs9
-superdataset:dfs9 rdf:type owl:ObjectProperty ;
-                  rdfs:range superdataset:LikertAmountMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf1a
-superdataset:idaf1a rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:LikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf1b
-superdataset:idaf1b rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:LikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf1c
-superdataset:idaf1c rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:LikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf1d
-superdataset:idaf1d rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:LikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf1e
-superdataset:idaf1e rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:LikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf1f
-superdataset:idaf1f rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:LikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf1g
-superdataset:idaf1g rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:LikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf1h
-superdataset:idaf1h rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:LikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf2a
-superdataset:idaf2a rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:NoYesMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf2b
-superdataset:idaf2b rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:NoYesMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf2c
-superdataset:idaf2c rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:NoYesMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf2d
-superdataset:idaf2d rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:NoYesMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf2e
-superdataset:idaf2e rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:NoYesMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf3a
-superdataset:idaf3a rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:DegreeLikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf3b
-superdataset:idaf3b rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:DegreeLikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf3c
-superdataset:idaf3c rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:DegreeLikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf3d
-superdataset:idaf3d rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:DegreeLikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf3e
-superdataset:idaf3e rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:DegreeLikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf3f
-superdataset:idaf3f rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:DegreeLikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf3g
-superdataset:idaf3g rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:DegreeLikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf3h
-superdataset:idaf3h rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:DegreeLikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf3i
-superdataset:idaf3i rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:DegreeLikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/idaf3j
-superdataset:idaf3j rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:DegreeLikertMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/mdas1
-superdataset:mdas1 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:AnxietyMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/mdas2
-superdataset:mdas2 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:AnxietyMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/mdas3
-superdataset:mdas3 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:AnxietyMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/mdas4
-superdataset:mdas4 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:AnxietyMissing .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/mdas5
-superdataset:mdas5 rdf:type owl:ObjectProperty ;
-                   rdfs:range superdataset:AnxietyMissing .
-
-
 ###  https://w3id.org/OHD/DFA-study/superdataset/records
 superdataset:records rdf:type owl:ObjectProperty ;
                      rdfs:label "records" ;
                      skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/source
-superdataset:source rdf:type owl:ObjectProperty ;
-                    rdfs:range superdataset:StudySource ;
-                    rdfs:label "source" ;
-                    skos:definition "The source of the data." ;
-                    skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
 
 
 #################################################################
@@ -383,6 +102,22 @@ superdataset:Age rdf:type owl:DatatypeProperty ;
                  skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
 
 
+###  https://w3id.org/OHD/DFA-study/superdataset/Ethnicity_new
+superdataset:Ethnicity_new rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:integer ;
+                           rdfs:label "Ethnicity_new" ;
+                           skos:definition "The participant's ethnicity is Hispanic." ;
+                           skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/Last_Dental_Visit
+superdataset:Last_Dental_Visit rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:integer ;
+                               rdfs:label "Last_Dental_Visit" ;
+                               skos:definition "How long has it been since you last visited a dentist or dental clinic for any reason?" ;
+                               skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
+
+
 ###  https://w3id.org/OHD/DFA-study/superdataset/Participant_id
 superdataset:Participant_id rdf:type owl:DatatypeProperty ;
                             rdfs:range xsd:integer ;
@@ -407,12 +142,128 @@ superdataset:Race rdf:type owl:DatatypeProperty ;
                   skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
 
 
+###  https://w3id.org/OHD/DFA-study/superdataset/Sex
+superdataset:Sex rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:integer ;
+                 rdfs:label "Sex" ;
+                 skos:definition "The participant's sex" ;
+                 skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/agegrp
+superdataset:agegrp rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer ;
+                    rdfs:label "agegrp" ;
+                    skos:definition "The age group of the participant." ;
+                    skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
+
+
 ###  https://w3id.org/OHD/DFA-study/superdataset/count_missing
 superdataset:count_missing rdf:type owl:DatatypeProperty ;
                            rdfs:range xsd:integer ;
                            rdfs:label "count_missing" ;
                            skos:definition "The count of missing values in the record." ;
                            skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs1
+superdataset:dfs1 rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs10
+superdataset:dfs10 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs11
+superdataset:dfs11 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs12
+superdataset:dfs12 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs13
+superdataset:dfs13 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs14
+superdataset:dfs14 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs15
+superdataset:dfs15 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs16
+superdataset:dfs16 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs17
+superdataset:dfs17 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs18
+superdataset:dfs18 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs19
+superdataset:dfs19 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs2
+superdataset:dfs2 rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs20
+superdataset:dfs20 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs3
+superdataset:dfs3 rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs4
+superdataset:dfs4 rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs5
+superdataset:dfs5 rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs6
+superdataset:dfs6 rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs7
+superdataset:dfs7 rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs8
+superdataset:dfs8 rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs9
+superdataset:dfs9 rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/dfs_avoidance_fear
@@ -447,12 +298,127 @@ superdataset:dfs_specific_stimuli_fear rdf:type owl:DatatypeProperty ;
                                        skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
 
 
-###  https://w3id.org/OHD/DFA-study/superdataset/dfs_total
-superdataset:dfs_total rdf:type owl:DatatypeProperty ;
-                       rdfs:range xsd:integer ;
-                       rdfs:label "dfs_total" ;
-                       skos:definition "Sum all 20 dfs items." ;
-                       skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
+###  https://w3id.org/OHD/DFA-study/superdataset/dfs_total_score
+superdataset:dfs_total_score rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:integer ;
+                             rdfs:label "dfs_total_score" ;
+                             skos:definition "Sum all 20 dfs items." ;
+                             skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf1a
+superdataset:idaf1a rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf1b
+superdataset:idaf1b rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf1c
+superdataset:idaf1c rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf1d
+superdataset:idaf1d rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf1e
+superdataset:idaf1e rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf1f
+superdataset:idaf1f rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf1g
+superdataset:idaf1g rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf1h
+superdataset:idaf1h rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf2a
+superdataset:idaf2a rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf2b
+superdataset:idaf2b rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf2c
+superdataset:idaf2c rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf2d
+superdataset:idaf2d rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf2e
+superdataset:idaf2e rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf3a
+superdataset:idaf3a rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf3b
+superdataset:idaf3b rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf3c
+superdataset:idaf3c rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf3d
+superdataset:idaf3d rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf3e
+superdataset:idaf3e rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf3f
+superdataset:idaf3f rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf3g
+superdataset:idaf3g rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf3h
+superdataset:idaf3h rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf3i
+superdataset:idaf3i rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/idaf3j
+superdataset:idaf3j rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/idaf_flag
@@ -463,6 +429,31 @@ superdataset:idaf_flag rdf:type owl:DatatypeProperty ;
                        skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
 
 
+###  https://w3id.org/OHD/DFA-study/superdataset/mdas1
+superdataset:mdas1 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/mdas2
+superdataset:mdas2 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/mdas3
+superdataset:mdas3 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/mdas4
+superdataset:mdas4 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/OHD/DFA-study/superdataset/mdas5
+superdataset:mdas5 rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
 ###  https://w3id.org/OHD/DFA-study/superdataset/mdas_flag
 superdataset:mdas_flag rdf:type owl:DatatypeProperty ;
                        rdfs:range xsd:integer ;
@@ -471,170 +462,17 @@ superdataset:mdas_flag rdf:type owl:DatatypeProperty ;
                        skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
 
 
+###  https://w3id.org/OHD/DFA-study/superdataset/source
+superdataset:source rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "source" ;
+                    skos:definition "The source of the data." ;
+                    skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> .
+
+
 #################################################################
 #    Classes
 #################################################################
-
-###  http://purl.obolibrary.org/obo/NCIT_C103804
-NCIT:C103804 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:LikertMissing ;
-             rdfs:label "3" ;
-             skos:definition "Neither Agree nor Disagree" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C104475
-NCIT:C104475 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:LikertMissing ;
-             rdfs:label "5" ;
-             skos:definition "Strongly Agree" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C104476
-NCIT:C104476 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:LikertMissing ;
-             rdfs:label "1" ;
-             skos:definition "Strongly Disagree" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C104478
-NCIT:C104478 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:LikertMissing ;
-             rdfs:label "4" ;
-             skos:definition "Agree" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C104479
-NCIT:C104479 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:LikertMissing ;
-             rdfs:label "2" ;
-             skos:definition "Disagree" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C104495
-NCIT:C104495 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:SexSuperdataset ;
-             rdfs:label "3" ;
-             skos:definition "Other" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C111675
-NCIT:C111675 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:AnxietyMissing ;
-             rdfs:label "1" ;
-             skos:definition "Not anxious" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C111676
-NCIT:C111676 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:AnxietyMissing ;
-             rdfs:label "3" ;
-             skos:definition "Fairly anxious" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C120244
-NCIT:C120244 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:AnxietyMissing ;
-             rdfs:label "2" ;
-             skos:definition "Slightly anxious" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C120252
-NCIT:C120252 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:AnxietyMissing ;
-             rdfs:label "4" ;
-             skos:definition "Very anxious" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C126287
-NCIT:C126287 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:DegreeLikertMissing ;
-             rdfs:label "4" ;
-             skos:definition "Much" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C205464
-NCIT:C205464 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:SexSuperdataset ;
-             rdfs:label "2" ;
-             skos:definition "Female" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C205465
-NCIT:C205465 rdf:type owl:Class ;
-             rdfs:subClassOf superdataset:SexSuperdataset ;
-             rdfs:label "1" ;
-             skos:definition "Male" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C49487
-NCIT:C49487 rdf:type owl:Class ;
-            rdfs:subClassOf superdataset:NoYes ,
-                            superdataset:NoYesMissing ;
-            rdfs:label "0" ;
-            skos:definition "No" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C49488
-NCIT:C49488 rdf:type owl:Class ;
-            rdfs:subClassOf superdataset:NoYes ,
-                            superdataset:NoYesMissing ;
-            rdfs:label "1" ;
-            skos:definition "Yes" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C54031
-NCIT:C54031 rdf:type owl:Class ;
-            rdfs:subClassOf superdataset:AgeGroup ,
-                            superdataset:AnxietyMissing ,
-                            superdataset:DegreeLikertMissing ,
-                            superdataset:FrequencyMissing ,
-                            superdataset:LikertAmountMissing ,
-                            superdataset:LikertMissing ,
-                            superdataset:NoYesMissing ,
-                            superdataset:SexSuperdataset ,
-                            superdataset:ValueMissing ,
-                            superdataset:Years1to5 ;
-            rdfs:label "-9999" ;
-            skos:definition "Missing" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C70543
-NCIT:C70543 rdf:type owl:Class ;
-            rdfs:subClassOf superdataset:FrequencyMissing ,
-                            superdataset:Years1to5 ;
-            rdfs:label "1" ,
-                       "5" ;
-            skos:definition "Never" ,
-                            "never" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C91213
-NCIT:C91213 rdf:type owl:Class ;
-            rdfs:subClassOf superdataset:DegreeLikertMissing ;
-            rdfs:label "1" ;
-            skos:definition "Not At All" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C91214
-NCIT:C91214 rdf:type owl:Class ;
-            rdfs:subClassOf superdataset:DegreeLikertMissing ;
-            rdfs:label "2" ;
-            skos:definition "A Little" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C91215
-NCIT:C91215 rdf:type owl:Class ;
-            rdfs:subClassOf superdataset:DegreeLikertMissing ;
-            rdfs:label "3" ;
-            skos:definition "Somewhat" .
-
-
-###  http://purl.obolibrary.org/obo/NCIT_C91217
-NCIT:C91217 rdf:type owl:Class ;
-            rdfs:subClassOf superdataset:DegreeLikertMissing ;
-            rdfs:label "5" ;
-            skos:definition "Very Much" .
-
 
 ###  http://purl.obolibrary.org/obo/OHD_0000421
 <http://purl.obolibrary.org/obo/OHD_0000421> rdf:type owl:Class .
@@ -830,50 +668,30 @@ NCIT:C91217 rdf:type owl:Class ;
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/AgeGroup
 superdataset:AgeGroup rdf:type owl:Class ;
-                      owl:equivalentClass [ rdf:type owl:Class ;
-                                            owl:unionOf ( NCIT:C54031
-                                                          <https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#1>
-                                                          <https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#2>
-                                                          <https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#3>
-                                                          <https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#4>
-                                                          <https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#5>
-                                                          <https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#6>
-                                                        )
-                                          ] ;
                       rdfs:label "AgeGroup" ;
                       skos:definition "An enumeration for the age group of the participant." ;
                       skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                      linkml:permissible_values NCIT:C54031 ,
-                                                <https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#1> ,
-                                                <https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#2> ,
-                                                <https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#3> ,
-                                                <https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#4> ,
-                                                <https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#5> ,
-                                                <https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#6> .
+                      linkml:permissible_values "-9999" ,
+                                                "1" ,
+                                                "2" ,
+                                                "3" ,
+                                                "4" ,
+                                                "5" ,
+                                                "6" .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/AnxietyMissing
 superdataset:AnxietyMissing rdf:type owl:Class ;
-                            owl:equivalentClass [ rdf:type owl:Class ;
-                                                  owl:unionOf ( NCIT:C111675
-                                                                NCIT:C111676
-                                                                NCIT:C120244
-                                                                NCIT:C120252
-                                                                NCIT:C54031
-                                                                <https://w3id.org/OHD/DFA-study/superdataset/AnxietyMissing#-9876>
-                                                                <https://w3id.org/OHD/DFA-study/superdataset/AnxietyMissing#5>
-                                                              )
-                                                ] ;
                             rdfs:label "AnxietyMissing" ;
                             skos:definition "Enumeration for answering whether an individual would feel anxious in some scenario." ;
                             skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                            linkml:permissible_values NCIT:C111675 ,
-                                                      NCIT:C111676 ,
-                                                      NCIT:C120244 ,
-                                                      NCIT:C120252 ,
-                                                      NCIT:C54031 ,
-                                                      <https://w3id.org/OHD/DFA-study/superdataset/AnxietyMissing#-9876> ,
-                                                      <https://w3id.org/OHD/DFA-study/superdataset/AnxietyMissing#5> .
+                            linkml:permissible_values "-9876" ,
+                                                      "-9999" ,
+                                                      "1" ,
+                                                      "2" ,
+                                                      "3" ,
+                                                      "4" ,
+                                                      "5" .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/Dataset
@@ -881,10 +699,6 @@ superdataset:Dataset rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty superdataset:records ;
                                        owl:allValuesFrom superdataset:Record
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty superdataset:records ;
-                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                      ] ;
                      rdfs:label "Dataset" ;
                      skos:definition "The Superdataset dataset." ;
@@ -893,138 +707,143 @@ superdataset:Dataset rdf:type owl:Class ;
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/DegreeLikertMissing
 superdataset:DegreeLikertMissing rdf:type owl:Class ;
-                                 owl:equivalentClass [ rdf:type owl:Class ;
-                                                       owl:unionOf ( NCIT:C126287
-                                                                     NCIT:C54031
-                                                                     NCIT:C91213
-                                                                     NCIT:C91214
-                                                                     NCIT:C91215
-                                                                     NCIT:C91217
-                                                                     <https://w3id.org/OHD/DFA-study/superdataset/DegreeLikertMissing#-9876>
-                                                                   )
-                                                     ] ;
                                  rdfs:label "DegreeLikertMissing" ;
                                  skos:definition "A standard 5-point frequency Likert scale ranging from \"Not At All\" to \"Very Much\", including an option for 'Missing'." ;
                                  skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                                 linkml:permissible_values NCIT:C126287 ,
-                                                           NCIT:C54031 ,
-                                                           NCIT:C91213 ,
-                                                           NCIT:C91214 ,
-                                                           NCIT:C91215 ,
-                                                           NCIT:C91217 ,
-                                                           <https://w3id.org/OHD/DFA-study/superdataset/DegreeLikertMissing#-9876> .
+                                 linkml:permissible_values "-9876" ,
+                                                           "-9999" ,
+                                                           "1" ,
+                                                           "2" ,
+                                                           "3" ,
+                                                           "4" ,
+                                                           "5" .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing
 superdataset:FrequencyMissing rdf:type owl:Class ;
-                              owl:equivalentClass [ rdf:type owl:Class ;
-                                                    owl:unionOf ( NCIT:C54031
-                                                                  NCIT:C70543
-                                                                  <https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#-9876>
-                                                                  <https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#2>
-                                                                  <https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#3>
-                                                                  <https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#4>
-                                                                  <https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#5>
-                                                                )
-                                                  ] ;
                               rdfs:label "FrequencyMissing" ;
                               skos:definition "An enumeration for a Likert scale of frequency with a missing option." ;
                               skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                              linkml:permissible_values NCIT:C54031 ,
-                                                        NCIT:C70543 ,
-                                                        <https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#-9876> ,
-                                                        <https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#2> ,
-                                                        <https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#3> ,
-                                                        <https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#4> ,
-                                                        <https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#5> .
+                              linkml:permissible_values "-9876" ,
+                                                        "-9999" ,
+                                                        "1" ,
+                                                        "2" ,
+                                                        "3" ,
+                                                        "4" ,
+                                                        "5" .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing
 superdataset:LikertAmountMissing rdf:type owl:Class ;
-                                 owl:equivalentClass [ rdf:type owl:Class ;
-                                                       owl:unionOf ( NCIT:C54031
-                                                                     <https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#-9876>
-                                                                     <https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#1>
-                                                                     <https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#2>
-                                                                     <https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#3>
-                                                                     <https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#4>
-                                                                     <https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#5>
-                                                                   )
-                                                     ] ;
                                  rdfs:label "LikertAmountMissing" ;
                                  skos:definition "An enumeration for a Likert scale of degree of fear with a missing option." ;
                                  skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                                 linkml:permissible_values NCIT:C54031 ,
-                                                           <https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#-9876> ,
-                                                           <https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#1> ,
-                                                           <https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#2> ,
-                                                           <https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#3> ,
-                                                           <https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#4> ,
-                                                           <https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#5> .
+                                 linkml:permissible_values "-9876" ,
+                                                           "-9999" ,
+                                                           "1" ,
+                                                           "2" ,
+                                                           "3" ,
+                                                           "4" ,
+                                                           "5" .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/LikertMissing
 superdataset:LikertMissing rdf:type owl:Class ;
-                           owl:equivalentClass [ rdf:type owl:Class ;
-                                                 owl:unionOf ( NCIT:C103804
-                                                               NCIT:C104475
-                                                               NCIT:C104476
-                                                               NCIT:C104478
-                                                               NCIT:C104479
-                                                               NCIT:C54031
-                                                               <https://w3id.org/OHD/DFA-study/superdataset/LikertMissing#-9876>
-                                                             )
-                                               ] ;
                            rdfs:label "LikertMissing" ;
                            skos:definition "A standard 5-point Likert scale ranging from \"Strongly Disagree\" to \"Strongly Agree\", including an option for 'Missing'." ;
                            skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                           linkml:permissible_values NCIT:C103804 ,
-                                                     NCIT:C104475 ,
-                                                     NCIT:C104476 ,
-                                                     NCIT:C104478 ,
-                                                     NCIT:C104479 ,
-                                                     NCIT:C54031 ,
-                                                     <https://w3id.org/OHD/DFA-study/superdataset/LikertMissing#-9876> .
+                           linkml:permissible_values "-9876" ,
+                                                     "-9999" ,
+                                                     "1" ,
+                                                     "2" ,
+                                                     "3" ,
+                                                     "4" ,
+                                                     "5" .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/NoYes
 superdataset:NoYes rdf:type owl:Class ;
-                   owl:equivalentClass [ rdf:type owl:Class ;
-                                         owl:unionOf ( NCIT:C49487
-                                                       NCIT:C49488
-                                                     )
-                                       ] ;
                    rdfs:label "NoYes" ;
                    skos:definition "An enumeration for yes/no responses." ;
                    skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                   linkml:permissible_values NCIT:C49487 ,
-                                             NCIT:C49488 .
+                   linkml:permissible_values "0" ,
+                                             "1" .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/NoYesMissing
 superdataset:NoYesMissing rdf:type owl:Class ;
-                          owl:equivalentClass [ rdf:type owl:Class ;
-                                                owl:unionOf ( NCIT:C49487
-                                                              NCIT:C49488
-                                                              NCIT:C54031
-                                                            )
-                                              ] ;
                           rdfs:label "NoYesMissing" ;
                           skos:definition "An enumeration for yes/no responses with a missing option." ;
                           skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                          linkml:permissible_values NCIT:C49487 ,
-                                                    NCIT:C49488 ,
-                                                    NCIT:C54031 .
+                          linkml:permissible_values "-9999" ,
+                                                    "0" ,
+                                                    "1" .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/Record
 superdataset:Record rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:Ethnicity ;
+                                      owl:onProperty superdataset:Age ;
+                                      owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                          owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                 owl:unionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                                 owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                                                        owl:onDatatype xsd:integer ;
+                                                                                                                        owl:withRestrictions ( [ xsd:minInclusive -9999
+                                                                                                                                               ]
+                                                                                                                                             )
+                                                                                                                      ]
+                                                                                                                      [ rdf:type rdfs:Datatype ;
+                                                                                                                        owl:onDatatype xsd:integer ;
+                                                                                                                        owl:withRestrictions ( [ xsd:maxInclusive -9999
+                                                                                                                                               ]
+                                                                                                                                             )
+                                                                                                                      ]
+                                                                                                                    )
+                                                                                               ]
+                                                                                               [ rdf:type rdfs:Datatype ;
+                                                                                                 owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                                                        owl:onDatatype xsd:integer ;
+                                                                                                                        owl:withRestrictions ( [ xsd:minInclusive 0
+                                                                                                                                               ]
+                                                                                                                                             )
+                                                                                                                      ]
+                                                                                                                      [ rdf:type rdfs:Datatype ;
+                                                                                                                        owl:onDatatype xsd:integer ;
+                                                                                                                        owl:withRestrictions ( [ xsd:maxInclusive 120
+                                                                                                                                               ]
+                                                                                                                                             )
+                                                                                                                      ]
+                                                                                                                    )
+                                                                                               ]
+                                                                                             )
+                                                                               ]
+                                                                               xsd:integer
+                                                                             )
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:Age ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:Ethnicity_new ;
                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty superdataset:Last_Dental_Visit ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:Participant_id ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:Participant_id_original ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:Race ;
                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
@@ -1033,6 +852,10 @@ superdataset:Record rdf:type owl:Class ;
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty superdataset:agegrp ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:count_missing ;
                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
@@ -1113,6 +936,26 @@ superdataset:Record rdf:type owl:Class ;
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty superdataset:dfs9 ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:dfs_avoidance_fear ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:dfs_flag ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:dfs_physiological_arousal ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:dfs_specific_stimuli_fear ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:dfs_total_score ;
                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
@@ -1208,6 +1051,10 @@ superdataset:Record rdf:type owl:Class ;
                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:idaf_flag ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty superdataset:mdas1 ;
                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
@@ -1228,95 +1075,11 @@ superdataset:Record rdf:type owl:Class ;
                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:source ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:Age ;
-                                      owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                                          owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
-                                                                                 owl:unionOf ( [ rdf:type rdfs:Datatype ;
-                                                                                                 owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
-                                                                                                                        owl:onDatatype xsd:integer ;
-                                                                                                                        owl:withRestrictions ( [ xsd:minInclusive -9999
-                                                                                                                                               ]
-                                                                                                                                             )
-                                                                                                                      ]
-                                                                                                                      [ rdf:type rdfs:Datatype ;
-                                                                                                                        owl:onDatatype xsd:integer ;
-                                                                                                                        owl:withRestrictions ( [ xsd:maxInclusive -9999
-                                                                                                                                               ]
-                                                                                                                                             )
-                                                                                                                      ]
-                                                                                                                    )
-                                                                                               ]
-                                                                                               [ rdf:type rdfs:Datatype ;
-                                                                                                 owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
-                                                                                                                        owl:onDatatype xsd:integer ;
-                                                                                                                        owl:withRestrictions ( [ xsd:minInclusive 0
-                                                                                                                                               ]
-                                                                                                                                             )
-                                                                                                                      ]
-                                                                                                                      [ rdf:type rdfs:Datatype ;
-                                                                                                                        owl:onDatatype xsd:integer ;
-                                                                                                                        owl:withRestrictions ( [ xsd:maxInclusive 120
-                                                                                                                                               ]
-                                                                                                                                             )
-                                                                                                                      ]
-                                                                                                                    )
-                                                                                               ]
-                                                                                             )
-                                                                               ]
-                                                                               xsd:integer
-                                                                             )
-                                                        ]
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:Age ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:Participant_id ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:Participant_id_original ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:Race ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:count_missing ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:dfs_avoidance_fear ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:dfs_flag ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:dfs_physiological_arousal ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:dfs_specific_stimuli_fear ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:dfs_total ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty superdataset:idaf_flag ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty superdataset:mdas_flag ;
+                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty superdataset:source ;
                                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                     ] ;
                     rdfs:label "Record" ;
@@ -1326,48 +1089,29 @@ superdataset:Record rdf:type owl:Class ;
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/SexSuperdataset
 superdataset:SexSuperdataset rdf:type owl:Class ;
-                             owl:equivalentClass [ rdf:type owl:Class ;
-                                                   owl:unionOf ( NCIT:C104495
-                                                                 NCIT:C205464
-                                                                 NCIT:C205465
-                                                                 NCIT:C54031
-                                                               )
-                                                 ] ;
                              rdfs:label "SexSuperdataset" ;
                              skos:definition "An enumeration for the sex of the participant." ;
                              skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                             linkml:permissible_values NCIT:C104495 ,
-                                                       NCIT:C205464 ,
-                                                       NCIT:C205465 ,
-                                                       NCIT:C54031 .
+                             linkml:permissible_values "-9999" ,
+                                                       "1" ,
+                                                       "2" ,
+                                                       "3" .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/StudySource
 superdataset:StudySource rdf:type owl:Class ;
-                         owl:equivalentClass [ rdf:type owl:Class ;
-                                               owl:unionOf ( <https://w3id.org/OHD/DFA-study/superdataset/StudySource#bph>
-                                                             <https://w3id.org/OHD/DFA-study/superdataset/StudySource#bwhs>
-                                                             <https://w3id.org/OHD/DFA-study/superdataset/StudySource#cohra1>
-                                                             <https://w3id.org/OHD/DFA-study/superdataset/StudySource#cohra2>
-                                                             <https://w3id.org/OHD/DFA-study/superdataset/StudySource#f31>
-                                                             <https://w3id.org/OHD/DFA-study/superdataset/StudySource#mdas>
-                                                             <https://w3id.org/OHD/DFA-study/superdataset/StudySource#randall>
-                                                             <https://w3id.org/OHD/DFA-study/superdataset/StudySource#sohea>
-                                                             <https://w3id.org/OHD/DFA-study/superdataset/StudySource#tic>
-                                                           )
-                                             ] ;
                          rdfs:label "StudySource" ;
                          skos:definition "An enumeration for the source of data." ;
                          skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                         linkml:permissible_values <https://w3id.org/OHD/DFA-study/superdataset/StudySource#bph> ,
-                                                   <https://w3id.org/OHD/DFA-study/superdataset/StudySource#bwhs> ,
-                                                   <https://w3id.org/OHD/DFA-study/superdataset/StudySource#cohra1> ,
-                                                   <https://w3id.org/OHD/DFA-study/superdataset/StudySource#cohra2> ,
-                                                   <https://w3id.org/OHD/DFA-study/superdataset/StudySource#f31> ,
-                                                   <https://w3id.org/OHD/DFA-study/superdataset/StudySource#mdas> ,
-                                                   <https://w3id.org/OHD/DFA-study/superdataset/StudySource#randall> ,
-                                                   <https://w3id.org/OHD/DFA-study/superdataset/StudySource#sohea> ,
-                                                   <https://w3id.org/OHD/DFA-study/superdataset/StudySource#tic> .
+                         linkml:permissible_values "bph" ,
+                                                   "bwhs" ,
+                                                   "cohra1" ,
+                                                   "cohra2" ,
+                                                   "f31" ,
+                                                   "mdas" ,
+                                                   "randall" ,
+                                                   "sohea" ,
+                                                   "tic" .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/ValueMissing
@@ -1375,29 +1119,20 @@ superdataset:ValueMissing rdf:type owl:Class ;
                           rdfs:label "ValueMissing" ;
                           skos:definition "An enumeration for a missing value." ;
                           skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                          linkml:permissible_values NCIT:C54031 .
+                          linkml:permissible_values "-9999" .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/Years1to5
 superdataset:Years1to5 rdf:type owl:Class ;
-                       owl:equivalentClass [ rdf:type owl:Class ;
-                                             owl:unionOf ( NCIT:C54031
-                                                           NCIT:C70543
-                                                           <https://w3id.org/OHD/DFA-study/superdataset/Years1to5#1>
-                                                           <https://w3id.org/OHD/DFA-study/superdataset/Years1to5#2>
-                                                           <https://w3id.org/OHD/DFA-study/superdataset/Years1to5#3>
-                                                           <https://w3id.org/OHD/DFA-study/superdataset/Years1to5#4>
-                                                         )
-                                           ] ;
                        rdfs:label "Years1to5" ;
                        skos:definition "An enumeration for a range of years." ;
                        skos:inScheme <https://w3id.org/OHD/DFA-study/superdataset> ;
-                       linkml:permissible_values NCIT:C54031 ,
-                                                 NCIT:C70543 ,
-                                                 <https://w3id.org/OHD/DFA-study/superdataset/Years1to5#1> ,
-                                                 <https://w3id.org/OHD/DFA-study/superdataset/Years1to5#2> ,
-                                                 <https://w3id.org/OHD/DFA-study/superdataset/Years1to5#3> ,
-                                                 <https://w3id.org/OHD/DFA-study/superdataset/Years1to5#4> .
+                       linkml:permissible_values "-9999" ,
+                                                 "1" ,
+                                                 "2" ,
+                                                 "3" ,
+                                                 "4" ,
+                                                 "5" .
 
 
 ###  https://w3id.org/OHD/DFA-study/superdataset/dfs1
@@ -1638,244 +1373,6 @@ superdataset:mdas4 rdf:type owl:Class ;
 ###  https://w3id.org/OHD/DFA-study/superdataset/mdas5
 superdataset:mdas5 rdf:type owl:Class ;
                    rdfs:subClassOf <http://purl.obolibrary.org/obo/OHD_0000450> .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#1
-<https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#1> rdf:type owl:Class ;
-                                                         rdfs:subClassOf superdataset:AgeGroup ;
-                                                         rdfs:label "1" ;
-                                                         skos:definition "0-17 years" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#2
-<https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#2> rdf:type owl:Class ;
-                                                         rdfs:subClassOf superdataset:AgeGroup ;
-                                                         rdfs:label "2" ;
-                                                         skos:definition "18-34 years" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#3
-<https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#3> rdf:type owl:Class ;
-                                                         rdfs:subClassOf superdataset:AgeGroup ;
-                                                         rdfs:label "3" ;
-                                                         skos:definition "35-44 years" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#4
-<https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#4> rdf:type owl:Class ;
-                                                         rdfs:subClassOf superdataset:AgeGroup ;
-                                                         rdfs:label "4" ;
-                                                         skos:definition "45-54 years" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#5
-<https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#5> rdf:type owl:Class ;
-                                                         rdfs:subClassOf superdataset:AgeGroup ;
-                                                         rdfs:label "5" ;
-                                                         skos:definition "55-64 years" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#6
-<https://w3id.org/OHD/DFA-study/superdataset/AgeGroup#6> rdf:type owl:Class ;
-                                                         rdfs:subClassOf superdataset:AgeGroup ;
-                                                         rdfs:label "6" ;
-                                                         skos:definition "65+ years" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/AnxietyMissing#-9876
-<https://w3id.org/OHD/DFA-study/superdataset/AnxietyMissing#-9876> rdf:type owl:Class ;
-                                                                   rdfs:subClassOf superdataset:AnxietyMissing ;
-                                                                   rdfs:label "-9876" ;
-                                                                   skos:definition "Not asked for in study" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/AnxietyMissing#5
-<https://w3id.org/OHD/DFA-study/superdataset/AnxietyMissing#5> rdf:type owl:Class ;
-                                                               rdfs:subClassOf superdataset:AnxietyMissing ;
-                                                               rdfs:label "5" ;
-                                                               skos:definition "Extremely anxious" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/DegreeLikertMissing#-9876
-<https://w3id.org/OHD/DFA-study/superdataset/DegreeLikertMissing#-9876> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf superdataset:DegreeLikertMissing ;
-                                                                        rdfs:label "-9876" ;
-                                                                        skos:definition "Not asked for in study" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#-9876
-<https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#-9876> rdf:type owl:Class ;
-                                                                     rdfs:subClassOf superdataset:FrequencyMissing ;
-                                                                     rdfs:label "-9876" ;
-                                                                     skos:definition "Not asked for in study" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#2
-<https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#2> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf superdataset:FrequencyMissing ;
-                                                                 rdfs:label "2" ;
-                                                                 skos:definition "Once or twice" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#3
-<https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#3> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf superdataset:FrequencyMissing ;
-                                                                 rdfs:label "3" ;
-                                                                 skos:definition "A few times" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#4
-<https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#4> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf superdataset:FrequencyMissing ;
-                                                                 rdfs:label "4" ;
-                                                                 skos:definition "Often" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#5
-<https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing#5> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf superdataset:FrequencyMissing ;
-                                                                 rdfs:label "5" ;
-                                                                 skos:definition "Nearly every time" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#-9876
-<https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#-9876> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf superdataset:LikertAmountMissing ;
-                                                                        rdfs:label "-9876" ;
-                                                                        skos:definition "Not asked for in study" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#1
-<https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#1> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf superdataset:LikertAmountMissing ;
-                                                                    rdfs:label "1" ;
-                                                                    skos:definition "Not at all" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#2
-<https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#2> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf superdataset:LikertAmountMissing ;
-                                                                    rdfs:label "2" ;
-                                                                    skos:definition "A little" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#3
-<https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#3> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf superdataset:LikertAmountMissing ;
-                                                                    rdfs:label "3" ;
-                                                                    skos:definition "Somewhat" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#4
-<https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#4> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf superdataset:LikertAmountMissing ;
-                                                                    rdfs:label "4" ;
-                                                                    skos:definition "Much" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#5
-<https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing#5> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf superdataset:LikertAmountMissing ;
-                                                                    rdfs:label "5" ;
-                                                                    skos:definition "Very much" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/LikertMissing#-9876
-<https://w3id.org/OHD/DFA-study/superdataset/LikertMissing#-9876> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf superdataset:LikertMissing ;
-                                                                  rdfs:label "-9876" ;
-                                                                  skos:definition "Not asked for in study" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/StudySource#bph
-<https://w3id.org/OHD/DFA-study/superdataset/StudySource#bph> rdf:type owl:Class ;
-                                                              rdfs:subClassOf superdataset:StudySource ;
-                                                              rdfs:label "bph" ;
-                                                              skos:definition "Boston Public Housing" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/StudySource#bwhs
-<https://w3id.org/OHD/DFA-study/superdataset/StudySource#bwhs> rdf:type owl:Class ;
-                                                               rdfs:subClassOf superdataset:StudySource ;
-                                                               rdfs:label "bwhs" ;
-                                                               skos:definition "Black Women's Health Study" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/StudySource#cohra1
-<https://w3id.org/OHD/DFA-study/superdataset/StudySource#cohra1> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf superdataset:StudySource ;
-                                                                 rdfs:label "cohra1" ;
-                                                                 skos:definition "COHRA1" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/StudySource#cohra2
-<https://w3id.org/OHD/DFA-study/superdataset/StudySource#cohra2> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf superdataset:StudySource ;
-                                                                 rdfs:label "cohra2" ;
-                                                                 skos:definition "COHRA2" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/StudySource#f31
-<https://w3id.org/OHD/DFA-study/superdataset/StudySource#f31> rdf:type owl:Class ;
-                                                              rdfs:subClassOf superdataset:StudySource ;
-                                                              rdfs:label "f31" ;
-                                                              skos:definition "F31  " .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/StudySource#mdas
-<https://w3id.org/OHD/DFA-study/superdataset/StudySource#mdas> rdf:type owl:Class ;
-                                                               rdfs:subClassOf superdataset:StudySource ;
-                                                               rdfs:label "mdas" ;
-                                                               skos:definition "OHBSS mdas dataset" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/StudySource#randall
-<https://w3id.org/OHD/DFA-study/superdataset/StudySource#randall> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf superdataset:StudySource ;
-                                                                  rdfs:label "randall" ;
-                                                                  skos:definition "Randall  " .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/StudySource#sohea
-<https://w3id.org/OHD/DFA-study/superdataset/StudySource#sohea> rdf:type owl:Class ;
-                                                                rdfs:subClassOf superdataset:StudySource ;
-                                                                rdfs:label "sohea" ;
-                                                                skos:definition "CareQuest" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/StudySource#tic
-<https://w3id.org/OHD/DFA-study/superdataset/StudySource#tic> rdf:type owl:Class ;
-                                                              rdfs:subClassOf superdataset:StudySource ;
-                                                              rdfs:label "tic" ;
-                                                              skos:definition "Utah TIC" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/Years1to5#1
-<https://w3id.org/OHD/DFA-study/superdataset/Years1to5#1> rdf:type owl:Class ;
-                                                          rdfs:subClassOf superdataset:Years1to5 ;
-                                                          rdfs:label "1" ;
-                                                          skos:definition "1 year or less" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/Years1to5#2
-<https://w3id.org/OHD/DFA-study/superdataset/Years1to5#2> rdf:type owl:Class ;
-                                                          rdfs:subClassOf superdataset:Years1to5 ;
-                                                          rdfs:label "2" ;
-                                                          skos:definition "1 to 2 years" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/Years1to5#3
-<https://w3id.org/OHD/DFA-study/superdataset/Years1to5#3> rdf:type owl:Class ;
-                                                          rdfs:subClassOf superdataset:Years1to5 ;
-                                                          rdfs:label "3" ;
-                                                          skos:definition "2 to 5 years" .
-
-
-###  https://w3id.org/OHD/DFA-study/superdataset/Years1to5#4
-<https://w3id.org/OHD/DFA-study/superdataset/Years1to5#4> rdf:type owl:Class ;
-                                                          rdfs:subClassOf superdataset:Years1to5 ;
-                                                          rdfs:label "4" ;
-                                                          skos:definition "5 or more years" .
 
 
 #################################################################
