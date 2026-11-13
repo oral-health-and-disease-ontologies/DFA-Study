@@ -1,5 +1,5 @@
-ATALOG=                    catalog-v001.xml
-ROBOT=                      robot --catalog $(CATALOG)
+CATALOG = catalog-v001.xml
+ROBOT = robot --catalog $(CATALOG)
 
 DOCSDIR = docs
 SRC = src
@@ -139,6 +139,7 @@ superdataset-owl: $(SUPERDATASET_SCHEMA)
 	src/scripts/sparql-update.py temp/superdataset.tmp.ttl src/sparql/enum-ranges-to-xsd.ru > temp/superdataset.dl.tmp.ttl
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl
 	$(ROBOT) merge -i temp/superdataset.dl.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/superdataset.ttl
+	$(ROBOT) convert -i owl/superdataset.ttl -o owl/superdataset.owl --format owl
 
 superdataset-records.ttl: $(SUPERDATASET_DATA) $(SUPERDATASET_SCHEMA) owl/superdataset.ttl
 # convert superdataset records from spreadsheet to RDF for use in Jupyter notebooks
@@ -146,6 +147,9 @@ superdataset-records.ttl: $(SUPERDATASET_DATA) $(SUPERDATASET_SCHEMA) owl/superd
 		-i $< \
 		-s $(word 2,$^) \
 		-o $(DATA_DIR)/$@
+
+superdataset-records.owl: $(DATA_DIR)/superdataset-records.ttl
+	$(ROBOT) convert -i $< -o $(DATA_DIR)/$@ --format owl
 
 superdataset-puns.ttl: $(SUPERDATASET_SCHEMA)
 # use pun annotations in the LinkML schema to create punning statements for use in Jupyter notebooks
@@ -158,6 +162,9 @@ superdataset-data.ttl: owl/superdataset.ttl superdataset-puns.ttl superdataset-r
 		-i $(DATA_DIR)/$(word 2,$^) \
 		-i $(DATA_DIR)/$(word 3,$^) \
 		-o $(DATA_DIR)/$@
+
+superdataset-data.owl: $(DATA_DIR)/superdataset-data.ttl
+	$(ROBOT) convert -i $< -o $(DATA_DIR)/$@ --format owl
 
 field-mappings:
 	python src/scripts/field-mappings-info.py

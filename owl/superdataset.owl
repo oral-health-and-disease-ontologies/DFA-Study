@@ -1,0 +1,2365 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/OHD/DFA-study/superdataset.owl.ttl#"
+     xml:base="https://w3id.org/OHD/DFA-study/superdataset.owl.ttl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:linkml="https://w3id.org/linkml/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:superdataset="https://w3id.org/OHD/DFA-study/superdataset/">
+    <owl:Ontology rdf:about="https://w3id.org/OHD/DFA-study/superdataset.owl.ttl">
+        <dcterms:license>https://mit-license.org/</dcterms:license>
+        <dcterms:title>DFA Superdataset Schema</dcterms:title>
+        <rdfs:label>superdataset</rdfs:label>
+        <skos:definition>LinkML schema for defining data elements used in the DFA Superdataset.</skos:definition>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/pun_as -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/pun_as"/>
+    
+
+
+    <!-- https://w3id.org/linkml/permissible_values -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/linkml/permissible_values"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/records -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/records">
+        <rdfs:label>records</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/Age -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/Age">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-9999</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-9999</xsd:maxInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:intersectionOf>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</xsd:maxInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:intersectionOf>
+                            </rdfs:Datatype>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                </owl:intersectionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label>Age</rdfs:label>
+        <skos:definition>The participant&apos;s age in years (0–120). The value -9999 is used for missing values.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/Ethnicity_new -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/Ethnicity_new">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>Ethnicity_new</rdfs:label>
+        <skos:definition>The participant&apos;s ethnicity is Hispanic.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/Last_Dental_Visit -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/Last_Dental_Visit">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>Last_Dental_Visit</rdfs:label>
+        <skos:definition>How long has it been since you last visited a dentist or dental clinic for any reason?</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/Participant_id -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/Participant_id">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>Participant_id</rdfs:label>
+        <skos:definition>The participant&apos;s study ID.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/Participant_id_original -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/Participant_id_original">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>Participant_id_original</rdfs:label>
+        <skos:definition>The participant&apos;s original study ID.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/Race -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/Race">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>Race</rdfs:label>
+        <skos:definition>The participant&apos;s race. The value -9999 is used for missing values.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/Sex -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/Sex">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>Sex</rdfs:label>
+        <skos:definition>The participant&apos;s sex</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/agegrp -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/agegrp">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>agegrp</rdfs:label>
+        <skos:definition>The age group of the participant.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/count_missing -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/count_missing">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>count_missing</rdfs:label>
+        <skos:definition>The count of missing values in the record.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs1 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs1">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs10 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs10">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs11 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs11">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs12 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs12">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs13 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs13">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs14 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs14">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs15 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs15">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs16 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs16">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs17 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs17">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs18 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs18">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs19 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs19">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs2 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs2">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs20 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs20">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs3 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs3">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs4 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs4">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs5 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs5">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs6 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs6">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs7 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs7">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs8 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs8">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs9 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs9">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs_avoidance_fear -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs_avoidance_fear">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>dfs_avoidance_fear</rdfs:label>
+        <skos:definition>Sum dfs items 1, 2, 8, 9, 10, 11, 12, 13.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs_flag -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs_flag">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>dfs_flag</rdfs:label>
+        <skos:definition>The participant have dfs value or not.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs_physiological_arousal -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs_physiological_arousal">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>dfs_physiological_arousal</rdfs:label>
+        <skos:definition>Sum dfs items 3, 4, 5, 6, 7.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs_specific_stimuli_fear -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs_specific_stimuli_fear">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>dfs_specific_stimuli_fear</rdfs:label>
+        <skos:definition>Sum dfs items 14, 15, 16, 17, 18, 19.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs_total_score -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs_total_score">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>dfs_total_score</rdfs:label>
+        <skos:definition>Sum all 20 dfs items.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1a -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1a">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1b -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1b">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1c -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1c">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1d -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1d">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1e -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1e">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1f -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1f">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1g -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1g">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1h -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1h">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf2a -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2a">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf2b -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2b">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf2c -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2c">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf2d -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2d">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf2e -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2e">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3a -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3a">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3b -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3b">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3c -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3c">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3d -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3d">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3e -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3e">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3f -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3f">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3g -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3g">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3h -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3h">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3i -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3i">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3j -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3j">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf_flag -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf_flag">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>idaf_flag</rdfs:label>
+        <skos:definition>The participant have idaf value or not.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/mdas1 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas1">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/mdas2 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas2">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/mdas3 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas3">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/mdas4 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas4">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/mdas5 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas5">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/mdas_flag -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas_flag">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>mdas_flag</rdfs:label>
+        <skos:definition>The participant have mdas value or not.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/source -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/OHD/DFA-study/superdataset/source">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>source</rdfs:label>
+        <skos:definition>The source of the data.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000421 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000421"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000422 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000422"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000423 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000423"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000424 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000424"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000426 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000426"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000427 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000427"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000428 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000428"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000429 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000429"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000430 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000430"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000431 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000431"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000432 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000432"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000433 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000433"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000434 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000434"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000435 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000435"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000436 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000436"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000437 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000437"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000438 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000438"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000439 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000439"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000440 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000440"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000441 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000441"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000446 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000446"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000447 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000447"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000448 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000448"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000449 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000449"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0000450 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0000450"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008055 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008055"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008056 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008056"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008057"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008058 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008058"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008059"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008060"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008061"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008062"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008063 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008063"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008064"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008065 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008065"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008066"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008067 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008067"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008068 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008068"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008069 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008069"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008070"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008071"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008072 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008072"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008073"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008074 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008074"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008075 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008075"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008076"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OHD_0008077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OHD_0008077"/>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/AgeGroup -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/AgeGroup">
+        <rdfs:label>AgeGroup</rdfs:label>
+        <skos:definition>An enumeration for the age group of the participant.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <linkml:permissible_values>-9999</linkml:permissible_values>
+        <linkml:permissible_values>1</linkml:permissible_values>
+        <linkml:permissible_values>2</linkml:permissible_values>
+        <linkml:permissible_values>3</linkml:permissible_values>
+        <linkml:permissible_values>4</linkml:permissible_values>
+        <linkml:permissible_values>5</linkml:permissible_values>
+        <linkml:permissible_values>6</linkml:permissible_values>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/AnxietyMissing -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/AnxietyMissing">
+        <rdfs:label>AnxietyMissing</rdfs:label>
+        <skos:definition>Enumeration for answering whether an individual would feel anxious in some scenario.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <linkml:permissible_values>-9876</linkml:permissible_values>
+        <linkml:permissible_values>-9999</linkml:permissible_values>
+        <linkml:permissible_values>1</linkml:permissible_values>
+        <linkml:permissible_values>2</linkml:permissible_values>
+        <linkml:permissible_values>3</linkml:permissible_values>
+        <linkml:permissible_values>4</linkml:permissible_values>
+        <linkml:permissible_values>5</linkml:permissible_values>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/Dataset -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/Dataset">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/records"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/Record"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Dataset</rdfs:label>
+        <skos:definition>The Superdataset dataset.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/DegreeLikertMissing -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/DegreeLikertMissing">
+        <rdfs:label>DegreeLikertMissing</rdfs:label>
+        <skos:definition>A standard 5-point frequency Likert scale ranging from &quot;Not At All&quot; to &quot;Very Much&quot;, including an option for &apos;Missing&apos;.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <linkml:permissible_values>-9876</linkml:permissible_values>
+        <linkml:permissible_values>-9999</linkml:permissible_values>
+        <linkml:permissible_values>1</linkml:permissible_values>
+        <linkml:permissible_values>2</linkml:permissible_values>
+        <linkml:permissible_values>3</linkml:permissible_values>
+        <linkml:permissible_values>4</linkml:permissible_values>
+        <linkml:permissible_values>5</linkml:permissible_values>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/FrequencyMissing">
+        <rdfs:label>FrequencyMissing</rdfs:label>
+        <skos:definition>An enumeration for a Likert scale of frequency with a missing option.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <linkml:permissible_values>-9876</linkml:permissible_values>
+        <linkml:permissible_values>-9999</linkml:permissible_values>
+        <linkml:permissible_values>1</linkml:permissible_values>
+        <linkml:permissible_values>2</linkml:permissible_values>
+        <linkml:permissible_values>3</linkml:permissible_values>
+        <linkml:permissible_values>4</linkml:permissible_values>
+        <linkml:permissible_values>5</linkml:permissible_values>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/LikertAmountMissing">
+        <rdfs:label>LikertAmountMissing</rdfs:label>
+        <skos:definition>An enumeration for a Likert scale of degree of fear with a missing option.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <linkml:permissible_values>-9876</linkml:permissible_values>
+        <linkml:permissible_values>-9999</linkml:permissible_values>
+        <linkml:permissible_values>1</linkml:permissible_values>
+        <linkml:permissible_values>2</linkml:permissible_values>
+        <linkml:permissible_values>3</linkml:permissible_values>
+        <linkml:permissible_values>4</linkml:permissible_values>
+        <linkml:permissible_values>5</linkml:permissible_values>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/LikertMissing -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/LikertMissing">
+        <rdfs:label>LikertMissing</rdfs:label>
+        <skos:definition>A standard 5-point Likert scale ranging from &quot;Strongly Disagree&quot; to &quot;Strongly Agree&quot;, including an option for &apos;Missing&apos;.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <linkml:permissible_values>-9876</linkml:permissible_values>
+        <linkml:permissible_values>-9999</linkml:permissible_values>
+        <linkml:permissible_values>1</linkml:permissible_values>
+        <linkml:permissible_values>2</linkml:permissible_values>
+        <linkml:permissible_values>3</linkml:permissible_values>
+        <linkml:permissible_values>4</linkml:permissible_values>
+        <linkml:permissible_values>5</linkml:permissible_values>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/NoYes -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/NoYes">
+        <rdfs:label>NoYes</rdfs:label>
+        <skos:definition>An enumeration for yes/no responses.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <linkml:permissible_values>0</linkml:permissible_values>
+        <linkml:permissible_values>1</linkml:permissible_values>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/NoYesMissing -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/NoYesMissing">
+        <rdfs:label>NoYesMissing</rdfs:label>
+        <skos:definition>An enumeration for yes/no responses with a missing option.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <linkml:permissible_values>-9876</linkml:permissible_values>
+        <linkml:permissible_values>-9999</linkml:permissible_values>
+        <linkml:permissible_values>0</linkml:permissible_values>
+        <linkml:permissible_values>1</linkml:permissible_values>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/Record -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/Record">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/Age"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdfs:Datatype>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-9999</xsd:minInclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-9999</xsd:maxInclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:intersectionOf>
+                                    </rdfs:Datatype>
+                                    <rdfs:Datatype>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</xsd:maxInclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:intersectionOf>
+                                    </rdfs:Datatype>
+                                </owl:unionOf>
+                            </rdfs:Datatype>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/Age"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/Ethnicity_new"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/Last_Dental_Visit"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/Participant_id"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/Participant_id_original"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/Race"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/Sex"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/agegrp"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/count_missing"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs1"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs10"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs11"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs12"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs13"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs14"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs15"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs16"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs17"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs18"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs19"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs2"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs20"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs3"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs4"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs5"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs6"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs7"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs8"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs9"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs_avoidance_fear"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs_flag"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs_physiological_arousal"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs_specific_stimuli_fear"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/dfs_total_score"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf1a"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf1b"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf1c"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf1d"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf1e"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf1f"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf1g"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf1h"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf2a"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf2b"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf2c"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf2d"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf2e"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf3a"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf3b"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf3c"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf3d"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf3e"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf3f"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf3g"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf3h"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf3i"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf3j"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/idaf_flag"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/mdas1"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/mdas2"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/mdas3"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/mdas4"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/mdas5"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/mdas_flag"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/OHD/DFA-study/superdataset/source"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Record</rdfs:label>
+        <skos:definition>A record in the Superdataset dataset.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/SexSuperdataset -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/SexSuperdataset">
+        <rdfs:label>SexSuperdataset</rdfs:label>
+        <skos:definition>An enumeration for the sex of the participant.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <linkml:permissible_values>-9999</linkml:permissible_values>
+        <linkml:permissible_values>1</linkml:permissible_values>
+        <linkml:permissible_values>2</linkml:permissible_values>
+        <linkml:permissible_values>3</linkml:permissible_values>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/StudySource -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/StudySource">
+        <rdfs:label>StudySource</rdfs:label>
+        <skos:definition>An enumeration for the source of data.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <linkml:permissible_values>bph</linkml:permissible_values>
+        <linkml:permissible_values>bwhs</linkml:permissible_values>
+        <linkml:permissible_values>cohra1</linkml:permissible_values>
+        <linkml:permissible_values>cohra2</linkml:permissible_values>
+        <linkml:permissible_values>f31</linkml:permissible_values>
+        <linkml:permissible_values>mdas</linkml:permissible_values>
+        <linkml:permissible_values>randall</linkml:permissible_values>
+        <linkml:permissible_values>sohea</linkml:permissible_values>
+        <linkml:permissible_values>tic</linkml:permissible_values>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/ValueMissing -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/ValueMissing">
+        <rdfs:label>ValueMissing</rdfs:label>
+        <skos:definition>An enumeration for a missing value.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <linkml:permissible_values>-9999</linkml:permissible_values>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/Years1to5 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/Years1to5">
+        <rdfs:label>Years1to5</rdfs:label>
+        <skos:definition>An enumeration for a range of years.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <linkml:permissible_values>-9999</linkml:permissible_values>
+        <linkml:permissible_values>1</linkml:permissible_values>
+        <linkml:permissible_values>2</linkml:permissible_values>
+        <linkml:permissible_values>3</linkml:permissible_values>
+        <linkml:permissible_values>4</linkml:permissible_values>
+        <linkml:permissible_values>5</linkml:permissible_values>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs1 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs1">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000421"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs10 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs10">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000431"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs11 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs11">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000432"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs12 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs12">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000433"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs13 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs13">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000434"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs14 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs14">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000435"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs15 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs15">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000436"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs16 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs16">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000437"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs17 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs17">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000438"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs18 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs18">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000439"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs19 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs19">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000440"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs2 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs2">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000422"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs20 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs20">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000441"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs3 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs3">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000423"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs4 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs4">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000424"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs5 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs5">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000426"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs6 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs6">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000427"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs7 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs7">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000428"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs8 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs8">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000429"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/dfs9 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs9">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000430"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1a -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1a">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008055"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1b -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1b">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008056"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1c -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1c">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008057"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1d -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1d">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008058"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1e -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1e">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008059"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1f -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1f">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008060"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1g -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1g">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008061"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf1h -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1h">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008062"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf2a -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2a">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008063"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf2b -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2b">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008064"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf2c -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2c">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008065"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf2d -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2d">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008066"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf2e -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2e">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008067"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3a -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3a">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008068"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3b -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3b">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008069"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3c -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3c">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008070"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3d -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3d">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008071"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3e -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3e">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008072"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3f -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3f">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008073"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3g -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3g">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008074"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3h -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3h">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008075"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3i -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3i">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008076"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/idaf3j -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3j">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0008077"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/mdas1 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas1">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000446"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/mdas2 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas2">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000447"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/mdas3 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas3">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000448"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/mdas4 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas4">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000449"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/OHD/DFA-study/superdataset/mdas5 -->
+
+    <owl:Class rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas5">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OHD_0000450"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs1">
+        <rdfs:label>dfs1</rdfs:label>
+        <skos:definition>Has fear of dental work ever caused you to put off making an appointment?</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000421</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs10">
+        <rdfs:label>dfs10</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Sitting in the waiting room.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000431</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs11">
+        <rdfs:label>dfs11</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Being seated in the dental chair.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000432</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs12">
+        <rdfs:label>dfs12</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: The smell of the dentist&apos;s office.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000433</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs13">
+        <rdfs:label>dfs13</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the dentist walk in.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000434</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs14">
+        <rdfs:label>dfs14</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the anesthetic needle.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000435</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs15">
+        <rdfs:label>dfs15</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the needle injected.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000436</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs16">
+        <rdfs:label>dfs16</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Seeing the drill.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000437</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs17">
+        <rdfs:label>dfs17</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Hearing the drill.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000438</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs18">
+        <rdfs:label>dfs18</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Feeling the vibrations of the drill.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000439</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs19">
+        <rdfs:label>dfs19</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Having your teeth cleaned.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000440</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs2">
+        <rdfs:label>dfs2</rdfs:label>
+        <skos:definition>Has fear of dental work ever caused you to cancel or not appear for an appointment?</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000422</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs20">
+        <rdfs:label>dfs20</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: All things considered, how fearful are you of having dental work done?</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000441</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs3">
+        <rdfs:label>dfs3</rdfs:label>
+        <skos:definition>When having dental work done, my muscles become tense.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000423</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs4">
+        <rdfs:label>dfs4</rdfs:label>
+        <skos:definition>When having dental work done, my breathing rate increases.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000424</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs5">
+        <rdfs:label>dfs5</rdfs:label>
+        <skos:definition>When having dental work done, I perspire.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000426</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs6">
+        <rdfs:label>dfs6</rdfs:label>
+        <skos:definition>When having dental work done, I feel nauseated and sick to my stomach.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000427</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs7">
+        <rdfs:label>dfs7</rdfs:label>
+        <skos:definition>When having dental work done, my heart beats faster.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000428</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs8">
+        <rdfs:label>dfs8</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Making an appointment for dentistry.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000429</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/dfs9">
+        <rdfs:label>dfs9</rdfs:label>
+        <skos:definition>Please rate how much fear, anxiety, or unpleasantness each of these dental situations causes you: Approching the dentist&apos;s office.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000430</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1a">
+        <rdfs:label>idaf1a</rdfs:label>
+        <skos:definition>(1a) I feel anxious shortly before going to the dentist.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008055</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1b">
+        <rdfs:label>idaf1b</rdfs:label>
+        <skos:definition>(1b) I generally avoid going to the dentist because I find the experience unpleasant or distressing.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008056</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1c">
+        <rdfs:label>idaf1c</rdfs:label>
+        <skos:definition>(1c) I get nervous or edgy about upcoming dental visits.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008057</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1d">
+        <rdfs:label>idaf1d</rdfs:label>
+        <skos:definition>(1d) I think that something really bad would happen to me if I were to visit a dentist.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008058</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1e">
+        <rdfs:label>idaf1e</rdfs:label>
+        <skos:definition>(1e) I feel afraid or fearful when visiting the dentist.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008059</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1f">
+        <rdfs:label>idaf1f</rdfs:label>
+        <skos:definition>(1f) My heart beats faster when I go to the dentist.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008060</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1g">
+        <rdfs:label>idaf1g</rdfs:label>
+        <skos:definition>(1g) I delay making appointments to go to the dentist.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008061</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf1h">
+        <rdfs:label>idaf1h</rdfs:label>
+        <skos:definition>(1h) I often think about all the things that might go wrong prior to going to the dentist.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008062</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2a">
+        <rdfs:label>idaf2a</rdfs:label>
+        <skos:definition>(2a) Going to the dentist is actively avoided or else endured with intense fear or anxiety</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008063</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2b">
+        <rdfs:label>idaf2b</rdfs:label>
+        <skos:definition>(2b) My fear of going to the dentist has been present for at least 6 month</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008064</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2c">
+        <rdfs:label>idaf2c</rdfs:label>
+        <skos:definition>(2c) My fear, anxiety or avoidance of going to the dentist significantly affects my life in some way (dental pain, avoiding eating some foods, embarrassed or self-conscious about appearance of teeth or mouth, etc.)</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008065</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2d">
+        <rdfs:label>idaf2d</rdfs:label>
+        <skos:definition>(2d) I am afraid of going to the dentist because I am concerned I may have a panic attack (abrupt fear with sweating, pounding liteart, fear of dying or losing control, chest pain etc.)</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008066</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf2e">
+        <rdfs:label>idaf2e</rdfs:label>
+        <skos:definition>(2e) I am afraid of going to the dentist because I am generally highly self-conscious or concerned about being watched or judged in social situations.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008067</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3a">
+        <rdfs:label>idaf3a</rdfs:label>
+        <skos:definition>(3a) Painful or uncomfortable procedures </skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008068</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3b">
+        <rdfs:label>idaf3b</rdfs:label>
+        <skos:definition>(3b)  Feeling embarrassed or ashamed  </skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008069</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3c">
+        <rdfs:label>idaf3c</rdfs:label>
+        <skos:definition>(3c)  Not being in control of what is happening </skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008070</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3d">
+        <rdfs:label>idaf3d</rdfs:label>
+        <skos:definition>(3d)  Feeling sick, queasy or disgusted  </skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008071</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3e">
+        <rdfs:label>idaf3e</rdfs:label>
+        <skos:definition>(3e)  Numbness caused by the anesthetic </skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008072</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3f">
+        <rdfs:label>idaf3f</rdfs:label>
+        <skos:definition>(3f)  Not knowing what the dentist is going to do  </skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008073</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3g">
+        <rdfs:label>idaf3g</rdfs:label>
+        <skos:definition>(3g)  The cost of dental treatment </skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008074</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3h">
+        <rdfs:label>idaf3h</rdfs:label>
+        <skos:definition>(3h) Needles or injections </skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008075</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3i">
+        <rdfs:label>idaf3i</rdfs:label>
+        <skos:definition>(3i)  Gagging or choking  </skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008076</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/idaf3j">
+        <rdfs:label>idaf3j</rdfs:label>
+        <skos:definition>(3j)  Having an unsympathetic or unkind dentist  </skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0008077</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas1">
+        <rdfs:label>mdas1</rdfs:label>
+        <skos:definition>If you went to the dentist for treatment tomorrow [How would you feel in the following scenarios?]</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000446</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas2">
+        <rdfs:label>mdas2</rdfs:label>
+        <skos:definition>If you were sitting in the waiting room (waiting for treatment) [How would you feel in the following scenarios?]</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000447</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas3">
+        <rdfs:label>mdas3</rdfs:label>
+        <skos:definition>If you were about to have a tooth drilled [How would you feel in the following scenarios?]</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000448</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas4">
+        <rdfs:label>mdas4</rdfs:label>
+        <skos:definition>If you were about to have your teeth scaled and polished [How would you feel in the following scenarios?]</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000449</superdataset:pun_as>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/OHD/DFA-study/superdataset/mdas5">
+        <rdfs:label>mdas5</rdfs:label>
+        <skos:definition>If you were about to have a local anesthetic injection in your gum above an upper back tooth [How would you feel in the following scenarios?]</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/OHD/DFA-study/superdataset"/>
+        <superdataset:pun_as>rdf:type owl:Class; rdfs:subClassOf OHD:0000450</superdataset:pun_as>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+
