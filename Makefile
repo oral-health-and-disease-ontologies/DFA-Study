@@ -143,10 +143,12 @@ superdataset-owl: $(SUPERDATASET_SCHEMA)
 
 superdataset-records.ttl: $(SUPERDATASET_DATA) $(SUPERDATASET_SCHEMA) owl/superdataset.ttl
 # convert superdataset records from spreadsheet to RDF for use in Jupyter notebooks
+# (each record gets an IRI from its Participant_id, e.g. superdataset:<Participant_id>)
 	python src/scripts/spreadsheet-to-rdf.py \
 		-i $< \
 		-s $(word 2,$^) \
-		-o $(DATA_DIR)/$@
+		-o $(DATA_DIR)/$@ \
+		--id-columns Participant_id
 
 superdataset-records.owl: $(DATA_DIR)/superdataset-records.ttl
 	$(ROBOT) convert -i $< -o $(DATA_DIR)/$@ --format owl
