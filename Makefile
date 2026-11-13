@@ -1,3 +1,6 @@
+ATALOG=                    catalog-v001.xml
+ROBOT=                      robot --catalog $(CATALOG)
+
 DOCSDIR = docs
 SRC = src
 DATA_DIR = notebooks/DFA-data
@@ -57,7 +60,7 @@ cohra1-jsonschema: $(COHRA1_SCHEMA)
 cohra1-owl: $(COHRA1_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/cohra1.tmp.ttl 
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl 
-	robot merge -i temp/cohra1.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/cohra1.ttl 
+	$(ROBOT) merge -i temp/cohra1.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/cohra1.ttl 
 
 cohra2-jsonschema: $(COHRA2_SCHEMA)
 	gen-json-schema $< > jsonschema/cohra2.json
@@ -65,7 +68,7 @@ cohra2-jsonschema: $(COHRA2_SCHEMA)
 cohra2-owl: $(COHRA2_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/cohra2.tmp.ttl 
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl 
-	robot merge -i temp/cohra2.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/cohra2.ttl 
+	$(ROBOT) merge -i temp/cohra2.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/cohra2.ttl 
 
 ada_ohwb-jsonschema: $(ADA_OHWB_SCHEMA)
 	gen-json-schema $< > jsonschema/ada_ohwb.json
@@ -73,7 +76,7 @@ ada_ohwb-jsonschema: $(ADA_OHWB_SCHEMA)
 ada_ohwb-owl: $(ADA_OHWB_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/ada_ohwb.tmp.ttl 
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl 
-	robot merge -i temp/ada_ohwb.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/ada_ohwb.ttl 
+	$(ROBOT) merge -i temp/ada_ohwb.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/ada_ohwb.ttl 
 
 dfs-jsonschema: $(DFS_SCHEMA)
 	gen-json-schema $< > jsonschema/dfs.json
@@ -81,7 +84,7 @@ dfs-jsonschema: $(DFS_SCHEMA)
 dfs-owl: $(DFS_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/dfs.tmp.ttl
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl 
-	robot merge -i temp/dfs.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/dfs.ttl
+	$(ROBOT) merge -i temp/dfs.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/dfs.ttl
 
 cq_sohea-jsonschema: $(CQ_SOHEA_SCHEMA)
 	gen-json-schema $< > jsonschema/cq_sohea.json
@@ -89,7 +92,7 @@ cq_sohea-jsonschema: $(CQ_SOHEA_SCHEMA)
 cq_sohea-owl: $(CQ_SOHEA_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/cq_sohea.tmp.ttl 
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl 
-	robot merge -i temp/cq_sohea.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/cq_sohea.ttl
+	$(ROBOT) merge -i temp/cq_sohea.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/cq_sohea.ttl
 
 tic_clinical-jsonschema: $(TIC_CLINICAL_SCHEMA)
 	gen-json-schema $< > jsonschema/tic_clinical.json
@@ -97,7 +100,7 @@ tic_clinical-jsonschema: $(TIC_CLINICAL_SCHEMA)
 tic_clinical-owl: $(TIC_CLINICAL_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/tic_clinical.tmp.ttl
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl
-	robot merge -i temp/tic_clinical.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/tic_clinical.ttl
+	$(ROBOT) merge -i temp/tic_clinical.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/tic_clinical.ttl
 
 tic_provider-jsonschema: $(TIC_PROVIDER_SCHEMA)
 	gen-json-schema $< > jsonschema/tic_provider.json
@@ -105,14 +108,14 @@ tic_provider-jsonschema: $(TIC_PROVIDER_SCHEMA)
 tic_provider-owl: $(TIC_PROVIDER_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/tic_provider.tmp.ttl
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl
-	robot merge -i temp/tic_provider.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/tic_provider.ttl
+	$(ROBOT) merge -i temp/tic_provider.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/tic_provider.ttl
 mdas-jsonschema: $(MDAS_SCHEMA)
 	gen-json-schema $< > jsonschema/mdas.json
 
 mdas-owl: $(MDAS_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/mdas.tmp.ttl 
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl 
-	robot merge -i temp/mdas.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/mdas.ttl
+	$(ROBOT) merge -i temp/mdas.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/mdas.ttl
 
 idaf-jsonschema: $(IDAF_SCHEMA)
 	gen-json-schema $< > jsonschema/idaf.json
@@ -120,7 +123,7 @@ idaf-jsonschema: $(IDAF_SCHEMA)
 idaf-owl: $(IDAF_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/idaf.tmp.ttl
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl 
-	robot merge -i temp/idaf.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/idaf.ttl
+	$(ROBOT) merge -i temp/idaf.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/idaf.ttl
 
 superdataset-jsonschema: $(SUPERDATASET_SCHEMA)
 	gen-json-schema $< > jsonschema/superdataset.json
@@ -135,7 +138,7 @@ superdataset-owl: $(SUPERDATASET_SCHEMA)
 	gen-owl $(GENOWL_OPTS) $< > temp/superdataset.tmp.ttl
 	src/scripts/sparql-update.py temp/superdataset.tmp.ttl src/sparql/enum-ranges-to-xsd.ru > temp/superdataset.dl.tmp.ttl
 	src/scripts/pun-annotations-to-ttl.py $< > temp/$@.pun.tmp.ttl
-	robot merge -i temp/superdataset.dl.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/superdataset.ttl
+	$(ROBOT) merge -i temp/superdataset.dl.tmp.ttl -i temp/$@.pun.tmp.ttl -o owl/superdataset.ttl
 
 superdataset-records.ttl: $(SUPERDATASET_DATA) $(SUPERDATASET_SCHEMA) owl/superdataset.ttl
 # convert superdataset records from spreadsheet to RDF for use in Jupyter notebooks
@@ -150,7 +153,7 @@ superdataset-puns.ttl: $(SUPERDATASET_SCHEMA)
 
 superdataset-data.ttl: owl/superdataset.ttl superdataset-puns.ttl superdataset-records.ttl
 # merge superdataset records and punning statements for use in Jupyter notebooks
-	robot merge \
+	$(ROBOT) merge \
 		-i $< \
 		-i $(DATA_DIR)/$(word 2,$^) \
 		-i $(DATA_DIR)/$(word 3,$^) \
