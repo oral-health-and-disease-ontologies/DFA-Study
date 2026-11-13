@@ -24,6 +24,7 @@ import re
 import shutil
 import sqlite3
 import subprocess
+import tempfile
 import textwrap
 import time
 from decimal import Decimal
@@ -393,6 +394,26 @@ def run_enrichment(adapter, sample, background, direction="greater", cutoff=0.05
     return df[cols]
 
 
+def _combine_images(main_png, side_png, out_png, position, gap=20):
+    """Place side_png (e.g., a legend) to the right/left/top/bottom of main_png, centred,
+    on a white background, and save the result as out_png."""
+    from PIL import Image as PILImage
+
+    main, side = PILImage.open(main_png).convert("RGB"), PILImage.open(side_png).convert("RGB")
+    if position in ("right", "left"):
+        width, height = main.width + gap + side.width, max(main.height, side.height)
+        main_xy = (0 if position == "right" else side.width + gap, (height - main.height) // 2)
+        side_xy = (main.width + gap if position == "right" else 0, (height - side.height) // 2)
+    else:
+        width, height = max(main.width, side.width), main.height + gap + side.height
+        main_xy = ((width - main.width) // 2, 0 if position == "bottom" else side.height + gap)
+        side_xy = ((width - side.width) // 2, main.height + gap if position == "bottom" else 0)
+    canvas = PILImage.new("RGB", (width, height), "white")
+    canvas.paste(main, main_xy)
+    canvas.paste(side, side_xy)
+    canvas.save(out_png)
+
+
 # Colors for plot_enrichment. Orange = over-represented, blue = under-represented
 # (a diverging pair that stays distinguishable with all common types of colour blindness).
 # Significance (adjusted p) is shown by 4 shades, light -> dark, on the box border
@@ -418,6 +439,7 @@ ENRICHMENT_STYLE = {
 
 def plot_enrichment(adapter, enrichment, imgfile, top_class="OHD:0008011", width=30,
                     show=True, legend=True, legend_orientation="vertical",
+                    legend_position=None,
                     significance_style="border-width",
                     style=None):
     """Draw the enriched OHD classes and their ancestors with OAK's viz (og2dot).
@@ -425,8 +447,10 @@ def plot_enrichment(adapter, enrichment, imgfile, top_class="OHD:0008011", width
     Significant classes are orange (over-represented) or blue (under-represented), with
     darker shades for smaller adjusted p-values (see ENRICHMENT_STYLE), and are labelled
     with a direction symbol (▲ over, ▼ under), the percentage of sample vs background
-    records, and the adjusted p-value. Ancestor classes that are not in the results are
-    white. Ancestors above `top_class` (default: 'question') are left out.
+    records, and the adjusted p-value. Classes in the results that are not significant
+    (adjusted p above the first p level, e.g. from run_enrichment(..., cutoff=1.0)) are
+    white with their statistics and "(n.s.)"; ancestor classes that are not in the results
+    are white. Ancestors above `top_class` (default: 'question') are left out.
 
     Args:
         adapter: OAK sqlite adapter for the OHD database.
@@ -439,6 +463,10 @@ def plot_enrichment(adapter, enrichment, imgfile, top_class="OHD:0008011", width
         legend: add a legend (shades and directions) to the figure.
         legend_orientation: "vertical" (legend boxes in a column, default) or
             "horizontal" (legend boxes in a row).
+        legend_position: where the legend goes: "right", "left", "top" or "bottom";
+            default: "right" for a vertical legend, "bottom" for a horizontal one.
+            The graph and the legend are drawn separately and combined, so any
+            position works with either orientation.
         significance_style: how significance is shown (boxes are light orange / light
             blue except in "border" and "fill"):
             "border-width": shaded border that also gets thicker (default);
@@ -456,6 +484,10 @@ def plot_enrichment(adapter, enrichment, imgfile, top_class="OHD:0008011", width
     
     if legend_orientation not in ("horizontal", "vertical"):
         raise ValueError(f"legend_orientation must be 'horizontal' or 'vertical', not {legend_orientation!r}")
+    if legend_position is None:
+        legend_position = "right" if legend_orientation == "vertical" else "bottom"
+    if legend_position not in ("right", "left", "top", "bottom"):
+        raise ValueError(f"legend_position must be 'right', 'left', 'top' or 'bottom', not {legend_position!r}")
     styles = ("border-width", "border-rings", "border-tint", "border", "fill")
     if significance_style not in styles:
         raise ValueError(f"significance_style must be one of {styles}, not {significance_style!r}")
@@ -501,47 +533,56 @@ def plot_enrichment(adapter, enrichment, imgfile, top_class="OHD:0008011", width
 
     stats = enrichment.set_index("class_id")
     used = set()
+    not_significant = False      # any results above the significance cutoff?
     for node in graph.nodes:
         label = wrap(node.lbl or node.id)
         if node.id in stats.index:
             r = stats.loc[node.id]
             direction = r.get("direction") or ("over" if r.sample_pct >= r.background_pct else "under")
-            step = level(r.p_value_adjusted)
-            used.add(direction)
+            significant = r.p_value_adjusted <= cfg["p_levels"][0]
             label += (f"\n{cfg[direction]['symbol']} {r.sample_pct:.1f}% vs {r.background_pct:.1f}%"
-                      f"\nadj. p = {r.p_value_adjusted:.1e}")
-            node.meta = significant_style(direction, step)
+                      f"\nadj. p = {r.p_value_adjusted:.1e}" + ("" if significant else f" (n.s.)"))
+            if significant:
+                used.add(direction)
+                node.meta = significant_style(direction, level(r.p_value_adjusted))
+            else:
+                not_significant = True
+                node.meta = node_style(cfg["context"])     # in the results, but not significant
         else:
             node.meta = node_style(cfg["context"])
         node.lbl = label
 
-    if legend:
-        # one legend box per shade for each direction in the results, plus the context style
+    configure = ('{"relationProperties": {"rdfs:subClassOf": {"label": ""}, '
+                 '"legend:next": {"style": "invis", "arrowhead": "none", "label": ""}}}')
+    if not legend:
+        graph_to_image(graph, configure=configure, imgfile=str(imgfile))
+    else:
+        # legend: one box per shade for each direction in the results, plus the white style
         names = {"over": "over-represented", "under": "under-represented"}
-        legend_ids = []
+        legend_graph = obograph.Graph(id="legend", nodes=[], edges=[])
         for direction in ("over", "under"):
             if direction not in used:
                 continue
             for step, cut in enumerate(cfg["p_levels"]):
-                legend_ids.append(f"legend:{direction}{step}")
-                graph.nodes.append(obograph.Node(
-                    id=legend_ids[-1],
-                    lbl=f"{cfg[direction]['symbol']} {names[direction]}\nadj. p ≤ {cut:g}",
+                legend_graph.nodes.append(obograph.Node(
+                    id=f"legend:{direction}{step}",
+                    lbl=f"{cfg[direction]['symbol']} {names[direction]}\nadj. p \u2264 {cut:g}",
                     meta=significant_style(direction, step)))
-        legend_ids.append("legend:context")
-        graph.nodes.append(obograph.Node(id="legend:context", lbl="ancestor, not significant",
-                                         meta=node_style(cfg["context"])))
+        legend_graph.nodes.append(obograph.Node(
+            id="legend:context", lbl="not significant" if not_significant else "ancestor, not significant",
+            meta=node_style(cfg["context"])))
         if legend_orientation == "vertical":
             # invisible edges stack the legend boxes in a column (first box on top)
-            graph.edges += [obograph.Edge(sub=lower, pred="legend:next", obj=upper)
-                            for upper, lower in zip(legend_ids, legend_ids[1:])]
+            legend_ids = [n.id for n in legend_graph.nodes]
+            legend_graph.edges = [obograph.Edge(sub=lower, pred="legend:next", obj=upper)
+                                  for upper, lower in zip(legend_ids, legend_ids[1:])]
 
-    graph_to_image(
-        graph,
-        configure='{"relationProperties": {"rdfs:subClassOf": {"label": ""}, '
-                  '"legend:next": {"style": "invis", "arrowhead": "none", "label": ""}}}',
-        imgfile=str(imgfile),
-    )
+        # draw the graph and the legend separately, then place the legend next to the graph
+        with tempfile.TemporaryDirectory() as tmp:
+            graph_png, legend_png = Path(tmp) / "graph.png", Path(tmp) / "legend.png"
+            graph_to_image(graph, configure=configure, imgfile=str(graph_png))
+            graph_to_image(legend_graph, configure=configure, imgfile=str(legend_png))
+            _combine_images(graph_png, legend_png, imgfile, legend_position)
     if show:
         display(Image(filename=str(imgfile)))
 
