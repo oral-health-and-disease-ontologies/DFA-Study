@@ -13,6 +13,7 @@ Contents
   queries               sparql_df (rdflib graph or SPARQL endpoint), sql_df (SQLite)
   semantic-sql          detect_rdf_format, build_semsql_db
   term enrichment       record_curie, run_enrichment, plot_enrichment, ENRICHMENT_STYLE
+  visualization         plot_sparql_graph (draw a SPARQL CONSTRUCT result)
   display               show_image
 
 Dependencies used by only some functions (oaklib, scipy, SPARQLWrapper, pyoxigraph,
@@ -39,6 +40,7 @@ __all__ = [
     "sparql_df", "sql_df",
     "detect_rdf_format", "build_semsql_db",
     "record_curie", "run_enrichment", "plot_enrichment", "ENRICHMENT_STYLE",
+    "plot_sparql_graph",
     "show_image",
 ]
 
@@ -585,6 +587,210 @@ def plot_enrichment(adapter, enrichment, imgfile, top_class="OHD:0008011", width
             _combine_images(graph_png, legend_png, imgfile, legend_position)
     if show:
         display(Image(filename=str(imgfile)))
+
+# ------------------------------------------------------------------------------
+# visualizing SPARQL query results
+# ------------------------------------------------------------------------------
+
+# Edges from is_a (rdfs:subClassOf) relationships; og2dot calls them "rdfs:subClassOf".
+_IS_A_KEYS = {"is_a", "rdfs:subClassOf", "http://www.w3.org/2000/01/rdf-schema#subClassOf"}
+
+
+def plot_sparql_graph(source, root, imgfile, query=None, predicates=None, edge_labels=None,
+                      node_color="lightgray", node_border_color="black", node_border_width=1,
+                      edge_color="black", edge_arrowhead="normal", include_is_a=True,
+                      draw_is_a=True,
+                      configure=None, highlight_root=True, root_border_width=5, show=True,
+                      return_graph=False):
+    """Draw the class hierarchy (and other relationships) in a SPARQL CONSTRUCT result.
+
+    The triples are written to a temporary OWL file, loaded with OAK (pronto) and drawn
+    with OAK's viz (og2dot). The image shows `root`, its is_a descendants and, for each
+    predicate in `predicates`, the classes those descendants point to with that
+    predicate (e.g., what the questions are about).
+
+    With include_is_a=False no is_a edges are drawn, and the image shows only the
+    relationships in `predicates` (e.g., parthood): `root`, the classes linked to it by
+    a chain of those relationships in either direction (e.g., its parts, their parts,
+    and the wholes it is part of), and the classes those point to with them.
+
+    With draw_is_a=False is_a is still used to find the classes below `root`, but the
+    is_a edges are not drawn, e.g. to show only what each question is about.
+
+    Args:
+        source: an rdflib Graph, or the result of `graph.query(construct_query)`.
+            If `query` is given, `source` must be an rdflib Graph and the query is run on it.
+        root: CURIE of the top class to draw (e.g., "OHD:0008044").
+        imgfile: path of the PNG file to write.
+        query: optional SPARQL CONSTRUCT query to run on `source`.
+        predicates: CURIEs of relationships to draw besides is_a (e.g., ["IAO:0000136"]);
+            is_a is drawn unless include_is_a=False, so it doesn't need to be listed (it is
+            ignored if it is); in the CONSTRUCT they must be some-values-from restrictions
+            on the class (e.g., `?part rdfs:subClassOf [owl:onProperty BFO:0000050 ;
+            owl:someValuesFrom ?whole]`). Required if include_is_a=False.
+        edge_labels: dict renaming edge labels, e.g.
+            {"rdfs:subClassOf": "is a", "IAO:0000136": "is about"}.
+            Keys may be a predicate CURIE or IRI ("is_a" and rdfs:subClassOf both mean
+            the subclass edges) or the label og2dot would otherwise show for the
+            predicate (e.g. "is about"). Use "" to hide a label.
+        node_color: fill colour of the nodes (any Graphviz colour name or "#rrggbb").
+        node_border_color: colour of the node borders.
+        node_border_width: width of the node borders (Graphviz penwidth).
+        edge_color: colour of the edges: one colour for all edges, or a dict with a
+            colour per relation (keys as in `edge_labels`, e.g.
+            {"rdfs:subClassOf": "black", "IAO:0000136": "#1c5cab"}); relations not in
+            the dict are black.
+        edge_arrowhead: Graphviz arrowhead of the edges ("normal", "empty", "vee",
+            "open", "dot", "odot", "diamond", "odiamond", "box", "tee", "none", ...): one
+            arrowhead for all edges, or a dict with one per relation (keys as in
+            `edge_labels`, e.g. {"rdfs:subClassOf": "empty", "IAO:0000136": "vee"});
+            relations not in the dict get "normal".
+        include_is_a: draw the is_a (subclass) edges and use them to find the classes
+            below `root` (default). If False, draw only the `predicates` relationships,
+            e.g. predicates=["BFO:0000050"] for a partonomy.
+        draw_is_a: draw the is_a edges (default). If False, the classes are still found
+            with is_a (as with include_is_a=True), but only the `predicates` edges are
+            drawn, and classes with none of those edges are left out.
+        configure: extra og2dot style settings (dict), merged over the defaults.
+        highlight_root: highlight the root node with a thicker border (default True);
+            if False, the root is drawn like the other nodes.
+        root_border_width: border width of the root node when it is highlighted
+            (default 5).
+        show: display the image in the notebook; if False, only save the PNG.
+        return_graph: return the OboGraph that was drawn (by default nothing is
+            returned, so the notebook doesn't print the graph after the image).
+
+    Returns:
+        The OboGraph that was drawn if `return_graph` is True, else None.
+
+    Example:
+        res = ohd_graph.query(construct_q)
+        plot_sparql_graph(res, "OHD:0008044", "DFA-data/temp.hierarchy.png",
+                          predicates=["IAO:0000136"],
+                          edge_labels={"rdfs:subClassOf": "is a", "IAO:0000136": "is about"},
+                          edge_arrowhead={"rdfs:subClassOf": "empty", "IAO:0000136": "vee"},
+                          edge_color={"IAO:0000136": "#1c5cab"})
+
+        # parthood only: the parts of the mouth, without the subclass edges
+        plot_sparql_graph(res, "UBERON:0000165", "DFA-data/temp.parts.png",
+                          predicates=["BFO:0000050"], include_is_a=False)
+
+        # only what each question is about (questions found with is_a, edges hidden)
+        plot_sparql_graph(res, "OHD:0008044", "DFA-data/temp.about.png",
+                          predicates=["IAO:0000136"], draw_is_a=False)
+    """
+    import json
+
+    from oaklib import get_adapter
+    from oaklib.datamodels import obograph
+    from oaklib.datamodels.vocabulary import IS_A
+    from oaklib.utilities.obograph_utils import graph_to_image
+    from rdflib import OWL, RDF
+
+    if query is not None:
+        if not isinstance(source, Graph):
+            raise TypeError("source must be an rdflib Graph when a query is given")
+        source = source.query(query)
+    rdf = source if isinstance(source, Graph) else getattr(source, "graph", None)
+    if rdf is None:
+        raise TypeError("source must be an rdflib Graph or the result of a CONSTRUCT query")
+    if len(rdf) == 0:
+        raise ValueError("the graph is empty; check the CONSTRUCT query")
+
+    # pronto needs an ontology header; copy the triples so `source` isn't changed
+    rdf = Graph() + rdf
+    if not any(rdf.subjects(RDF.type, OWL.Ontology)):
+        rdf.add((URIRef("http://purl.obolibrary.org/obo/viz.tmp.owl"), RDF.type, OWL.Ontology))
+    # pronto fails on restrictions whose property isn't declared; declare them
+    for prop in set(rdf.objects(None, OWL.onProperty)):
+        if isinstance(prop, URIRef) and (prop, RDF.type, OWL.ObjectProperty) not in rdf:
+            rdf.add((prop, RDF.type, OWL.ObjectProperty))
+
+    # is_a is handled by include_is_a; drop it from the extra relationships
+    predicates = [p for p in dict.fromkeys(predicates or []) if p not in _IS_A_KEYS]
+    if not (include_is_a and draw_is_a) and not predicates:
+        raise ValueError("include_is_a=False and draw_is_a=False need at least one "
+                         "relationship in `predicates`")
+    with tempfile.TemporaryDirectory() as tmp:
+        owl_file = Path(tmp) / "viz.tmp.owl"
+        rdf.serialize(owl_file, format="pretty-xml")
+        adapter = get_adapter(f"pronto:{owl_file}")
+
+        if include_is_a:
+            edge_predicates = [IS_A] + predicates
+            nodes = set(adapter.descendants(root, predicates=[IS_A], reflexive=True))
+            if not nodes - {root}:
+                raise ValueError(f"no is_a descendants of {root} in the graph; "
+                                 "check the root CURIE")
+        else:
+            edge_predicates = predicates
+            nodes = (set(adapter.descendants(root, predicates=predicates, reflexive=True))
+                     | set(adapter.ancestors(root, predicates=predicates, reflexive=True)))
+            if not nodes - {root}:
+                raise ValueError(f"no {', '.join(predicates)} relationships of {root} in the "
+                                 "graph; check the root CURIE and the CONSTRUCT query")
+        if predicates:
+            nodes |= {o for n in list(nodes)
+                        for _, o in adapter.outgoing_relationships(n, predicates=predicates)}
+        graph = adapter.extract_graph(list(nodes), predicates=edge_predicates)
+
+        # the labels og2dot shows by default: the predicate's label if it is a node, else the CURIE
+        node_labels = {n.id: n.lbl for n in graph.nodes if n.lbl}
+        for pred in predicates:
+            if pred not in node_labels and adapter.label(pred):
+                node_labels[pred] = adapter.label(pred)
+
+    # don't draw the predicates themselves (e.g., an "is about" box) as nodes
+    graph.nodes = [n for n in graph.nodes if n.id not in predicates]
+
+    # hide the is_a edges, and the classes left without edges
+    if include_is_a and not draw_is_a:
+        graph.edges = [e for e in graph.edges if e.pred not in _IS_A_KEYS]
+        connected = {e.sub for e in graph.edges} | {e.obj for e in graph.edges}
+        graph.nodes = [n for n in graph.nodes if n.id in connected]
+
+    def kgviz(attrs):
+        # og2dot passes https://w3id.org/kgviz/<attribute> values to Graphviz,
+        # over its own defaults
+        return obograph.Meta(basicPropertyValues=[
+            obograph.BasicPropertyValue(pred=f"https://w3id.org/kgviz/{k}", val=str(v))
+            for k, v in attrs.items() if v is not None])
+
+    def for_edge(edge, value, default=None):
+        # value for this edge's relation: `value` itself, or looked up in a dict whose keys
+        # are a predicate CURIE / IRI or the label og2dot would show
+        if not isinstance(value, dict):
+            return value
+        if edge.pred in _IS_A_KEYS:
+            keys = _IS_A_KEYS
+        else:
+            keys = (edge.pred, _obo_iri(edge.pred), node_labels.get(edge.pred))
+        return next((value[k] for k in keys if k is not None and k in value), default)
+
+    # node styles; the root gets a thicker border if highlighted
+    for node in graph.nodes:
+        width = root_border_width if (node.id == root and highlight_root) else node_border_width
+        node.meta = kgviz({"fillcolor": node_color, "color": node_border_color, "penwidth": width})
+
+    # edge styles and labels (a per-edge label is used over og2dot's default)
+    for edge in graph.edges:
+        edge.meta = kgviz({"label": for_edge(edge, edge_labels or {}),
+                           "color": for_edge(edge, edge_color, "black"),
+                           "arrowhead": for_edge(edge, edge_arrowhead, "normal")})
+
+    graph_to_image(graph, configure=json.dumps(configure) if configure else None, imgfile=str(imgfile))
+    if show:
+        from IPython.display import Image, display
+        display(Image(filename=str(imgfile)))
+    return graph if return_graph else None
+
+
+def _obo_iri(curie):
+    """Expand an OBO-style CURIE (e.g., IAO:0000136) to its PURL; return other values unchanged."""
+    if curie and re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*:\d+", curie):
+        prefix, local = curie.split(":")
+        return f"http://purl.obolibrary.org/obo/{prefix}_{local}"
+    return curie
 
 # ------------------------------------------------------------------------------
 # display
