@@ -563,7 +563,7 @@ def plot_enrichment(adapter, enrichment, imgfile, top_class="OHD:0008011", width
                     show=True, legend=True, legend_orientation="vertical",
                     legend_position=None,
                     significance_style="border-width",
-                    style=None):
+                    style=None, short_labels=False):
     """Draw the enriched OHD classes and their ancestors with OAK's viz (og2dot).
 
     Significant classes are orange (over-represented) or blue (under-represented), with
@@ -599,6 +599,10 @@ def plot_enrichment(adapter, enrichment, imgfile, top_class="OHD:0008011", width
             "fill": shaded box fill.
         style: colours, shades and widths to use (same structure as ENRICHMENT_STYLE);
             default: ENRICHMENT_STYLE.
+        short_labels: label the classes with the text before the first "." only, e.g.
+            "DFS 17" for "DFS 17. Hearing the drill." and "IDAF-4C+ 1a" for
+            "IDAF-4C+ 1a. I feel anxious ..."; labels without a "." (e.g., "question
+            about tooth drilling") are kept as they are.
     """
     from oaklib.datamodels.vocabulary import IS_A
     from oaklib.utilities.obograph_utils import graph_to_image
@@ -621,7 +625,10 @@ def plot_enrichment(adapter, enrichment, imgfile, top_class="OHD:0008011", width
     directions_used = set()
     any_not_significant = False      # any results above the significance cutoff?
     for node in graph.nodes:
-        label = _wrap_label(node.lbl or node.id, width)
+        name = node.lbl or node.id
+        if short_labels:
+            name = _short_label(name)
+        label = _wrap_label(name, width)
         node.meta = _kgviz_meta(cfg["context"])
         if node.id in stats.index:
             r = stats.loc[node.id]
@@ -654,6 +661,12 @@ def plot_enrichment(adapter, enrichment, imgfile, top_class="OHD:0008011", width
             _combine_images(graph_png, legend_png, imgfile, legend_position)
     if show:
         _display_png(imgfile)
+
+
+def _short_label(label):
+    """The text of a label before the first "." (e.g., "DFS 17" for "DFS 17. Hearing the
+    drill."); labels without a "." are returned unchanged."""
+    return label.split(".", 1)[0].strip() or label
 
 
 def _no_break(text):
