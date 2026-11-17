@@ -17,10 +17,11 @@ Contents
   display               show_image
 
 Dependencies used by only some functions (oaklib, scipy, SPARQLWrapper, pyoxigraph,
-semsql, matplotlib, IPython) are imported inside those functions, so the module can be
-imported without all of them installed.
+semsql, matplotlib, IPython, PIL) are imported inside those functions, so the module can
+be imported without all of them installed.
 """
 
+import json
 import re
 import shutil
 import sqlite3
@@ -33,7 +34,7 @@ from itertools import islice
 from pathlib import Path
 
 import pandas as pd
-from rdflib import BNode, Graph, Literal, URIRef
+from rdflib import OWL, RDF, BNode, Graph, Literal, URIRef
 
 __all__ = [
     "head", "timed",
@@ -44,6 +45,14 @@ __all__ = [
     "show_image",
 ]
 
+SUPERDATASET_BASE = "https://w3id.org/OHD/DFA-study/superdataset/"   # IRI base of the records
+
+
+def _check_choice(name, value, choices):
+    """Raise ValueError if `value` is not one of `choices`."""
+    if value not in choices:
+        options = ", ".join(repr(c) for c in choices[:-1]) + f" or {choices[-1]!r}"
+        raise ValueError(f"{name} must be {options}, not {value!r}")
 
 
 # ------------------------------------------------------------------------------
@@ -72,6 +81,7 @@ def timed(label, func, *args, **kwargs):
     print(f"{label}: {time.perf_counter() - start:.3f} s")
     return result
 
+
 # ------------------------------------------------------------------------------
 # queries
 # ------------------------------------------------------------------------------
@@ -85,7 +95,6 @@ def sparql_df(query, source="http://127.0.0.1:8000/", to_python=True):
         to_python: convert literals to Python values (e.g., xsd:integer -> int);
             if False, every value is returned as a string.
     """
-    from SPARQLWrapper import JSON, SPARQLWrapper   # only needed for endpoints
     def convert(term):
         if term is None:
             return None
@@ -94,40 +103,69 @@ def sparql_df(query, source="http://127.0.0.1:8000/", to_python=True):
             return float(value) if isinstance(value, Decimal) else value
         return str(term)
 
-    def to_term(b):
-        # JSON result binding -> rdflib term
-        if b is None:
-            return None
-        if b["type"] == "uri":
-            return URIRef(b["value"])
-        if b["type"] == "bnode":
-            return BNode(b["value"])
-        return Literal(b["value"], lang=b.get("xml:lang"), datatype=b.get("datatype"))
-
     if isinstance(source, Graph):
         res = source.query(query)
         cols = [str(v) for v in res.vars]
         rows = [[convert(term) for term in row] for row in res]
     else:
+        from SPARQLWrapper import JSON, SPARQLWrapper
+
         sw = SPARQLWrapper(source)
         sw.setQuery(query)
         sw.setReturnFormat(JSON)
         res = sw.query().convert()
         cols = res["head"]["vars"]
-        rows = [[convert(to_term(b.get(c))) for c in cols] for b in res["results"]["bindings"]]
+        rows = [[convert(_binding_to_term(b.get(c))) for c in cols]
+                for b in res["results"]["bindings"]]
 
     df = pd.DataFrame(rows, columns=cols)
     # use nullable types so integer columns with missing values stay integers
     return df.convert_dtypes() if to_python else df
 
 
+def _binding_to_term(binding):
+    """Convert a value from a SPARQL JSON result to an rdflib term."""
+    if binding is None:
+        return None
+    if binding["type"] == "uri":
+        return URIRef(binding["value"])
+    if binding["type"] == "bnode":
+        return BNode(binding["value"])
+    return Literal(binding["value"], lang=binding.get("xml:lang"),
+                   datatype=binding.get("datatype"))
+
+
 def sql_df(query, con, params=None):
     """Run a SQL query and return the results as a pandas DataFrame."""
     return pd.read_sql(query, con, params=params)
 
+
 # ------------------------------------------------------------------------------
 # semantic-sql (SQLite) databases
 # ------------------------------------------------------------------------------
+
+def _keywords(*words):
+    return "|".join(words)
+
+
+# patterns used by detect_rdf_format, matched at the start of the first content line
+# (except _XML_ROOT, _OBO_STANZA and _NTRIPLES_LINE)
+_XML_START = re.compile(r"<[\w:]+[\s>]")
+_XML_ROOT = re.compile(r"<(?!\?|!)([\w.-]+:)?([\w.-]+)[\s>/]")       # first element
+_FUNCTIONAL_START = re.compile(rf"({_keywords('Prefix', 'Ontology', 'Import', 'Declaration')})\(")
+_MANCHESTER_START = re.compile(rf"""({_keywords(
+    'Prefix', 'Ontology', 'Import', 'Class', 'ObjectProperty', 'DataProperty',
+    'AnnotationProperty', 'Individual', 'Datatype')}):""")
+_OBO_HEADER = re.compile(rf"""({_keywords(
+    'format-version', 'data-version', 'ontology', 'default-namespace', 'date', 'saved-by',
+    'auto-generated-by', 'subsetdef', 'synonymtypedef', 'import', 'idspace', 'remark')}):""")
+_OBO_STANZA = re.compile(r"^\[(Term|Typedef|Instance)\]", re.M)
+_TURTLE_DIRECTIVE = re.compile(r"(@prefix|@base)\b")
+_SPARQL_DIRECTIVE = re.compile(r"(PREFIX|BASE)\s", re.I)
+_NTRIPLES_LINE = re.compile(
+    r'^(<[^>]*>|_:\S+)\s+<[^>]*>\s+(<[^>]*>|_:\S+|".*"(\^\^<[^>]*>|@[\w-]+)?)\s*\.$')
+_TURTLE_TRIPLE_START = re.compile(r"(<[^>]*>|_:\S+|[\w-]*:\S*)\s")
+
 
 def detect_rdf_format(path, sample_size=65536):
     """Detect the serialization of an RDF/OWL file from its content (not its extension).
@@ -144,38 +182,42 @@ def detect_rdf_format(path, sample_size=65536):
     Raises ValueError if the format is not recognized.
     """
     with open(path, "rb") as f:
-        text = f.read(sample_size).decode("utf-8", errors="replace").lstrip("﻿")
+        text = f.read(sample_size).decode("utf-8", errors="replace").lstrip("\ufeff")  # BOM
     stripped = text.lstrip()
-    # first line that is not blank or a comment ("#" for Turtle/N-Triples, "!" for OBO)
+    # lines that are not blank or comments ("#" for Turtle/N-Triples, "!" for OBO)
     content = [line.strip() for line in text.splitlines()
                if line.strip() and not line.lstrip().startswith(("#", "!"))]
     first = content[0] if content else ""
 
-    if stripped.startswith("<?xml") or stripped.startswith("<!DOCTYPE") or re.match(r"<[\w:]+[\s>]", stripped):
-        # XML: RDF/XML has an rdf:RDF root element; OWL/XML has an Ontology root element
-        root = re.search(r"<(?!\?|!)([\w.-]+:)?([\w.-]+)[\s>/]", stripped)
-        if root and root.group(2) == "RDF":
+    if stripped.startswith(("<?xml", "<!DOCTYPE")) or _XML_START.match(stripped):
+        # RDF/XML has an rdf:RDF root element; OWL/XML has an Ontology root element
+        root = _XML_ROOT.search(stripped)
+        root_name = root.group(2) if root else None
+        if root_name == "RDF":
             return "rdfxml"
-        if root and root.group(2) == "Ontology":
+        if root_name == "Ontology":
             return "owlxml"
         raise ValueError(f"{path}: XML file, but neither RDF/XML nor OWL/XML")
     if first.startswith(("{", "[")):
         return "jsonld"
-    if re.match(r"(Prefix|Ontology|Import|Declaration)\(", first):
+    if _FUNCTIONAL_START.match(first):
         return "functional"
-    if re.match(r"(Prefix|Ontology|Import|Class|ObjectProperty|DataProperty|AnnotationProperty|Individual|Datatype):", first):
+    if _MANCHESTER_START.match(first):
         return "manchester"
-    if re.match(r"(format-version|data-version|ontology|default-namespace|date|saved-by|auto-generated-by|subsetdef|synonymtypedef|import|idspace|remark):", first) \
-            or re.search(r"^\[(Term|Typedef|Instance)\]", text, re.M):
+    if _OBO_HEADER.match(first) or _OBO_STANZA.search(text):
         return "obo"
-    if re.match(r"(@prefix|@base)\b", first) or re.match(r"(PREFIX|BASE)\s", first, re.I):
+    if _TURTLE_DIRECTIVE.match(first) or _SPARQL_DIRECTIVE.match(first):
         return "turtle"
-    ntriple = re.compile(r'^(<[^>]*>|_:\S+)\s+<[^>]*>\s+(<[^>]*>|_:\S+|".*"(\^\^<[^>]*>|@[\w-]+)?)\s*\.$')
-    if content and all(ntriple.match(line) for line in content[:50]):
+    if content and all(_NTRIPLES_LINE.match(line) for line in content[:50]):
         return "ntriples"
-    if re.match(r"(<[^>]*>|_:\S+|[\w-]*:\S*)\s", first):
+    if _TURTLE_TRIPLE_START.match(first):
         return "turtle"      # Turtle without prefix declarations at the top
     raise ValueError(f"{path}: unrecognized RDF/OWL serialization")
+
+
+# formats build_semsql_db converts to RDF/XML with pyoxigraph and with ROBOT
+_PYOXIGRAPH_FORMATS = {"turtle": "TURTLE", "ntriples": "N_TRIPLES", "jsonld": "JSON_LD"}
+_ROBOT_FORMATS = {"functional", "manchester", "owlxml", "obo"}
 
 
 def build_semsql_db(data_path, db_path, extra_prefixes=None, method="rdftab",
@@ -204,19 +246,14 @@ def build_semsql_db(data_path, db_path, extra_prefixes=None, method="rdftab",
         input_format: serialization of data_path (a detect_rdf_format value); detected if None.
         rebuild: rebuild the database even if it already exists.
     """
-    import pyoxigraph
     import semsql
-    
-    pyoxigraph_formats = {"turtle": pyoxigraph.RdfFormat.TURTLE, "ntriples": pyoxigraph.RdfFormat.N_TRIPLES,
-                          "jsonld": pyoxigraph.RdfFormat.JSON_LD}
-    robot_formats = {"functional", "manchester", "owlxml", "obo"}
-    if method not in ("rdftab", "semsql"):
-        raise ValueError(f"method must be 'rdftab' or 'semsql', not {method!r}")
+
+    _check_choice("method", method, ("rdftab", "semsql"))
     data_path, db_path = Path(data_path), Path(db_path)
     if db_path.exists() and not rebuild:
         return db_path
     fmt = input_format or detect_rdf_format(data_path)
-    if fmt not in pyoxigraph_formats and fmt not in robot_formats and fmt != "rdfxml":
+    if fmt not in _PYOXIGRAPH_FORMATS and fmt not in _ROBOT_FORMATS and fmt != "rdfxml":
         raise ValueError(f"unsupported input_format {fmt!r}")
     print(f"{data_path.name}: {fmt}")
 
@@ -224,63 +261,88 @@ def build_semsql_db(data_path, db_path, extra_prefixes=None, method="rdftab",
     work.mkdir(parents=True, exist_ok=True)
     builder = Path(semsql.__file__).parent / "builder"
 
-    # RDF/XML for rdftab / semsql (semsql make X.db expects X.owl next to it)
+    # semsql make X.db expects the RDF/XML in X.owl next to it
     owl_path = work / (db_path.stem + ".owl")
-    created = []                                     # temporary files to remove at the end
-    if fmt == "rdfxml":
-        if method == "rdftab":
-            rdfxml_path = data_path                  # use the input file directly
-        elif data_path.resolve() == owl_path.resolve():
-            rdfxml_path = owl_path
-        else:
-            shutil.copy(data_path, owl_path); created.append(owl_path); rdfxml_path = owl_path
-    else:
-        if data_path.resolve() == owl_path.resolve():
-            raise ValueError(f"{data_path} is {fmt}; it would be overwritten by the RDF/XML conversion")
-        if fmt in pyoxigraph_formats:
-            with open(data_path, "rb") as src, open(owl_path, "wb") as rdfxml:
-                pyoxigraph.serialize(pyoxigraph.parse(src, format=pyoxigraph_formats[fmt]),
-                                     rdfxml, format=pyoxigraph.RdfFormat.RDF_XML)
-        else:
-            subprocess.run(["robot", "convert", "-i", str(data_path), "--format", "owl", "-o", str(owl_path)],
-                           check=True, capture_output=True, text=True)
-        created.append(owl_path); rdfxml_path = owl_path
-
-    # semsql's standard prefixes + extra prefixes
-    prefixes = work / "prefixes.csv"
-    lines = (builder / "prefixes" / "prefixes.csv").read_text().rstrip("\n").split("\n")
-    lines += [f"{p},{base}" for p, base in (extra_prefixes or {}).items()]
-    prefixes.write_text("\n".join(lines) + "\n")
+    rdfxml_path, created = _as_rdfxml(data_path, fmt, owl_path,
+                                      copy_rdfxml=(method == "semsql"))
+    prefixes_csv = work / "prefixes.csv"
+    prefix_lines = _write_prefixes(builder, prefixes_csv, extra_prefixes)
 
     try:
         db_path.unlink(missing_ok=True)
         if method == "semsql":
-            build = subprocess.run(["semsql", "make", "-P", prefixes.name, db_path.name],
-                                   cwd=work, capture_output=True, text=True)
-            if build.returncode != 0:
-                raise RuntimeError(f"semsql failed:\n{build.stderr[-3000:]}")
+            _semsql_make(work, prefixes_csv, db_path)
         else:
-            tmp = db_path.with_suffix(".db.tmp")
-            tmp.unlink(missing_ok=True)
-            with sqlite3.connect(tmp) as db:
-                db.executescript((builder / "sql_schema" / "semsql.sql").read_text())   # tables and views
-                rows = [line.split(",", 1) for line in lines[1:] if "," in line]       # skip the header
-                db.executemany("INSERT INTO prefix (prefix, base) VALUES (?, ?)", rows)
-            with open(rdfxml_path, "rb") as rdfxml:
-                load = subprocess.run(["rdftab", str(tmp)], stdin=rdfxml, capture_output=True, text=True)
-            if load.returncode != 0:
-                raise RuntimeError(f"rdftab failed:\n{load.stderr[-3000:]}")
-            with sqlite3.connect(tmp) as db:
-                db.executescript("""
-                    CREATE INDEX statements_spo ON statements(subject, predicate, object);
-                    CREATE INDEX statements_spv ON statements(subject, predicate, value);
-                    CREATE INDEX statements_p ON statements(predicate);
-                """)
-            tmp.rename(db_path)
+            _load_with_rdftab(builder, rdfxml_path, db_path, prefix_lines)
     finally:
         for f in created:                            # never deletes the input file
             f.unlink(missing_ok=True)
     return db_path
+
+
+def _as_rdfxml(data_path, fmt, owl_path, copy_rdfxml):
+    """Return the path of an RDF/XML version of data_path (converted or copied to
+    owl_path if needed) and the list of files created, to delete when done."""
+    if fmt == "rdfxml":
+        if not copy_rdfxml or data_path.resolve() == owl_path.resolve():
+            return data_path, []                     # use the input file directly
+        shutil.copy(data_path, owl_path)
+        return owl_path, [owl_path]
+
+    if data_path.resolve() == owl_path.resolve():
+        raise ValueError(f"{data_path} is {fmt}; it would be overwritten by the RDF/XML conversion")
+    if fmt in _PYOXIGRAPH_FORMATS:
+        import pyoxigraph
+
+        in_format = getattr(pyoxigraph.RdfFormat, _PYOXIGRAPH_FORMATS[fmt])
+        with open(data_path, "rb") as src, open(owl_path, "wb") as rdfxml:
+            pyoxigraph.serialize(pyoxigraph.parse(src, format=in_format),
+                                 rdfxml, format=pyoxigraph.RdfFormat.RDF_XML)
+    else:
+        subprocess.run(["robot", "convert", "-i", str(data_path), "--format", "owl",
+                        "-o", str(owl_path)],
+                       check=True, capture_output=True, text=True)
+    return owl_path, [owl_path]
+
+
+def _write_prefixes(builder, prefixes_csv, extra_prefixes):
+    """Write semsql's standard prefixes plus extra_prefixes to prefixes_csv; return
+    its lines (the first line is the header)."""
+    lines = (builder / "prefixes" / "prefixes.csv").read_text().rstrip("\n").split("\n")
+    lines += [f"{prefix},{base}" for prefix, base in (extra_prefixes or {}).items()]
+    prefixes_csv.write_text("\n".join(lines) + "\n")
+    return lines
+
+
+def _semsql_make(work, prefixes_csv, db_path):
+    """Build db_path with `semsql make` (runs in `work`, next to the .owl file)."""
+    build = subprocess.run(["semsql", "make", "-P", prefixes_csv.name, db_path.name],
+                           cwd=work, capture_output=True, text=True)
+    if build.returncode != 0:
+        raise RuntimeError(f"semsql failed:\n{build.stderr[-3000:]}")
+
+
+def _load_with_rdftab(builder, rdfxml_path, db_path, prefix_lines):
+    """Create the semsql tables and views, load the triples with rdftab, and add the
+    statements indexes. The database is built in a temporary file and renamed at the end."""
+    tmp = db_path.with_suffix(".db.tmp")
+    tmp.unlink(missing_ok=True)
+    with sqlite3.connect(tmp) as db:
+        db.executescript((builder / "sql_schema" / "semsql.sql").read_text())
+        rows = [line.split(",", 1) for line in prefix_lines[1:] if "," in line]  # skip header
+        db.executemany("INSERT INTO prefix (prefix, base) VALUES (?, ?)", rows)
+    with open(rdfxml_path, "rb") as rdfxml:
+        load = subprocess.run(["rdftab", str(tmp)], stdin=rdfxml, capture_output=True, text=True)
+    if load.returncode != 0:
+        raise RuntimeError(f"rdftab failed:\n{load.stderr[-3000:]}")
+    with sqlite3.connect(tmp) as db:
+        db.executescript("""
+            CREATE INDEX statements_spo ON statements(subject, predicate, object);
+            CREATE INDEX statements_spv ON statements(subject, predicate, value);
+            CREATE INDEX statements_p ON statements(predicate);
+        """)
+    tmp.rename(db_path)
+
 
 # ------------------------------------------------------------------------------
 # term enrichment
@@ -293,10 +355,18 @@ def record_curie(iris):
     Records get their IRIs from their Participant_id when the RDF is created
     (spreadsheet-to-rdf.py --id-columns Participant_id).
     """
-    return iris.str.replace("https://w3id.org/OHD/DFA-study/superdataset/", "superdataset:", regex=False)
+    return iris.str.replace(SUPERDATASET_BASE, "superdataset:", regex=False)
 
 
-def run_enrichment(adapter, sample, background, direction="greater", cutoff=0.05, filter_redundant=False):
+_ENRICHMENT_COLUMNS = [
+    "rank", "class_id", "class_label", "direction", "sample_count", "sample_total",
+    "background_count", "background_total", "p_value", "p_value_adjusted",
+    "ancestor_of_more_informative_result", "descendant_of_more_informative_result",
+    "sample_pct", "background_pct"]
+
+
+def run_enrichment(adapter, sample, background, direction="greater", cutoff=0.05,
+                   filter_redundant=False):
     """Test OHD classes for over- and/or under-representation in a sample of records.
 
     Follows OAK's class enrichment (`adapter.enriched_classes`): the same association
@@ -319,18 +389,13 @@ def run_enrichment(adapter, sample, background, direction="greater", cutoff=0.05
 
     Classes tested:
         "greater": classes with at least 2 sample records (as in OAK).
-        "less" and "two-sided": every class with at least 1 background record, 
+        "less" and "two-sided": every class with at least 1 background record,
            so classes with no sample records can be found to be under-represented.
     """
     from oaklib.datamodels.vocabulary import IS_A
     from scipy.stats import fisher_exact
-    
-    if direction not in ("greater", "less", "two-sided"):
-        raise ValueError(f"direction must be 'greater', 'less' or 'two-sided', not {direction!r}")
-    cols = ["rank", "class_id", "class_label", "direction", "sample_count", "sample_total",
-            "background_count", "background_total", "p_value", "p_value_adjusted",
-            "ancestor_of_more_informative_result", "descendant_of_more_informative_result",
-            "sample_pct", "background_pct"]
+
+    _check_choice("direction", direction, ("greater", "less", "two-sided"))
 
     sample = list(dict.fromkeys(sample))                 # drop duplicates, keep order
     if not sample:
@@ -338,12 +403,14 @@ def run_enrichment(adapter, sample, background, direction="greater", cutoff=0.05
     background = set(background) | set(sample)          # background includes the sample
     n_sample, n_bg = len(sample), len(background)
 
-    sample_counts = dict(adapter.association_subject_counts(sample, object_closure_predicates=[IS_A]))
+    sample_counts = dict(adapter.association_subject_counts(
+        sample, object_closure_predicates=[IS_A]))
     if not any(sample_counts.values()):
-        raise ValueError("No associations found for the sample records. Check that the sample IDs are "
-                         "record CURIEs (superdataset:<Participant_id>) and that the association and "
-                         "database cells were run on the current data.")
-    bg_counts = dict(adapter.association_subject_counts(background, object_closure_predicates=[IS_A]))
+        raise ValueError("No associations found for the sample records. Check that the sample "
+                         "IDs are record CURIEs (superdataset:<Participant_id>) and that the "
+                         "association and database cells were run on the current data.")
+    bg_counts = dict(adapter.association_subject_counts(
+        background, object_closure_predicates=[IS_A]))
 
     if direction == "greater":
         hypotheses = [c for c, k in sample_counts.items() if k > 1]
@@ -353,14 +420,13 @@ def run_enrichment(adapter, sample, background, direction="greater", cutoff=0.05
     rows = []
     for cls in hypotheses:
         k, bg = sample_counts.get(cls, 0), bg_counts[cls]
-        
         # 2x2 table: sample vs rest of background, with vs without the class
         table = [[k, n_sample - k], [bg - k, (n_bg - n_sample) - (bg - k)]]
         p = fisher_exact(table, alternative=direction)[1]
         rows.append({"class_id": cls, "sample_count": k, "sample_total": n_sample,
                      "background_count": bg, "background_total": n_bg, "p_value": p,
                      "direction": "over" if k / n_sample > bg / n_bg else "under"})
-    df = pd.DataFrame(rows, columns=cols)
+    df = pd.DataFrame(rows, columns=_ENRICHMENT_COLUMNS)
     df["p_value_adjusted"] = (df["p_value"] * len(hypotheses)).clip(upper=1.0)
     df = df[df["p_value_adjusted"] <= cutoff]
 
@@ -373,27 +439,61 @@ def run_enrichment(adapter, sample, background, direction="greater", cutoff=0.05
     # redundancy flags, as in OAK; for two-sided tests, over- and under-represented
     # classes are compared separately
     groups = df["direction"] if direction == "two-sided" else ["all"] * len(df)
-    seen, seen_ancestors = {}, {}
-    anc_flags, desc_flags = [], []
-    for cls, d in zip(df["class_id"], groups):
-        s, sa = seen.setdefault(d, set()), seen_ancestors.setdefault(d, set())
-        desc_flags.append(bool(s & (ancestors[cls] - {cls})) or None)
-        anc_flags.append((cls in sa) or None)
-        s.add(cls)
-        sa.update(ancestors[cls])
-    df["ancestor_of_more_informative_result"] = anc_flags
-    df["descendant_of_more_informative_result"] = desc_flags
+    (df["ancestor_of_more_informative_result"],
+     df["descendant_of_more_informative_result"]) = _redundancy_flags(
+        df["class_id"], groups, ancestors)
     df["rank"] = range(1, len(df) + 1)
-    
+
     if filter_redundant:
-        redundant = df["ancestor_of_more_informative_result"].fillna(False).astype(bool) | \
-                    df["descendant_of_more_informative_result"].fillna(False).astype(bool)
+        redundant = (df["ancestor_of_more_informative_result"].fillna(False).astype(bool)
+                     | df["descendant_of_more_informative_result"].fillna(False).astype(bool))
         df = df[~redundant].reset_index(drop=True)
 
     df["class_label"] = [adapter.label(c) for c in df["class_id"]]
     df["sample_pct"] = (100 * df["sample_count"] / df["sample_total"]).round(1)
     df["background_pct"] = (100 * df["background_count"] / df["background_total"]).round(1)
-    return df[cols]
+    return df[_ENRICHMENT_COLUMNS]
+
+
+def _redundancy_flags(class_ids, groups, ancestors):
+    """OAK's redundancy flags for results sorted from most to least significant.
+
+    A class is flagged as an ancestor (or descendant) of a more informative result if a
+    more significant class in the same group is its descendant (or ancestor).
+    Returns two lists of True / None: ancestor flags and descendant flags.
+    """
+    earlier, earlier_ancestors = {}, {}      # per group: classes seen so far, their ancestors
+    anc_flags, desc_flags = [], []
+    for cls, group in zip(class_ids, groups):
+        seen = earlier.setdefault(group, set())
+        seen_ancestors = earlier_ancestors.setdefault(group, set())
+        desc_flags.append(bool(seen & (ancestors[cls] - {cls})) or None)
+        anc_flags.append((cls in seen_ancestors) or None)
+        seen.add(cls)
+        seen_ancestors.update(ancestors[cls])
+    return anc_flags, desc_flags
+
+
+# ------------------------------------------------------------------------------
+# drawing graphs with OAK's viz (og2dot)
+# ------------------------------------------------------------------------------
+
+def _kgviz_meta(attrs):
+    """OboGraph metadata that sets Graphviz attributes on a node or edge: og2dot passes
+    https://w3id.org/kgviz/<attribute> values to Graphviz, over its own defaults.
+    Attributes whose value is None are left out."""
+    from oaklib.datamodels import obograph
+
+    return obograph.Meta(basicPropertyValues=[
+        obograph.BasicPropertyValue(pred=f"https://w3id.org/kgviz/{k}", val=str(v))
+        for k, v in attrs.items() if v is not None])
+
+
+def _display_png(path):
+    """Display a PNG file in the notebook."""
+    from IPython.display import Image, display
+
+    display(Image(filename=str(path)))
 
 
 def _combine_images(main_png, side_png, out_png, position, gap=20):
@@ -416,27 +516,47 @@ def _combine_images(main_png, side_png, out_png, position, gap=20):
     canvas.save(out_png)
 
 
+# ------------------------------------------------------------------------------
+# term enrichment figure
+# ------------------------------------------------------------------------------
+
 # Colors for plot_enrichment. Orange = over-represented, blue = under-represented
 # (a diverging pair that stays distinguishable with all common types of colour blindness).
 # Significance (adjusted p) is shown by 4 shades, light -> dark, on the box border
 # ("border-width", "border-rings", "border-tint", "border") or the box fill ("fill"),
 # plus border width ("border-width") or number of outlines ("border-rings"); the ramps were
 # checked for monotone lightness, a single hue and readable label text.
+#   borders, tint:  border shades and box colour in the "border" styles
+#   fills, border:  fill shades and border colour in the "fill" style
+#   fill_text:      label colour on each fill shade
 ENRICHMENT_STYLE = {
     "p_levels": [0.05, 1e-3, 1e-6, 1e-12],     # adj. p at or below -> shade 0, 1, 2, 3
-    "over":  {"symbol": "\u25b2",                                                             # orange
-              "borders": ["#ff9067", "#da5821", "#9e3703", "#611f01"], "tint": "#fed3c4",       # "border" styles
-              "fills": ["#fea98b", "#fb7744", "#da5821", "#b43f01"], "border": "#9e3703",       # "fill" style
-              "fill_text": ["#0b0b0b", "#ffffff", "#ffffff", "#ffffff"]},                       # label ink on each fill
-    "under": {"symbol": "\u25bc",                                                             # blue
-              "borders": ["#86b6ef", "#3987e5", "#1c5cab", "#0d366b"], "tint": "#cce0f9",
-              "fills": ["#9ec5f4", "#6da7ec", "#3987e5", "#256abf"], "border": "#1c5cab",
-              "fill_text": ["#0b0b0b", "#0b0b0b", "#ffffff", "#ffffff"]},
-    "border_text": "#0b0b0b",                                     # label ink in the "border" styles
+    "over": {                                  # orange
+        "symbol": "\u25b2",
+        "borders": ["#ff9067", "#da5821", "#9e3703", "#611f01"], "tint": "#fed3c4",
+        "fills": ["#fea98b", "#fb7744", "#da5821", "#b43f01"], "border": "#9e3703",
+        "fill_text": ["#0b0b0b", "#ffffff", "#ffffff", "#ffffff"],
+    },
+    "under": {                                 # blue
+        "symbol": "\u25bc",
+        "borders": ["#86b6ef", "#3987e5", "#1c5cab", "#0d366b"], "tint": "#cce0f9",
+        "fills": ["#9ec5f4", "#6da7ec", "#3987e5", "#256abf"], "border": "#1c5cab",
+        "fill_text": ["#0b0b0b", "#0b0b0b", "#ffffff", "#ffffff"],
+    },
+    "border_text": "#0b0b0b",                  # label colour in the "border" styles
     "penwidth": {"fill": "2", "border": "4", "rings": "2"},
-    "border_widths": ["1.5", "3", "5", "7"],                      # "border-width": width for each shade
-    "context": {"fillcolor": "#ffffff", "color": "#898781", "fontcolor": "#52514e", "penwidth": "1"},
+    "border_widths": ["1.5", "3", "5", "7"],   # "border-width": width for each shade
+    "context": {"fillcolor": "#ffffff", "color": "#898781", "fontcolor": "#52514e",
+                "penwidth": "1"},
 }
+
+_SIGNIFICANCE_STYLES = ("border-width", "border-rings", "border-tint", "border", "fill")
+_DIRECTION_NAMES = {"over": "over-represented", "under": "under-represented"}
+
+# og2dot settings: no "is a" labels; invisible edges that stack the legend boxes
+_ENRICHMENT_CONFIGURE = json.dumps({"relationProperties": {
+    "rdfs:subClassOf": {"label": ""},
+    "legend:next": {"style": "invis", "arrowhead": "none", "label": ""}}})
 
 
 def plot_enrichment(adapter, enrichment, imgfile, top_class="OHD:0008011", width=30,
@@ -472,128 +592,139 @@ def plot_enrichment(adapter, enrichment, imgfile, top_class="OHD:0008011", width
         significance_style: how significance is shown (boxes are light orange / light
             blue except in "border" and "fill"):
             "border-width": shaded border that also gets thicker (default);
-            "border-rings": shaded border with 1-4 outlines (countable; works in black and white);
+            "border-rings": shaded border with 1-4 outlines (countable; works in black
+                and white);
             "border-tint": shaded border of constant width;
             "border": white box with a shaded border;
             "fill": shaded box fill.
         style: colours, shades and widths to use (same structure as ENRICHMENT_STYLE);
             default: ENRICHMENT_STYLE.
     """
-    from IPython.display import Image, display
-    from oaklib.datamodels import obograph
     from oaklib.datamodels.vocabulary import IS_A
     from oaklib.utilities.obograph_utils import graph_to_image
-    
-    if legend_orientation not in ("horizontal", "vertical"):
-        raise ValueError(f"legend_orientation must be 'horizontal' or 'vertical', not {legend_orientation!r}")
+
+    _check_choice("legend_orientation", legend_orientation, ("horizontal", "vertical"))
     if legend_position is None:
         legend_position = "right" if legend_orientation == "vertical" else "bottom"
-    if legend_position not in ("right", "left", "top", "bottom"):
-        raise ValueError(f"legend_position must be 'right', 'left', 'top' or 'bottom', not {legend_position!r}")
-    styles = ("border-width", "border-rings", "border-tint", "border", "fill")
-    if significance_style not in styles:
-        raise ValueError(f"significance_style must be one of {styles}, not {significance_style!r}")
+    _check_choice("legend_position", legend_position, ("right", "left", "top", "bottom"))
+    _check_choice("significance_style", significance_style, _SIGNIFICANCE_STYLES)
     cfg = style or ENRICHMENT_STYLE
-    ids = enrichment["class_id"].tolist()
-    graph = adapter.ancestor_graph(ids, predicates=[IS_A])
 
+    graph = adapter.ancestor_graph(enrichment["class_id"].tolist(), predicates=[IS_A])
     # drop the upper-level ancestors (BFO, IAO, ...) and the predicate node OAK adds
     keep = set(adapter.descendants(top_class, predicates=[IS_A]))
     graph.nodes = [n for n in graph.nodes if n.id in keep]
     graph.edges = [e for e in graph.edges if e.sub in keep and e.obj in keep]
 
-    def level(p):
-        # index of the shade for an adjusted p-value
-        return max(i for i, cut in enumerate(cfg["p_levels"]) if p <= cut)
-
-    def node_style(attrs):
-        # og2dot passes https://w3id.org/kgviz/<attribute> values to Graphviz
-        return obograph.Meta(basicPropertyValues=[
-            obograph.BasicPropertyValue(pred=f"https://w3id.org/kgviz/{k}", val=str(v))
-            for k, v in attrs.items()])
-
-    def significant_style(direction, step):
-        d = cfg[direction]
-        if significance_style == "fill":
-            attrs = {"fillcolor": d["fills"][step], "color": d["border"],
-                     "fontcolor": d["fill_text"][step], "penwidth": cfg["penwidth"]["fill"]}
-        else:
-            attrs = {"fillcolor": "#ffffff" if significance_style == "border" else d["tint"],
-                     "color": d["borders"][step], "fontcolor": cfg["border_text"],
-                     "penwidth": cfg["penwidth"]["border"]}
-            if significance_style == "border-width":
-                attrs["penwidth"] = cfg["border_widths"][step]
-            elif significance_style == "border-rings":
-                attrs["peripheries"] = str(step + 1)      # Graphviz: number of outlines
-                attrs["penwidth"] = cfg["penwidth"]["rings"]
-        return node_style(attrs)
-
-    def wrap(text):
-        # og2dot puts every word on its own line; wrap the labels ourselves and use
-        # non-breaking spaces within a line
-        return "\n".join(line.replace(" ", " ") for line in textwrap.wrap(text, width))
-
+    # label and colour the nodes
     stats = enrichment.set_index("class_id")
-    used = set()
-    not_significant = False      # any results above the significance cutoff?
+    directions_used = set()
+    any_not_significant = False      # any results above the significance cutoff?
     for node in graph.nodes:
-        label = wrap(node.lbl or node.id)
+        label = _wrap_label(node.lbl or node.id, width)
+        node.meta = _kgviz_meta(cfg["context"])
         if node.id in stats.index:
             r = stats.loc[node.id]
-            direction = r.get("direction") or ("over" if r.sample_pct >= r.background_pct else "under")
+            direction = r.get("direction") or (
+                "over" if r.sample_pct >= r.background_pct else "under")
             significant = r.p_value_adjusted <= cfg["p_levels"][0]
-            label += (f"\n{cfg[direction]['symbol']} {r.sample_pct:.1f}% vs {r.background_pct:.1f}%"
-                      f"\nadj. p = {r.p_value_adjusted:.1e}" + ("" if significant else f" (n.s.)"))
+            symbol = cfg[direction]["symbol"]
+            percentages = f"{symbol} {r.sample_pct:.1f}% vs {r.background_pct:.1f}%"
+            p_value = f"adj. p = {r.p_value_adjusted:.1e}" + ("" if significant else " (n.s.)")
+            label += "\n" + _no_break(percentages) + "\n" + _no_break(p_value)
             if significant:
-                used.add(direction)
-                node.meta = significant_style(direction, level(r.p_value_adjusted))
+                directions_used.add(direction)
+                shade = _shade(cfg, r.p_value_adjusted)
+                node.meta = _kgviz_meta(_significance_attrs(cfg, significance_style,
+                                                            direction, shade))
             else:
-                not_significant = True
-                node.meta = node_style(cfg["context"])     # in the results, but not significant
-        else:
-            node.meta = node_style(cfg["context"])
+                any_not_significant = True
         node.lbl = label
 
-    configure = ('{"relationProperties": {"rdfs:subClassOf": {"label": ""}, '
-                 '"legend:next": {"style": "invis", "arrowhead": "none", "label": ""}}}')
     if not legend:
-        graph_to_image(graph, configure=configure, imgfile=str(imgfile))
+        graph_to_image(graph, configure=_ENRICHMENT_CONFIGURE, imgfile=str(imgfile))
     else:
-        # legend: one box per shade for each direction in the results, plus the white style
-        names = {"over": "over-represented", "under": "under-represented"}
-        legend_graph = obograph.Graph(id="legend", nodes=[], edges=[])
-        for direction in ("over", "under"):
-            if direction not in used:
-                continue
-            for step, cut in enumerate(cfg["p_levels"]):
-                legend_graph.nodes.append(obograph.Node(
-                    id=f"legend:{direction}{step}",
-                    lbl=f"{cfg[direction]['symbol']} {names[direction]}\nadj. p \u2264 {cut:g}",
-                    meta=significant_style(direction, step)))
-        legend_graph.nodes.append(obograph.Node(
-            id="legend:context", lbl="not significant" if not_significant else "ancestor, not significant",
-            meta=node_style(cfg["context"])))
-        if legend_orientation == "vertical":
-            # invisible edges stack the legend boxes in a column (first box on top)
-            legend_ids = [n.id for n in legend_graph.nodes]
-            legend_graph.edges = [obograph.Edge(sub=lower, pred="legend:next", obj=upper)
-                                  for upper, lower in zip(legend_ids, legend_ids[1:])]
-
+        legend_graph = _enrichment_legend(cfg, significance_style, directions_used,
+                                          any_not_significant, legend_orientation)
         # draw the graph and the legend separately, then place the legend next to the graph
         with tempfile.TemporaryDirectory() as tmp:
             graph_png, legend_png = Path(tmp) / "graph.png", Path(tmp) / "legend.png"
-            graph_to_image(graph, configure=configure, imgfile=str(graph_png))
-            graph_to_image(legend_graph, configure=configure, imgfile=str(legend_png))
+            graph_to_image(graph, configure=_ENRICHMENT_CONFIGURE, imgfile=str(graph_png))
+            graph_to_image(legend_graph, configure=_ENRICHMENT_CONFIGURE, imgfile=str(legend_png))
             _combine_images(graph_png, legend_png, imgfile, legend_position)
     if show:
-        display(Image(filename=str(imgfile)))
+        _display_png(imgfile)
+
+
+def _no_break(text):
+    """Replace the spaces with non-breaking spaces: og2dot puts every word of a label on
+    its own line, so labels keep their line breaks only with these."""
+    return text.replace(" ", "\u00a0")
+
+
+def _wrap_label(text, width):
+    """Wrap a label at `width` characters (see _no_break)."""
+    return "\n".join(_no_break(line) for line in textwrap.wrap(text, width))
+
+
+def _shade(cfg, p):
+    """Index of the shade for an adjusted p-value (the last p level it is at or below)."""
+    return max(i for i, cut in enumerate(cfg["p_levels"]) if p <= cut)
+
+
+def _significance_attrs(cfg, significance_style, direction, shade):
+    """Graphviz attributes for a significant class (see plot_enrichment)."""
+    d = cfg[direction]
+    if significance_style == "fill":
+        return {"fillcolor": d["fills"][shade], "color": d["border"],
+                "fontcolor": d["fill_text"][shade], "penwidth": cfg["penwidth"]["fill"]}
+
+    attrs = {"fillcolor": "#ffffff" if significance_style == "border" else d["tint"],
+             "color": d["borders"][shade], "fontcolor": cfg["border_text"],
+             "penwidth": cfg["penwidth"]["border"]}
+    if significance_style == "border-width":
+        attrs["penwidth"] = cfg["border_widths"][shade]
+    elif significance_style == "border-rings":
+        attrs["peripheries"] = str(shade + 1)      # Graphviz: number of outlines
+        attrs["penwidth"] = cfg["penwidth"]["rings"]
+    return attrs
+
+
+def _enrichment_legend(cfg, significance_style, directions, any_not_significant, orientation):
+    """OboGraph for the legend: one box per shade for each direction in `directions`,
+    plus the white box."""
+    from oaklib.datamodels import obograph
+
+    legend = obograph.Graph(id="legend", nodes=[], edges=[])
+    for direction in ("over", "under"):
+        if direction not in directions:
+            continue
+        for shade, cut in enumerate(cfg["p_levels"]):
+            attrs = _significance_attrs(cfg, significance_style, direction, shade)
+            legend.nodes.append(obograph.Node(
+                id=f"legend:{direction}{shade}",
+                lbl=(_no_break(f"{cfg[direction]['symbol']} {_DIRECTION_NAMES[direction]}")
+                     + "\n" + _no_break(f"adj. p \u2264 {cut:g}")),
+                meta=_kgviz_meta(attrs)))
+    legend.nodes.append(obograph.Node(
+        id="legend:context",
+        lbl=_no_break("not significant" if any_not_significant else "ancestor, not significant"),
+        meta=_kgviz_meta(cfg["context"])))
+
+    if orientation == "vertical":
+        # invisible edges stack the legend boxes in a column (first box on top)
+        ids = [n.id for n in legend.nodes]
+        legend.edges = [obograph.Edge(sub=lower, pred="legend:next", obj=upper)
+                        for upper, lower in zip(ids, ids[1:])]
+    return legend
+
 
 # ------------------------------------------------------------------------------
 # visualizing SPARQL query results
 # ------------------------------------------------------------------------------
 
-# Edges from is_a (rdfs:subClassOf) relationships; og2dot calls them "rdfs:subClassOf".
-_IS_A_KEYS = {"is_a", "rdfs:subClassOf", "http://www.w3.org/2000/01/rdf-schema#subClassOf"}
+# names of the is_a (rdfs:subClassOf) relationship; og2dot calls it "rdfs:subClassOf"
+_IS_A_KEYS = ("rdfs:subClassOf", "is_a", "http://www.w3.org/2000/01/rdf-schema#subClassOf")
 
 
 def plot_sparql_graph(source, root, imgfile, query=None, predicates=None, edge_labels=None,
@@ -679,66 +810,30 @@ def plot_sparql_graph(source, root, imgfile, query=None, predicates=None, edge_l
         plot_sparql_graph(res, "OHD:0008044", "DFA-data/temp.about.png",
                           predicates=["IAO:0000136"], draw_is_a=False)
     """
-    import json
-
     from oaklib import get_adapter
-    from oaklib.datamodels import obograph
     from oaklib.datamodels.vocabulary import IS_A
     from oaklib.utilities.obograph_utils import graph_to_image
-    from rdflib import OWL, RDF
 
-    if query is not None:
-        if not isinstance(source, Graph):
-            raise TypeError("source must be an rdflib Graph when a query is given")
-        source = source.query(query)
-    rdf = source if isinstance(source, Graph) else getattr(source, "graph", None)
-    if rdf is None:
-        raise TypeError("source must be an rdflib Graph or the result of a CONSTRUCT query")
-    if len(rdf) == 0:
-        raise ValueError("the graph is empty; check the CONSTRUCT query")
+    rdf = _for_pronto(_construct_graph(source, query))
 
-    # pronto needs an ontology header; copy the triples so `source` isn't changed
-    rdf = Graph() + rdf
-    if not any(rdf.subjects(RDF.type, OWL.Ontology)):
-        rdf.add((URIRef("http://purl.obolibrary.org/obo/viz.tmp.owl"), RDF.type, OWL.Ontology))
-    # pronto fails on restrictions whose property isn't declared; declare them
-    for prop in set(rdf.objects(None, OWL.onProperty)):
-        if isinstance(prop, URIRef) and (prop, RDF.type, OWL.ObjectProperty) not in rdf:
-            rdf.add((prop, RDF.type, OWL.ObjectProperty))
-
-    # is_a is handled by include_is_a; drop it from the extra relationships
+    # is_a is handled by include_is_a / draw_is_a; drop it from the extra relationships
     predicates = [p for p in dict.fromkeys(predicates or []) if p not in _IS_A_KEYS]
     if not (include_is_a and draw_is_a) and not predicates:
         raise ValueError("include_is_a=False and draw_is_a=False need at least one "
                          "relationship in `predicates`")
+
     with tempfile.TemporaryDirectory() as tmp:
         owl_file = Path(tmp) / "viz.tmp.owl"
         rdf.serialize(owl_file, format="pretty-xml")
         adapter = get_adapter(f"pronto:{owl_file}")
 
-        if include_is_a:
-            edge_predicates = [IS_A] + predicates
-            nodes = set(adapter.descendants(root, predicates=[IS_A], reflexive=True))
-            if not nodes - {root}:
-                raise ValueError(f"no is_a descendants of {root} in the graph; "
-                                 "check the root CURIE")
-        else:
-            edge_predicates = predicates
-            nodes = (set(adapter.descendants(root, predicates=predicates, reflexive=True))
-                     | set(adapter.ancestors(root, predicates=predicates, reflexive=True)))
-            if not nodes - {root}:
-                raise ValueError(f"no {', '.join(predicates)} relationships of {root} in the "
-                                 "graph; check the root CURIE and the CONSTRUCT query")
-        if predicates:
-            nodes |= {o for n in list(nodes)
-                        for _, o in adapter.outgoing_relationships(n, predicates=predicates)}
-        graph = adapter.extract_graph(list(nodes), predicates=edge_predicates)
+        classes = _select_classes(adapter, root, predicates, include_is_a)
+        edge_predicates = ([IS_A] if include_is_a else []) + predicates
+        graph = adapter.extract_graph(list(classes), predicates=edge_predicates)
 
-        # the labels og2dot shows by default: the predicate's label if it is a node, else the CURIE
+        # the labels og2dot shows for the predicates: their label, else the CURIE
         node_labels = {n.id: n.lbl for n in graph.nodes if n.lbl}
-        for pred in predicates:
-            if pred not in node_labels and adapter.label(pred):
-                node_labels[pred] = adapter.label(pred)
+        predicate_labels = {p: node_labels.get(p) or adapter.label(p) for p in predicates}
 
     # don't draw the predicates themselves (e.g., an "is about" box) as nodes
     graph.nodes = [n for n in graph.nodes if n.id not in predicates]
@@ -749,40 +844,91 @@ def plot_sparql_graph(source, root, imgfile, query=None, predicates=None, edge_l
         connected = {e.sub for e in graph.edges} | {e.obj for e in graph.edges}
         graph.nodes = [n for n in graph.nodes if n.id in connected]
 
-    def kgviz(attrs):
-        # og2dot passes https://w3id.org/kgviz/<attribute> values to Graphviz,
-        # over its own defaults
-        return obograph.Meta(basicPropertyValues=[
-            obograph.BasicPropertyValue(pred=f"https://w3id.org/kgviz/{k}", val=str(v))
-            for k, v in attrs.items() if v is not None])
-
-    def for_edge(edge, value, default=None):
-        # value for this edge's relation: `value` itself, or looked up in a dict whose keys
-        # are a predicate CURIE / IRI or the label og2dot would show
-        if not isinstance(value, dict):
-            return value
-        if edge.pred in _IS_A_KEYS:
-            keys = _IS_A_KEYS
-        else:
-            keys = (edge.pred, _obo_iri(edge.pred), node_labels.get(edge.pred))
-        return next((value[k] for k in keys if k is not None and k in value), default)
-
     # node styles; the root gets a thicker border if highlighted
     for node in graph.nodes:
-        width = root_border_width if (node.id == root and highlight_root) else node_border_width
-        node.meta = kgviz({"fillcolor": node_color, "color": node_border_color, "penwidth": width})
+        is_highlighted = highlight_root and node.id == root
+        node.meta = _kgviz_meta({
+            "fillcolor": node_color,
+            "color": node_border_color,
+            "penwidth": root_border_width if is_highlighted else node_border_width})
 
-    # edge styles and labels (a per-edge label is used over og2dot's default)
+    # edge styles and labels (a label set here is used over og2dot's default)
+    def for_relation(edge, value, default=None):
+        return _value_for_relation(edge.pred, value, predicate_labels, default)
+
     for edge in graph.edges:
-        edge.meta = kgviz({"label": for_edge(edge, edge_labels or {}),
-                           "color": for_edge(edge, edge_color, "black"),
-                           "arrowhead": for_edge(edge, edge_arrowhead, "normal")})
+        edge.meta = _kgviz_meta({
+            "label": for_relation(edge, edge_labels or {}),
+            "color": for_relation(edge, edge_color, "black"),
+            "arrowhead": for_relation(edge, edge_arrowhead, "normal")})
 
-    graph_to_image(graph, configure=json.dumps(configure) if configure else None, imgfile=str(imgfile))
+    graph_to_image(graph, configure=json.dumps(configure) if configure else None,
+                   imgfile=str(imgfile))
     if show:
-        from IPython.display import Image, display
-        display(Image(filename=str(imgfile)))
+        _display_png(imgfile)
     return graph if return_graph else None
+
+
+def _construct_graph(source, query):
+    """The rdflib Graph to draw: `source` itself, the graph of a CONSTRUCT result, or
+    the result of running `query` on `source`."""
+    if query is not None:
+        if not isinstance(source, Graph):
+            raise TypeError("source must be an rdflib Graph when a query is given")
+        source = source.query(query)
+    rdf = source if isinstance(source, Graph) else getattr(source, "graph", None)
+    if rdf is None:
+        raise TypeError("source must be an rdflib Graph or the result of a CONSTRUCT query")
+    if len(rdf) == 0:
+        raise ValueError("the graph is empty; check the CONSTRUCT query")
+    return rdf
+
+
+def _for_pronto(rdf):
+    """Copy of `rdf` (so the original isn't changed) with what pronto needs to load it:
+    an ontology header, and a declaration of each property used in a restriction."""
+    rdf = Graph() + rdf
+    if not any(rdf.subjects(RDF.type, OWL.Ontology)):
+        rdf.add((URIRef("http://purl.obolibrary.org/obo/viz.tmp.owl"), RDF.type, OWL.Ontology))
+    for prop in set(rdf.objects(None, OWL.onProperty)):
+        if isinstance(prop, URIRef) and (prop, RDF.type, OWL.ObjectProperty) not in rdf:
+            rdf.add((prop, RDF.type, OWL.ObjectProperty))
+    return rdf
+
+
+def _select_classes(adapter, root, predicates, include_is_a):
+    """The classes to draw (see plot_sparql_graph)."""
+    from oaklib.datamodels.vocabulary import IS_A
+
+    if include_is_a:
+        classes = set(adapter.descendants(root, predicates=[IS_A], reflexive=True))
+        if not classes - {root}:
+            raise ValueError(f"no is_a descendants of {root} in the graph; "
+                             "check the root CURIE")
+    else:
+        classes = (set(adapter.descendants(root, predicates=predicates, reflexive=True))
+                   | set(adapter.ancestors(root, predicates=predicates, reflexive=True)))
+        if not classes - {root}:
+            raise ValueError(f"no {', '.join(predicates)} relationships of {root} in the "
+                             "graph; check the root CURIE and the CONSTRUCT query")
+    # plus the classes they point to with the other relationships
+    if predicates:
+        classes |= {o for c in list(classes)
+                    for _, o in adapter.outgoing_relationships(c, predicates=predicates)}
+    return classes
+
+
+def _value_for_relation(pred, value, predicate_labels, default=None):
+    """The style value for edges of relationship `pred`: `value` itself, or, if `value`
+    is a dict, the entry for `pred`, whose key can be the predicate's CURIE, IRI or
+    label (any name of is_a for the is_a edges); `default` if there is none."""
+    if not isinstance(value, dict):
+        return value
+    if pred in _IS_A_KEYS:
+        keys = _IS_A_KEYS
+    else:
+        keys = (pred, _obo_iri(pred), predicate_labels.get(pred))
+    return next((value[k] for k in keys if k is not None and k in value), default)
 
 
 def _obo_iri(curie):
@@ -792,6 +938,7 @@ def _obo_iri(curie):
         return f"http://purl.obolibrary.org/obo/{prefix}_{local}"
     return curie
 
+
 # ------------------------------------------------------------------------------
 # display
 # ------------------------------------------------------------------------------
@@ -799,7 +946,7 @@ def _obo_iri(curie):
 def show_image(path, scale=1.0, dpi=100):
     """Display an image file with matplotlib at (roughly) its actual pixel size."""
     import matplotlib.pyplot as plt
-    
+
     img = plt.imread(path)
     height, width = img.shape[:2]
     fig = plt.figure(figsize=(scale * width / dpi, scale * height / dpi), dpi=dpi)
